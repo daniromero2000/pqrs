@@ -8,7 +8,43 @@
             </div>
         </div>
         <ul class="sidebar-menu" data-widget="tree">
-            @if($user->hasRole('admin|superadmin|marketing|operativo'))<li class="header">ADMINISTRACION</li>
+            <li class="header">GESTION PQRS SOCOMIR</li>
+            @if($user->hasRole('superadmin|marketing|operativo'))
+            <li class="treeview @if(request()->segment(2) == 'pqrs') active @endif">
+                <a href="#"> <i class="fa fa-users"> </i> <span>Pqrs</span> <span class="pull-right-container">
+                        @if($pqrSCCount > 0)
+                        <span class="label label-danger pull-right">{{ $pqrSCCount }}</span>
+                        @endif
+                        <i class="fa fa-angle-left pull-right"> </i> </span> </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ route('admin.pqrs.index') }}"><i class="fa fa-circle-o"> </i> Ver Pqrs</a>
+                    </li>
+                    <li><a href="{{ route('admin.pqrs.create') }}"><i class="fa fa-plus"> </i> Crear Pqr</a>
+                    </li>
+                    <li class="treeview @if(request()->segment(2) == 'pqr-statuses') active @endif"> <a href="#">
+                            <i class="fa fa-anchor">
+                            </i> <span>Estados de Pqrs</span>
+                            <span class="pull-right-container"> <i class="fa fa-angle-left pull-right">
+                                </i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="{{ route('admin.pqr-statuses.index') }}"><i class="fa fa-circle-o"> </i>
+                                    Ver estados Pqrss</a></li> @if($user->hasRole('superadmin|marketing'))<li><a
+                                    href="{{ route('admin.pqr-statuses.create') }}"><i class="fa fa-plus"> </i>
+                                    Crear estado Pqr
+                                </a>
+                            </li>
+                            @endif
+                        </ul>
+                    </li>
+                </ul>
+                @endif
+
+
+                @if($user->hasRole('admin|superadmin|marketing|operativo'))
+            <li class="header">ADMINISTRACION</li>
             @if($user->hasRole('admin|superadmin'))<li
                 class="treeview @if(request()->segment(2) == 'employees' || request()->segment(2) == 'roles' || request()->segment(2) == 'permissions') active @endif">
                 <a href="#"> <i class="fa fa-user"> </i> <span>Empleados</span> <span class="pull-right-container"> <i

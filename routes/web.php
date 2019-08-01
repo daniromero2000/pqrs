@@ -32,12 +32,20 @@ Route::group(['prefix' => 'admin', 'middleware' => ['employee'], 'as' => 'admin.
                 Route::get('remove-image-subsidiary', 'SubsidiaryController@removeImage')->name('subsidiary.remove.image');
             });
 
+            Route::namespace('Pqrs')->group(function () {
+                Route::resource('pqrs', 'PqrController');
+                Route::resource('pqr-statuses', 'PqrStatusController');
+               
+            });
+
 
 
             Route::resource('countries', 'Countries\CountryController');
             Route::resource('countries.provinces', 'Provinces\ProvinceController');
             Route::resource('countries.provinces.cities', 'Cities\CityController');
         });
+
+
 
         
         Route::group(['middleware' => ['role:admin|superadmin|marketing|operativo, guard:employee']], function () {
