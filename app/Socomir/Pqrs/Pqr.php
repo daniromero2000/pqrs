@@ -25,8 +25,11 @@ class Pqr extends Authenticatable
         'name',
         'cedula',
         'email',
-        'password',
+        'pqr',
+        'asunto',
+        'mensaje',
         'status',
+        'city_id',
         'Pqr_status_id',
         'lead',
         'phone',
@@ -83,7 +86,7 @@ class Pqr extends Authenticatable
         return $this->hasMany(Commentary::class)->whereStatus(true);
     }
 
-     /**
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function items()
@@ -113,7 +116,7 @@ class Pqr extends Authenticatable
         return self::search($term);
     }
 
- /**
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function pqrStatus()

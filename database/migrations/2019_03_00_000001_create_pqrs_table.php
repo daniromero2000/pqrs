@@ -15,17 +15,19 @@ class CreatePqrsTable extends Migration
     {
         Schema::create('pqrs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
             $table->string('cedula')->nullable()->index();
+            $table->string('name');
             $table->string('email')->unique()->index();
-            $table->string('password');
-            $table->string('genre')->nullable();
             $table->string('lead')->nullable();
             $table->string('phone')->nullable();
+            $table->string('pqr');
+            $table->string('asunto');
+            $table->string('mensaje');
             $table->integer('status')->default(0);
             $table->integer('pqr_status_id')->unsigned();
             $table->foreign('pqr_status_id')->references('id')->on('pqr_statuses');
-            $table->date('birthday')->nullable();
+            $table->unsignedInteger('city_id');
+            $table->foreign('city_id')->references('id')->on('cities');
             $table->boolean('data_politics')->nullable();
             $table->softDeletes();
             $table->rememberToken();
