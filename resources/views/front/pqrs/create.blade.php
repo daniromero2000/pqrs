@@ -76,7 +76,7 @@
                                 name="pqr_status_id" value="6"></div>
                         <div class="form-group hidden"> <label for="lead" class="col-md-4 control-label">lead</label>
                             <input id="lead" type="text" class="form-control" name="lead" value="Registro"></div>
-                        <input type="hidden" name="status" id="status" class="form-control" value="3">
+                        <input type="hidden" name="status" id="status" class="form-control" value="1">
 
                         {{-- <input type="hidden" name="status" value="1"> <label class="register-box-msg"><small>Prueba que
                                 no
