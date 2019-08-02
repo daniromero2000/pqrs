@@ -11,19 +11,19 @@
             <li class="header">GESTION PQRS SOCOMIR</li>
             @if($user->hasRole('superadmin|marketing|operativo'))
             <li class="treeview @if(request()->segment(2) == 'pqrs') active @endif">
-                <a href="#"> <i class="fa fa-users"> </i> <span>Pqrs</span> <span class="pull-right-container">
+                <a href="#"> <i class="fa fa-users"> </i> <span>PQRS</span> <span class="pull-right-container">
                         @if($pqrSCCount > 0)
                         <span class="label label-danger pull-right">{{ $pqrSCCount }}</span>
                         @endif
                         <i class="fa fa-angle-left pull-right"> </i> </span> </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ route('admin.pqrs.index') }}"><i class="fa fa-circle-o"> </i> Ver Pqrs</a>
+                    <li><a href="{{ route('admin.pqrs.index') }}"><i class="fa fa-circle-o"> </i> Ver PQRS</a>
                     </li>
-                    <li><a href="{{ route('admin.pqrs.create') }}"><i class="fa fa-plus"> </i> Crear Pqr</a>
+                    <li><a href="{{ route('admin.pqrs.create') }}"><i class="fa fa-plus"> </i> Crear PQR</a>
                     </li>
                     <li class="treeview @if(request()->segment(2) == 'pqr-statuses') active @endif"> <a href="#">
                             <i class="fa fa-anchor">
-                            </i> <span>Estados de Pqrs</span>
+                            </i> <span>Estados de PQRS</span>
                             <span class="pull-right-container"> <i class="fa fa-angle-left pull-right">
                                 </i>
                             </span>
@@ -31,9 +31,9 @@
                         <ul class="treeview-menu">
                             <li>
                                 <a href="{{ route('admin.pqr-statuses.index') }}"><i class="fa fa-circle-o"> </i>
-                                    Ver estados Pqrss</a></li> @if($user->hasRole('superadmin|marketing'))<li><a
+                                    Ver estados PQRS</a></li> @if($user->hasRole('superadmin|marketing'))<li><a
                                     href="{{ route('admin.pqr-statuses.create') }}"><i class="fa fa-plus"> </i>
-                                    Crear estado Pqr
+                                    Crear estado PQR
                                 </a>
                             </li>
                             @endif

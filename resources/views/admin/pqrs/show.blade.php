@@ -5,14 +5,13 @@
     <!-- Default box -->
     <div class="box">
         <div class="box-body">
-            <h1>Pqr</h1>
+            <h1>PQR</h1>
             <table class="table">
                 <thead>
                     <tr>
                         <th scope="col">Documento Identificación</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Email</th>
-                        <th scope="col">lead</th>
                         <th scope="col">Teléfono</th>
                         <th scope="col">Estado</th>
                         <th scope="col">Opciones</th>
@@ -23,7 +22,6 @@
                         <td>{{ $pqr->cedula }}</td>
                         <td>{{ $pqr->name }}</td>
                         <td>{{ $pqr->email }}</td>
-                        <td>{{ $pqr->lead }}</td>
                         <td>{{ $pqr->phone }}</td>
                         <td>
                             <p class="text-center label"
@@ -41,6 +39,24 @@
                                 </div>
                             </form>
                         </td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th scope="col">Ciudad</th>
+                        <th scope="col">Tipo de PQR</th>
+                        <th scope="col">Asunto</th>
+                        <th scope="col">Mensaje</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ $city->name }}</td>
+                        <td>{{ $pqr->pqr }}</td>
+                        <td>{{ $pqr->asunto }}</td>
+                        <td>{{ $pqr->mensaje }}</td>
+
                     </tr>
                 </tbody>
             </table>

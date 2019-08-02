@@ -11,6 +11,9 @@ use App\Socomir\Pqrs\Transformations\PqrTransformable;
 use App\Socomir\PqrStatuses\PqrStatus;
 use App\Socomir\PqrStatuses\Repositories\Interfaces\PqrStatusRepositoryInterface;
 use App\Socomir\PqrStatuses\Repositories\PqrStatusRepository;
+use App\Socomir\Cities\Repositories\Interfaces\CityRepositoryInterface;
+use App\Socomir\Cities\City;
+
 use App\Http\Controllers\Controller;
 
 class PqrController extends Controller
@@ -27,6 +30,7 @@ class PqrController extends Controller
      */
     private $pqrStatusRepo;
 
+    private $cityRepo;
 
     /**
      * PqrController constructor.
@@ -34,10 +38,12 @@ class PqrController extends Controller
      */
     public function __construct(
         PqrRepositoryInterface $pqrRepository,
-        PqrStatusRepositoryInterface $pqrStatusRepository
+        PqrStatusRepositoryInterface $pqrStatusRepository,
+        CityRepositoryInterface $cityRepository
     ) {
         $this->pqrRepo = $pqrRepository;
         $this->pqrStatusRepo = $pqrStatusRepository;
+         $this->cityRepo = $cityRepository;
     }
 
 
@@ -55,11 +61,9 @@ class PqrController extends Controller
             $list = $this->pqrRepo->searchPqr(request()->input('q'));
         }
 
-        $pqrs = $list->where('status', 0)->map(function (Pqr $pqr) {
+        $pqrs = $list->where('status', 1)->map(function (Pqr $pqr) {
             return $this->transformPqr($pqr);
         })->all();
-
-
 
         return view('admin.pqrs.list', [
             'pqrs' => $this->pqrRepo->paginateArrayResults($pqrs),
@@ -76,6 +80,7 @@ class PqrController extends Controller
     {
         return view('admin.pqrs.create', [
             'statuses' => $this->pqrStatusRepo->listPqrStatuses(),
+            'cities' => City::all()
         ]);
     }
 
@@ -107,6 +112,7 @@ class PqrController extends Controller
             'pqr' => $this->pqrRepo->findPqrById($id),
             'pqrcommentaries' => $pqr->pqrcommentaries,
             'currentStatus' => $this->pqrStatusRepo->findPqrStatusById($pqr->pqr_status_id),
+            'city' => $this->cityRepo->findCityById($pqr->city_id),
         ]);
     }
 

@@ -67,24 +67,48 @@
                         </select>
                     </div>
                 </div>
+
                 <div class="form-group">
-                    <label for="lead" class="control-label">lead</label>
+                    <label for="pqr" class="control-label">Tipo de PQR</label>
                     <div class="input-group">
                         <div class="input-group-addon">
                             <i class="fa fa-check"></i>
                         </div>
-                        <select class="selectpicker form-control" id="lead" name="lead">
-                            <option>Facebook</option>
-                            <option>WhatsApp</option>
-                            <option>Telemercadeo</option>
-                            <option>Recontactado</option>
-                            <option>Almacén</option>
-                            <option>Buscado</option>
-                            <option>Add's</option>
-                            <option>Agencia</option>
+                        <select class="selectpicker form-control form-controlPqrs " id="pqr" name="pqr">
+                            <option>Pregunta</option>
+                            <option>Queja</option>
+                            <option>Reclamo</option>
+                            <option>Solicitud</option>
                         </select>
                     </div>
                 </div>
+                <div id="cities" class="form-group">
+                    <label for="city_id">Ciudad <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        </div>
+                        <select name="city_id" id="city_id" class="form-control form-controlPqrs" enabled>
+                            @foreach($cities as $city)
+                            <option value="{{ $city->id }}">{{ $city->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group{{ $errors->has('asunto') ? ' has-error' : '' }}"> <input id="asunto"
+                        type="asunto" class="form-control form-controlPqrs" name="asunto" placeholder="Asunto"
+                        value="{{ old('asunto') }}" required>
+                    @if($errors->has('asunto')) <span class="help-block">
+                        <strong>{{ $errors->first('asunto') }}</strong> </span> @endif</div>
+
+                <div class="form-group{{ $errors->has('mensaje') ? ' has-error' : '' }}"> <textarea id="mensaje"
+                        type="mensaje" class="form-control" name="mensaje" placeholder="Mensaje"
+                        value="{{ old('mensaje') }}" required></textarea>
+                    @if($errors->has('mensaje')) <span class="help-block">
+                        <strong>{{ $errors->first('mensaje') }}</strong> </span> @endif</div>
+
+
             </div>
             <!-- /.box-body -->
             <div class="box-footer">

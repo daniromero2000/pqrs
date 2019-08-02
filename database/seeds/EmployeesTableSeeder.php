@@ -10,139 +10,35 @@ class EmployeesTableSeeder extends Seeder
 {
     public function run()
     {
-
-        /*Permisos productos*/
-        $createProductPerm = factory(Permission::class)->create([
-            'name' => 'create-product',
-            'display_name' => 'Crear Producto'
-        ]);
-
-        $viewProductPerm = factory(Permission::class)->create([
-            'name' => 'view-product',
-            'display_name' => 'Ver Producto'
-        ]);
-
-        $updateProductPerm = factory(Permission::class)->create([
-            'name' => 'update-product',
-            'display_name' => 'Actualizar Producto'
-        ]);
-
-        $deleteProductPerm = factory(Permission::class)->create([
-            'name' => 'delete-product',
-            'display_name' => 'Borrar Producto'
-        ]);
-
-        $viewProductStatusPerm = factory(Permission::class)->create([
-            'name' => 'view-productStatus',
-            'display_name' => 'Ver Estados Productos'
-        ]);
-
-        $createProductStatusPerm = factory(Permission::class)->create([
-            'name' => 'create-productStatus',
-            'display_name' => 'Crear Estado Productos'
-        ]);
-
-
-        /*Permisos Categorias*/
-        $createCategoryPerm = factory(Permission::class)->create([
-            'name' => 'create-category',
-            'display_name' => 'Crear Categoría'
-        ]);
-
-        $viewCategoryPerm = factory(Permission::class)->create([
-            'name' => 'view-category',
-            'display_name' => 'Ver Categoría'
-        ]);
-
-        $updateCategoryPerm = factory(Permission::class)->create([
-            'name' => 'update-category',
-            'display_name' => 'Actualizar Categoría'
-        ]);
-
-        $deleteCategoryPerm = factory(Permission::class)->create([
-            'name' => 'delete-category',
-            'display_name' => 'Borrar Categoría'
-        ]);
-
-
-        /*Permisos Compras*/
-        $updateOrderPerm = factory(Permission::class)->create([
-            'name' => 'update-order',
-            'display_name' => 'Actualizar Compra'
-        ]);
-
-        $viewOrderStatusPerm = factory(Permission::class)->create([
-            'name' => 'view-orderStatus',
-            'display_name' => 'Ver Estados Compras'
-        ]);
-
-        $createOrderStatusPerm = factory(Permission::class)->create([
-            'name' => 'create-orderStatus',
-            'display_name' => 'Crear Estado Compras'
-        ]);
-
-
-        /*Permisos Artículos*/
-        $createItemPerm = factory(Permission::class)->create([
-            'name' => 'create-item',
-            'display_name' => 'Crear Artículo'
-        ]);
-
-        $viewItemPerm = factory(Permission::class)->create([
-            'name' => 'view-item',
-            'display_name' => 'Ver Artículo'
-        ]);
-
-        $updateItemPerm = factory(Permission::class)->create([
-            'name' => 'update-item',
-            'display_name' => 'Actualizar Artículo'
-        ]);
-
-        $deleteItemPerm = factory(Permission::class)->create([
-            'name' => 'delete-item',
-            'display_name' => 'Borrar Artículo'
-        ]);
-
-        $viewItemStatusPerm = factory(Permission::class)->create([
-            'name' => 'view-itemStatus',
-            'display_name' => 'Ver Estados Artículos'
-        ]);
-
-        $createItemStatusPerm = factory(Permission::class)->create([
-            'name' => 'create-itemStatus',
-            'display_name' => 'Crear Estado Artículo'
-        ]);
-
-
         /*Permisos Clientes*/
-        $deleteCustomerPerm = factory(Permission::class)->create([
-            'name' => 'delete-customer',
-            'display_name' => 'Borrar Cliente'
+        $deletePqrPerm = factory(Permission::class)->create([
+            'name' => 'delete-pqr',
+            'display_name' => 'Borrar PQR'
         ]);
 
-        $viewCustomerPerm = factory(Permission::class)->create([
-            'name' => 'view-customer',
-            'display_name' => 'Ver Cliente'
+        $viewPqrPerm = factory(Permission::class)->create([
+            'name' => 'view-pqr',
+            'display_name' => 'Ver Pqr'
         ]);
 
-        $updateCustomerPerm = factory(Permission::class)->create([
-            'name' => 'update-customer',
-            'display_name' => 'Actualizar Cliente'
+        $updatePqrPerm = factory(Permission::class)->create([
+            'name' => 'update-pqr',
+            'display_name' => 'Actualizar Pqr'
         ]);
 
-        $createCustomerPerm = factory(Permission::class)->create([
-            'name' => 'create-customer',
-            'display_name' => 'Crear Cliente'
+        $createPqrPerm = factory(Permission::class)->create([
+            'name' => 'create-pqrr',
+            'display_name' => 'Crear Pqr'
         ]);
 
-        $viewCustomerStatusPerm = factory(Permission::class)->create([
-            'name' => 'view-customerStatus',
-            'display_name' => 'Ver Estados Clientes'
+        $viewPqrStatusPerm = factory(Permission::class)->create([
+            'name' => 'view-pqrStatus',
+            'display_name' => 'Ver Estados Pqr'
         ]);
 
-        $createCustomerStatusPerm = factory(Permission::class)->create([
-            'name' => 'create-customerStatus',
-            'display_name' => 'Crear Estado Clientes'
+        $createPqrStatusPerm = factory(Permission::class)->create([
+            'name' => 'create-pqrStatus',
+            'display_name' => 'Crear Estado Pqr'
         ]);
 
 
@@ -207,36 +103,13 @@ class EmployeesTableSeeder extends Seeder
         ]);
 
         $roleSuperRepo = new RoleRepository($super);
-        /*Permisos productos*/
-        $roleSuperRepo->attachToPermission($createProductPerm);
-        $roleSuperRepo->attachToPermission($viewProductPerm);
-        $roleSuperRepo->attachToPermission($updateProductPerm);
-        $roleSuperRepo->attachToPermission($deleteProductPerm);
-        $roleSuperRepo->attachToPermission($viewProductStatusPerm);
-        $roleSuperRepo->attachToPermission($createProductStatusPerm);
-        /*Permisos Categoruias*/
-        $roleSuperRepo->attachToPermission($createCategoryPerm);
-        $roleSuperRepo->attachToPermission($viewCategoryPerm);
-        $roleSuperRepo->attachToPermission($updateCategoryPerm);
-        $roleSuperRepo->attachToPermission($deleteCategoryPerm);
-        /*Permisos Artículos*/
-        $roleSuperRepo->attachToPermission($createItemPerm);
-        $roleSuperRepo->attachToPermission($viewItemPerm);
-        $roleSuperRepo->attachToPermission($updateItemPerm);
-        $roleSuperRepo->attachToPermission($deleteItemPerm);
-        $roleSuperRepo->attachToPermission($viewItemStatusPerm);
-        $roleSuperRepo->attachToPermission($createItemStatusPerm);
-        /*Permisos Compras*/
-        $roleSuperRepo->attachToPermission($updateOrderPerm);
-        $roleSuperRepo->attachToPermission($viewOrderStatusPerm);
-        $roleSuperRepo->attachToPermission($createOrderStatusPerm);
         /*Permisos Clientes*/
-        $roleSuperRepo->attachToPermission($deleteCustomerPerm);
-        $roleSuperRepo->attachToPermission($createCustomerPerm);
-        $roleSuperRepo->attachToPermission($viewCustomerPerm);
-        $roleSuperRepo->attachToPermission($updateCustomerPerm);
-        $roleSuperRepo->attachToPermission($viewCustomerStatusPerm);
-        $roleSuperRepo->attachToPermission($createCustomerStatusPerm);
+        $roleSuperRepo->attachToPermission($deletePqrPerm);
+        $roleSuperRepo->attachToPermission($createPqrPerm);
+        $roleSuperRepo->attachToPermission($viewPqrPerm);
+        $roleSuperRepo->attachToPermission($updatePqrPerm);
+        $roleSuperRepo->attachToPermission($viewPqrStatusPerm);
+        $roleSuperRepo->attachToPermission($createPqrStatusPerm);
         /*Permisos Empleados*/
         $roleSuperRepo->attachToPermission($deleteEmployeePerm);
         $roleSuperRepo->attachToPermission($createEmployeePerm);
@@ -251,52 +124,6 @@ class EmployeesTableSeeder extends Seeder
         /*Permisos Permisos*/
         $roleSuperRepo->attachToPermission($viewPermissionPerm);
         $employee->roles()->save($super);
-
-
-        $employee = factory(Employee::class)->create([
-            'email' => 'directormarketing@standard.com.co'
-        ]);
-
-        $marketing = factory(Role::class)->create([
-            'name' => 'marketing',
-            'display_name' => 'Marketing'
-        ]);
-
-        $roleMarketingRepo = new RoleRepository($marketing);
-        $roleMarketingRepo->attachToPermission($createProductPerm);
-        $roleMarketingRepo->attachToPermission($viewProductPerm);
-        $roleMarketingRepo->attachToPermission($updateProductPerm);
-        $roleMarketingRepo->attachToPermission($deleteProductPerm);
-        $roleMarketingRepo->attachToPermission($viewProductStatusPerm);
-        $roleMarketingRepo->attachToPermission($createProductStatusPerm);
-        /*Permisos Categoruias*/
-        $roleMarketingRepo->attachToPermission($createCategoryPerm);
-        $roleMarketingRepo->attachToPermission($viewCategoryPerm);
-        $roleMarketingRepo->attachToPermission($updateCategoryPerm);
-        $roleMarketingRepo->attachToPermission($deleteCategoryPerm);
-        /*Permisos Artículos*/
-        $roleMarketingRepo->attachToPermission($createItemPerm);
-        $roleMarketingRepo->attachToPermission($viewItemPerm);
-        $roleMarketingRepo->attachToPermission($updateItemPerm);
-        $roleMarketingRepo->attachToPermission($deleteItemPerm);
-        $roleMarketingRepo->attachToPermission($viewItemStatusPerm);
-        $roleMarketingRepo->attachToPermission($createItemStatusPerm);
-        /*Permisos Compras*/
-        $roleMarketingRepo->attachToPermission($updateOrderPerm);
-        $roleMarketingRepo->attachToPermission($viewOrderStatusPerm);
-        $roleMarketingRepo->attachToPermission($createOrderStatusPerm);
-        /*Permisos Clientes*/
-        $roleMarketingRepo->attachToPermission($deleteCustomerPerm);
-        $roleMarketingRepo->attachToPermission($createCustomerPerm);
-        $roleMarketingRepo->attachToPermission($viewCustomerPerm);
-        $roleMarketingRepo->attachToPermission($updateCustomerPerm);
-        $roleMarketingRepo->attachToPermission($viewCustomerStatusPerm);
-        $roleMarketingRepo->attachToPermission($createCustomerStatusPerm);
-        /*Permisos Ciudad*/
-        $roleMarketingRepo->attachToPermission($viewCityPerm);
-        /*Permisos Sucursal*/
-        $roleMarketingRepo->attachToPermission($viewSubsidiaryPerm);
-        $employee->roles()->save($marketing);
 
 
         $employee = factory(Employee::class)->create([
@@ -334,22 +161,11 @@ class EmployeesTableSeeder extends Seeder
         ]);
 
         $roleOperativoRepo = new RoleRepository($operativo);
-        /*Permisos productos*/
-        $roleOperativoRepo->attachToPermission($viewProductPerm);
-        $roleOperativoRepo->attachToPermission($viewProductStatusPerm);
-        /*Permisos Artículos*/
-        $roleOperativoRepo->attachToPermission($createItemPerm);
-        $roleOperativoRepo->attachToPermission($viewItemPerm);
-        $roleOperativoRepo->attachToPermission($updateItemPerm);
-        $roleOperativoRepo->attachToPermission($viewItemStatusPerm);
-        /*Permisos Compras*/
-        $roleOperativoRepo->attachToPermission($updateOrderPerm);
-        $roleOperativoRepo->attachToPermission($viewOrderStatusPerm);
         /*Permisos Clientes*/
-        $roleOperativoRepo->attachToPermission($createCustomerPerm);
-        $roleOperativoRepo->attachToPermission($viewCustomerPerm);
-        $roleOperativoRepo->attachToPermission($updateCustomerPerm);
-        $roleOperativoRepo->attachToPermission($viewCustomerStatusPerm);
+        $roleOperativoRepo->attachToPermission($createPqrPerm);
+        $roleOperativoRepo->attachToPermission($viewPqrPerm);
+        $roleOperativoRepo->attachToPermission($updatePqrPerm);
+        $roleOperativoRepo->attachToPermission($viewPqrStatusPerm);
         /*Permisos Sucursal*/
         $roleOperativoRepo->attachToPermission($viewSubsidiaryPerm);
         $employee->roles()->save($operativo);

@@ -7,7 +7,7 @@
 
     <div class="box">
         <div class="box-body">
-            <h1>Pqrs Socomir</h1>
+            <h1>PQRS Socomir</h1>
             <div class="row">
                 <div class="col-md-5">
                     @include('layouts.search', ['route' => route('admin.pqrs.index')])
@@ -18,9 +18,9 @@
                 <thead>
                     <tr>
                         <th scope="col">Ingreso</th>
-                        <th scope="col">Lead</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Teléfono</th>
+                        <th scope="col">Tipo de PQR</th>
                         <th scope="col">Estado</th>
                         <th scope="col">Opciones</th>
                     </tr>
@@ -29,17 +29,17 @@
                     @foreach ($pqrs as $pqr)
                     <tr>
                         <td>{{ date('M d, Y h:i a', strtotime($pqr['created_at'])) }}</td>
-                        <td>{{ $pqr['lead'] }}</td>
                         <td>
-                           
-
                             <a href="{{ route('admin.pqrs.show', $pqr['id']) }}">{{ $pqr['name'] }}</a>
                         </td>
                         <td>{{ $pqr['phone'] }}</td>
+                        <td>{{ $pqr['pqr'] }}</td>
+
                         <td>
                             <p class="text-center label"
                                 style="color: #ffffff; background-color: {{ $pqr->pqr_status_id->color }}">
-                                </p>
+                                {{ $pqr->pqr_status_id->name }}
+                            </p>
                         </td>
                         <!-- <td>
     @include('layouts.status', ['status' => $pqr['status']])</td>-->

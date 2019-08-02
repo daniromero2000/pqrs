@@ -36,12 +36,12 @@
                                 <strong>{{ $errors->first('phone') }}</strong> </span> @endif</div>
 
                         <div class="form-group">
-                            <label for="pqr" class="control-label">pqr</label>
+                            <label for="pqr" class="control-label">Tipo de PQR</label>
                             <div class="input-group">
                                 <div class="input-group-addon">
                                     <i class="fa fa-check"></i>
                                 </div>
-                                <select class="selectpicker form-control" id="pqr" name="pqr">
+                                <select class="selectpicker form-control form-controlPqrs " id="pqr" name="pqr">
                                     <option>Pregunta</option>
                                     <option>Queja</option>
                                     <option>Reclamo</option>
@@ -49,26 +49,34 @@
                                 </select>
                             </div>
                         </div>
-
+                        <div id="cities" class="form-group">
+                            <label for="city_id">Ciudad <span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                </div>
+                                <select name="city_id" id="city_id" class="form-control form-controlPqrs" enabled>
+                                    @foreach($cities as $city)
+                                    <option value="{{ $city->id }}">{{ $city->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
                         <div class="form-group{{ $errors->has('asunto') ? ' has-error' : '' }}"> <input id="asunto"
                                 type="asunto" class="form-control form-controlPqrs" name="asunto" placeholder="Asunto"
                                 value="{{ old('asunto') }}" required>
                             @if($errors->has('asunto')) <span class="help-block">
                                 <strong>{{ $errors->first('asunto') }}</strong> </span> @endif</div>
-
                         <div class="form-group{{ $errors->has('mensaje') ? ' has-error' : '' }}"> <textarea id="mensaje"
                                 type="mensaje" class="form-control" name="mensaje" placeholder="Mensaje"
                                 value="{{ old('mensaje') }}" required></textarea>
                             @if($errors->has('mensaje')) <span class="help-block">
                                 <strong>{{ $errors->first('mensaje') }}</strong> </span> @endif</div>
-
                         <div class="form-group hidden"> <input id="pqr_status_id" type="text" class="form-control"
                                 name="pqr_status_id" value="6"></div>
-
-                                <div class="form-group hidden"> <input id="city_id" type="text" class="form-control"
-                                    name="city_id" value="1"></div>
                         <div class="form-group hidden"> <label for="lead" class="col-md-4 control-label">lead</label>
                             <input id="lead" type="text" class="form-control" name="lead" value="Registro"></div>
+                        <input type="hidden" name="status" id="status" class="form-control" value="3">
 
                         {{-- <input type="hidden" name="status" value="1"> <label class="register-box-msg"><small>Prueba que
                                 no
