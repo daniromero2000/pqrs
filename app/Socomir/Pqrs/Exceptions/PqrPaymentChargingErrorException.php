@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Socomir\Customers\Exceptions;
+namespace App\Socomir\Pqr\Exceptions;
 
 class PqrPaymentChargingErrorException extends \Exception
 {

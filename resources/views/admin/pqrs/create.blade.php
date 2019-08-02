@@ -60,7 +60,7 @@
                         <div class="input-group-addon">
                             <i class="fa fa-check"></i>
                         </div>
-                        <select name="cpqr_status_id" id="pqr_status_id" class="form-control select2">
+                        <select name="pqr_status_id" id="pqr_status_id" class="form-control select2">
                             @foreach($statuses as $status)
                             <option value="{{ $status->id }}">{{ $status->name }}</option>
                             @endforeach

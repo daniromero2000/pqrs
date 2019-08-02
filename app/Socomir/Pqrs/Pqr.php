@@ -3,9 +3,7 @@
 namespace App\Socomir\Pqrs;
 
 use App\Socomir\Addresses\Address;
-use App\Socomir\PqrCommentaries\Commentary;
-use App\Socomir\Items\Item;
-use App\Socomir\Orders\Order;
+use App\Socomir\PqrCommentaries\PqrCommentary;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -30,7 +28,7 @@ class Pqr extends Authenticatable
         'mensaje',
         'status',
         'city_id',
-        'Pqr_status_id',
+        'pqr_status_id',
         'lead',
         'phone',
         'data_politics'
@@ -81,31 +79,12 @@ class Pqr extends Authenticatable
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function commentaries()
+    public function pqrcommentaries()
     {
-        return $this->hasMany(Commentary::class)->whereStatus(true);
+        return $this->hasMany(PqrCommentary::class)->whereStatus(true);
     }
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function items()
-    {
-        return $this->hasMany(Item::class)->whereStatus(true);
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function orders()
-    {
-        return $this->hasMany(Order::class);
-    }
-
+   
     /**
      * @param $term
      *

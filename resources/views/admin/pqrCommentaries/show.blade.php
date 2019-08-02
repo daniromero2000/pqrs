@@ -15,7 +15,7 @@
                 </tbody>
                 <tbody>
                     <tr>
-                        <td>{{ $commentary->commentary_1 }}</td>
+                        <td>{{ $pqrcommentary->commentary_1 }}</td>
                     </tr>
                 </tbody>
             </table>

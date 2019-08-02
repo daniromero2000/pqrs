@@ -19,6 +19,9 @@ trait PqrTransformable
         $prop->created_at = $pqr->created_at;
         $prop->email = $pqr->email;
         $prop->phone = $pqr->phone;
+        $prop->pqr = $pqr->pqr;
+        $prop->asunto = $pqr->asunto;
+        $prop->mensaje = $pqr->mensaje;
         $prop->status = (int) $pqr->status;
 
         $pqrStatusRepo = new PqrStatusRepository(new PqrStatus());

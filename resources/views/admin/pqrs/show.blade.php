@@ -5,7 +5,7 @@
     <!-- Default box -->
     <div class="box">
         <div class="box-body">
-            <h1>Cliente</h1>
+            <h1>Pqr</h1>
             <table class="table">
                 <thead>
                     <tr>
@@ -46,97 +46,8 @@
             </table>
         </div>
         <div class="box-body">
-            <h1>Dirección</h1>
-            @if(!$addresses->isEmpty())
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Dirección</th>
-                        <th scope="col">Ciudad</th>
-                        <th scope="col">Departamento</td>
-                        <th scope="col">Opciones</td>
-                    </tr>
-                    </th>
-                </thead>
-                @foreach ($addresses as $address)
-                <tr>
-                    <td>{{ $address->address_1 }}</td>
-                    <td>{{ $address->city->name }}</td>
-                    <td>{{ $address->province->name }}</td>
-                    <td>
-                        <form action="{{ route('admin.addresses.destroy', $address->id) }}" method="post"
-                            class="form-horizontal">
-                            {{ csrf_field() }}
-                            <input type="hidden" name="_method" value="delete">
-                            <div class="btn-group">
-                                <a href="{{ route('admin.addresses.edit', $address->id) }}"
-                                    class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
-                                <button onclick="return confirm('¿Estás Seguro?')" type="submit"
-                                    class="btn btn-danger btn-sm"><i class="fa fa-times"></i> Borrar</button>
-                            </div>
-                        </form>
-                    </td>
-                </tr>
-                @endforeach
-                </th>
-            </table>
-            @else
-            <span>Aún no tiene dirección</span><br>
-            @endif
-            <a href="{{ route('admin.addresses.create', ['id' => $pqr->id]) }}" class="btn btn-primary btn-sm"><i
-                    class="fa fa-edit"></i>
-                Crear Dirección</a>
-
-        </div>
-        <div class="box-body">
-            <h1>Artículos Compraventa</h1>
-            @if(!$items->isEmpty())
-            @include('admin.shared.items', ['items' => $items])
-            @else
-            <span>Aún no tiene dirección</span><br>
-            @endif
-            <a href="{{ route('admin.items.create', ['id' => $pqr->id]) }}" class="btn btn-primary btn-sm"><i
-                    class="fa fa-edit"></i>
-                Crear Artículo Compraventa</a>
-        </div>
-        <div class="box-body">
-            @if(!$orders->isEmpty())
-            <div class="box">
-                <div class="box-body">
-                    <h1>Compras</h1>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Referencia</th>
-                                <th scope="col">Fecha</th>
-                                <th scope="col">Total</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($orders as $order)
-                            <tr>
-                                <td>{{$order->reference}}</td>
-                                <td><a title="Show order"
-                                        href="{{ route('admin.orders.show', $order->id) }}">{{ date('M d, Y h:i a', strtotime($order->created_at)) }}</a>
-                                </td>
-                                <td>
-                                    <span
-                                        class="label @if($order->total != $order->total_paid) label-danger @else label-success @endif">{{ config('cart.currency_symbol') }}
-                                        {{ number_format($order->total )}}</span>
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
-                <!-- /.box-body -->
-            </div>
-            <!-- /.box -->
-            @endif
-        </div>
-        <div class="box-body">
             <h1>Comentarios</h1>
-            @if(!$commentaries->isEmpty())
+            @if(!$pqrcommentaries->isEmpty())
             <table class="table">
                 <thead>
                     <tr>
@@ -146,11 +57,11 @@
                     </tr>
                     </t>
                 <tbody>
-                    @foreach ($commentaries as $comentary)
+                    @foreach ($pqrcommentaries as $pqrcommentary)
                     <tr>
-                        <td>{{ $comentary->commentary_1 }}</td>
-                        <td>{{  date('M d, Y h:i a', strtotime($comentary->created_at)) }}</td>
-                        <td>{{ $comentary->user }}</td>
+                        <td>{{ $pqrcommentary->commentary_1 }}</td>
+                        <td>{{  date('M d, Y h:i a', strtotime($pqrcommentary->created_at)) }}</td>
+                        <td>{{ $pqrcommentary->user }}</td>
                     </tr>
                     @endforeach
                 </tbody>
@@ -183,7 +94,7 @@
                 <!-- Modal body -->
                 <div class="modal-body">
                     <div class="box">
-                        <form action="{{ route('admin.customerCommentaries.store') }}" method="post" class="form"
+                        <form action="{{ route('admin.pqrCommentaries.store') }}" method="post" class="form"
                             enctype="multipart/form-data">
                             <div class="box-body">
                                 {{ csrf_field() }}

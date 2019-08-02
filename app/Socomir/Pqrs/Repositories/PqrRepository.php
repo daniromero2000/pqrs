@@ -2,7 +2,6 @@
 
 namespace App\Socomir\Pqrs\Repositories;
 
-use App\Socomir\Addresses\Address;
 use Jsdecena\Baserepo\BaseRepository;
 use App\Socomir\Pqrs\Pqr;
 use App\Socomir\Pqrs\Exceptions\CreatePqrInvalidArgumentException;
@@ -40,7 +39,7 @@ class PqrRepository extends BaseRepository implements PqrRepositoryInterface
      * @param array $columns
      * @return \Illuminate\Support\Collection
      */
-    public function listPqrs(string $order = 'id', string $sort = 'desc', array $columns = ['*']) : Support
+    public function listPqrs(string $order = 'id', string $sort = 'desc', array $columns = ['*']): Support
     {
         return $this->all($columns, $order, $sort);
     }
@@ -52,16 +51,11 @@ class PqrRepository extends BaseRepository implements PqrRepositoryInterface
      * @return Pqr
      * @throws CreatePqrInvalidArgumentException
      */
-    public function createPqr(array $params) : Pqr
+    public function createPqr(array $params): Pqr
     {
         try {
-            $data = collect($params)->except('password')->all();
-
+            $data = collect($params)->all();
             $pqr = new Pqr($data);
-            if (isset($params['password'])) {
-                $pqr->password = bcrypt($params['password']);
-            }
-
             $pqr->save();
 
             return $pqr;
@@ -78,7 +72,7 @@ class PqrRepository extends BaseRepository implements PqrRepositoryInterface
      * @return bool
      * @throws UpdatePqrInvalidArgumentException
      */
-    public function updatePqr(array $params) : bool
+    public function updatePqr(array $params): bool
     {
         try {
             return $this->model->update($params);
@@ -95,7 +89,7 @@ class PqrRepository extends BaseRepository implements PqrRepositoryInterface
      * @return Pqr
      * @throws PqrNotFoundException
      */
-    public function findPqrById(int $id) : Pqr
+    public function findPqrById(int $id): Pqr
     {
         try {
             return $this->findOneOrFail($id);
@@ -113,7 +107,7 @@ class PqrRepository extends BaseRepository implements PqrRepositoryInterface
      * @return Pqr
      * @throws PqrNotFoundException
      */
-    public function findPqrByEmail(string $email) : Pqr
+    public function findPqrByEmail(string $email): Pqr
     {
         try {
             return $this->findOneOrFailEmail($email);
@@ -128,47 +122,16 @@ class PqrRepository extends BaseRepository implements PqrRepositoryInterface
      * @return bool
      * @throws \Exception
      */
-    public function deletePqr() : bool
+    public function deletePqr(): bool
     {
         return $this->delete();
-    }
-
-    /**
-     * @param Address $address
-     * @return Address
-     */
-    public function attachAddress(Address $address) : Address
-    {
-        $this->model->addresses()->save($address);
-        return $address;
-    }
-
-    /**
-     * Find the address attached to the pqr
-     *
-     * @return mixed
-     */
-    public function findAddresses() : Support
-    {
-        return $this->model->addresses;
-    }
-
-    /**
-     * @param array $columns
-     * @param string $orderBy
-     *
-     * @return Collection
-     */
-    public function findOrders($columns = ['*'], string $orderBy = 'id') : Collection
-    {
-        return $this->model->orders()->get($columns)->sortByDesc($orderBy);
     }
 
     /**
      * @param string $text
      * @return mixed
      */
-    public function searchPqr(string $text = null) : Collection
+    public function searchPqr(string $text = null): Collection
     {
         if (is_null($text)) {
             return $this->all();
@@ -191,7 +154,7 @@ class PqrRepository extends BaseRepository implements PqrRepositoryInterface
         }
     }
 
- /**
+    /**
      * Send email to pqr
      */
     public function sendEmailToPqr($pqrMail)
@@ -211,10 +174,4 @@ class PqrRepository extends BaseRepository implements PqrRepositoryInterface
         Mail::to($employee)
             ->send(new sendWelcomeEmailNotificationToAdminMailable($this->findPqrById($pqrMail->id)));
     }
-
-
-
-
-
-
 }

@@ -31,13 +31,15 @@
                         <td>{{ date('M d, Y h:i a', strtotime($pqr['created_at'])) }}</td>
                         <td>{{ $pqr['lead'] }}</td>
                         <td>
-                            <a href="{{ route('admin.pqrs.show', $pqr->id) }}">{{ $pqr->name }}</a>
+                           
+
+                            <a href="{{ route('admin.pqrs.show', $pqr['id']) }}">{{ $pqr['name'] }}</a>
                         </td>
                         <td>{{ $pqr['phone'] }}</td>
                         <td>
                             <p class="text-center label"
                                 style="color: #ffffff; background-color: {{ $pqr->pqr_status_id->color }}">
-                                {{ $pqr->cpqr_status_id->name }}</p>
+                                </p>
                         </td>
                         <!-- <td>
     @include('layouts.status', ['status' => $pqr['status']])</td>-->

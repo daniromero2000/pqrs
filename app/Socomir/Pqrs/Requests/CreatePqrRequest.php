@@ -15,8 +15,8 @@ class CreatePqrRequest extends BaseFormRequest
     {
         return [
             'name' => ['required'],
-            'email' => ['required', 'email', 'unique:pqrs'],
-            'password' => ['required', 'min:8'],
+            'email' => ['required', 'email'],
+         
         ];
     }
 }

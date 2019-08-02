@@ -55,12 +55,14 @@ class PqrController extends Controller
             $list = $this->pqrRepo->searchPqr(request()->input('q'));
         }
 
-        $pqr = $list->where('status', 1)->map(function (Pqr $pqr) {
+        $pqrs = $list->where('status', 0)->map(function (Pqr $pqr) {
             return $this->transformPqr($pqr);
         })->all();
 
+
+
         return view('admin.pqrs.list', [
-            'pqrs' => $this->pqrRepo->paginateArrayResults($pqr),
+            'pqrs' => $this->pqrRepo->paginateArrayResults($pqrs),
             'user' =>   $user
         ]);
     }
@@ -98,14 +100,12 @@ class PqrController extends Controller
     public function show(int $id)
     {
         $pqr = $this->pqrRepo->findPqrById($id);
-        $pqrSCCount = Pqr::where('pqr_status_id', 3)->where('status', 1)->count();
 
 
         return view('admin.pqrs.show', [
             'user' => auth()->guard('employee')->user(),
-            'pqr' => $this->cpqrRepo->findPqrById($id),
-            'commentaries' => $pqr->commentaries,
-            'pqrSCCount'  =>  $pqrSCCount,
+            'pqr' => $this->pqrRepo->findPqrById($id),
+            'pqrcommentaries' => $pqr->pqrcommentaries,
             'currentStatus' => $this->pqrStatusRepo->findPqrStatusById($pqr->pqr_status_id),
         ]);
     }

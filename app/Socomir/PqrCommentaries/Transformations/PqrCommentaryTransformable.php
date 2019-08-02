@@ -2,32 +2,32 @@
 
 namespace App\Socomir\PqrCommentaries\Transformations;
 
-use App\Socomir\PqrCommentaries\Commentary;
+use App\Socomir\PqrCommentaries\PqrCommentary;
 use App\Socomir\Pqrs\Pqr;
-use App\Socomir\Pqr\Repositories\PqrRepository;
+use App\Socomir\Pqrs\Repositories\PqrRepository;
 use App\Socomir\Provinces\Repositories\ProvinceRepository;
 
 
 trait PqrCommentaryTransformable
 {
     /**
-     * Transform the commentary
+     * Transform the pqrcommentary
      *
-     * @param Commentary $commentary
+     * @param PqrCommentary $pqrcommentary
      *
-     * @return Commentary
+     * @return PqrCommentary
      * @throws \App\Socomir\Pqrs\Exceptions\PqrNotFoundException
      */
-    public function transformPqrCommentary(Commentary $commentary)
+    public function transformPqrCommentary(PqrCommentary $pqrcommentary)
     {
-        $obj = new Commentary;
-        $obj->id = $commentary->id;
-        $obj->commentary_1 = $commentary->commentary_1;
+        $obj = new PqrCommentary;
+        $obj->id = $pqrcommentary->id;
+        $obj->commentary_1 = $pqrcommentary->commentary_1;
 
-        $customerRepo = new PqrRepository(new Pqr);
-        $pqr = $customerRepo->findPqrById($commentary->pqr_id);
+        $pqrRepo = new PqrRepository(new Pqr);
+        $pqr = $pqrRepo->findPqrById($pqrcommentary->pqr_id);
         $obj->pqr = $pqr->name;
-        $obj->status = $commentary->status;
+        $obj->status = $pqrcommentary->status;
 
         return $obj;
     }

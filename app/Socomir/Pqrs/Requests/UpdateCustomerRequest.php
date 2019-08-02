@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Shop\Customers\Requests;
+namespace App\Socomir\Pqrs\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class UpdateCustomerRequest extends FormRequest
+class UpdatePqrRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,7 +26,7 @@ class UpdateCustomerRequest extends FormRequest
     {
         return [
             'name' => ['required'],
-            'email' => ['required', 'email', Rule::unique('customers')->ignore($this->segment(3))]
+            'email' => ['required', 'email', Rule::unique('pqrs')->ignore($this->segment(3))]
         ];
     }
 }

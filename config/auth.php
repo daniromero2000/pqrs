@@ -78,7 +78,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\Socomir\Customers\Customer::class,
+            'model' => App\Socomir\Pqrs\pqr::class,
         ],
 
          'employee' => [

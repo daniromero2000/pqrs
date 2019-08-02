@@ -4,7 +4,7 @@
 <section class="content">
     @include('layouts.errors-and-messages')
     <!-- Default box -->
-    @if($commentaries)
+    @if($pqrcommentaries)
     <div class="box">
         <div class="box-body">
             <h1>Comentarios Clientes</h1>
@@ -17,15 +17,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($commentaries as $commentary)
+                    @foreach ($pqrcommentaries as $pqrcommentary)
                     <tr>
-                        <td>{{ $commentary->commentary_1 }}</td>
+                        <td>{{ $pqrcommentary->commentary_1 }}</td>
                         <td>
-                            <form action="{{ route('admin.pqrCommentaries.destroy', $commentary->id) }}" method="post" class="form-horizontal">
+                            <form action="{{ route('admin.pqrCommentaries.destroy', $pqrcommentary->id) }}" method="post" class="form-horizontal">
                                 {{ csrf_field() }}
                                 <input type="hidden" name="_method" value="delete">
                                 <div class="btn-group">
-                                    <a href="{{ route('admin.pqrCommentaries.edit', $commentary->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
+                                    <a href="{{ route('admin.pqrCommentaries.edit', $pqrcommentary->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
                                     <button onclick="return confirm('¿Estás Seguro?')" type="submit" class="btn btn-danger btn-sm"><i class="fa fa-times"></i> Borrar</button>
                                 </div>
                             </form>
@@ -34,10 +34,10 @@
                     @endforeach
                 </tbody>
             </table>
-            @if($commentaries instanceof \Illuminate\Contracts\Pagination\LengthAwarePaginator)
+            @if($pqrcommentaries instanceof \Illuminate\Contracts\Pagination\LengthAwarePaginator)
             <div class="row">
                 <div class="col-md-12">
-                    <div class="pull-left">{{ $commentaries->links() }}</div>
+                    <div class="pull-left">{{ $pqrcommentaries->links() }}</div>
                 </div>
             </div>
             @endif

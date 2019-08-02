@@ -35,19 +35,14 @@ Route::group(['prefix' => 'admin', 'middleware' => ['employee'], 'as' => 'admin.
             Route::namespace('Pqrs')->group(function () {
                 Route::resource('pqrs', 'PqrController');
                 Route::resource('pqr-statuses', 'PqrStatusController');
-               
             });
 
-
-
+            Route::resource('pqrCommentaries', 'PqrCommentaries\PqrCommentaryController');
             Route::resource('countries', 'Countries\CountryController');
             Route::resource('countries.provinces', 'Provinces\ProvinceController');
             Route::resource('countries.provinces.cities', 'Cities\CityController');
         });
 
-
-
-        
         Route::group(['middleware' => ['role:admin|superadmin|marketing|operativo, guard:employee']], function () {
             Route::resource('employees', 'EmployeeController');
             Route::get('employees/{id}/profile', 'EmployeeController@getProfile')->name('employee.profile');
@@ -116,8 +111,13 @@ Route::namespace('Front')->group(function () {
         });
 
         Route::namespace('Pqr')->group(function () {
-            Route::resource('pqr', 'PqrController');
-            Route::get('pqr', 'PqrController@pqr')->name('pqr');
+            Route::resource('pqrs', 'PqrController');
+            Route::get('pqrs', 'PqrController@pqr')->name('pqr');
+        });
+
+        Route::namespace('TermsConditions')->group(function () {
+            Route::resource('termsConditions', 'TermsConditionsController');
+            Route::get('termsConditions', 'TermsConditionsController@termsConditions')->name('termsConditions');
         });
 
         Route::namespace('Convenios')->group(function () {

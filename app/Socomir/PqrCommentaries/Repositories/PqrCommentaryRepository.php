@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Socomir\CustomerCommentaries\Repositories;
+namespace App\Socomir\PqrCommentaries\Repositories;
 
-use App\Socomir\PqrCommentaries\Commentary;
+use App\Socomir\PqrCommentaries\PqrCommentary;
 use App\Socomir\PqrCommentaries\Exceptions\CreatePqrCommentaryErrorException;
 use App\Socomir\PqrCommentaries\Exceptions\PqrCommentaryNotFoundException;
 use App\Socomir\PqrCommentaries\Repositories\Interfaces\PqrCommentaryRepositoryInterface;
@@ -19,116 +19,116 @@ class PqrCommentaryRepository extends BaseRepository implements PqrCommentaryRep
 
     /**
      * CommentaryRepository constructor.
-     * @param Commentary $commentary
+     * @param PqrCommentary $pqrcommentary
      */
-    public function __construct(Commentary $commentary)
+    public function __construct(PqrCommentary $pqrcommentary)
     {
-        parent::__construct($commentary);
-        $this->model = $commentary;
+        parent::__construct($pqrcommentary);
+        $this->model = $pqrcommentary;
     }
 
     /**
-     * Create the commentary
+     * Create the pqrcommentary
      *
      * @param array $data
      *
-     * @return Commentary
+     * @return PqrCommentary
      * @throws CreatePqrCommentaryErrorException
      */
-    public function createCommentary(array $data) : Commentary
+    public function createPqrCommentary(array $data) : PqrCommentary
     {
         try {
             return $this->create($data);
         } catch (QueryException $e) {
-            throw new CreateCommentaryErrorException('Commentary creation error');
+            throw new CreatePqrCommentaryErrorException('PqrCommentary creation error');
         }
     }
 
     /**
-     * Attach the customer to the commentary
+     * Attach the pqr to the pqrcommentary
      *
-     * @param Commentary $commentary
+     * @param PqrCommentary $commentary
      * @param Pqr $pqr
      */
-    public function attachToPqr(Commentary $commentary, Pqr $pqr)
+    public function attachToPqr(PqrCommentary $pqrcommentary, Pqr $pqr)
     {
-        $pqr->commentaries()->save($commentary);
+        $pqr->pqrcommentaries()->save($pqrcommentary);
     }
 
     /**
      * @param array $data
      * @return bool
      */
-    public function updateCommentary(array $data): bool
+    public function updatePqrCommentary(array $data): bool
     {
         return $this->update($data);
     }
 
     /**
-     * Soft delete the commentary
+     * Soft delete the pqrcommentary
      *
      */
-    public function deleteCommentary()
+    public function deletePqrCommentary()
     {
         $this->model->pqr()->dissociate();
         return $this->model->delete();
     }
 
     /**
-     * List all the commentary
+     * List all the pqrcommentary
      *
      * @param string $order
      * @param string $sort
      * @param array $columns
      * @return array|Collection
      */
-    public function listCommentary(string $order = 'id', string $sort = 'desc', array $columns = ['*']) : Collection
+    public function listPqrCommentary(string $order = 'id', string $sort = 'desc', array $columns = ['*']) : Collection
     {
         return $this->all($columns, $order, $sort);
     }
 
     /**
-     * Return the commentary
+     * Return the pqrcommentary
      *
      * @param int $id
      *
      * @return PqrCommentary
      * @throws PqrCommentaryNotFoundException
      */
-    public function findCommentaryById(int $id) : Commentary
+    public function findPqrCommentaryById(int $id) : PqrCommentary
     {
         try {
             return $this->findOneOrFail($id);
         } catch (ModelNotFoundException $e) {
-            throw new PqrCommentaryNotFoundException('Commentary not found.');
+            throw new PqrCommentaryNotFoundException('PqrCommentary not found.');
         }
     }
 
-    /**
-     * Return the commentary
-     *
-     * @param int $id
-     *
-     * @return PqrCommentary
-     * @throws PqrCommentaryNotFoundException
-     */
-    public function findCustomerCommentaryById(int $id, Pqr $pqr) : Commentary
-    {
-        try 
-        {
-            return $pqr
-                        ->commentaries()
-                        ->whereId($id)
-                        ->firstOrFail();
-        } 
-        catch (ModelNotFoundException $e) 
-        {
-            throw new PqrCommentaryNotFoundException('Commentary not found.');
-        }
-    }
+    // /**
+    //  * Return the pqrcommentary
+    //  *
+    //  * @param int $id
+    //  *
+    //  * @return PqrCommentary
+    //  * @throws PqrCommentaryNotFoundException
+    //  */
+    // public function findPqrCommentaryById(int $id, Pqr $pqr) : Pqr
+    // {
+    //     try 
+    //     {
+    //         return $pqr
+    //                     ->pqrcommentaries()
+    //                     ->whereId($id)
+    //                     ->firstOrFail();
+    //     } 
+    //     catch (ModelNotFoundException $e) 
+    //     {
+    //         throw new PqrCommentaryNotFoundException('PqrCommentary not found.');
+    //     }
+    // }
 
     /**
-     * Return the customer owner of the commentary
+     * Return the pqr owner of the pqrcommentary
      *
      * @return Pqr
      */
@@ -141,12 +141,12 @@ class PqrCommentaryRepository extends BaseRepository implements PqrCommentaryRep
      * @param string $text
      * @return mixed
      */
-    public function searchCommentary(string $text = null) : Collection
+    public function searchPqrCommentary(string $text = null) : Collection
     {
         if (is_null($text)) {
-            return $this->all(['*'], 'commentary_1', 'asc');
+            return $this->all(['*'], 'pqrcommentary_1', 'asc');
         }
-        return $this->model->searchCommentary($text)->get();
+        return $this->model->searchPqrCommentary($text)->get();
     }
 
     /**

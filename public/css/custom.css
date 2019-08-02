@@ -2392,3 +2392,111 @@ PHONE PORTRAIT VERSION
 /* ************************
   Registro Web
 ************************** */
+
+
+
+
+/* ************************
+      PQRS
+************************** */
+
+.login-logo a,
+.register-logo a {
+    color: #ffffff !important;
+}
+
+.login-page,
+.register-page {
+    background: #ffffff;
+}
+
+.login-box,
+.register-box {
+    width: 360px;
+    margin: 7% auto;
+    border-radius: 30px;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+
+    .login-box,
+    .register-box {
+        width: 90%;
+        margin-top: 40px;
+    }
+}
+
+.login-box-body {
+    background: #ffffff;
+    padding: 20px;
+    border-top: 0;
+    color: #666;
+    border-radius: 25px;
+    padding-top: 56px;
+    padding-bottom: 30px;
+}
+
+.register-box-body {
+    background: #ffffff;
+    padding: 20px;
+    border-top: 0;
+    color: #666;
+    border-radius: 25px;
+    padding-bottom: 30px;
+    padding-top: 56px;
+    height: auto;
+}
+
+.login-box-body .form-control-feedback,
+.register-box-body .form-control-feedback {
+    color: #777;
+}
+
+.login-box-msg,
+.register-box-msg {
+    margin: 0;
+    text-align: center;
+    padding: 0 20px 20px 20px;
+    font-size: 18px;
+    color: #FFEB00;
+    font-weight: bold;
+}
+
+.social-auth-links {
+    margin: 10px 0;
+}
+
+.passreset {
+    font-size: 13px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.passreset:hover {
+    font-size: 13px;
+    color: #d89522;
+    text-decoration: none;
+}
+
+hr.loginstyle {
+    border-top: 3px solid #ffffff;
+    width: auto;
+    margin: 0px 0px 0px 0px;
+    display: block;
+    overflow: hidden;
+}
+
+.registerlabel {
+    font-size: 16px;
+    color: #000000;
+    text-decoration: none;
+}
+
+
+.form-controlPqrs {
+border-left: none !important;
+border-right: none !important;
+border-top: none !important;
+
+}

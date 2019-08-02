@@ -2,28 +2,28 @@
 
 namespace App\Socomir\PqrCommentaries\Repositories\Interfaces;
 
-use App\Socomir\PqrCommentaries\Commentary;
+use App\Socomir\PqrCommentaries\PqrCommentary;
 use App\Socomir\Pqrs\Pqr;
 use Illuminate\Support\Collection;
 use Jsdecena\Baserepo\BaseRepositoryInterface;
 
 interface PqrCommentaryRepositoryInterface extends BaseRepositoryInterface
 {
-    public function createCommentary(array $params) : Commentary;
+    public function createPqrCommentary(array $params) : PqrCommentary;
 
-    public function attachToPqr(Commentary $commentary, Pqr $pqr);
+    public function attachToPqr(PqrCommentary $pqrcommentary, Pqr $pqr);
 
-    public function updateCommentary(array $update): bool;
+    public function updatePqrCommentary(array $update): bool;
 
-    public function deleteCommentary();
+    public function deletePqrCommentary();
 
-    public function listCommentary(string $order = 'id', string $sort = 'desc', array $columns = ['*']) : Collection;
+    public function listPqrCommentary(string $order = 'id', string $sort = 'desc', array $columns = ['*']) : Collection;
 
-    public function findCommentaryById(int $id) : Commentary;
+    public function findPqrCommentaryById(int $id) : PqrCommentary;
 
     public function findPqr() : Pqr;
 
-    public function searchCommentary(string $text) : Collection;
+    public function searchPqrCommentary(string $text) : Collection;
 
 
 }

@@ -2,29 +2,29 @@
 
 namespace App\Http\Controllers\Admin\PqrCommentaries;
 
-use App\Shop\CustomerCommentaries\Commentary;
-use App\Shop\CustomerCommentaries\Repositories\CommentaryRepository;
-use App\Shop\CustomerCommentaries\Repositories\Interfaces\CommentaryRepositoryInterface;
-use App\Shop\CustomerCommentaries\Requests\CreateCommentaryRequest;
-use App\Shop\CustomerCommentaries\Requests\UpdateCommentaryRequest;
-use App\Shop\CustomerCommentaries\Transformations\CommentaryTransformable;
-use App\Shop\Customers\Repositories\Interfaces\CustomerRepositoryInterface;
+use App\Socomir\PqrCommentaries\PqrCommentary;
+use App\Socomir\PqrCommentaries\Repositories\PqrCommentaryRepository;
+use App\Socomir\PqrCommentaries\Repositories\Interfaces\PqrCommentaryRepositoryInterface;
+use App\Socomir\PqrCommentaries\Requests\CreatePqrCommentaryRequest;
+use App\Socomir\PqrCommentaries\Requests\UpdatePqrCommentaryRequest;
+use App\Socomir\PqrCommentaries\Transformations\PqrCommentaryTransformable;
+use App\Socomir\Pqrs\Repositories\Interfaces\PqrRepositoryInterface;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class CommentaryController extends Controller
+class PqrCommentaryController extends Controller
 {
-    use CommentaryTransformable;
+    use PqrCommentaryTransformable;
 
-    private $commentaryRepo;
-    private $customerRepo;
+    private $pqrcommentaryRepo;
+    private $pqrRepo;
 
     public function __construct(
-        CommentaryRepositoryInterface $commentaryRepository,
-        CustomerRepositoryInterface $customerRepository
+        PqrCommentaryRepositoryInterface $pqrcommentaryRepository,
+        PqrRepositoryInterface $pqrRepository
     ) {
-        $this->commentaryRepo = $commentaryRepository;
-        $this->customerRepo = $customerRepository;
+        $this->pqrcommentaryRepo = $pqrcommentaryRepository;
+        $this->pqrRepo = $pqrRepository;
     }
 
     /**
@@ -36,17 +36,17 @@ class CommentaryController extends Controller
      */
     public function index(Request $request)
     {
-        $list = $this->commentaryRepo->listCommentary('created_at', 'desc');
+        $list = $this->pqrcommentaryRepo->listPqrCommentary('created_at', 'desc');
 
         if ($request->has('q')) {
-            $list = $this->commentaryRepo->searchCommentary($request->input('q'));
+            $list = $this->pqrcommentaryRepo->searchPqrCommentary($request->input('q'));
         }
 
-        $commentaries = $list->map(function (Commentary $commentary) {
-            return $this->transformCommentary($commentary);
+        $pqrcommentaries = $list->map(function (PqrCommentary $pqrcommentary) {
+            return $this->transformPqrCommentary($pqrcommentary);
         })->all();
 
-        return view('admin.customerCommentaries.list', ['commentaries' => $this->commentaryRepo->paginateArrayResults($commentaries)]);
+        return view('admin.pqrCommentaries.list', ['pqrcommentaries' => $this->pqrcommentaryRepo->paginateArrayResults($pqrcommentaries)]);
     }
 
     /**
@@ -56,9 +56,9 @@ class CommentaryController extends Controller
      */
     public function create()
     {
-        $customers = $this->customerRepo->listCustomers();
-        return view('admin.customerCommentaries.create', [
-            'customers' => $customers,
+        $pqrs = $this->pqrRepo->listpqrs();
+        return view('admin.pqrCommentaries.create', [
+            'pqrs' => $pqrs,
             'user' => auth()->guard('employee')->user()
         ]);
     }
@@ -66,12 +66,12 @@ class CommentaryController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  CreateCommentaryRequest $request
+     * @param  CreatePqrCommentaryRequest $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CreateCommentaryRequest $request)
+    public function store(CreatePqrCommentaryRequest $request)
     {
-        $this->commentaryRepo->createCommentary($request->except('_token', '_method'));
+        $this->pqrcommentaryRepo->createPqrCommentary($request->except('_token', '_method'));
         $request->session()->flash('message', 'Creación Exitosa');
         return back()->with('message','Operation Successful !');
     }
@@ -84,7 +84,7 @@ class CommentaryController extends Controller
      */
     public function show(int $id)
     {
-        return view('admin.customerCommentaries.show', ['commentary' => $this->commentaryRepo->findCommentaryById($id)]);
+        return view('admin.pqrCommentaries.show', ['pqrcommentary' => $this->pqrcommentaryRepo->findPqrCommentaryById($id)]);
     }
 
     /**
@@ -96,33 +96,33 @@ class CommentaryController extends Controller
     public function edit(int $id)
     {
 
-        $commentary = $this->commentaryRepo->findCommentaryById($id);
-        $commentaryRepo = new CommentaryRepository($commentary);
-        $customer = $commentaryRepo->findCustomer();
+        $pqrcommentary = $this->pqrcommentaryRepo->findPqrCommentaryById($id);
+        $pqrcommentaryRepo = new PqrCommentaryRepository($pqrcommentary);
+        $pqr = $pqrcommentaryRepo->findPqr();
 
-        return view('admin.customerCommentaries.edit',  [
-            'commentary' => $commentary,
-            'customers' => $this->customerRepo->listCustomers(),
-            'customerId' => $customer->id
+        return view('admin.pqrCommentaries.edit',  [
+            'pqrcommentary' => $pqrcommentary,
+            'pqrs' => $this->pqrRepo->listPqrs(),
+            'pqrId' => $pqr->id
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  UpdateCommentaryRequest $request
+     * @param  UpdatePqrCommentaryRequest $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateCommentaryRequest $request, $id)
+    public function update(UpdatePqrCommentaryRequest $request, $id)
     {
-        $commentary = $this->commentaryRepo->findCommentaryById($id);
+        $pqrcommentary = $this->pqrcommentaryRepo->findPqrCommentaryById($id);
 
-        $update = new CommentaryRepository($commentary);
-        $update->updateCommentary($request->except('_method', '_token'));
+        $update = new PqrCommentaryRepository($pqrcommentary);
+        $update->updatePqrCommentary($request->except('_method', '_token'));
 
         $request->session()->flash('message', 'Actualización Exitosa!');
-        return redirect()->route('admin.customerCommentaries.edit', $id);
+        return redirect()->route('admin.pqrCommentaries.edit', $id);
     }
 
     /**
@@ -133,11 +133,11 @@ class CommentaryController extends Controller
      */
     public function destroy($id)
     {
-        $commentary = $this->commentaryRepo->findCommentaryById($id);
-        $delete = new CommentaryRepository($commentary);
-        $delete->deleteCommentary();
+        $pqrcommentary = $this->pqrcommentaryRepo->findPqrCommentaryById($id);
+        $delete = new PqrCommentaryRepository($pqrcommentary);
+        $delete->deletePqrCommentary();
 
         request()->session()->flash('message', 'Eliminado Satisfactoriamente');
-        return redirect()->route('admin.customerCommentaries.index');
+        return redirect()->route('admin.pqrCommentaries.index');
     }
 }

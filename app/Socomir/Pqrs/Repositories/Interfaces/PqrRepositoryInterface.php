@@ -22,8 +22,6 @@ interface PqrRepositoryInterface extends BaseRepositoryInterface
 
     public function deletePqr(): bool;
 
-    public function findOrders(): Collection;
-
     public function searchPqr(string $text): Collection;
 
     public function charge(int $amount, array $options);

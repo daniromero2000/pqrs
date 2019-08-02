@@ -2,13 +2,13 @@
 
 namespace App\Socomir\PqrCommentaries;
 
-use App\Socomir\Pqrs\Pqr;
+use App\Socomir\Pqrs\pqr;
 use App\Socomir\Provinces\Province;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Nicolaslopezj\Searchable\SearchableTrait;
 
-class Commentary extends Model
+class PqrCommentary extends Model
 {
     use SoftDeletes, SearchableTrait;
 
@@ -18,7 +18,7 @@ class Commentary extends Model
      * @var array
      */
     public $fillable = [
-        'Pqr_id',
+        'pqr_id',
         'commentary_1',
         'user',
         'status'
@@ -49,20 +49,13 @@ class Commentary extends Model
         return $this->belongsTo(Pqr::class);
     }
   
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function orders()
-    {
-        return $this->hasMany(Order::class);
-    }
-
+    
     /**
      * @param $term
      *
      * @return mixed
      */
-    public function searchCommentary($term)
+    public function searchPqrCommentary($term)
     {
         return self::search($term);
     }

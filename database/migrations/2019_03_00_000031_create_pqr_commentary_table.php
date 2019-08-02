@@ -13,7 +13,7 @@ class CreatePqrCommentaryTable extends Migration
      */
     public function up()
     {
-        Schema::create('pqrcommentaries', function (Blueprint $table) {
+        Schema::create('pqr_commentaries', function (Blueprint $table) {
             $table->increments('id');
             $table->string('commentary_1');
             $table->string('user');
@@ -32,6 +32,6 @@ class CreatePqrCommentaryTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pqrcommentaries');
+        Schema::dropIfExists('pqr_commentaries');
     }
 }
