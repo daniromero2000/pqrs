@@ -34,7 +34,6 @@
                                 value="{{ old('phone') }}" required>
                             @if($errors->has('phone')) <span class="help-block">
                                 <strong>{{ $errors->first('phone') }}</strong> </span> @endif</div>
-
                         <div class="form-group">
                             <label for="pqr" class="control-label">Tipo de PQR</label>
                             <div class="input-group">

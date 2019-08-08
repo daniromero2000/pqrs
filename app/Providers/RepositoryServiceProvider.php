@@ -23,6 +23,10 @@ use App\Socomir\PqrStatuses\Repositories\PqrStatusRepository;
 use App\Socomir\PqrStatuses\Repositories\Interfaces\PqrStatusRepositoryInterface;
 use App\Socomir\PqrCommentaries\Repositories\PqrCommentaryRepository;
 use App\Socomir\PqrCommentaries\Repositories\Interfaces\PqrCommentaryRepositoryInterface;
+use App\Socomir\Years\Repositories\YearRepository;
+use App\Socomir\Years\Repositories\Interfaces\YearRepositoryInterface;
+use App\Socomir\Finances\Repositories\Interfaces\FinanceRepositoryInterface;
+use App\Socomir\Finances\Repositories\FinanceRepository;
 use Illuminate\Support\ServiceProvider;
 
 class RepositoryServiceProvider extends ServiceProvider
@@ -35,6 +39,16 @@ class RepositoryServiceProvider extends ServiceProvider
             EmployeeRepository::class
         );
 
+        
+        $this->app->bind(
+            yearRepositoryInterface::class,
+            YearRepository::class
+        );
+
+        $this->app->bind(
+            FinanceRepositoryInterface::class,
+            FinanceRepository::class
+        );
 
         $this->app->bind(
             SubsidiaryRepositoryInterface::class,

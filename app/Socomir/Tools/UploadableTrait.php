@@ -34,7 +34,7 @@ trait UploadableTrait
      *
      * @return false|string
      */
-    public function storeFile(UploadedFile $file, $folder = 'products', $disk = 'public')
+    public function storeFile(UploadedFile $file, $folder = 'finances', $disk = 'public')
     {
         return $file->store($folder, ['disk' => $disk]);
     }

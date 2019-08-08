@@ -10,6 +10,53 @@ class EmployeesTableSeeder extends Seeder
 {
     public function run()
     {
+
+
+
+        /*Permisos productos*/
+        $createFinancePerm = factory(Permission::class)->create([
+            'name' => 'create-finance',
+            'display_name' => 'Crear Finanza'
+        ]);
+
+        $viewFinancePerm = factory(Permission::class)->create([
+            'name' => 'view-finance',
+            'display_name' => 'Ver Finanza'
+        ]);
+
+        $updateFinancePerm = factory(Permission::class)->create([
+            'name' => 'update-finance',
+            'display_name' => 'Actualizar Finanza'
+        ]);
+
+        $deleteFinancePerm = factory(Permission::class)->create([
+            'name' => 'delete-finance',
+            'display_name' => 'Borrar Finanza'
+        ]);
+
+        /*Permisos Categorias*/
+        $createYearPerm = factory(Permission::class)->create([
+            'name' => 'create-year',
+            'display_name' => 'Crear Año'
+        ]);
+
+        $viewYearPerm = factory(Permission::class)->create([
+            'name' => 'view-year',
+            'display_name' => 'Ver Año'
+        ]);
+
+        $updateYearPerm = factory(Permission::class)->create([
+            'name' => 'update-year',
+            'display_name' => 'Actualizar Año'
+        ]);
+
+        $deleteYearPerm = factory(Permission::class)->create([
+            'name' => 'delete-year',
+            'display_name' => 'Borrar Año'
+        ]);
+
+
+
         /*Permisos Clientes*/
         $deletePqrPerm = factory(Permission::class)->create([
             'name' => 'delete-pqr',
@@ -103,6 +150,16 @@ class EmployeesTableSeeder extends Seeder
         ]);
 
         $roleSuperRepo = new RoleRepository($super);
+        /*Permisos Finanzas*/
+        $roleSuperRepo->attachToPermission($createFinancePerm);
+        $roleSuperRepo->attachToPermission($viewFinancePerm);
+        $roleSuperRepo->attachToPermission($updateFinancePerm);
+        $roleSuperRepo->attachToPermission($deleteFinancePerm);
+        /*Permisos años*/
+        $roleSuperRepo->attachToPermission($createYearPerm);
+        $roleSuperRepo->attachToPermission($viewYearPerm);
+        $roleSuperRepo->attachToPermission($updateYearPerm);
+        $roleSuperRepo->attachToPermission($deleteYearPerm);
         /*Permisos Clientes*/
         $roleSuperRepo->attachToPermission($deletePqrPerm);
         $roleSuperRepo->attachToPermission($createPqrPerm);
@@ -136,6 +193,16 @@ class EmployeesTableSeeder extends Seeder
         ]);
 
         $roleAdminRepo = new RoleRepository($admin);
+        /*Permisos Finanzas*/
+        $roleAdminRepo->attachToPermission($createFinancePerm);
+        $roleAdminRepo->attachToPermission($viewFinancePerm);
+        $roleAdminRepo->attachToPermission($updateFinancePerm);
+        $roleAdminRepo->attachToPermission($deleteFinancePerm);
+        /*Permisos años*/
+        $roleAdminRepo->attachToPermission($createYearPerm);
+        $roleAdminRepo->attachToPermission($viewYearPerm);
+        $roleAdminRepo->attachToPermission($updateYearPerm);
+        $roleAdminRepo->attachToPermission($deleteYearPerm);
         /*Permisos Empleados*/
         $roleAdminRepo->attachToPermission($deleteEmployeePerm);
         $roleAdminRepo->attachToPermission($createEmployeePerm);

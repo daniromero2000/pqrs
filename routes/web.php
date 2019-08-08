@@ -37,6 +37,18 @@ Route::group(['prefix' => 'admin', 'middleware' => ['employee'], 'as' => 'admin.
                 Route::resource('pqr-statuses', 'PqrStatusController');
             });
 
+            Route::namespace('Years')->group(function () {
+                Route::resource('years', 'YearController');
+                Route::get('remove-image-year', 'YearController@removeImage')->name('year.remove.image');
+            });
+
+
+            Route::namespace('Finances')->group(function () {
+                Route::resource('finances', 'FinanceController');
+                Route::get('remove-image-finance', 'FinanceController@removeThumbnail')->name('finance.remove.image');
+                Route::get('remove-image-thumb', 'FinanceController@removeThumbnail')->name('finance.remove.thumb');
+            });
+
             Route::resource('pqrCommentaries', 'PqrCommentaries\PqrCommentaryController');
             Route::resource('countries', 'Countries\CountryController');
             Route::resource('countries.provinces', 'Provinces\ProvinceController');

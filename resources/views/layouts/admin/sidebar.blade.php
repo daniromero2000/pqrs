@@ -43,58 +43,89 @@
                 @endif
 
 
-                @if($user->hasRole('admin|superadmin|marketing|operativo'))
-            <li class="header">ADMINISTRACION</li>
-            @if($user->hasRole('admin|superadmin'))<li
-                class="treeview @if(request()->segment(2) == 'employees' || request()->segment(2) == 'roles' || request()->segment(2) == 'permissions') active @endif">
-                <a href="#"> <i class="fa fa-user"> </i> <span>Empleados</span> <span class="pull-right-container"> <i
-                            class="fa fa-angle-left pull-right"> </i> </span> </a>
-                <ul class="treeview-menu">
-                    <li><a href="{{ route('admin.employees.index') }}"><i class="fa fa-circle-o"> </i> Ver Empleados</a>
-                    </li>
-                    <li><a href="{{ route('admin.employees.create') }}"><i class="fa fa-plus"> </i> Crear Empleado</a>
-                    </li>
-                    @if($user->hasRole('superadmin'))<li
-                        class="treeview @if(request()->segment(2) == 'roles') active @endif"> <a href="#"> <i
-                                class="fa fa-star-o"> </i> <span>Roles</span> <span class="pull-right-container"> <i
-                                    class="fa fa-angle-left pull-right"> </i> </span> </a>
-                        <ul class="treeview-menu">
-                            <li><a href="{{ route('admin.roles.index') }}"><i class="fa fa-circle-o"> </i> Ver Roles</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="treeview @if(request()->segment(2) == 'permissions') active @endif"> <a href="#"> <i
-                                class="fa fa-star-o"> </i> <span>Permisos</span> <span class="pull-right-container"> <i
-                                    class="fa fa-angle-left pull-right"> </i> </span> </a>
-                        <ul class="treeview-menu">
-                            <li><a href="{{ route('admin.permissions.index') }}"><i class="fa fa-circle-o"> </i> Ver
-                                    Permisos</a></li>
-                        </ul>
-                    </li> @endif
-                </ul>
-            </li>
 
-            @endif @if($user->hasRole('admin|superadmin|marketing|'))<li
-                class="treeview @if(request()->segment(2) == 'countries' || request()->segment(2) == 'provinces') active @endif">
-                <a href="#"> <i class="fa fa-flag"> </i> <span>Ciudades</span> <span class="pull-right-container"> <i
-                            class="fa fa-angle-left pull-right"> </i> </span> </a>
-                <ul class="treeview-menu">
-                    <li><a href="{{ route('admin.countries.index') }}"><i class="fa fa-circle-o"> </i> Ver Ciudades</a>
-                    </li>
-                </ul>
-            </li> @endif @if($user->hasRole('admin|superadmin|marketing|operativo'))<li
-                class="treeview @if(request()->segment(2) == 'subsidiaries') active @endif"> <a href="#"> <i
-                        class="fa fa-map-marker"> </i> <span>Sucursales</span> <span class="pull-right-container"> <i
-                            class="fa fa-angle-left pull-right"> </i> </span> </a>
-                <ul class="treeview-menu">
-                    <li><a href="{{ route('admin.subsidiaries.index') }}"><i class="fa fa-circle-o"> </i> Ver
-                            Sucursales</a>
-                    </li> @if($user->hasRole('admin|superadmin|marketing'))<li><a
-                            href="{{ route('admin.subsidiaries.create') }}"><i class="fa fa-plus"> </i> Crear
-                            Sucursal</a>
-                    </li> @endif
-                </ul>
-            </li> @endif @endif
+                @if($user->hasRole('operativo|superadmin|marketing'))
+            <li class="header">GESTION INFO FINANCIERA
+            </li>
+            <li
+                class="treeview @if(request()->segment(2) == 'finances' || request()->segment(2) == 'attributes') active @endif">
+                <a href="#"> <i class="fa fa-gift"> </i> <span>INFO FINANCIERA</span> <span
+                        class="pull-right-container"> <i class="fa fa-angle-left pull-right"> </i> </span> </a>
+                <ul class="treeview-menu"> @if($user->hasPermission('view-finance'))<li><a
+                            href="{{ route('admin.finances.index') }}"><i class="fa fa-circle-o"> </i> Ver
+                            Info Financiera</a>
+                    </li>@endif @if($user->hasPermission('create-finance'))<li><a
+                            href="{{ route('admin.finances.create') }}"><i class="fa fa-plus"> </i> Crear Info
+                            Financiera</a>
+                    </li>@endif
+            </li> @endif
+        </ul>
+        </li> @if($user->hasRole('superadmin|marketing'))<li
+            class="treeview @if(request()->segment(2) == 'years') active @endif"> <a href="#"> <i class="fa fa-sitemap">
+                </i> <span>AÑOS INFO FINANCIERA</span> <span class="pull-right-container"> <i
+                        class="fa fa-angle-left pull-right"> </i> </span> </a>
+            <ul class="treeview-menu"> @if($user->hasPermission('view-year'))<li><a
+                        href="{{ route('admin.years.index') }}"><i class="fa fa-circle-o"> </i> Ver Años Info
+                        Financiera</a>
+                </li>@endif @if($user->hasPermission('create-year'))<li><a href="{{ route('admin.years.create') }}"><i
+                            class="fa fa-plus"> </i> Crear Año Financiero</a>
+                </li>@endif</ul>
+        </li> @endif
+
+
+
+        @if($user->hasRole('admin|superadmin|marketing|operativo'))
+        <li class="header">ADMINISTRACIÓN</li>
+        @if($user->hasRole('admin|superadmin'))<li
+            class="treeview @if(request()->segment(2) == 'employees' || request()->segment(2) == 'roles' || request()->segment(2) == 'permissions') active @endif">
+            <a href="#"> <i class="fa fa-user"> </i> <span>Empleados</span> <span class="pull-right-container"> <i
+                        class="fa fa-angle-left pull-right"> </i> </span> </a>
+            <ul class="treeview-menu">
+                <li><a href="{{ route('admin.employees.index') }}"><i class="fa fa-circle-o"> </i> Ver Empleados</a>
+                </li>
+                <li><a href="{{ route('admin.employees.create') }}"><i class="fa fa-plus"> </i> Crear Empleado</a>
+                </li>
+                @if($user->hasRole('superadmin'))<li
+                    class="treeview @if(request()->segment(2) == 'roles') active @endif"> <a href="#"> <i
+                            class="fa fa-star-o"> </i> <span>Roles</span> <span class="pull-right-container"> <i
+                                class="fa fa-angle-left pull-right"> </i> </span> </a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ route('admin.roles.index') }}"><i class="fa fa-circle-o"> </i> Ver Roles</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="treeview @if(request()->segment(2) == 'permissions') active @endif"> <a href="#"> <i
+                            class="fa fa-star-o"> </i> <span>Permisos</span> <span class="pull-right-container"> <i
+                                class="fa fa-angle-left pull-right"> </i> </span> </a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ route('admin.permissions.index') }}"><i class="fa fa-circle-o"> </i> Ver
+                                Permisos</a></li>
+                    </ul>
+                </li> @endif
+            </ul>
+        </li>
+
+        @endif @if($user->hasRole('admin|superadmin|marketing|'))<li
+            class="treeview @if(request()->segment(2) == 'countries' || request()->segment(2) == 'provinces') active @endif">
+            <a href="#"> <i class="fa fa-flag"> </i> <span>Ciudades</span> <span class="pull-right-container"> <i
+                        class="fa fa-angle-left pull-right"> </i> </span> </a>
+            <ul class="treeview-menu">
+                <li><a href="{{ route('admin.countries.index') }}"><i class="fa fa-circle-o"> </i> Ver Ciudades</a>
+                </li>
+            </ul>
+        </li> @endif @if($user->hasRole('admin|superadmin|marketing|operativo'))<li
+            class="treeview @if(request()->segment(2) == 'subsidiaries') active @endif"> <a href="#"> <i
+                    class="fa fa-map-marker"> </i> <span>Sucursales</span> <span class="pull-right-container"> <i
+                        class="fa fa-angle-left pull-right"> </i> </span> </a>
+            <ul class="treeview-menu">
+                <li><a href="{{ route('admin.subsidiaries.index') }}"><i class="fa fa-circle-o"> </i> Ver
+                        Sucursales</a>
+                </li> @if($user->hasRole('admin|superadmin|marketing'))<li><a
+                        href="{{ route('admin.subsidiaries.create') }}"><i class="fa fa-plus"> </i> Crear
+                        Sucursal</a>
+                </li> @endif
+            </ul>
+        </li> @endif @endif
         </ul>
     </section>
 </aside>
