@@ -41,7 +41,7 @@ class RepositoryServiceProvider extends ServiceProvider
 
         
         $this->app->bind(
-            yearRepositoryInterface::class,
+            YearRepositoryInterface::class,
             YearRepository::class
         );
 

@@ -13,21 +13,15 @@
                         <th scope="col">Cover</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Descripción</th>
-                        <th scope="col">Cantidad</th>
-                        <th scope="col">Precio</th>
-                        <th scope="col">Sucursal</th>
-                        <th scope="col">Estado</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td> <img src="{{ asset("storage/$product->cover") }}" alt=""
+                        <td> <img src="{{ asset("storage/$finance->cover") }}" alt=""
                                 class="img-responsive img-thumbnail" width="100">
                         </td>
                         <td>{{ $finance->name }}</td>
                         <td>{{ $finance->description }}</td>
-                        <td>{{ $finance->quantity }}</td>
-                        <td>{{ config('cart.currency_symbol') }} {{ number_format($finance->price)}}</td>
                     </tr>
                 </tbody>
             </table>

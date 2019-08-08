@@ -4,7 +4,6 @@ namespace App\Socomir\Subsidiaries\Repositories\Interfaces;
 
 use Jsdecena\Baserepo\BaseRepositoryInterface;
 use App\Socomir\Subsidiaries\Subsidiary;
-use App\Socomir\Products\Product;
 use Illuminate\Support\Collection;
 use App\Socomir\Subsidiaries\SubsidiaryRepository;
 

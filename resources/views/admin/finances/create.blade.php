@@ -34,12 +34,10 @@
                         </div>
                         <small class="text-warning">El archivo financiero es necesario</small>
                     </div>
-                    
+
                     <input type="hidden" name="quantity" id="quantity" placeholder="Cantidad" class="form-control"
                         value="1" required>
 
-
-                    <input id="product_status_id" type="hidden" class="form-control" name="product_status_id" value="2">
                     <input type="hidden" name="status" id="status" class="form-control" value="1">
                 </div>
                 <div class="col-md-4">

@@ -6,15 +6,10 @@ use App\Socomir\Subsidiaries\Repositories\SubsidiaryRepository;
 use App\Socomir\Subsidiaries\Repositories\Interfaces\SubsidiaryRepositoryInterface;
 use App\Socomir\Subsidiaries\Requests\CreateSubsidiaryRequest;
 use App\Socomir\Subsidiaries\Requests\UpdateSubsidiaryRequest;
-use App\Socomir\Products\Transformations\ProductTransformable;
 use App\Socomir\Cities\City;
 use App\Socomir\Cities\Repositories\Interfaces\CityRepositoryInterface;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
-use App\Socomir\ProductStatuses\ProductStatus;
-use App\Socomir\ProductStatuses\Repositories\Interfaces\ProductStatusRepositoryInterface;
-use App\Socomir\ProductStatuses\Repositories\ProductStatusRepository;
 
 class SubsidiaryController extends Controller
 {
@@ -96,10 +91,8 @@ class SubsidiaryController extends Controller
 
 
         return view('admin.subsidiaries.show', [
-            'statuses' => $this->productStatusRepo->listProductStatuses(),
             'subsidiary' => $subsidiary,
             'subsidiaries' => $subsidiary->children,
-
             'user' =>  $user
         ]);
     }

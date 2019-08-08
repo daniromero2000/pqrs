@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Socomir\Finance\Requests;
+namespace App\Socomir\Finances\Requests;
 
 use App\Socomir\Base\BaseFormRequest;
 use Illuminate\Validation\Rule;
@@ -17,8 +17,6 @@ class UpdateFinanceRequest extends BaseFormRequest
         return [
             'sku' => ['required'],
             'name' => ['required', Rule::unique('finances')->ignore($this->segment(3))],
-            'quantity' => ['required', 'integer'],
-            'price' => ['required']
         ];
     }
 }

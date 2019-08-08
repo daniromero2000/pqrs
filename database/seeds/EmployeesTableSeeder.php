@@ -13,7 +13,7 @@ class EmployeesTableSeeder extends Seeder
 
 
 
-        /*Permisos productos*/
+        /*Permisos Finances*/
         $createFinancePerm = factory(Permission::class)->create([
             'name' => 'create-finance',
             'display_name' => 'Crear Finanza'

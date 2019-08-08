@@ -2,7 +2,6 @@
 
 namespace App\Socomir\Subsidiaries;
 
-
 use App\Socomir\Cities\City;
 use Kalnoy\Nestedset\NodeTrait;
 use Illuminate\Database\Eloquent\Model;
@@ -31,11 +30,7 @@ class Subsidiary extends Model
      */
     protected $hidden = [];
 
-    public function products()
-    {
-        return $this->belongsToMany(Product::class);
-    }
-
+    
     public function city()
     {
         return $this->belongsTo(City::class);

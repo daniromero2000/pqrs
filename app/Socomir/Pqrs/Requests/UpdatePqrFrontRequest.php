@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Shop\Pqrs\Requests;
+namespace App\Socomir\Pqrs\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;

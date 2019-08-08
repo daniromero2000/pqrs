@@ -24,10 +24,10 @@
                 </tbody>
             </table>
         </div>
-        @if(!$products->isEmpty())
+        @if(!$finances->isEmpty())
         <div class="box-body">
             <h2>Productos</h2>
-    @include('admin.shared.products', ['products' => $products])
+    @include('admin.shared.finances', ['finances' => $finances])
         </div>
         @endif
         <!-- /.box-body -->

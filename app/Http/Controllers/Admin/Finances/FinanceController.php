@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin\Finances;
 
+
 use App\Socomir\Years\Repositories\Interfaces\YearRepositoryInterface;
 use App\Socomir\Finances\Exceptions\FinanceInvalidArgumentException;
 use App\Socomir\Finances\Exceptions\FinanceNotFoundException;
@@ -41,12 +42,11 @@ class FinanceController extends Controller
      * @param YearRepositoryInterface $yearRepository
      */
     public function __construct(
-        FinanceRepositoryInterface $financeRepository,
-        YearRepositoryInterface $yearRepository
+        YearRepositoryInterface $yearRepository,
+        FinanceRepositoryInterface $financeRepository
     ) {
-        $this->yearRepo = $financeRepository;
+        $this->financeRepo = $financeRepository;
         $this->yearRepo = $yearRepository;
-
         $this->middleware(['permission:create-finance, guard:employee'], ['only' => ['create', 'store']]);
         $this->middleware(['permission:update-finance, guard:employee'], ['only' => ['edit', 'update']]);
         $this->middleware(['permission:delete-finance, guard:employee'], ['only' => ['destroy']]);
@@ -86,7 +86,6 @@ class FinanceController extends Controller
     public function create()
     {
         $years = $this->yearRepo->listYears('year', 'asc')->where('parent_id', 1);
-
         return view('admin.finances.create', [
             'years' => $years,
             'finance' => new Finance
@@ -103,7 +102,6 @@ class FinanceController extends Controller
     public function store(CreateFinanceRequest $request)
     {
         $data = $request->except('_token', '_method');
-        $data['slug'] = str_slug($request->input('name'));
 
         if ($request->hasFile('cover') && $request->file('cover') instanceof UploadedFile) {
             $data['cover'] = $this->financeRepo->saveCoverImage($request->file('cover'));
@@ -140,9 +138,8 @@ class FinanceController extends Controller
      */
     public function show(int $id)
     {
-
         $finance = $this->financeRepo->findFinanceById($id);
-        return view('admin.finances.show', compact('finance'));
+        return view('admin.finances.show', [], compact('finance'));
     }
 
     /**
@@ -156,18 +153,12 @@ class FinanceController extends Controller
     {
         $finance = $this->financeRepo->findFinanceById($id);
 
-        if (request()->has('delete') && request()->has('pa')) {
-            request()->session()->flash('message', 'Eliminado Satisfactoriamente');
-            return redirect()->route('admin.finances.edit', [$finance->id, 'combination' => 1]);
-        }
-
-        $years = $this->yearRepo->listYears('name', 'asc')
+        $years = $this->yearRepo->listYears('year', 'asc')
             ->where('parent_id', 1);
 
         return view('admin.finances.edit', [
             'finance' => $finance,
-            'images' => $finance->images()->get(['src']),
-            'yearrs' => $years,
+            'years' => $years,
             'selectedIdsC' => $finance->years()->pluck('year_id')->all(),
         ]);
     }
@@ -186,24 +177,15 @@ class FinanceController extends Controller
         $finance = $this->financeRepo->findFinanceById($id);
         $financeRepo = new FinanceRepository($finance);
 
-
         $data = $request->except(
             'years',
             '_token',
             '_method',
             'default',
-            'image',
-        );
-
-
-        $data['slug'] = str_slug($request->input('name'));
+                    );
 
         if ($request->hasFile('cover')) {
             $data['cover'] = $financeRepo->saveCoverImage($request->file('cover'));
-        }
-
-        if ($request->hasFile('image')) {
-            $financeRepo->saveFinanceImages(collect($request->file('image')));
         }
 
         if ($request->has('years')) {
@@ -236,25 +218,6 @@ class FinanceController extends Controller
         return redirect()->route('admin.finances.index')->with('message', 'Eliminado Satisfactoriamente');
     }
 
-    /**
-     * @param Request $request
-     *
-     * @return \Illuminate\Http\RedirectResponse
-     */
-    public function removeImage(Request $request)
-    {
-        $this->financeRepo->deleteFile($request->only('finance', 'image'), 'uploads');
-        return redirect()->back()->with('message', 'Imagen Eliminada Satisfactoriamente');
-    }
-
-    /**
-     * @param Request $request
-     *
-     * @return \Illuminate\Http\RedirectResponse
-     */
-    public function removeThumbnail(Request $request)
-    {
-        $this->financeRepo->deleteThumb($request->input('src'));
-        return redirect()->back()->with('message', 'Imagen Eliminada Satisfactoriamente');
-    }
+   
+ 
 }

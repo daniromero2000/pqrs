@@ -214,7 +214,7 @@ class FinanceRepository extends BaseRepository implements FinanceRepositoryInter
      */
     public function saveCoverImage(UploadedFile $file): string
     {
-dd('entre a guardar imagen');
+
 
         return $file->store('finances', ['disk' => 'public']);
     }

@@ -7,13 +7,9 @@
 
     <div class="box">
         <div class="box-body">
-            <h1>Productos en Venta</h1>
-            <div class="row">
-                <div class="col-md-6">
-                    @include('layouts.search', ['route' => route('admin.finances.index')])
-                </div>
-            </div>
-            @if(!$products->isEmpty())
+            <h1>Estados Financieros</h1>
+            
+            @if(!$finances->isEmpty())
             @include('admin.shared.finances') {{ $finances->links()
             }}
         </div>

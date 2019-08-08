@@ -17,7 +17,7 @@ class FinanceImage extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function product()
+    public function finance()
     {
         return $this->belongsTo(Finance::class);
     }

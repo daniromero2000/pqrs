@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Socomir\Products\Exceptions;
+namespace App\Socomir\Finances\Exceptions;
 
 class FinanceUpdateErrorException extends \Exception
 {
