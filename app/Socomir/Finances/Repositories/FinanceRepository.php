@@ -123,7 +123,7 @@ class FinanceRepository extends BaseRepository implements FinanceRepositoryInter
     }
 
     /**
-     * Detach the categories
+     * Detach the years
      */
     public function detachYears()
     {
@@ -131,7 +131,7 @@ class FinanceRepository extends BaseRepository implements FinanceRepositoryInter
     }
 
     /**
-     * Return the categories which the finance is associated with
+     * Return the years which the finance is associated with
      *
      * @return Collection
      */
@@ -141,7 +141,7 @@ class FinanceRepository extends BaseRepository implements FinanceRepositoryInter
     }
 
     /**
-     * Sync the categories
+     * Sync the years
      *
      * @param array $params
      */

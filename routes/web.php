@@ -141,5 +141,8 @@ Route::namespace('Front')->group(function () {
             Route::resource('directorio', 'DirectorioController');
             Route::get('directorio', 'DirectorioController@directorio')->name('directorio');
         });
+
+        Route::get("year/{slug}", 'YearController@getYear')->name('front.year.slug');
+        Route::get("{finance}", 'FinanceController@show')->name('front.get.finance');
     });
 });

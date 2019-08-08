@@ -15,7 +15,7 @@ class CreateFinanceRequest extends BaseFormRequest
     {
         return [
             'name' => ['required', 'unique:finances'],
-            'cover' => ['required', 'file', 'image:png,jpeg,jpg,gif']
+            'cover' => ['required', 'file', 'mimes:pdf']
         ];
     }
 }
