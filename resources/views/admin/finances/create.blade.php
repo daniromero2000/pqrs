@@ -10,12 +10,12 @@
                 <div class="col-md-8">
                     <h1>Información Financiera</h1>
                     <div class="form-group">
-                        <label for="name">Nombre <span class="text-danger">*</span></label>
+                        <label for="name">Mes <span class="text-danger">*</span></label>
                         <div class="input-group">
                             <div class="input-group-addon">
                                 <i class="fa fa-at"></i>
                             </div>
-                            <input type="text" name="name" id="name" placeholder="Nombre" class="form-control"
+                            <input type="text" name="name" id="name" placeholder="Mes" class="form-control"
                                 value="{{ old('name') }}" required>
                         </div>
                     </div>
@@ -25,7 +25,7 @@
                             placeholder="Descripción" required>{{ old('description') }}</textarea>
                     </div>
                     <div class="form-group">
-                        <label for="cover">Imagen <span class="text-danger">*</span></label>
+                        <label for="cover">Archivo PDF <span class="text-danger">*</span></label>
                         <div class="input-group">
                             <div class="input-group-addon">
                                 <i class="fa fa-picture-o"></i>

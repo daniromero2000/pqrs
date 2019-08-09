@@ -7,11 +7,12 @@
     @if($pqrStatuses)
     <div class="box">
         <div class="box-body">
-            <h1>Estados Cientes</h1>
+            <h1>Estados PQRS</h1>
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Nombre</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Color</th>
                         <th scope="col">Opciones</th>
                     </tr>
                 </thead>

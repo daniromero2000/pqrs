@@ -7,7 +7,7 @@
     @if($year)
     <div class="box">
         @if(!$years->isEmpty())
-            <div class="box-body">
+        <div class="box-body">
             <h2>Años Financieros</h2>
             <table class="table">
                 <thead>

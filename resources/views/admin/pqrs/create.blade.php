@@ -8,7 +8,7 @@
             <div class="box-body">
                 {{ csrf_field() }}
                 <div class="form-group">
-                    <label for="name">Nombre <span class="text-danger">*</span></label>
+                    <label for="name">Nombre Usuario<span class="text-danger">*</span></label>
                     <div class="input-group">
                         <div class="input-group-addon">
                             <i class="fa fa-user"></i>
