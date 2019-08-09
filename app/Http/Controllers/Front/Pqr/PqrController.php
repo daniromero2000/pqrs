@@ -228,7 +228,7 @@ class PqrController extends Controller
         $update->updatePqr($data);
 
         $request->session()->flash('message', 'Asignación de clave exitosa');
-        return redirect()->route('compraventaOnline');
+        return redirect()->route('home');
     }
 
 

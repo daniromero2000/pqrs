@@ -184,7 +184,7 @@ class EmployeesTableSeeder extends Seeder
 
 
         $employee = factory(Employee::class)->create([
-            'email' => 'gerenciacoandes@hotmail.com'
+            'email' => 'carlo.villarreal@lagobo.com'
         ]);
 
         $admin = factory(Role::class)->create([
