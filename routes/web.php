@@ -42,7 +42,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['employee'], 'as' => 'admin.
                 Route::get('remove-image-year', 'YearController@removeImage')->name('year.remove.image');
             });
 
-
             Route::namespace('Finances')->group(function () {
                 Route::resource('finances', 'FinanceController');
                 Route::get('remove-image-finance', 'FinanceController@removeThumbnail')->name('finance.remove.image');
@@ -71,12 +70,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['employee'], 'as' => 'admin.
  */
 Auth::routes();
 Route::namespace('Auth')->group(function () { });
-
 Route::namespace('Front')->group(function () {
     Route::get('/', 'HomeController@index')->name('home');
-
     Route::group(['prefix' => 'front'], function () {
-
         Route::namespace('About')->group(function () {
             Route::resource('about', 'AboutController');
             Route::get('about', 'AboutController@about')->name('about');

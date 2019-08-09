@@ -2495,9 +2495,9 @@ hr.loginstyle {
 
 
 .form-controlPqrs {
-border-left: none !important;
-border-right: none !important;
-border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
 }
 
 
@@ -4721,5 +4721,31 @@ BIG DESKTOP VERSION
         color: #ffffff !important;
         font-size: 21.07px !important;
     }
-}
 
+
+
+    /* ************************
+BreadCrumb
+************************** */
+
+    .breadcrumb {
+        padding: 0px !important;
+        margin: 0px !important;
+        background-color: #ffffff !important;
+    }
+
+    .breadcrumb li a {
+        font-size: 14px !important;
+    }
+
+    .divider {
+        font-size: 14px !important;
+    }
+
+    .breadactive {
+        font-size: 14px !important;
+        margin-top: 5px;
+    }
+
+
+}

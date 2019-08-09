@@ -7,19 +7,9 @@
         <form action="{{ route('admin.years.store') }}" method="post" class="form" enctype="multipart/form-data">
             <div class="box-body">
                 {{ csrf_field() }}
-                <div class="form-group hidden">
-                    <label for="parent">Año Padre <span class="text-danger">*</span></label>
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <i class="fa fa-sitemap"></i>
-                        </div>
-                        <select name="parent" id="parent" class="form-control select2">
-                            @foreach($years as $year)
-                            <option value="{{ $year->id }}">{{ $year->year }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                </div>
+               
+                <input type="hidden" name="parent" id="parent" class="form-control" value="1">
+
                 <div class="form-group">
                     <label for="year">Año <span class="text-danger">*</span></label>
                     <div class="input-group">

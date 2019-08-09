@@ -15,6 +15,7 @@ class CreateFinancesTable extends Migration
     {
         Schema::create('finances', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('slug');
             $table->string('name');
             $table->text('description')->nullable();
             $table->string('cover')->nullable();

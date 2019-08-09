@@ -107,6 +107,8 @@ class FinanceController extends Controller
             $data['cover'] = $this->financeRepo->saveCoverImage($request->file('cover'));
         }
 
+        $data['slug'] = str_slug($request->input('name'));
+
         $finance = $this->financeRepo->createFinance($data);
 
         $financeRepo = new FinanceRepository($finance);
