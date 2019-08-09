@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
-        content="Somos una empresa con 78 años de Experiencia, recibimos una amplia línea de productos en Compraventa, ven y conoce nuestros servicio">
+        content="">
     <meta name="subject" content="Socomir">
     <meta name="copyright" content="Socomir">
     <meta name="language" content="ES">
-    <meta name="classification" content="PawnShop Business">
+    <meta name="classification" content="">
     <meta name="author" content="Socomir">
     <meta http-equiv="refresh" content="500">
-    <title>Socomir</title>
+    <title>@if($pqrSCCount>0) ({{ $pqrSCCount }})@endif Socomir</title>
     <link href="{{ asset('css/normalizeMIT.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/admin.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap3.min.css') }}">

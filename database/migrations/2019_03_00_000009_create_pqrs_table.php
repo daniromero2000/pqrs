@@ -17,7 +17,7 @@ class CreatePqrsTable extends Migration
             $table->increments('id');
             $table->string('cedula')->nullable()->index();
             $table->string('name');
-            $table->string('email')->unique()->index();
+            $table->string('email');
             $table->string('lead')->nullable();
             $table->string('phone')->nullable();
             $table->string('pqr');

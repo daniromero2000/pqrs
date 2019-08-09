@@ -72,7 +72,7 @@
                             @if($errors->has('mensaje')) <span class="help-block">
                                 <strong>{{ $errors->first('mensaje') }}</strong> </span> @endif</div>
                         <div class="form-group hidden"> <input id="pqr_status_id" type="text" class="form-control"
-                                name="pqr_status_id" value="6"></div>
+                                name="pqr_status_id" value="3"></div>
                         <div class="form-group hidden"> <label for="lead" class="col-md-4 control-label">lead</label>
                             <input id="lead" type="text" class="form-control" name="lead" value="Registro"></div>
                         <input type="hidden" name="status" id="status" class="form-control" value="1">
