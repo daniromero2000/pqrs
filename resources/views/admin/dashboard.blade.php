@@ -18,14 +18,9 @@
                         <!-- --></i><!-- --></button>
             </div>
         </div>
-
     </div>
 </section>
 <section class="content">
-    
-
-    
-
 </section>
 <!-- /.content -->
 @endsection
