@@ -20,10 +20,23 @@
             @if(isset($year))<li><a href="{{ route('front.year.slug', $year->slug) }}">{{ $year->year }}</a><span
                     class="divider">/</span></li> @endif
         </ul>
+
+
+
+
         <div class="container-fluid d-flex justify-content-center d-flex align-items-center d-xl-none top-buffer">
             <button type="button" id="sidebarCollapse" class="btn btn-outline-danger btn-sm"> <i class="fa fa-gift">
                     Info Financiera</i> <span>Cerrar</span> </button></div>
         <div class="row d-flex justify-content-center top-buffer">
         </div> @yield('content1')
+
+        <div id="bannerInicial" class="container-fluid bottom-buffer">
+            <div class="row">
+                <div
+                    class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 side-nopadding d-flex justify-content-center">
+                    <img class="img-fluid imgBanner" src="{{asset('/img/BANNER-11.png')}}" alt="Crédito para todos">
+                </div>
+            </div>
+        </div>
     </div>
 </div>
