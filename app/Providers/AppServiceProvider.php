@@ -21,8 +21,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         $pqrSCCount = Pqr::where('pqr_status_id', 3)->where('status', 1)->count();
-        Schema::defaultStringLength(191);
         View::share('pqrSCCount', $pqrSCCount);
+
+        Schema::defaultStringLength(191);
     }
 
     /**

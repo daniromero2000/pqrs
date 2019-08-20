@@ -22,6 +22,8 @@ $factory->define(Employee::class, function (Faker\Generator $faker) {
         'email' => $faker->unique()->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
-        'status' => 1
+        'status' => 1, 
+        'city' => 'Bogotá'
+
     ];
 });

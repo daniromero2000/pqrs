@@ -18,6 +18,7 @@ class CreateEmployeesTable extends Migration
             $table->string('name');
             $table->string('email')->unique()->index();
             $table->string('password');
+            $table->string('city');
             $table->integer('status')->default(1);
             $table->softDeletes();
             $table->rememberToken();
