@@ -108,6 +108,12 @@ return [
             'table' => 'password_resets',
             'expire' => 60,
         ],
+
+        'employee' => [
+            'provider' => 'employee',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
     ],
 
 ];
