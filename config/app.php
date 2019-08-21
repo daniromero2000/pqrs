@@ -161,8 +161,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Laratrust\LaratrustServiceProvider::class,
-
+       
 
         /*
          * Package Service Providers...

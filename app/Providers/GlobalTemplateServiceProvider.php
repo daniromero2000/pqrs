@@ -19,7 +19,14 @@ class GlobalTemplateServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-       
+        view()->composer([
+            'layouts.admin.app',
+            'layouts.admin.sidebar',
+            'admin.shared.finances',
+        ], function ($view) {
+            $view->with('admin', Auth::guard('employee')->user());
+        });
+
     }
      
 }
