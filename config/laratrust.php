@@ -13,7 +13,6 @@ use App\Socomir\Permissions\Permission;
 use App\Socomir\Roles\Role;
 use App\Socomir\Teams\Team;
 
-
 return [
     /*
     |--------------------------------------------------------------------------
