@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Socomir\Admins\Requests;
+namespace App\Model\Admins\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -24,9 +24,9 @@ class CreateEmployeeRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required'],
-            'email' => ['required', 'email', 'unique:employees'],
-            'password' => ['required', 'min:8'],
+            'employeeName' => ['required'],
+            'employeeEmail' => ['required', 'employeeEmail', 'unique:employees'],
+            'employeePassword' => ['required', 'min:8'],
             'role' => ['required']
         ];
     }

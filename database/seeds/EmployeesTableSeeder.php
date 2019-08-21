@@ -62,7 +62,7 @@ class EmployeesTableSeeder extends Seeder
 
         /*Creacion Usuario Super Admin Desarrollo*/
         $employee = factory(Employee::class)->create([
-            'email' => 'desarrolladorcoandes@standard.com.co'
+            'employeeEmail' => 'desarrolladorcoandes@standard.com.co'
         ]);
 
         $super = factory(Role::class)->create([
@@ -88,7 +88,7 @@ class EmployeesTableSeeder extends Seeder
 
 
         $employee = factory(Employee::class)->create([
-            'email' => 'carlo.villarreal@lagobo.com'
+            'employeeEmail' => 'carlo.villarreal@lagobo.com'
         ]);
 
         $admin = factory(Role::class)->create([
@@ -109,11 +109,9 @@ class EmployeesTableSeeder extends Seeder
         $employee->roles()->save($admin);
 
         $employee = factory(Employee::class)->create([
-            'email' => 'employee@company.com'
+            'employeeEmail' => 'employee@company.com'
         ]);
 
-
-        
         $operativo = factory(Role::class)->create([
             'name' => 'operativo',
             'display_name' => 'Operativo'

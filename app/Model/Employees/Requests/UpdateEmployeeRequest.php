@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Socomir\Admins\Requests;
+namespace App\Model\Admins\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
@@ -25,8 +25,8 @@ class UpdateEmployeeRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required'],
-            'email' => ['required', 'email', Rule::unique('employees', 'email')->ignore($this->segment(3))]
+            'employeeName' => ['required'],
+            'employeeEmail' => ['required', 'email', Rule::unique('employees', 'employeeEmail')->ignore($this->segment(3))]
         ];
     }
 }

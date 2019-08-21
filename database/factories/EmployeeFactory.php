@@ -9,11 +9,11 @@ $factory->define(Employee::class, function (Faker $faker) {
     static $password;
 
     return [
-        'name' => $faker->firstName,
-        'email' => $faker->unique()->safeEmail,
-        'password' => $password ?: $password = bcrypt('secret'),
+        'employeeName' => $faker->firstName,
+        'employeeEmail' => $faker->unique()->safeEmail,
+        'employeePassword' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
-        'status' => 1, 
-        'city' => 'Bogotá'
+        'employeeStatus' => 1, 
+        'employeeCity' => 'Bogotá'
     ];
 });

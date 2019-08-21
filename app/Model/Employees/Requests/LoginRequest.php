@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Socomir\Admins\Requests;
+namespace App\Model\Admins\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -24,8 +24,8 @@ class LoginRequest extends FormRequest
     public function rules()
     {
         return [
-            'email' => ['required', 'email'],
-            'password' => ['required']
+            'employeeEmail' => ['required', 'employeeEmail'],
+            'employeePassword' => ['required']
         ];
     }
 }
