@@ -3,7 +3,7 @@
 namespace App\Socomir\Years\Repositories;
 
 use Jsdecena\Baserepo\BaseRepository;
-use App\Socomir\Years\year;
+use App\Socomir\Years\Year;
 use App\Socomir\Years\Exceptions\YearInvalidArgumentException;
 use App\Socomir\Years\Exceptions\YearNotFoundException;
 use App\Socomir\Years\Repositories\Interfaces\YearRepositoryInterface;

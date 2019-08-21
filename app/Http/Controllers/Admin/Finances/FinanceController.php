@@ -183,8 +183,8 @@ class FinanceController extends Controller
             'years',
             '_token',
             '_method',
-            'default',
-                    );
+            'default'
+        );
 
         if ($request->hasFile('cover')) {
             $data['cover'] = $financeRepo->saveCoverImage($request->file('cover'));
@@ -219,7 +219,4 @@ class FinanceController extends Controller
 
         return redirect()->route('admin.finances.index')->with('message', 'Eliminado Satisfactoriamente');
     }
-
-   
- 
 }
