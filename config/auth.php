@@ -46,16 +46,6 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
-
-        'checkout' => [
-            'driver' => 'session',
-            'provider' => 'users',
-        ],
-
-        'employee' => [
-            'driver' => 'session',
-            'provider' => 'employee',
-        ],
     ],
 
     /*
@@ -85,11 +75,6 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
-
-        'employee' => [
-            'driver' => 'eloquent',
-            'model' => App\Model\Employees\Employee::class,
-        ],
     ],
 
     /*
@@ -110,12 +95,6 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
-            'table' => 'password_resets',
-            'expire' => 60,
-        ],
-
-        'employee' => [
-            'provider' => 'employee',
             'table' => 'password_resets',
             'expire' => 60,
         ],
