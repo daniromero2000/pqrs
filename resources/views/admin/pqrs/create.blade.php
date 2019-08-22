@@ -3,7 +3,7 @@
 <!-- Main content -->
 <section class="content">
     @include('layouts.errors-and-messages')
-    <div class="box">
+    <div class="box crud-box">
         <form action="{{ route('admin.pqrs.store') }}" method="post" class="form">
             <div class="box-body">
                 {{ csrf_field() }}

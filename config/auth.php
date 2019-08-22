@@ -49,7 +49,6 @@ return [
         'employee' => [
             'driver' => 'session',
             'provider' => 'employee',
-
         ],
 
         'api' => [

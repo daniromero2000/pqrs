@@ -4,7 +4,7 @@
 <section class="content">
     @include('layouts.errors-and-messages')
     <!-- Default box -->
-    <div class="box">
+    <div class="box crud-box">
         <form action="{{ route('admin.pqr-statuses.update', $pqrStatus->id) }}" method="post">
             <div class="box-body">
                 <h1>Estados Clientes</h1>

@@ -5,7 +5,7 @@
     @include('layouts.errors-and-messages')
     <!-- Default box -->
     @if($years)
-    <div class="box">
+    <div class="box crud-box">
         <div class="box-body">
             <h1>Años Financieros</h1>
             <table class="table">
