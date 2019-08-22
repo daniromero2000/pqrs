@@ -28,7 +28,7 @@
         </div>
         <div class="row d-flex justify-content-center">
             <div class="col-2.4 col-xs-2.4 col-sm-2.4 col-md-2.4 col-lg-2.4 col-xl-2.4 ">
-                <div class="servicios-iconos btn"> <button class="btn btn-default" onclick="location.href ='';">
+                <div class="servicios-iconos btn"> <button class="btn btn-default" onclick="location.href ='{{ route('estatutos') }}';">
                         <img src="{{asset('/img/images-12.png')}}" class="img-fluid" alt="Estatutos" width="100" />
                     </button></div>
                 <h2 class="servicios-text">Estatutos</h2>

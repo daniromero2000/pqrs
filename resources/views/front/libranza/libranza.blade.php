@@ -91,7 +91,7 @@
         <hr>
         <div class="row d-flex justify-content-center">
             <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center top-buffer bottom-buffer">
-                <span class="autorizacionesText">Autorizaciones</span>
+                <span class="autorizacionesText">DOCUMENTOS PARA LA CONTRATACIÓN DEL CRÉDITO </span>
             </div>
             <div class="container-fluid">
                 <div class="row">

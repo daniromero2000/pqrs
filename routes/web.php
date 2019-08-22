@@ -108,6 +108,11 @@ Route::namespace('Front')->group(function () {
             Route::get('tarifas', 'TarifasController@tarifas')->name('tarifas');
         });
 
+        Route::namespace('Estatutos')->group(function () {
+            Route::resource('estatutos', 'EstatutosController');
+            Route::get('estatutos', 'EstatutosController@estatutos')->name('estatutos');
+        });
+
         Route::namespace('InformacionFinanciera')->group(function () {
             Route::resource('informacionfinanciera', 'InformacionFinancieraController');
             Route::get('informacionfinanciera', 'InformacionFinancieraController@informacionfinanciera')->name('informacionfinanciera');
@@ -136,6 +141,11 @@ Route::namespace('Front')->group(function () {
         Route::namespace('Directorio')->group(function () {
             Route::resource('directorio', 'DirectorioController');
             Route::get('directorio', 'DirectorioController@directorio')->name('directorio');
+        });
+
+        Route::namespace('TermsConditions')->group(function () {
+            Route::resource('termsConditions', 'TermsConditionsController');
+            Route::get('termsConditions', 'TermsConditionsController@termsConditions')->name('termsConditions');
         });
 
         Route::get("year/{slug}", 'YearController@getYear')->name('front.year.slug');
