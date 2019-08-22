@@ -11,7 +11,7 @@
                             src="{{ asset('img/avatarModel.png') }}" class="user-image" alt="User Image"> <span
                             class="hidden-xs">{{ $user->name }}</span> </a>
                     <ul class="dropdown-menu">
-                        <li class="user-header"> <img src="{{ asset('img/avatarModel.png') }}" class="img-circle"
+                        <li class="user-header"> <img src="{{ asset('img/avatarsocomir.png') }}" class="img-circle"
                                 alt="User Image">
                             <p> {{ $user->name }} <small>Miembro desde
                                     {{ date('m Y', strtotime($user->created_at)) }}</small></p>
