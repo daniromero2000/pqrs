@@ -5,7 +5,7 @@
     @include('layouts.errors-and-messages')
     <!-- Default box -->
     @if($year)
-    <div class="box">
+    <div class="box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
         @if(!$years->isEmpty())
         <div class="box-body">
             <h2>Años Financieros</h2>

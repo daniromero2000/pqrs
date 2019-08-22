@@ -5,7 +5,7 @@
     @include('layouts.errors-and-messages')
     <!-- Default box -->
     @if($pqrcommentaries)
-    <div class="box">
+    <div class="box" >
         <div class="box-body">
             <h1>Comentarios Clientes</h1>
     @include('layouts.search', ['route' => route('admin.pqrCommentaries.index')])
