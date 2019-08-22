@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Admin\Countries;
 
-use App\Socomir\Countries\Repositories\CountryRepository;
-use App\Socomir\Countries\Repositories\Interfaces\CountryRepositoryInterface;
-use App\Socomir\Countries\Requests\UpdateCountryRequest;
+use App\Model\Countries\Repositories\CountryRepository;
+use App\Model\Countries\Repositories\Interfaces\CountryRepositoryInterface;
+use App\Model\Countries\Requests\UpdateCountryRequest;
 use App\Http\Controllers\Controller;
 
 class CountryController extends Controller

@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Admin\Cities;
 
-use App\Socomir\Cities\Repositories\CityRepository;
-use App\Socomir\Cities\Repositories\Interfaces\CityRepositoryInterface;
-use App\Socomir\Cities\Requests\UpdateCityRequest;
+use App\Model\Cities\Repositories\CityRepository;
+use App\Model\Cities\Repositories\Interfaces\CityRepositoryInterface;
+use App\Model\Cities\Requests\UpdateCityRequest;
 use App\Http\Controllers\Controller;
 
 class CityController extends Controller

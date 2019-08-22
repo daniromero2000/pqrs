@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Socomir\Countries\Requests;
+namespace App\Model\Countries\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin\Years;
 
-use App\Socomir\Years\Repositories\YearRepository;
-use App\Socomir\Years\Repositories\Interfaces\YearRepositoryInterface;
-use App\Socomir\Years\Requests\CreateYearRequest;
-use App\Socomir\Years\Requests\UpdateYearRequest;
+use App\Model\Years\Repositories\YearRepository;
+use App\Model\Years\Repositories\Interfaces\YearRepositoryInterface;
+use App\Model\Years\Requests\CreateYearRequest;
+use App\Model\Years\Requests\UpdateYearRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Socomir\Finances\Transformations\FinanceTransformable;
+use App\Model\Finances\Transformations\FinanceTransformable;
 
 class YearController extends Controller
 {

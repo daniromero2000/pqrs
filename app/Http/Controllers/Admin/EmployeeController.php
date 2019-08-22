@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Socomir\Admins\Requests\CreateEmployeeRequest;
-use App\Socomir\Admins\Requests\UpdateEmployeeRequest;
-use App\Socomir\Employees\Repositories\EmployeeRepository;
-use App\Socomir\Employees\Repositories\Interfaces\EmployeeRepositoryInterface;
-use App\Socomir\Roles\Repositories\RoleRepositoryInterface;
+use App\Model\Admins\Requests\CreateEmployeeRequest;
+use App\Model\Admins\Requests\UpdateEmployeeRequest;
+use App\Model\Employees\Repositories\EmployeeRepository;
+use App\Model\Employees\Repositories\Interfaces\EmployeeRepositoryInterface;
+use App\Model\Roles\Repositories\RoleRepositoryInterface;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 

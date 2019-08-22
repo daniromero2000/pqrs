@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Socomir\Permissions\Repositories;
+namespace App\Model\Permissions\Repositories;
 
 use Jsdecena\Baserepo\BaseRepository;
-use App\Socomir\Permissions\Exceptions\CreatePermissionErrorException;
-use App\Socomir\Permissions\Exceptions\DeletePermissionErrorException;
-use App\Socomir\Permissions\Exceptions\PermissionNotFoundErrorException;
-use App\Socomir\Permissions\Exceptions\UpdatePermissionErrorException;
-use App\Socomir\Permissions\Permission;
-use App\Socomir\Permissions\Repositories\Interfaces\PermissionRepositoryInterface;
+use App\Model\Permissions\Exceptions\CreatePermissionErrorException;
+use App\Model\Permissions\Exceptions\DeletePermissionErrorException;
+use App\Model\Permissions\Exceptions\PermissionNotFoundErrorException;
+use App\Model\Permissions\Exceptions\UpdatePermissionErrorException;
+use App\Model\Permissions\Permission;
+use App\Model\Permissions\Repositories\Interfaces\PermissionRepositoryInterface;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Collection;

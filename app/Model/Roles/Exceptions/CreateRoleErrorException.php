@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Socomir\Roles\Exceptions;
+namespace App\Model\Roles\Exceptions;
 
 class CreateRoleErrorException extends \Exception
 {

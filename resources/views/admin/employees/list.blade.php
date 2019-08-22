@@ -7,7 +7,7 @@
     @if($employees)
     <div class="box">
         <div class="box-body">
-            <h1>Empleados Socomir</h1>
+            <h1>Empleados Model</h1>
             <table class="table">
                 <thead>
                     <tr>

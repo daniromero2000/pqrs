@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Admin\Pqrs;
 
 
-use App\Socomir\PqrStatuses\Repositories\Interfaces\PqrStatusRepositoryInterface;
-use App\Socomir\PqrStatuses\Repositories\PqrStatusRepository;
-use App\Socomir\PqrStatuses\Requests\CreatePqrStatusRequest;
-use App\Socomir\PqrStatuses\Requests\UpdatePqrStatusRequest;
+use App\Model\PqrStatuses\Repositories\Interfaces\PqrStatusRepositoryInterface;
+use App\Model\PqrStatuses\Repositories\PqrStatusRepository;
+use App\Model\PqrStatuses\Requests\CreatePqrStatusRequest;
+use App\Model\PqrStatuses\Requests\UpdatePqrStatusRequest;
 use App\Http\Controllers\Controller;
 
 class PqrStatusController extends Controller

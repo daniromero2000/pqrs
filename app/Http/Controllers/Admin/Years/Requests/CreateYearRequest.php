@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Socomir\Years\Requests;
+namespace App\Model\Years\Requests;
 
-use App\Socomir\Base\BaseFormRequest;
+use App\Model\Base\BaseFormRequest;
 
 class CreateYearRequest extends BaseFormRequest
 {

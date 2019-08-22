@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Socomir\Roles\Repositories;
+namespace App\Model\Roles\Repositories;
 
 use Jsdecena\Baserepo\BaseRepositoryInterface;
-use App\Socomir\Permissions\Permission;
-use App\Socomir\Roles\Role;
+use App\Model\Permissions\Permission;
+use App\Model\Roles\Role;
 use Illuminate\Support\Collection;
 
 interface RoleRepositoryInterface extends BaseRepositoryInterface

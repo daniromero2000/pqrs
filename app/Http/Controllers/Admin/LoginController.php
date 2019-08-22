@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Socomir\Admins\Requests\LoginRequest;
+use App\Model\Admins\Requests\LoginRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 

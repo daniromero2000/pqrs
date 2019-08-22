@@ -11,7 +11,7 @@
 |
 */
 
-use App\Socomir\Permissions\Permission;
+use App\Model\Permissions\Permission;
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(Permission::class, function (Faker\Generator $faker) {
 

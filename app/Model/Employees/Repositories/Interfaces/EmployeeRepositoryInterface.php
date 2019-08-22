@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Socomir\Employees\Repositories\Interfaces;
+namespace App\Model\Employees\Repositories\Interfaces;
 
 use Jsdecena\Baserepo\BaseRepositoryInterface;
-use App\Socomir\Employees\Employee;
+use App\Model\Employees\Employee;
 use Illuminate\Support\Collection;
 
 interface EmployeeRepositoryInterface extends BaseRepositoryInterface

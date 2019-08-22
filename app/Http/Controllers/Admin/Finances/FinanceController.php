@@ -3,17 +3,17 @@
 namespace App\Http\Controllers\Admin\Finances;
 
 
-use App\Socomir\Years\Repositories\Interfaces\YearRepositoryInterface;
-use App\Socomir\Finances\Exceptions\FinanceInvalidArgumentException;
-use App\Socomir\Finances\Exceptions\FinanceNotFoundException;
-use App\Socomir\Finances\Finance;
-use App\Socomir\Finances\Repositories\Interfaces\FinanceRepositoryInterface;
-use App\Socomir\Finances\Repositories\FinanceRepository;
-use App\Socomir\Finances\Requests\CreateFinanceRequest;
-use App\Socomir\Finances\Requests\UpdateFinanceRequest;
+use App\Model\Years\Repositories\Interfaces\YearRepositoryInterface;
+use App\Model\Finances\Exceptions\FinanceInvalidArgumentException;
+use App\Model\Finances\Exceptions\FinanceNotFoundException;
+use App\Model\Finances\Finance;
+use App\Model\Finances\Repositories\Interfaces\FinanceRepositoryInterface;
+use App\Model\Finances\Repositories\FinanceRepository;
+use App\Model\Finances\Requests\CreateFinanceRequest;
+use App\Model\Finances\Requests\UpdateFinanceRequest;
 use App\Http\Controllers\Controller;
-use App\Socomir\Finances\Transformations\FinanceTransformable;
-use App\Socomir\Tools\UploadableTrait;
+use App\Model\Finances\Transformations\FinanceTransformable;
+use App\Model\Tools\UploadableTrait;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\DB;
@@ -172,7 +172,7 @@ class FinanceController extends Controller
      * @param  int $id
      *
      * @return \Illuminate\Http\Response
-     * @throws \App\Socomir\Finances\Exceptions\FinanceUpdateErrorException
+     * @throws \App\Model\Finances\Exceptions\FinanceUpdateErrorException
      */
     public function update(UpdateFinanceRequest $request, int $id)
     {

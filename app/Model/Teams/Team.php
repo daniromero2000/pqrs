@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Socomir\Teams;
+namespace App\Model\Teams;
 
 use Laratrust\Models\LaratrustTeam;
 

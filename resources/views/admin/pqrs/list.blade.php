@@ -7,7 +7,7 @@
 
     <div class="box">
         <div class="box-body">
-            <h1>PQRS Socomir</h1>
+            <h1>PQRS Model</h1>
             <div class="row">
                 <div class="col-md-5">
                     @include('layouts.search', ['route' => route('admin.pqrs.index')])

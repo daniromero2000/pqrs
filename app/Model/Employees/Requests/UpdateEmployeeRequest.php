@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Socomir\Admins\Requests;
+namespace App\Model\Admins\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;

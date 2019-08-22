@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\Admin\Roles;
 
 use App\Http\Controllers\Controller;
-use App\Socomir\Permissions\Repositories\Interfaces\PermissionRepositoryInterface;
-use App\Socomir\Roles\Repositories\RoleRepository;
-use App\Socomir\Roles\Repositories\RoleRepositoryInterface;
-use App\Socomir\Roles\Requests\CreateRoleRequest;
-use App\Socomir\Roles\Requests\UpdateRoleRequest;
+use App\Model\Permissions\Repositories\Interfaces\PermissionRepositoryInterface;
+use App\Model\Roles\Repositories\RoleRepository;
+use App\Model\Roles\Repositories\RoleRepositoryInterface;
+use App\Model\Roles\Requests\CreateRoleRequest;
+use App\Model\Roles\Requests\UpdateRoleRequest;
 
 class RoleController extends Controller
 {

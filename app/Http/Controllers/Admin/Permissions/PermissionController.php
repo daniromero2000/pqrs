@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin\Permissions;
 
 use App\Http\Controllers\Controller;
-use App\Socomir\Permissions\Repositories\PermissionRepository;
+use App\Model\Permissions\Repositories\PermissionRepository;
 
 class PermissionController extends Controller
 {

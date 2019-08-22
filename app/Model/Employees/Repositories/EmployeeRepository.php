@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Socomir\Employees\Repositories;
+namespace App\Model\Employees\Repositories;
 
 use Jsdecena\Baserepo\BaseRepository;
-use App\Socomir\Employees\Employee;
-use App\Socomir\Employees\Exceptions\EmployeeNotFoundException;
-use App\Socomir\Employees\Repositories\Interfaces\EmployeeRepositoryInterface;
+use App\Model\Employees\Employee;
+use App\Model\Employees\Exceptions\EmployeeNotFoundException;
+use App\Model\Employees\Repositories\Interfaces\EmployeeRepositoryInterface;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;

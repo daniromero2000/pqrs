@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin\PqrCommentaries;
 
-use App\Socomir\PqrCommentaries\PqrCommentary;
-use App\Socomir\PqrCommentaries\Repositories\PqrCommentaryRepository;
-use App\Socomir\PqrCommentaries\Repositories\Interfaces\PqrCommentaryRepositoryInterface;
-use App\Socomir\PqrCommentaries\Requests\CreatePqrCommentaryRequest;
-use App\Socomir\PqrCommentaries\Requests\UpdatePqrCommentaryRequest;
-use App\Socomir\PqrCommentaries\Transformations\PqrCommentaryTransformable;
-use App\Socomir\Pqrs\Repositories\Interfaces\PqrRepositoryInterface;
+use App\Model\PqrCommentaries\PqrCommentary;
+use App\Model\PqrCommentaries\Repositories\PqrCommentaryRepository;
+use App\Model\PqrCommentaries\Repositories\Interfaces\PqrCommentaryRepositoryInterface;
+use App\Model\PqrCommentaries\Requests\CreatePqrCommentaryRequest;
+use App\Model\PqrCommentaries\Requests\UpdatePqrCommentaryRequest;
+use App\Model\PqrCommentaries\Transformations\PqrCommentaryTransformable;
+use App\Model\Pqrs\Repositories\Interfaces\PqrRepositoryInterface;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 

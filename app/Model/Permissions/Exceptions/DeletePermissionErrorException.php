@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Socomir\Permissions\Exceptions;
+namespace App\Model\Permissions\Exceptions;
 
 class DeletePermissionErrorException extends \Exception
 {

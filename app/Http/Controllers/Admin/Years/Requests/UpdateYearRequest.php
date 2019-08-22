@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Socomir\Years\Requests;
+namespace App\Model\Years\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;

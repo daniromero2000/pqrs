@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Socomir\Employees\Employee;
-use App\Socomir\Employees\Repositories\EmployeeRepository;
+use App\Model\Employees\Employee;
+use App\Model\Employees\Repositories\EmployeeRepository;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
 

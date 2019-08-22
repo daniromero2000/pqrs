@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Socomir\Employees;
+namespace App\Model\Employees;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;

@@ -6,7 +6,7 @@
     <!-- Default box -->
     <div class="box">
         <div class="box-header with-border">
-            <h1 class="box-title"><strong>Panel Administrativo Socomir</strong></h1>
+            <h1 class="box-title"><strong>Panel Administrativo Model</strong></h1>
             <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                     title="Collapse">

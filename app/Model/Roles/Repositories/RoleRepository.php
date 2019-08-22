@@ -1,13 +1,13 @@
 <?php
-namespace App\Socomir\Roles\Repositories;
+namespace App\Model\Roles\Repositories;
 
 use Jsdecena\Baserepo\BaseRepository;
-use App\Socomir\Permissions\Permission;
-use App\Socomir\Roles\Exceptions\CreateRoleErrorException;
-use App\Socomir\Roles\Exceptions\DeleteRoleErrorException;
-use App\Socomir\Roles\Exceptions\RoleNotFoundErrorException;
-use App\Socomir\Roles\Exceptions\UpdateRoleErrorException;
-use App\Socomir\Roles\Role;
+use App\Model\Permissions\Permission;
+use App\Model\Roles\Exceptions\CreateRoleErrorException;
+use App\Model\Roles\Exceptions\DeleteRoleErrorException;
+use App\Model\Roles\Exceptions\RoleNotFoundErrorException;
+use App\Model\Roles\Exceptions\UpdateRoleErrorException;
+use App\Model\Roles\Role;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Collection;
 

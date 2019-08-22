@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Admin\Provinces;
 
-use App\Socomir\Provinces\Repositories\Interfaces\ProvinceRepositoryInterface;
+use App\Model\Provinces\Repositories\Interfaces\ProvinceRepositoryInterface;
 use App\Http\Controllers\Controller;
-use App\Socomir\Provinces\Repositories\ProvinceRepository;
+use App\Model\Provinces\Repositories\ProvinceRepository;
 use Illuminate\Http\Request;
 
 class ProvinceController extends Controller

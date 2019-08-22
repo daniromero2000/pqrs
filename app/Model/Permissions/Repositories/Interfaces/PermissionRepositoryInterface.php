@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Socomir\Permissions\Repositories\Interfaces;
+namespace App\Model\Permissions\Repositories\Interfaces;
 
 use Jsdecena\Baserepo\BaseRepositoryInterface;
-use App\Socomir\Permissions\Permission;
+use App\Model\Permissions\Permission;
 use Illuminate\Support\Collection;
 
 interface PermissionRepositoryInterface extends BaseRepositoryInterface

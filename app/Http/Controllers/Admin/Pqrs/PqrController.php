@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers\Admin\Pqrs;
 
-use App\Socomir\Pqrs\Pqr;
-use App\Socomir\Pqrs\Repositories\PqrRepository;
-use App\Socomir\Pqrs\Repositories\Interfaces\PqrRepositoryInterface;
-use App\Socomir\Pqrs\Requests\CreatePqrRequest;
-use App\Socomir\Pqrs\Requests\UpdatePqrRequest;
-use App\Socomir\Pqrs\Transformations\PqrTransformable;
-use App\Socomir\PqrStatuses\PqrStatus;
-use App\Socomir\PqrStatuses\Repositories\Interfaces\PqrStatusRepositoryInterface;
-use App\Socomir\PqrStatuses\Repositories\PqrStatusRepository;
-use App\Socomir\Cities\Repositories\Interfaces\CityRepositoryInterface;
-use App\Socomir\Cities\City;
+use App\Model\Pqrs\Pqr;
+use App\Model\Pqrs\Repositories\PqrRepository;
+use App\Model\Pqrs\Repositories\Interfaces\PqrRepositoryInterface;
+use App\Model\Pqrs\Requests\CreatePqrRequest;
+use App\Model\Pqrs\Requests\UpdatePqrRequest;
+use App\Model\Pqrs\Transformations\PqrTransformable;
+use App\Model\PqrStatuses\PqrStatus;
+use App\Model\PqrStatuses\Repositories\Interfaces\PqrStatusRepositoryInterface;
+use App\Model\PqrStatuses\Repositories\PqrStatusRepository;
+use App\Model\Cities\Repositories\Interfaces\CityRepositoryInterface;
+use App\Model\Cities\City;
 
 use App\Http\Controllers\Controller;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Socomir\Roles;
+namespace App\Model\Roles;
 
 use Laratrust\Models\LaratrustRole;
 

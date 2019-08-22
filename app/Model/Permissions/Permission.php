@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Socomir\Permissions;
+namespace App\Model\Permissions;
 
 use Laratrust\Models\LaratrustPermission;
 

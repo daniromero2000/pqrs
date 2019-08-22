@@ -7,7 +7,7 @@
     @if($subsidiaries)
     <div class="box">
         <div class="box-body">
-            <h1>Sucursales Socomir</h1>
+            <h1>Sucursales Model</h1>
             <table class="table">
                 <thead>
                     <tr>

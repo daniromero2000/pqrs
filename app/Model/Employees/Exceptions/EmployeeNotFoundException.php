@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Socomir\Employees\Exceptions;
+namespace App\Model\Employees\Exceptions;
 
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 

@@ -2,12 +2,12 @@
 
 namespace App\Providers;
 
-use App\Socomir\Employees\Repositories\EmployeeRepository;
-use App\Socomir\Employees\Repositories\Interfaces\EmployeeRepositoryInterface;
-use App\Socomir\Permissions\Repositories\PermissionRepository;
-use App\Socomir\Permissions\Repositories\Interfaces\PermissionRepositoryInterface;
-use App\Socomir\Roles\Repositories\RoleRepository;
-use App\Socomir\Roles\Repositories\RoleRepositoryInterface;
+use App\Model\Employees\Repositories\EmployeeRepository;
+use App\Model\Employees\Repositories\Interfaces\EmployeeRepositoryInterface;
+use App\Model\Permissions\Repositories\PermissionRepository;
+use App\Model\Permissions\Repositories\Interfaces\PermissionRepositoryInterface;
+use App\Model\Roles\Repositories\RoleRepository;
+use App\Model\Roles\Repositories\RoleRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
 
 class RepositoryServiceProvider extends ServiceProvider

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Socomir\Roles\Requests;
+namespace App\Model\Roles\Requests;
 
-use App\Socomir\Base\BaseFormRequest;
+use App\Model\Base\BaseFormRequest;
 
 class CreateRoleRequest extends BaseFormRequest
 {

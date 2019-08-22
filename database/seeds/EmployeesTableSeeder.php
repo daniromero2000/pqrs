@@ -1,9 +1,9 @@
 <?php
 
-use App\Socomir\Employees\Employee;
-use App\Socomir\Permissions\Permission;
-use App\Socomir\Roles\Repositories\RoleRepository;
-use App\Socomir\Roles\Role;
+use App\Model\Employees\Employee;
+use App\Model\Permissions\Permission;
+use App\Model\Roles\Repositories\RoleRepository;
+use App\Model\Roles\Role;
 use Illuminate\Database\Seeder;
 
 class EmployeesTableSeeder extends Seeder
