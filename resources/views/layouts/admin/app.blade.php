@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description"
-        content="">
+    <meta name="description" content="">
     <meta name="subject" content="Model">
     <meta name="copyright" content="Model">
     <meta name="language" content="ES">
@@ -43,9 +42,19 @@
 </head>
 
 <body class="hold-transition skin-purple sidebar-mini">
-    <div class="wrapper"> @include('layouts.admin.header', ['user' => $admin]) @include('layouts.admin.sidebar', ['user'
-        => $admin] )<div class="content-wrapper"> @yield('content')</div> @include('layouts.admin.footer')
+    <div class="wrapper">
+        @include('layouts.admin.header', ['user' => $admin])
+        @include('layouts.admin.sidebar', ['user'=> $admin] )
+        <div class="content-wrapper">
+            @yield('content')</div> @include('layouts.admin.footer')
         @include('layouts.admin.control-sidebar')</div>
+
+
+
+
+
+        
+
     <script src="{{ asset('js/jquery-3.4.0.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/adminlte.min.js') }}"></script>

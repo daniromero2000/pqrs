@@ -167,6 +167,7 @@ return [
          * Package Service Providers...
          */
         Laratrust\LaratrustServiceProvider::class,
+        JeroenNoten\LaravelAdminLte\ServiceProvider::class,
 
         /*
          * Application Service Providers...
