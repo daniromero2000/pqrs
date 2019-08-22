@@ -7,7 +7,7 @@
     <div class="box crud-box">
         <form action="{{ route('admin.pqr-statuses.update', $pqrStatus->id) }}" method="post">
             <div class="box-body">
-                <h1>Estados Clientes</h1>
+                <h1>Editar Estado Clientes</h1>
                 {{ csrf_field() }}
                 <input type="hidden" name="_method" value="put">
                 <div class="form-group">

@@ -8,7 +8,7 @@
             <div class="box-body">
                 {{ csrf_field() }}
                 <div class="col-md-8">
-                    <h1>Información Financiera</h1>
+                    <h1>Crear Información Financiera</h1>
                     <div class="form-group">
                         <label for="name">Mes <span class="text-danger">*</span></label>
                         <div class="input-group">

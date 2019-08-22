@@ -7,7 +7,7 @@
     <div class="box crud-box">
         <form action="{{ route('admin.pqr-statuses.store') }}" method="post">
             <div class="box-body">
-                <h2>Estado PQRS</h2>
+                <h2>Crear Estado PQRS</h2>
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="name">Nombre <span class="text-danger">*</span></label>

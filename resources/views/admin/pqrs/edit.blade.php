@@ -7,6 +7,7 @@
         <form action="{{ route('admin.pqrs.update', $pqr->id) }}" method="post" class="form">
             <div class="box-body">
                 {{ csrf_field() }}
+                <h1>Editar PQR</h1>
                 <input type="hidden" name="_method" value="put">
                 <div class="form-group">
                     <label for="name">Nombre <span class="text-danger">*</span></label>

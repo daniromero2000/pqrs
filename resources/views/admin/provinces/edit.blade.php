@@ -3,10 +3,11 @@
 <!-- Main content -->
 <section class="content">
     @include('layouts.errors-and-messages')
-    <div class="box">
+    <div class="box crud-box">
         <form action="{{ route('admin.countries.provinces.update', [$countryId, $province->id]) }}" method="post" class="form" enctype="multipart/form-data">
             <div class="box-body">
                 <input type="hidden" name="_method" value="put"> {{ csrf_field() }}
+                <h1>Editar Departamento</h1>
                 <div class="form-group">
                     <label for="name">Nombre <span class="text-danger">*</span></label>
                     <div class="input-group">

@@ -9,6 +9,7 @@
             <div class="box-body">
                 <div class="row">
                     {{ csrf_field() }}
+                    <h1>Editar Información Financiera</h1>
                     <input type="hidden" name="_method" value="put">
                     <div class="col-md-12">
                         <!-- Nav tabs -->

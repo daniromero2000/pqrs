@@ -7,6 +7,7 @@
         <form action="{{ route('admin.pqrs.store') }}" method="post" class="form">
             <div class="box-body">
                 {{ csrf_field() }}
+                <h1>Crear PQR</h1>
                 <div class="form-group">
                     <label for="name">Nombre Usuario<span class="text-danger">*</span></label>
                     <div class="input-group">
