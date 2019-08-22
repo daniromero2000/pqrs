@@ -26,7 +26,10 @@
                 </tbody>
             </table>
         </div>
+    </div>
+    <div class="box crud-box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
         <div class="box-body">
+                <h2>Departamentos</h2>
             @include('admin.shared.provinces', ['country' => $country->id])
         </div>
         <!-- /.box-body -->
