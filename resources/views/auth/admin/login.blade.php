@@ -37,18 +37,26 @@
                         <h1 class="login-box-msg">Inicia Sesión</h1>
                         <form action="{{ route('admin.login') }}" method="post"> {{ csrf_field() }}<div
                                 class="form-group has-feedback">
-                                <div class="input-group">
-                                    <div class="input-group-addon"> <i class="fa fa-envelope"></i></div> <input
-                                        name="email" type="email" class="form-control" placeholder="Email"
-                                        value="{{ old('email') }}" required>
+                                <div class="form-group has-feedback {{ $errors->has('email') ? 'has-error' : '' }}">
+                                    <input type="email" name="email" class="form-control" value="{{ old('email') }}"
+                                           placeholder="{{ trans('adminlte::adminlte.email') }}">
+                                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                                    @if ($errors->has('email'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('email') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
                             </div>
-                            <div class="form-group has-feedback">
-                                <div class="input-group">
-                                    <div class="input-group-addon"> <i class="fa fa-lock"></i></div> <input
-                                        name="password" type="password" class="form-control" placeholder="Password"
-                                        required>
-                                </div>
+                            <div class="form-group has-feedback {{ $errors->has('password') ? 'has-error' : '' }}">
+                                <input type="password" name="password" class="form-control"
+                                       placeholder="{{ trans('adminlte::adminlte.password') }}">
+                                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                             <div class="row">
                                 <div class="col-xs-8">

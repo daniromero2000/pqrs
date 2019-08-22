@@ -3,7 +3,7 @@
 <!-- Main content -->
 <section class="content">
     @include('layouts.errors-and-messages')
-    <div class="box">
+    <div class="box crud-box">
         <form action="{{ route('admin.countries.provinces.cities.update', [$countryId, $provinceId, $city->id]) }}"
             method="post" class="form" enctype="multipart/form-data">
             <div class="box-body">
