@@ -30,6 +30,11 @@ Route::group(['prefix' => 'admin', 'middleware' => ['employee'], 'as' => 'admin.
         Route::group(['middleware' => ['role:admin|superadmin|operativo|marketing, guard:employee']], function () {
             Route::get('/', 'DashboardController@index')->name('dashboard');
 
+            Route::namespace('Subsidiaries')->group(function () {
+                Route::resource('subsidiaries', 'SubsidiaryController');
+                Route::get('remove-image-subsidiary', 'SubsidiaryController@removeImage')->name('subsidiary.remove.image');
+            });
+
             Route::resource('countries', 'Countries\CountryController');
             Route::resource('countries.provinces', 'Provinces\ProvinceController');
             Route::resource('countries.provinces.cities', 'Cities\CityController');
