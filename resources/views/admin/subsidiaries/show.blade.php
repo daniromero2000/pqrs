@@ -1,11 +1,11 @@
-@extends('layouts.admin.app') 
+@extends('layouts.admin.app')
 @section('content')
 <!-- Main content -->
 <section class="content">
     @include('layouts.errors-and-messages')
     <!-- Default box -->
     @if($subsidiary)
-    <div class="box">
+    <div class="box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
         <div class="box-body">
             <table class="table">
                 <thead>
@@ -24,12 +24,6 @@
                 </tbody>
             </table>
         </div>
-        @if(!$finances->isEmpty())
-        <div class="box-body">
-            <h2>Productos</h2>
-    @include('admin.shared.finances', ['finances' => $finances])
-        </div>
-        @endif
         <!-- /.box-body -->
         <div class="box-footer">
             <div class="btn-group">

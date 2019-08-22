@@ -1,6 +1,6 @@
 @if($errors->all())
     @foreach($errors->all() as $message)
-        <div class="box no-border">
+        <div class="box no-border" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
             <div class="box-tools">
                 <p class="alert alert-warning alert-dismissible">
                     {{ $message }}
@@ -11,7 +11,7 @@
     @endforeach
 
 @elseif(session()->has('message'))
-    <div class="box no-border">
+    <div class="box no-border" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
         <div class="box-tools">
             <p class="alert alert-success alert-dismissible">
                 {{ session()->get('message') }}
@@ -20,7 +20,7 @@
         </div>
     </div>
 @elseif(session()->has('error'))
-    <div class="box no-border">
+    <div class="box no-border" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
         <div class="box-tools">
             <p class="alert alert-danger alert-dismissible">
                 {{ session()->get('error') }}

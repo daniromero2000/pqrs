@@ -4,7 +4,7 @@
 <!-- Main content -->
 <section class="content">
     <!-- Default box -->
-    <div class="box">
+    <div class="box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
         <div class="box-header with-border">
             <h1 class="box-title"><strong>Panel Administrativo Model</strong></h1>
             <div class="box-tools pull-right">

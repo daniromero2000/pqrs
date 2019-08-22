@@ -32,9 +32,9 @@
         <div class="row">
             <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <div class="login-box">
-                    <div class="login-logo"> <img src="{{asset('/img/logo.png')}}" alt="Model" width="190"></div>
+                    <div class="login-logo" > <img src="{{asset('/img/logo.png')}}" alt="Model" width="190"></div>
                     @include('layouts.errors-and-messages')<div class="login-box-body">
-                        <h1 class="login-box-msg">Inicia Sesión</h1>
+                        <h1 class="login-box-msg" >Inicia Sesión</h1>
                         <form action="{{ route('admin.login') }}" method="post"> {{ csrf_field() }}<div
                                 class="form-group has-feedback">
                                 <div class="form-group has-feedback {{ $errors->has('email') ? 'has-error' : '' }}">

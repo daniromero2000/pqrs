@@ -6,7 +6,7 @@
     <form action="{{ route('admin.employee.profile.update', $employee->id) }}" method="post" class="form">
         <input type="hidden" name="_method" value="put"> {{ csrf_field() }}
         <!-- Default box -->
-        <div class="box">
+        <div class="box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
             <div class="box-body">
                 <table class="table">
                     <thead>
