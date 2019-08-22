@@ -83,6 +83,8 @@
         @include('layouts.admin.sidebar', ['user'=> $admin] )
         <div class="content-wrapper">
             @yield('content')</div> 
+
+            
             @include('layouts.admin.footer')
         @include('layouts.admin.control-sidebar')</div>
 

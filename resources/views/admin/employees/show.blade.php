@@ -1,14 +1,13 @@
-@extends('layouts.admin.app') 
+@extends('layouts.admin.app')
 @section('content')
 <!-- Main content -->
 <section class="content">
     <!-- Default box -->
-    <div class="box">
+    <div class="box crud-box">
         <div class="box-body">
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Codigo</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Email</th>
                         <th scope="col">Roles</th>
@@ -16,7 +15,6 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{{ $employee->id }}</td>
                         <td>{{ $employee->name }}</td>
                         <td>{{ $employee->email }}</td>
                         <td>
