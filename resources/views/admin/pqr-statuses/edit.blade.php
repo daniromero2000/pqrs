@@ -16,7 +16,7 @@
                         <div class="input-group-addon">
                             <i class="fa fa-check"></i>
                         </div>
-                        <input class="form-control" type="text" name="name" id="name" value="{{ $PqrStatus->name ?: old('name') }}" placeholder="Nombre"
+                        <input class="form-control" type="text" name="name" id="name" value="{{ $pqrStatus->name ?: old('name') }}" placeholder="Nombre"
                             required>
                     </div>
                 </div>

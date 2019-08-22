@@ -7,16 +7,16 @@
     @if($finance)
     <div class="box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
         <div class="box-body">
+            <h2>{{ $finance->name }}
+            </h2>
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Nombre</th>
                         <th scope="col">Descripción</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{{ $finance->name }}</td>
                         <td>{{ $finance->description }}</td>
                     </tr>
                 </tbody>

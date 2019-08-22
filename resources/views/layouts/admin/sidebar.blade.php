@@ -45,7 +45,7 @@
             <li class="header">GESTION INFO FINANCIERA
             </li>
             <li
-                class="treeview @if(request()->segment(2) == 'finances' || request()->segment(2) == 'finances') active @endif">
+                class="treeview @if(request()->segment(2) == 'finances' || request()->segment(2) == 'years') active @endif">
                 <ul class="treeview-menu"> @if($user->hasPermission('view-finance'))@endif
             </li> @endif
         </ul>
