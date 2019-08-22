@@ -9,12 +9,15 @@
     "license": "MIT",
     "require": {
         "php": "^7.1.3",
+        "artesaos/seotools": "^0.15.0",
         "fideloper/proxy": "^4.0",
         "jeroennoten/laravel-adminlte": "^1.26",
         "jsdecena/baserepo": "^1.0",
         "kalnoy/nestedset": "^4.3",
         "laravel/framework": "5.8.*",
+        "laravel/socialite": "^4.1",
         "laravel/tinker": "^1.0",
+        "orzcc/autometa": "dev-master",
         "santigarcor/laratrust": "5.0.*"
     },
     "require-dev": {

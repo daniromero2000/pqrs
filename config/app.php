@@ -167,6 +167,8 @@ return [
          * Package Service Providers...
          */
         Laratrust\LaratrustServiceProvider::class,
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+        'Orzcc\AutoMeta\Providers\AutoMetaServiceProvider',
      
 
         /*
@@ -232,6 +234,15 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Laratrust'   => Laratrust\LaratrustFacade::class,
+
+        'SEOMeta'   => Artesaos\SEOTools\Facades\SEOMeta::class,
+        'OpenGraph' => Artesaos\SEOTools\Facades\OpenGraph::class,
+        'Twitter'   => Artesaos\SEOTools\Facades\TwitterCard::class,
+        'JsonLd'   => Artesaos\SEOTools\Facades\JsonLd::class,
+        // or
+        'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
+        // ...
+        'Meta'   => 'Orzcc\AutoMeta\Facades\AutoMeta',
         
 
 
