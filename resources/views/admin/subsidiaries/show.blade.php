@@ -5,24 +5,23 @@
     @include('layouts.errors-and-messages')
     <!-- Default box -->
     @if($subsidiary)
-    <div class="box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
+    <div class="box crud-box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
         <div class="box-body">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Dirección</th>
-                        <th scope="col">Telefono</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>{{ $subsidiary->name }}</td>
-                        <td>{{ $subsidiary->address }}</td>
-                        <td>{{ $subsidiary->phone }}</td>
-                    </tr>
-                </tbody>
-            </table>
+            <h2>{{ $subsidiary->name }} ({{ $subsidiary->city->name }})</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Dirección</th>
+                            <th scope="col">Telefono</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ $subsidiary->address }}</td>
+                            <td>{{ $subsidiary->phone }}</td>
+                        </tr>
+                    </tbody>
+                </table>
         </div>
         <!-- /.box-body -->
         <div class="box-footer">

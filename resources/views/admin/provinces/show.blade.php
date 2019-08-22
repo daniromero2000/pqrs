@@ -1,4 +1,4 @@
-@extends('layouts.admin.app') 
+@extends('layouts.admin.app')
 @section('content')
 <!-- Main content -->
 <section class="content">
@@ -7,20 +7,19 @@
     @if($province)
     <div class="box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
         <div class="box-body">
-            <h1>Departamentos</h1>
+            <h2>{{ $province->name }}</h2>
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Nombre</th>
                         <th scope="col">Opciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{{ $province->name }}</td>
                         <td>
                             <div class="btn-group">
-                                <a href="{{ route('admin.countries.provinces.edit', [$countryId, $province->id]) }}" class="btn btn-primary"><i class="fa fa-edit"></i> Editar</a>
+                                <a href="{{ route('admin.countries.provinces.edit', [$countryId, $province->id]) }}"
+                                    class="btn btn-primary"><i class="fa fa-edit"></i> Editar</a>
                             </div>
                         </td>
                     </tr>
@@ -29,7 +28,7 @@
         </div>
         <div class="box-body">
             <h2>Ciudades / Municipios</h2>
-    @include('admin.shared.cities')
+            @include('admin.shared.cities')
         </div>
         <!-- /.box-body -->
         <div class="box-footer">
