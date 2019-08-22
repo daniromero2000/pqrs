@@ -7,6 +7,7 @@
         <form action="{{ route('admin.subsidiaries.store') }}" method="post" class="form" enctype="multipart/form-data">
             <div class="box-body">
                 {{ csrf_field() }}
+                <h1>Crear Sucursal</h1>
                 <div class="form-group">
                     <label for="name">Nombre <span class="text-danger">*</span></label>
                     <div class="input-group">

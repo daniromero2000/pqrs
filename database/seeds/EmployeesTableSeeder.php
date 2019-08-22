@@ -10,86 +10,6 @@ class EmployeesTableSeeder extends Seeder
 {
     public function run()
     {
-
-
-
-        /*Permisos Finances*/
-        $createFinancePerm = factory(Permission::class)->create([
-            'name' => 'create-finance',
-            'display_name' => 'Crear Finanza'
-        ]);
-
-        $viewFinancePerm = factory(Permission::class)->create([
-            'name' => 'view-finance',
-            'display_name' => 'Ver Finanza'
-        ]);
-
-        $updateFinancePerm = factory(Permission::class)->create([
-            'name' => 'update-finance',
-            'display_name' => 'Actualizar Finanza'
-        ]);
-
-        $deleteFinancePerm = factory(Permission::class)->create([
-            'name' => 'delete-finance',
-            'display_name' => 'Borrar Finanza'
-        ]);
-
-        /*Permisos Categorias*/
-        $createYearPerm = factory(Permission::class)->create([
-            'name' => 'create-year',
-            'display_name' => 'Crear Año'
-        ]);
-
-        $viewYearPerm = factory(Permission::class)->create([
-            'name' => 'view-year',
-            'display_name' => 'Ver Año'
-        ]);
-
-        $updateYearPerm = factory(Permission::class)->create([
-            'name' => 'update-year',
-            'display_name' => 'Actualizar Año'
-        ]);
-
-        $deleteYearPerm = factory(Permission::class)->create([
-            'name' => 'delete-year',
-            'display_name' => 'Borrar Año'
-        ]);
-
-
-
-        /*Permisos Clientes*/
-        $deletePqrPerm = factory(Permission::class)->create([
-            'name' => 'delete-pqr',
-            'display_name' => 'Borrar PQR'
-        ]);
-
-        $viewPqrPerm = factory(Permission::class)->create([
-            'name' => 'view-pqr',
-            'display_name' => 'Ver Pqr'
-        ]);
-
-        $updatePqrPerm = factory(Permission::class)->create([
-            'name' => 'update-pqr',
-            'display_name' => 'Actualizar Pqr'
-        ]);
-
-        $createPqrPerm = factory(Permission::class)->create([
-            'name' => 'create-pqrr',
-            'display_name' => 'Crear Pqr'
-        ]);
-
-        $viewPqrStatusPerm = factory(Permission::class)->create([
-            'name' => 'view-pqrStatus',
-            'display_name' => 'Ver Estados Pqr'
-        ]);
-
-        $createPqrStatusPerm = factory(Permission::class)->create([
-            'name' => 'create-pqrStatus',
-            'display_name' => 'Crear Estado Pqr'
-        ]);
-
-
-
         /*Permisos Empleados*/
         $deleteEmployeePerm = factory(Permission::class)->create([
             'name' => 'delete-employee',
@@ -150,23 +70,6 @@ class EmployeesTableSeeder extends Seeder
         ]);
 
         $roleSuperRepo = new RoleRepository($super);
-        /*Permisos Finanzas*/
-        $roleSuperRepo->attachToPermission($createFinancePerm);
-        $roleSuperRepo->attachToPermission($viewFinancePerm);
-        $roleSuperRepo->attachToPermission($updateFinancePerm);
-        $roleSuperRepo->attachToPermission($deleteFinancePerm);
-        /*Permisos años*/
-        $roleSuperRepo->attachToPermission($createYearPerm);
-        $roleSuperRepo->attachToPermission($viewYearPerm);
-        $roleSuperRepo->attachToPermission($updateYearPerm);
-        $roleSuperRepo->attachToPermission($deleteYearPerm);
-        /*Permisos Clientes*/
-        $roleSuperRepo->attachToPermission($deletePqrPerm);
-        $roleSuperRepo->attachToPermission($createPqrPerm);
-        $roleSuperRepo->attachToPermission($viewPqrPerm);
-        $roleSuperRepo->attachToPermission($updatePqrPerm);
-        $roleSuperRepo->attachToPermission($viewPqrStatusPerm);
-        $roleSuperRepo->attachToPermission($createPqrStatusPerm);
         /*Permisos Empleados*/
         $roleSuperRepo->attachToPermission($deleteEmployeePerm);
         $roleSuperRepo->attachToPermission($createEmployeePerm);
@@ -184,7 +87,7 @@ class EmployeesTableSeeder extends Seeder
 
 
         $employee = factory(Employee::class)->create([
-            'email' => 'carlo.villarreal@lagobo.com'
+            'email' => 'adminl@empresa.com'
         ]);
 
         $admin = factory(Role::class)->create([
@@ -193,16 +96,6 @@ class EmployeesTableSeeder extends Seeder
         ]);
 
         $roleAdminRepo = new RoleRepository($admin);
-        /*Permisos Finanzas*/
-        $roleAdminRepo->attachToPermission($createFinancePerm);
-        $roleAdminRepo->attachToPermission($viewFinancePerm);
-        $roleAdminRepo->attachToPermission($updateFinancePerm);
-        $roleAdminRepo->attachToPermission($deleteFinancePerm);
-        /*Permisos años*/
-        $roleAdminRepo->attachToPermission($createYearPerm);
-        $roleAdminRepo->attachToPermission($viewYearPerm);
-        $roleAdminRepo->attachToPermission($updateYearPerm);
-        $roleAdminRepo->attachToPermission($deleteYearPerm);
         /*Permisos Empleados*/
         $roleAdminRepo->attachToPermission($deleteEmployeePerm);
         $roleAdminRepo->attachToPermission($createEmployeePerm);
@@ -215,11 +108,7 @@ class EmployeesTableSeeder extends Seeder
         $employee->roles()->save($admin);
 
         $employee = factory(Employee::class)->create([
-            'email' => 'contacto@compraventastandard.com'
-        ]);
-
-        $employee = factory(Employee::class)->create([
-            'email' => 'disenadorcoandes@standard.com.co'
+            'email' => 'contacto@empresa.com'
         ]);
 
         $operativo = factory(Role::class)->create([
@@ -228,12 +117,7 @@ class EmployeesTableSeeder extends Seeder
         ]);
 
         $roleOperativoRepo = new RoleRepository($operativo);
-        /*Permisos Clientes*/
-        $roleOperativoRepo->attachToPermission($createPqrPerm);
-        $roleOperativoRepo->attachToPermission($viewPqrPerm);
-        $roleOperativoRepo->attachToPermission($updatePqrPerm);
-        $roleOperativoRepo->attachToPermission($viewPqrStatusPerm);
-        /*Permisos Sucursal*/
+               /*Permisos Sucursal*/
         $roleOperativoRepo->attachToPermission($viewSubsidiaryPerm);
         $employee->roles()->save($operativo);
     }

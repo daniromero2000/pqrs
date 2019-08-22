@@ -1,4 +1,4 @@
-@extends('layouts.admin.app') 
+@extends('layouts.admin.app')
 @section('content')
 <!-- Main content -->
 <section class="content">
@@ -11,7 +11,6 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Codigo</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Email</th>
                         <th scope="col">Estado</th>
@@ -21,20 +20,23 @@
                 <tbody>
                     @foreach ($employees as $employee)
                     <tr>
-                        <td>{{ $employee->id }}</td>
                         <td>
                             <a href="{{ route('admin.employees.show', $employee->id) }}">{{ $employee->name }}</a>
                         </td>
                         <td>{{ $employee->email }}</td>
                         <td>
-    @include('layouts.status', ['status' => $employee->status])</td>
+                            @include('layouts.status', ['status' => $employee->status])</td>
                         <td>
-                            <form action="{{ route('admin.employees.destroy', $employee->id) }}" method="post" class="form-horizontal">
+                            <form action="{{ route('admin.employees.destroy', $employee->id) }}" method="post"
+                                class="form-horizontal">
                                 {{ csrf_field() }}
                                 <input type="hidden" name="_method" value="delete">
                                 <div class="btn-group">
-                                    <a href="{{ route('admin.employees.edit', $employee->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>                                    @if($user->hasPermission('delete-employee')) <button onclick="return confirm('¿Estás Seguro?')"
-                                        type="submit" class="btn btn-danger btn-sm"><i class="fa fa-times"></i> Borrar</button>@endif
+                                    <a href="{{ route('admin.employees.edit', $employee->id) }}"
+                                        class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
+                                    @if($user->hasPermission('delete-employee')) <button
+                                        onclick="return confirm('¿Estás Seguro?')" type="submit"
+                                        class="btn btn-danger btn-sm"><i class="fa fa-times"></i> Borrar</button>@endif
                                 </div>
                             </form>
                         </td>
