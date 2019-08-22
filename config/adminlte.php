@@ -87,7 +87,7 @@ return [
 
     'dashboard_url' => 'home',
 
-    'logout_url' => 'logout',
+    'logout_url' => 'admin/logout',
 
     'logout_method' => null,
 
@@ -108,12 +108,12 @@ return [
 
     'menu' => [
         [
-            'text' => 'search',
+            'text' => 'Buscar',
             'search' => true,
         ],
-        ['header' => 'main_navigation'],
+        ['header' => 'Menu Principal'],
         [
-            'text' => 'blog',
+            'text' => 'Admin Standard',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
@@ -127,8 +127,9 @@ return [
         ['header' => 'account_settings'],
         [
             'text' => 'profile',
-            'url'  => 'admin/settings',
+            'url'  => 'employee.profile',
             'icon' => 'fas fa-fw fa-user',
+            
         ],
         [
             'text' => 'change_password',
@@ -136,7 +137,7 @@ return [
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
-            'text'    => 'multilevel',
+            'text'    => 'Empleados',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [

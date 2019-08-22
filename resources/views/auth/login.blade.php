@@ -1,4 +1,5 @@
-@extends('layouts.front.app') @section('title', 'Inicio Sesíon') @section('content')
+@extends('layouts.front.app')
+@extends('adminlte::login') @section('title', 'Inicio Sesíon') @section('content')
 
 <head>
     <meta charset="utf-8">
