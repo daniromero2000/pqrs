@@ -17,7 +17,6 @@ class LoginController extends Controller
      */
     protected $redirectTo = '/admin';
 
-
     /**
      * Shows the admin login form
      *
@@ -56,9 +55,7 @@ class LoginController extends Controller
         $details = $request->only('email', 'password');
         $details['status'] = 1;
         if (auth()->guard('employee')->attempt($details)) {
-         
             return $this->sendLoginResponse($request);
-            
         }
 
         // If the login attempt was unsuccessful we will increment the number of attempts

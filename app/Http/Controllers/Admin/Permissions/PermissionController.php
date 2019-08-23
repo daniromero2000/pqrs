@@ -28,7 +28,6 @@ class PermissionController extends Controller
     public function index()
     {
         $list = $this->permRepo->listPermissions();
-
         $permissions = $this->permRepo->paginateArrayResults($list->all());
 
         return view('admin.permissions.list', compact('permissions'));

@@ -42,9 +42,9 @@ class RoleController extends Controller
     {
         $list = $this->roleRepo->listRoles('name', 'asc')->all();
 
-        $roles = $this->roleRepo->paginateArrayResults($list);
-
-        return view('admin.roles.list', compact('roles'));
+        return view('admin.roles.list', [
+            'roles' => $this->roleRepo->paginateArrayResults($list),
+        ]);
     }
 
     /**

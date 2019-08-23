@@ -46,7 +46,7 @@ class CityRepository extends BaseRepository implements CityRepositoryInterface
         try {
             return $this->findOneOrFail($id);
         } catch (ModelNotFoundException $e) {
-            throw new CityNotFoundException('City not found.');
+            throw new CityNotFoundException('Ciudad no encontrada.');
         }
     }
 
@@ -62,16 +62,6 @@ class CityRepository extends BaseRepository implements CityRepositoryInterface
     }
 
     /**
-     * @param string $state_code
-     *
-     * @return Collection
-     */
-    public function listCitiesByStateCode(string $state_code) : Collection
-    {
-        return $this->model->where(compact('state_code'))->get();
-    }
-
-    /**
      * @param string $name
      *
      * @return mixed
@@ -82,7 +72,7 @@ class CityRepository extends BaseRepository implements CityRepositoryInterface
         try {
             return $this->model->where(compact('name'))->firstOrFail();
         } catch (ModelNotFoundException $e) {
-            throw new CityNotFoundException('City not found.');
+            throw new CityNotFoundException('Ciudad no encontrada');
         }
     }
 }

@@ -25,11 +25,10 @@ class ProvinceController extends Controller
      */
     public function show(int $countryId, int $provinceId)
     {
-        $province = $this->provinceRepo->findProvinceById($provinceId);
         $cities = $this->provinceRepo->listCities($provinceId);
 
         return view('admin.provinces.show', [
-            'province' => $province,
+            'province' => $this->provinceRepo->findProvinceById($provinceId),
             'countryId' => $countryId,
             'cities' => $this->provinceRepo->paginateArrayResults(collect($cities)->toArray())
         ]);

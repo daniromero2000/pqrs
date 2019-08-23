@@ -13,7 +13,6 @@ use Illuminate\Http\Request;
 
 class SubsidiaryController extends Controller
 {
-
     /**
      * @var SubsidiaryRepositoryInterface
      */
@@ -40,12 +39,11 @@ class SubsidiaryController extends Controller
      */
     public function index()
     {
-        $user = auth()->guard('employee')->user();
         $list = $this->subsidiaryRepo->rootSubsidiaries('created_at', 'desc');
 
         return view('admin.subsidiaries.list', [
             'subsidiaries' => $this->subsidiaryRepo->paginateArrayResults($list->all()),
-            'user' => $user
+            'user' => auth()->guard('employee')->user()
         ]);
     }
 
@@ -83,17 +81,13 @@ class SubsidiaryController extends Controller
      */
     public function show($id)
     {
-
-        $user = auth()->guard('employee')->user();
         $subsidiary = $this->subsidiaryRepo->findSubsidiaryById($id);
         $cat = new SubsidiaryRepository($subsidiary);
-
-
 
         return view('admin.subsidiaries.show', [
             'subsidiary' => $subsidiary,
             'subsidiaries' => $subsidiary->children,
-            'user' =>  $user
+            'user' =>  auth()->guard('employee')->user()
         ]);
     }
 
@@ -124,7 +118,6 @@ class SubsidiaryController extends Controller
     public function update(UpdateSubsidiaryRequest $request, $id)
     {
         $subsidiary = $this->subsidiaryRepo->findSubsidiaryById($id);
-
         $update = new SubsidiaryRepository($subsidiary);
         $update->updateSubsidiary($request->except('_token', '_method'));
 
