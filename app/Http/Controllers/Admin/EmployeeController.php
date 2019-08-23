@@ -42,7 +42,6 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-
         $user = auth()->guard('employee')->user();
         $list = $this->employeeRepo->listEmployees('created_at', 'desc');
 
@@ -59,9 +58,9 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        $roles = $this->roleRepo->listRoles();
-
-        return view('admin.employees.create', compact('roles'));
+        return view('admin.employees.create', [
+            'roles' => $this->roleRepo->listRoles()
+        ]);
     }
 
     /**
@@ -91,8 +90,9 @@ class EmployeeController extends Controller
      */
     public function show(int $id)
     {
-        $employee = $this->employeeRepo->findEmployeeById($id);
-        return view('admin.employees.show', ['employee' => $employee]);
+        return view('admin.employees.show', [
+            'employee' => $this->employeeRepo->findEmployeeById($id)
+        ]);
     }
 
     /**
@@ -105,15 +105,13 @@ class EmployeeController extends Controller
     public function edit(int $id)
     {
         $employee = $this->employeeRepo->findEmployeeById($id);
-        $roles = $this->roleRepo->listRoles('created_at', 'desc');
-        $isCurrentUser = $this->employeeRepo->isAuthUser($employee);
 
         return view(
             'admin.employees.edit',
             [
                 'employee' => $employee,
-                'roles' => $roles,
-                'isCurrentUser' => $isCurrentUser,
+                'roles' => $this->roleRepo->listRoles('created_at', 'desc'),
+                'isCurrentUser' => $this->employeeRepo->isAuthUser($employee),
                 'selectedIds' => $employee->roles()->pluck('role_id')->all()
             ]
         );
@@ -174,8 +172,9 @@ class EmployeeController extends Controller
      */
     public function getProfile($id)
     {
-        $employee = $this->employeeRepo->findEmployeeById($id);
-        return view('admin.employees.profile', ['employee' => $employee]);
+        return view('admin.employees.profile', [
+            'employee' => $this->employeeRepo->findEmployeeById($id)
+        ]);
     }
 
     /**

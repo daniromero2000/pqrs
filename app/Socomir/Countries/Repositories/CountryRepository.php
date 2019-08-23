@@ -56,7 +56,7 @@ class CountryRepository extends BaseRepository implements CountryRepositoryInter
         try {
             return $this->findOneOrFail($id);
         } catch (ModelNotFoundException $e) {
-            throw new CountryNotFoundException('Country not found.');
+            throw new CountryNotFoundException('País no encontrado.');
         }
     }
 
