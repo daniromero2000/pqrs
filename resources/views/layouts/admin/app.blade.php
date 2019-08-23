@@ -41,6 +41,7 @@
     @yield('adminlte_css')
 
     @yield('css')
+    <!-- FavIcon -->
     <link rel="shortcut icon" href="{{ asset('favicons/favicon-96x96.png')}}">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
         type='text/css'>
