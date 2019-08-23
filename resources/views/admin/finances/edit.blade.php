@@ -25,16 +25,6 @@
                                     <div class="col-md-8">
                                         <h2>{{ ucfirst($finance->name) }}</h2>
                                         <div class="form-group">
-                                            <label for="sku">Código <span class="text-danger">*</span></label>
-                                            <div class="input-group">
-                                                <div class="input-group-addon">
-                                                    <i class="fa fa-barcode"></i>
-                                                </div>
-                                                <input type="text" name="sku" id="sku" placeholder="xxxxx"
-                                                    class="form-control" value="{!! $finance->sku !!}" required>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
                                             <label for="name">Nombre <span class="text-danger">*</span></label>
                                             <div class="input-group">
                                                 <div class="input-group-addon">

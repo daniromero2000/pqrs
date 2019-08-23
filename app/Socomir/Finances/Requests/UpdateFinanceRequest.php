@@ -15,7 +15,6 @@ class UpdateFinanceRequest extends BaseFormRequest
     public function rules()
     {
         return [
-            'sku' => ['required'],
             'name' => ['required', Rule::unique('finances')->ignore($this->segment(3))],
         ];
     }

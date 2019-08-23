@@ -60,7 +60,6 @@ class FinanceController extends Controller
      */
     public function index()
     {
-        $user = auth()->guard('employee')->user();
         $list = $this->financeRepo->listFinances('id');
 
         if (request()->has('q') && request()->input('q') != '') {
@@ -73,7 +72,7 @@ class FinanceController extends Controller
 
         return view('admin.finances.list', [
             'finances' => $this->financeRepo->paginateArrayResults($finances, 25),
-            'user' => $user
+            'user' => auth()->guard('employee')->user()
         ]);
     }
 
@@ -85,9 +84,8 @@ class FinanceController extends Controller
      */
     public function create()
     {
-        $years = $this->yearRepo->listYears('year', 'asc')->where('parent_id', 1);
         return view('admin.finances.create', [
-            'years' => $years,
+            'years' => $this->yearRepo->listYears('year', 'asc')->where('parent_id', 1),
             'finance' => new Finance
         ]);
     }
@@ -108,9 +106,7 @@ class FinanceController extends Controller
         }
 
         $data['slug'] = str_slug($request->input('name'));
-
         $finance = $this->financeRepo->createFinance($data);
-
         $financeRepo = new FinanceRepository($finance);
 
         if ($request->hasFile('image')) {
@@ -140,8 +136,9 @@ class FinanceController extends Controller
      */
     public function show(int $id)
     {
-        $finance = $this->financeRepo->findFinanceById($id);
-        return view('admin.finances.show', [], compact('finance'));
+        return view('admin.finances.show', [
+            'finance' => $this->financeRepo->findFinanceById($id)
+        ]);
     }
 
     /**
@@ -155,12 +152,9 @@ class FinanceController extends Controller
     {
         $finance = $this->financeRepo->findFinanceById($id);
 
-        $years = $this->yearRepo->listYears('year', 'asc')
-            ->where('parent_id', 1);
-
         return view('admin.finances.edit', [
             'finance' => $finance,
-            'years' => $years,
+            'years' => $this->yearRepo->listYears('year', 'asc')->where('parent_id', 1),
             'selectedIdsC' => $finance->years()->pluck('year_id')->all(),
         ]);
     }

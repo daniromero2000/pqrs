@@ -46,7 +46,9 @@ class PqrCommentaryController extends Controller
             return $this->transformPqrCommentary($pqrcommentary);
         })->all();
 
-        return view('admin.pqrCommentaries.list', ['pqrcommentaries' => $this->pqrcommentaryRepo->paginateArrayResults($pqrcommentaries)]);
+        return view('admin.pqrCommentaries.list', [
+            'pqrcommentaries' => $this->pqrcommentaryRepo->paginateArrayResults($pqrcommentaries)
+        ]);
     }
 
     /**
@@ -56,9 +58,8 @@ class PqrCommentaryController extends Controller
      */
     public function create()
     {
-        $pqrs = $this->pqrRepo->listpqrs();
         return view('admin.pqrCommentaries.create', [
-            'pqrs' => $pqrs,
+            'pqrs' => $this->pqrRepo->listpqrs(),
             'user' => auth()->guard('employee')->user()
         ]);
     }
@@ -73,7 +74,7 @@ class PqrCommentaryController extends Controller
     {
         $this->pqrcommentaryRepo->createPqrCommentary($request->except('_token', '_method'));
         $request->session()->flash('message', 'Creación Exitosa');
-        return back()->with('message','Operation Successful !');
+        return back()->with('message', 'Comentario guardado.');
     }
 
     /**
@@ -84,7 +85,9 @@ class PqrCommentaryController extends Controller
      */
     public function show(int $id)
     {
-        return view('admin.pqrCommentaries.show', ['pqrcommentary' => $this->pqrcommentaryRepo->findPqrCommentaryById($id)]);
+        return view('admin.pqrCommentaries.show', [
+            'pqrcommentary' => $this->pqrcommentaryRepo->findPqrCommentaryById($id)
+        ]);
     }
 
     /**
@@ -95,7 +98,6 @@ class PqrCommentaryController extends Controller
      */
     public function edit(int $id)
     {
-
         $pqrcommentary = $this->pqrcommentaryRepo->findPqrCommentaryById($id);
         $pqrcommentaryRepo = new PqrCommentaryRepository($pqrcommentary);
         $pqr = $pqrcommentaryRepo->findPqr();
@@ -117,7 +119,6 @@ class PqrCommentaryController extends Controller
     public function update(UpdatePqrCommentaryRequest $request, $id)
     {
         $pqrcommentary = $this->pqrcommentaryRepo->findPqrCommentaryById($id);
-
         $update = new PqrCommentaryRepository($pqrcommentary);
         $update->updatePqrCommentary($request->except('_method', '_token'));
 

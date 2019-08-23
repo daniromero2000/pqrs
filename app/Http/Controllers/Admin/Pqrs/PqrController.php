@@ -43,7 +43,7 @@ class PqrController extends Controller
     ) {
         $this->pqrRepo = $pqrRepository;
         $this->pqrStatusRepo = $pqrStatusRepository;
-         $this->cityRepo = $cityRepository;
+        $this->cityRepo = $cityRepository;
     }
 
 
@@ -54,7 +54,6 @@ class PqrController extends Controller
      */
     public function index()
     {
-        $user = auth()->guard('employee')->user();
         $list = $this->pqrRepo->listPqrs('created_at', 'desc');
 
         if (request()->has('q')) {
@@ -67,7 +66,7 @@ class PqrController extends Controller
 
         return view('admin.pqrs.list', [
             'pqrs' => $this->pqrRepo->paginateArrayResults($pqrs),
-            'user' =>   $user
+            'user' =>   auth()->guard('employee')->user()
         ]);
     }
 
@@ -106,10 +105,9 @@ class PqrController extends Controller
     {
         $pqr = $this->pqrRepo->findPqrById($id);
 
-
         return view('admin.pqrs.show', [
             'user' => auth()->guard('employee')->user(),
-            'pqr' => $this->pqrRepo->findPqrById($id),
+            'pqr' => $pqr,
             'pqrcommentaries' => $pqr->pqrcommentaries,
             'currentStatus' => $this->pqrStatusRepo->findPqrStatusById($pqr->pqr_status_id),
             'city' => $this->cityRepo->findCityById($pqr->city_id),
@@ -125,8 +123,9 @@ class PqrController extends Controller
     public function edit($id)
     {
         $pqr = $this->pqrRepo->findPqrById($id);
+
         return view('admin.pqrs.edit', [
-            'pqr' => $this->pqrRepo->findPqrById($id),
+            'pqr' => $pqr,
             'statuses' => $this->pqrStatusRepo->listPqrStatuses(),
             'currentStatus' => $this->pqrStatusRepo->findPqrStatusById($pqr->pqr_status_id)
         ]);
@@ -151,7 +150,6 @@ class PqrController extends Controller
         }
 
         $update->updatePqr($data);
-
         $request->session()->flash('message', 'Actualización Exitosa!');
         return redirect()->route('admin.pqrs.show', $id);
     }
