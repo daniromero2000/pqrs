@@ -30,10 +30,10 @@
                     <tr>
                         <td>{{ date('M d, Y h:i a', strtotime($pqr['created_at'])) }}</td>
                         <td>
-                            <a href="{{ route('admin.pqrs.show', $pqr['id']) }}">{{ $pqr['name'] }}</a>
+                           {{ $pqr['name'] }}
                         </td>
                         <td>{{ $pqr['phone'] }}</td>
-                        <td>{{ $pqr['pqr'] }}</td>
+                        <td> <a href="{{ route('admin.pqrs.show', $pqr['id']) }}">{{ $pqr['pqr'] }}</a></td>
 
                         <td>
                             <p class="text-center label"

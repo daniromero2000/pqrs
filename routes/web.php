@@ -11,7 +11,6 @@
 |
 */
 
-
 /**
  * Admin routes
  */

@@ -8,33 +8,23 @@ class PqrStatusTableSeeder extends Seeder
     public function run()
     {
         factory(PqrStatus::class)->create([
-            'name' => 'Contactado',
+            'name' => 'Atendido',
             'color' => 'green'
         ]);
 
         factory(PqrStatus::class)->create([
-            'name' => 'Sin Decidir',
+            'name' => 'En Tramite',
             'color' => 'yellow'
         ]);
 
         factory(PqrStatus::class)->create([
-            'name' => 'Sin Contactar',
+            'name' => 'Abierto',
             'color' => 'red'
         ]);
 
         factory(PqrStatus::class)->create([
-            'name' => 'Sin enviar Información',
-            'color' => 'blue'
-        ]);
-
-        factory(PqrStatus::class)->create([
-            'name' => 'Comprometido',
+            'name' => 'En Trámite Pendiente Información Tercero',
             'color' => 'grey'
-        ]);
-
-        factory(PqrStatus::class)->create([
-            'name' => 'Re Contactar',
-            'color' => 'orange'
         ]);
     }
 }

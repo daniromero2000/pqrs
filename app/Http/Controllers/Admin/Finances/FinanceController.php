@@ -155,7 +155,7 @@ class FinanceController extends Controller
         return view('admin.finances.edit', [
             'finance' => $finance,
             'years' => $this->yearRepo->listYears('year', 'asc')->where('parent_id', 1),
-            'selectedIdsC' => $finance->years()->pluck('year_id')->all(),
+            'selectedIdsC' => $finance->years()->pluck('year_id')->all()
         ]);
     }
 
