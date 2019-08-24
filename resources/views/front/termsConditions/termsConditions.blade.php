@@ -4,7 +4,7 @@
         <div class="col-md-10 ">
             <h1 class="titulo top-buffer">POLÍTICA DE TRATAMIENTO DE LA INFORMACIÓN Y PROTECCIÓN DE DATOS PERSONALES
                 SOCOMIR</h1>
-            <h2 class="titulo top-buffer">OBJETIVO:</h2>
+            <h2 class="titulo top-buffer"><i class="fa fa-check yellow" aria-hidden="true"></i> OBJETIVO:</h2>
             <p class="parrafo"> Establecer y divulgar las Políticas de Tratamiento de la Información y Protección de
                 Datos Personales, implementados por Socomir con el fin de
                 garantizar el adecuado cumplimiento de la Ley 1581 de 2012 y el Decreto 1377 de 2013, los cuales tienen

@@ -30,7 +30,7 @@
                     <i class="fa fa-check yellow" aria-hidden="true"></i> Unificamos tus deudas para mejorar tu flujo de
                     caja mensual <br><br>
 
-                    <i class="fa fa-check yellow" aria-hidden="true"></i>Monto desde $500.000 hasta $80.000.000<br><br>
+                    <i class="fa fa-check yellow" aria-hidden="true"></i> Monto desde $500.000 hasta $80.000.000<br><br>
 
                     <i class="fa fa-check yellow" aria-hidden="true"></i> El monto a otorgar se define de acuerdo con la
                     Pagaduría, Capacidad de pago, la edad y Perfil de cada asociado <br><br>
