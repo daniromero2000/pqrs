@@ -66,7 +66,7 @@
                                         <!-- /.box-body -->
                                     </div>
                                     <div class="col-md-4">
-                                        <h2>Categorias</h2>
+                                        <h2>Categorías</h2>
                                         @include('admin.shared.years', ['years' => $years, 'ids' =>
                                         $finance])
                                     </div>

@@ -88,12 +88,11 @@
                         <div class="row pb-2">
                             <div class="col-md-12 text-justify">
                                 <h2>Visión</h2>
-                                <p>SOCOMIR, bajo nuestra marca <strong class="yellow">“CREO”</strong>, se consolidara en
-                                    el 2020 como una cooperativa
-                                    reconocida por su solidez, eficiencia en la prestación de servicios, fuente de
-                                    solución a las necesidades y responsabilidad social; aportando al mejoramiento de la
-                                    calidad de vida de nuestros asociados y su familia, con una gestión participativa de
-                                    ellos.
+                                <p>SOCOMIR, se consolidará en
+                                    el 2020 como una cooperativa reconocida por su solidez, eficiencia en la prestación
+                                    de servicios, fuente de solución a las necesidades y responsabilidad social;
+                                    aportando al mejoramiento de la calidad de vida de nuestros asociados y su familia,
+                                    con una gestión participativa de ellos.
                                 </p>
                             </div>
 

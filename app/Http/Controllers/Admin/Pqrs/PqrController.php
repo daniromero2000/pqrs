@@ -141,7 +141,6 @@ class PqrController extends Controller
     public function update(UpdatePqrRequest $request, $id)
     {
         $pqr = $this->pqrRepo->findPqrById($id);
-
         $update = new PqrRepository($pqr);
         $data = $request->except('_method', '_token', 'password');
 
@@ -166,7 +165,6 @@ class PqrController extends Controller
     public function destroy($id)
     {
         $pqr = $this->pqrRepo->findPqrById($id);
-
         $pqrRepo = new PqrRepository($pqr);
         $pqrRepo->deletePqr();
 
