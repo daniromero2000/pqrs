@@ -10,6 +10,14 @@
                             legislación cooperativa, los estatutos sociales y vigilada por la Superintendencia de
                             Economía Solidaria</p>
                     </a>
+                    <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="footer-menu">
+                            <ul class="list-unstyled">
+                                <li> <a href="{{ route('termsConditions') }}">Política de tratamiento de datos
+                                        personales</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-12 col-xs-12 col-sm-4 col-md-3 col-lg-3 col-xl-3 float-left">
                     <div class="footer-menu">
@@ -40,7 +48,8 @@
                 <div class="col-12 col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                     <h2 class="footer-text">Contacto</h2>
                     <p><i class="fa fa-home iconFooter" aria-hidden="true" target="_blank"></i> Cra. 7 # 156-10 Torre
-                        Krystal of 2303 Bogotá<br><br><i class="fa fa-phone iconFooter" aria-hidden="true"></i> 4842121<br><br>
+                        Krystal of 2303 Bogotá<br><br><i class="fa fa-phone iconFooter" aria-hidden="true"></i>
+                        4842121<br><br>
                         <i class="fa fa-envelope iconFooter" aria-hidden="true"></i> socomir@creolibranzas.com</p>
                 </div>
             </div>
