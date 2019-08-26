@@ -2114,6 +2114,13 @@ PHONE PORTRAIT VERSION
     font-family: 'Lato', sans-serif;
 }
 
+.imgBeneficios {
+    width: 460px !important;
+    height: 735px !important;
+    margin-left: 50px;
+
+}
+
 
 /* ************************
 PHONE LANDSCAPE VERSION

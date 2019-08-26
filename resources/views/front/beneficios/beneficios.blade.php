@@ -12,7 +12,7 @@
         <hr>
         <div class="row d-flex justify-content-center">
             <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 side-nopadding">
-                <img class="img float-left hidden-xs" src="{{asset('/img/images-04.png')}}" alt="Crédito para todos">
+                <img class="img float-left hidden-xs imgBeneficios" src="{{asset('/img/images-04.png')}}" alt="Crédito para todos">
                 <p class="beneficiosText"><strong>Los siguientes son los beneficios que nuestros asociados
                         encontraran:</strong> </p>
                 <p class="beneficiosText text-justify ">
