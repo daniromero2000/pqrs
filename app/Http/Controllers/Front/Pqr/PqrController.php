@@ -108,9 +108,13 @@ class PqrController extends Controller
      */
     public function store(CreatePqrRequest $request)
     {
-        $this->pqrRepo->createPqr($request->except('_token', '_method'));
-        return redirect()->route('admin.pqrs.index');
+        $pqr =  $this->pqrRepo->createPqr($request->except('_token', '_method'));
+
+        return view('front.pqrs.pqrtkspage', [
+            'pqr' =>  $this->pqrRepo->findPqrById($pqr->id)
+        ]);
     }
+    
 
     /**
      * Display the specified resource.
@@ -123,7 +127,7 @@ class PqrController extends Controller
         $pqr = $this->pqrRepo->findPqrById($id);
         return view('admin.pqrs.show', [
             'user' => auth()->guard('employee')->user(),
-            'pqr' => $this->pqrRepo->findPqrById($id),
+            'pqr' =>  $pqr,
             'pqrcommentaries' => $pqr->pqrcommentaries,
             'items' => $pqr->items,
             'currentStatus' => $this->pqrStatusRepo->findPqrStatusById($pqr->pqr_status_id)
