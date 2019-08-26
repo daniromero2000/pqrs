@@ -41,7 +41,7 @@
                                     <i class="fa fa-check"></i>
                                 </div>
                                 <select class="selectpicker form-control form-controlPqrs " id="pqr" name="pqr">
-                                    <option>Pregunta</option>
+                                    <option>Petición</option>
                                     <option>Queja</option>
                                     <option>Reclamo</option>
                                     <option>Solicitud</option>
