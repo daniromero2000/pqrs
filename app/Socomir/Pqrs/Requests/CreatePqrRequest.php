@@ -16,7 +16,7 @@ class CreatePqrRequest extends BaseFormRequest
         return [
             'name' => ['required'],
             'email' => ['required', 'email'],
-         
+            'data_politics' => ['required']
         ];
     }
 }

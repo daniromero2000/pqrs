@@ -26,7 +26,7 @@ class UpdatePqrRequest extends FormRequest
     {
         return [
             'name' => ['required'],
-            'email' => ['required', 'email', Rule::unique('pqrs')->ignore($this->segment(3))]
+            'email' => ['required', 'email']
         ];
     }
 }
