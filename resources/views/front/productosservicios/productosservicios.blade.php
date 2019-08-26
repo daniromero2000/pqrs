@@ -14,7 +14,7 @@
                 <img class="imgProducto shadow p-3 mb-5 bg-white rounded" src="{{asset('/img/producto1.jpg')}}"
                     alt="First slide">
             </div>
-            <div class="col-md-6 top-buffer">
+            <div class="col-md-6 top-buffer ">
                 <h2 class="productTitle1">
                     CRÉDITO DE DESCUENTO POR NÓMINA (LIBRANZA)
                 </h2>
