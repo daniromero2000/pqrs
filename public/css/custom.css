@@ -4754,5 +4754,53 @@ BreadCrumb
         margin-top: 5px;
     }
 
+    /* ************************
+Productos y Servicios
+************************** */
+.productTitle1{
+background-color: #DBAC06 ;
+color: #ffffff !important;
+font-size: 20px;
+width: auto;
+text-align: center;
+font-weight: bold;
+padding: 5px;
+}
+
+.productTitle2{
+    background-color: #DBAC06 ;
+    color: #ffffff !important;
+    font-size: 20px;
+    width: auto;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+    }
+
+    .productTitle3{
+        background-color: #DBAC06 ;
+        color: #ffffff !important;
+        font-size: 20px;
+        width: auto;
+        text-align: center;
+        font-weight: bold;
+        padding: 5px;
+        }
+
+        .productTitle4{
+            background-color: #DBAC06 ;
+            color: #ffffff !important;
+            font-size: 20px;
+            width: auto;
+            text-align: center;
+            font-weight: bold;
+            padding: 5px;
+            }
+    
+
+
+.imgProducto {
+    width:400px;
+}
 
 }
