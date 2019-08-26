@@ -48,6 +48,24 @@ Route::group(['prefix' => 'admin', 'middleware' => ['employee'], 'as' => 'admin.
         });
     });
 });
+
+
+
+
+
 /**
  * Frontend routes
  */
+
+Auth::routes();
+Route::namespace('Auth')->group(function () {
+    Route::get('logout', 'LoginController@logout');
+    Route::resource('auth', 'RegisterController');
+});
+
+
+Route::namespace('Front')->group(function () { 
+
+
+    
+});
