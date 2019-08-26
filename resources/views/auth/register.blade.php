@@ -46,7 +46,7 @@
                 <div class="col-md-12">
                     <a href=""><img src="{{asset('/img/engranaje.png')}}" alt="First slide"></a>
                     <div class="title m-b-md">
-                            AQUÍ Proximamente podrás realizar tu registro de usuario
+                            Aquí Proximamente podrás realizar tu registro de usuario
                     </div>
                 </div>
             </div>
