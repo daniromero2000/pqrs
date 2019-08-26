@@ -87,7 +87,7 @@
                                 personales</a></div>
                         <div class="form-group">
                             <div class="d-flex justify-content-center d-flex align-items-end"> <button type="submit"
-                                    class="btn btnlogin">Envíar</button></div>
+                                    class="btn btnlogin"><i class="fa fa-check yellow" aria-hidden="true"></i> Envíar</button></div>
                         </div>
                     </form>
                 </div>
