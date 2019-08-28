@@ -33,7 +33,7 @@
                                     href="{{ route('libranza') }}"> Conceptos crédito de libranza</a></li>
                             <hr class="footerStyle">
                             <li><i class="fa fa-angle-right iconFooter" aria-hidden="true"></i><a target="_blank"
-                                    href="{{asset('/pdf/Informacion-cobranzas-socomir.pdf')}}"> Políticas de cobro</a>
+                                    href="{{asset('/pdf/Informacion-cobranzas-socomir.pdf#toolbar=0&navpanes=0&scrollbar=0')}}"> Políticas de cobro</a>
                             </li>
                             <hr class="footerStyle">
                             <li><i class="fa fa-angle-right iconFooter" aria-hidden="true" target="_blank"></i><a

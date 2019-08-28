@@ -2,7 +2,7 @@
 @section('title', 'Reglamentos')
 @section('content')
 
-<body>
+<body oncopy="return false" oncut="return false" onpaste="return false">
     <div class="container-fluid">
         <div class="row top-buffer">
             <div class="col-md-12 side-nopadding">
@@ -14,15 +14,15 @@
             <div class="row top-buffer">
                 <div class="col-md-10">
                     <ul class="list-unstyled">
-                        <li> <a target="_blank" class="reglamentos" href="{{asset('/pdf/manual-credito-2019.pdf')}}"><i
+                        <li> <a target="_blank" class="reglamentos" href="{{asset('/pdf/manual-credito-2019.pdf#toolbar=0&navpanes=0&scrollbar=0')}}"><i
                                     class="fa fa-angle-right yellow" aria-hidden="true"></i> Reglamento de
                                 Crédito</a> </li>
                         <li> <a target="_blank" class="reglamentos"
-                                href="{{asset('/pdf/politicas-de-gestion-de-cobranza-socomir.pdf')}}"><i
+                                href="{{asset('/pdf/politicas-de-gestion-de-cobranza-socomir.pdf#toolbar=0&navpanes=0&scrollbar=0')}}"><i
                                     class="fa fa-angle-right yellow" aria-hidden="true"></i> Reglamento de
                                 Cobranza</a> </li>
                         <li><a target="_blank" class="reglamentos"
-                                href="{{asset('/pdf/2019 REGLAMENTO Y CONDICIONES DE CREDITO LIBRANZA SOCOMIR.docx nov 2018.pdf')}}"><i
+                                href="{{asset('/pdf/2019 REGLAMENTO Y CONDICIONES DE CREDITO LIBRANZA SOCOMIR.docx nov 2018.pdf#toolbar=0&navpanes=0&scrollbar=0')}}"><i
                                     class="fa fa-angle-right yellow" aria-hidden="true"></i> Reglamento y
                                 Condiciones
                                 de Crédito Libranza</a> </li>

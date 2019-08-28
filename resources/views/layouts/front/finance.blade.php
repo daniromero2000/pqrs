@@ -1,11 +1,11 @@
+
+<body oncopy="return false" oncut="return false" onpaste="return false">
 <div class="container-fluid">
     <div class="row d-flex justify-content-center top-buffer bottom-buffer">
         <div class="col-md-12 text-center top-buffer">
             <h1 class="nombre"> {{ $finance->name }}</h1>
             <object data="{{asset("storage/$finance->cover")}}" type="application/pdf" width="100%" height="800px">
-                <p>It appears you don't have a PDF plugin for this browser.
-                    No biggie... you can <a href="resume.pdf">click here to
-                        download the PDF file.</a></p>
+                <p>Parece que tu navegador no puede leer PDF</p>
             </object>
         </div>
     </div>
@@ -17,3 +17,4 @@
         </div>
     </div>
 </div>
+</body>

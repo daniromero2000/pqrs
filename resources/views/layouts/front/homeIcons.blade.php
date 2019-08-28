@@ -43,7 +43,7 @@
             </div>
             <div class="col-2.4 col-xs-2.4 col-sm-2.4 col-md-2.4 col-lg-2.4 col-xl-2.4">
                 <div class="servicios-iconos btn"> <button class="btn btn-default"
-                        onclick="location.href ='{{asset('/pdf/Informacion-cobranzas-socomir.pdf')}}';" target="_blank">
+                        onclick="location.href ='{{asset('/pdf/Informacion-cobranzas-socomir.pdf#toolbar=0&navpanes=0&scrollbar=0')}}';" target="_blank">
                         <img src="{{asset('/img/images-10.png')}}" class="img-fluid" alt="Políticas de Cobro"
                             width="100" /> </button></div>
                 <h2 class="servicios-text">Políticas de <br> Cobro</h2>

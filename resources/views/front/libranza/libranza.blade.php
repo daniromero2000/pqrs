@@ -2,7 +2,7 @@
 @section('title', 'Crédito Libranza')
 @section('content')
 
-<body>
+<body oncopy="return false" oncut="return false" onpaste="return false">
     <div class="container-fluid">
         <div class="row top-buffer">
             <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 side-nopadding">
@@ -186,7 +186,7 @@
                 <div class="row">
                     <div
                         class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 top-buffer text-center bottom-buffer">
-                        <a target="_blank" href="{{asset('/pdf/CONDICIONES DE CREDITO LIBRANZA SOCOMIR v5.pdf')}}"><img
+                        <a target="_blank" href="{{asset('/pdf/CONDICIONES DE CREDITO LIBRANZA SOCOMIR v5.pdf#toolbar=0&navpanes=0&scrollbar=0')}}"><img
                                 class="libranzaIconPdf" src="{{asset('/img/icono-PDF.png')}}" alt="First slide">
                             <div class="block animatable fadeInUp">
                                 <h2 class="libranzaIconPdfText text-center">Condiciones<br> del Crédito</h2>
@@ -195,7 +195,7 @@
                     </div>
                     <div
                         class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 top-buffer text-center bottom-buffer">
-                        <a target="_blank" href="{{asset('/pdf/LIBRANZA_SOCOMIR.pdf')}}"><img class="libranzaIconPdf"
+                        <a target="_blank" href="{{asset('/pdf/LIBRANZA_SOCOMIR.pdf#toolbar=0&navpanes=0&scrollbar=0')}}"><img class="libranzaIconPdf"
                                 src="{{asset('/img/icono-PDF.png')}}" alt="First slide">
                             <div class="block animatable fadeInUp">
                                 <h2 class="libranzaIconPdfText text-center">Libranza</h2>
@@ -204,7 +204,7 @@
                     </div>
                     <div
                         class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 top-buffer text-center bottom-buffer">
-                        <a target="_blank" href="{{asset('/pdf/pagare_2019.pdf')}}"><img class="libranzaIconPdf"
+                        <a target="_blank" href="{{asset('/pdf/pagare_2019.pdf#toolbar=0&navpanes=0&scrollbar=0')}}"><img class="libranzaIconPdf"
                                 src="{{asset('/img/icono-PDF.png')}}" alt="First slide">
                             <div class="block animatable fadeInUp">
                                 <h2 class="libranzaIconPdfText text-center">Pagaré</h2>
@@ -213,7 +213,7 @@
                     </div>
                     <div
                         class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 top-buffer text-center bottom-buffer">
-                        <a target="_blank" href="{{asset('/pdf/SOLICITUD_DE_CREDITO_SOCOMIR.pdf')}}"><img
+                        <a target="_blank" href="{{asset('/pdf/SOLICITUD_DE_CREDITO_SOCOMIR.pdf#toolbar=0&navpanes=0&scrollbar=0')}}"><img
                                 class="libranzaIconPdf" src="{{asset('/img/icono-PDF.png')}}" alt="First slide">
                             <div class="block animatable fadeInUp">
                                 <h2 class="libranzaIconPdfText text-center">Solicitud de<br>

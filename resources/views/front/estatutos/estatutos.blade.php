@@ -2,7 +2,7 @@
 @section('title', 'Estatutos')
 @section('content')
 
-<body>
+<body oncopy="return false" oncut="return false" onpaste="return false">
     <div class="container-fluid">
         <div class="row top-buffer">
             <div class="col-md-12 side-nopadding">
@@ -13,11 +13,9 @@
         <div class="row top-buffer bottom-buffer">
             <div class="col-md-12">
                 <p class="text-center"><strong>Las siguientes son los estatutos de Socomir:</strong></p>
-                <object data="{{asset('/pdf/ESTATUTOS SOCOMIR 2015.pdf')}}" type="application/pdf" width="100%"
+                <object data="{{asset('/pdf/ESTATUTOS SOCOMIR 2015.pdf#toolbar=0&navpanes=0&scrollbar=0')}}" type="application/pdf" width="100%"
                     height="800px">
-                    <p>It appears you don't have a PDF plugin for this browser.
-                        No biggie... you can <a href="resume.pdf">click here to
-                            download the PDF file.</a></p>
+                    <p>Parece que tu navegador no puede leer PDF</p>
                 </object>
             </div>
         </div>
