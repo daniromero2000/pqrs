@@ -62,9 +62,6 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'employee' => \App\Http\Middleware\RedirectIfNotEmployee::class,
         'checkout' => \App\Http\Middleware\RedirectIfNotCustomer::class,
-
-
-
     ];
 
     /**

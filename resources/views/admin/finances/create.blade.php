@@ -3,12 +3,12 @@
 <!-- Main content -->
 <section class="content">
     @include('layouts.errors-and-messages')
-    <div class="box">
+    <div class="box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
         <form action="{{ route('admin.finances.store') }}" method="post" class="form" enctype="multipart/form-data">
             <div class="box-body">
                 {{ csrf_field() }}
                 <div class="col-md-8">
-                    <h1>Información Financiera</h1>
+                    <h1>Crear Información Financiera</h1>
                     <div class="form-group">
                         <label for="name">Mes <span class="text-danger">*</span></label>
                         <div class="input-group">

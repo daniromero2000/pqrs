@@ -3,64 +3,59 @@
 <!-- Main content -->
 <section class="content">
     <!-- Default box -->
-    <div class="box">
+    <div class="box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
         <div class="box-body">
-            <h1>PQR</h1>
+            <h2>{{ $pqr->name }} ({{ $pqr->pqr }}) <p class="text-center label"
+                    style="color: #ffffff; background-color: {{ $currentStatus->color }}"
+                    class="btn btn-info btn-block">{{ $currentStatus->name }}</p>
+            </h2>
             <table class="table">
                 <thead>
                     <tr>
                         <th scope="col">Documento Identificación</th>
-                        <th scope="col">Nombre</th>
                         <th scope="col">Email</th>
                         <th scope="col">Teléfono</th>
-                        <th scope="col">Estado</th>
-                        <th scope="col">Opciones</th>
+
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>{{ $pqr->cedula }}</td>
-                        <td>{{ $pqr->name }}</td>
                         <td>{{ $pqr->email }}</td>
                         <td>{{ $pqr->phone }}</td>
-                        <td>
-                            <p class="text-center label"
-                                style="color: #ffffff; background-color: {{ $currentStatus->color }}"
-                                class="btn btn-info btn-block">{{ $currentStatus->name }}</p>
-                        </td>
-                        <td>
-                            <form action="{{ route('admin.pqrs.destroy', $pqr['id']) }}" method="post"
-                                class="form-horizontal">
-                                {{ csrf_field() }}
-                                <input type="hidden" name="_method" value="delete">
-                                <div class="btn-group">
-                                    <a href="{{ route('admin.pqrs.edit', $pqr['id']) }}"
-                                        class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
-                                </div>
-                            </form>
-                        </td>
+
                     </tr>
                 </tbody>
                 <thead>
                     <tr>
                         <th scope="col">Ciudad</th>
-                        <th scope="col">Tipo de PQR</th>
                         <th scope="col">Asunto</th>
                         <th scope="col">Mensaje</th>
-
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>{{ $city->name }}</td>
-                        <td>{{ $pqr->pqr }}</td>
                         <td>{{ $pqr->asunto }}</td>
                         <td>{{ $pqr->mensaje }}</td>
-
                     </tr>
                 </tbody>
             </table>
+            <div class="row">
+                <div class="col">
+                    <form action="{{ route('admin.pqrs.destroy', $pqr['id']) }}" method="post" class="form-horizontal">
+                        {{ csrf_field() }}
+                        <input type="hidden" name="_method" value="delete">
+                        <div class="btn-group">
+                            <a href="{{ route('admin.pqrs.edit', $pqr['id']) }}" class="btn btn-primary btn-sm"><i
+                                    class="fa fa-edit"></i> Editar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
+    </div>
+    <div class="box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
         <div class="box-body">
             <h1>Comentarios</h1>
             @if(!$pqrcommentaries->isEmpty())

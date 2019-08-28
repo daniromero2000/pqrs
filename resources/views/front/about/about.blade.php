@@ -74,7 +74,7 @@
                     <div class="tab-pane fade show active" id="bogota" role="tabpanel" aria-labelledby="home-tab">
                         <div class="row pb-2">
                             <div class="col-md-12 text-justify">
-                                <h2>Misión</h2>
+                                <h2><i class="fa fa-check yellow" aria-hidden="true"></i> Misión</h2>
                                 <p>Somos una cooperativa multiactiva de aportes y crédito que promueve el desarrollo
                                     integral, fundamentada en la Equidad, Solidaridad, Respeto y Confianza para
                                     satisfacer las necesidades sociales y de consumo de sus asociados y sus familias,
@@ -87,13 +87,12 @@
                     <div class="tab-pane fade" id="cali" role="tabpanel" aria-labelledby="profile-tab">
                         <div class="row pb-2">
                             <div class="col-md-12 text-justify">
-                                <h2>Visión</h2>
-                                <p>SOCOMIR, bajo nuestra marca <strong class="yellow">“CREO”</strong>, se consolidara en
-                                    el 2020 como una cooperativa
-                                    reconocida por su solidez, eficiencia en la prestación de servicios, fuente de
-                                    solución a las necesidades y responsabilidad social; aportando al mejoramiento de la
-                                    calidad de vida de nuestros asociados y su familia, con una gestión participativa de
-                                    ellos.
+                                <h2><i class="fa fa-check yellow" aria-hidden="true"></i> Visión</h2>
+                                <p>SOCOMIR, se consolidará en
+                                    el 2020 como una cooperativa reconocida por su solidez, eficiencia en la prestación
+                                    de servicios, fuente de solución a las necesidades y responsabilidad social;
+                                    aportando al mejoramiento de la calidad de vida de nuestros asociados y su familia,
+                                    con una gestión participativa de ellos.
                                 </p>
                             </div>
 
@@ -103,7 +102,7 @@
                         <div class="row pb-2">
                             <div class="col-md-12 text-justify">
                                 <p>
-                                    <h2 class="text-center">Valores</h2>
+                                    <h2 class="text-center"><i class="fa fa-check yellow" aria-hidden="true"></i> Valores</h2>
                                     <strong>AYUDA MUTUA:</strong> es el accionar conjunto de nuestros asociados y la
                                     cooperativa para la
                                     solución de problemas comunes. Buscando de forma constate de la superación de las
@@ -143,7 +142,7 @@
                     <div class="tab-pane fade" id="manizales" role="tabpanel" aria-labelledby="contact-tab">
                         <div class="row pb-2">
                             <div class="col-md-12 text-justify">
-                                <h2 class="text-center">Objetivos</h2>
+                                <h2 class="text-center"><i class="fa fa-check yellow" aria-hidden="true"></i> Objetivos</h2>
                                 <p><strong>General:</strong> Desarrollar la actividad financiera, mediante la prestación
                                     de servicios de
                                     crédito, contribuyendo al progreso de los asociados, sus familias y la comunidad en

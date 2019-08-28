@@ -5,7 +5,7 @@
     @include('layouts.errors-and-messages')
     <!-- Default box -->
 
-    <div class="box">
+    <div class="box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
         <div class="box-body">
             <h1>PQRS Socomir</h1>
             <div class="row">
@@ -30,10 +30,10 @@
                     <tr>
                         <td>{{ date('M d, Y h:i a', strtotime($pqr['created_at'])) }}</td>
                         <td>
-                            <a href="{{ route('admin.pqrs.show', $pqr['id']) }}">{{ $pqr['name'] }}</a>
+                           {{ $pqr['name'] }}
                         </td>
                         <td>{{ $pqr['phone'] }}</td>
-                        <td>{{ $pqr['pqr'] }}</td>
+                        <td> <a href="{{ route('admin.pqrs.show', $pqr['id']) }}">{{ $pqr['pqr'] }}</a></td>
 
                         <td>
                             <p class="text-center label"

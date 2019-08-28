@@ -1,4 +1,4 @@
-@extends('layouts.admin.app') 
+@extends('layouts.admin.app')
 @section('content')
 <!-- Main content -->
 <section class="content">
@@ -6,40 +6,43 @@
     <form action="{{ route('admin.employee.profile.update', $employee->id) }}" method="post" class="form">
         <input type="hidden" name="_method" value="put"> {{ csrf_field() }}
         <!-- Default box -->
-        <div class="box">
+        <div class="box crud-box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
             <div class="box-body">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Password</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div class="form-group">
-                                    <input name="name" type="text" class="form-control" value="{{ $employee->name }}" required>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-group">
-                                    <input name="email" type="email" class="form-control" value="{{ $employee->email }}" required>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-group">
-                                    <input name="password" type="password" class="form-control" value="" placeholder="xxxxxx" required>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <h1>Editar Perfil</h1>
+                <div class="form-group">
+                    <label for="name">Nombre <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <input type="text" name="name" id="name" placeholder="Nombre" class="form-control"
+                            value="{!! $employee->name ?: old('name')  !!}" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <input type="text" name="email" id="email" placeholder="Email" class="form-control"
+                            value="{!! $employee->email ?: old('email')  !!}" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-lock"></i>
+                        </div>
+                        <input type="password" name="password" id="password" placeholder="xxxxx" class="form-control"
+                            required>
+                    </div>
+                </div>
             </div>
             <!-- /.box-body -->
             <div class="box-footer">
-                <div class="btn-group">
+                <div class="btn-group">`=
                     <a href="{{ route('admin.dashboard') }}" class="btn btn-default btn-sm">Regresar</a>
                     <button class="btn btn-success btn-sm" type="submit"> <i class="fa fa-save"></i> Guardar</button>
                 </div>

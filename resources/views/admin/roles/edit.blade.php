@@ -3,10 +3,11 @@
 <!-- Main content -->
 <section class="content">
     @include('layouts.errors-and-messages')
-    <div class="box">
+    <div class="box crud-box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
         <form action="{{ route('admin.roles.update', $role->id) }}" method="post" class="form">
             <div class="box-body">
                 {{ csrf_field() }}
+                <h1>Editar Rol</h1>
                 <input type="hidden" value="put" name="_method">
                 <div class="form-group">
                     <label for="display_name">Nombre <span class="text text-danger">*</span></label>

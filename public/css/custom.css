@@ -2114,6 +2114,13 @@ PHONE PORTRAIT VERSION
     font-family: 'Lato', sans-serif;
 }
 
+.imgBeneficios {
+    width: 460px !important;
+    height: 800px !important;
+    margin-left: 50px;
+
+}
+
 
 /* ************************
 PHONE LANDSCAPE VERSION
@@ -4747,5 +4754,61 @@ BreadCrumb
         margin-top: 5px;
     }
 
+    /* ************************
+Productos y Servicios
+************************** */
+    .productTitle1 {
+        background-color: #DBAC06;
+        color: #ffffff !important;
+        font-size: 20px;
+        width: auto;
+        text-align: center;
+        font-weight: bold;
+        padding: 5px;
+    }
 
+    .productTitle2 {
+        background-color: #DBAC06;
+        color: #ffffff !important;
+        font-size: 20px;
+        width: auto;
+        text-align: center;
+        font-weight: bold;
+        padding: 5px;
+    }
+
+    .productTitle3 {
+        background-color: #DBAC06;
+        color: #ffffff !important;
+        font-size: 20px;
+        width: auto;
+        text-align: center;
+        font-weight: bold;
+        padding: 5px;
+    }
+
+    .productTitle4 {
+        background-color: #DBAC06;
+        color: #ffffff !important;
+        font-size: 20px;
+        width: auto;
+        text-align: center;
+        font-weight: bold;
+        padding: 5px;
+    }
+
+    .imgProducto {
+        width: 400px;
+    }
+
+
+    #outerContainer #mainContainer div.toolbar {
+        display: none !important;
+        /* hide PDF viewer toolbar */
+    }
+
+    #outerContainer #mainContainer #viewerContainer {
+        top: 0 !important;
+        /* move doc up into empty bar space */
+    }
 }

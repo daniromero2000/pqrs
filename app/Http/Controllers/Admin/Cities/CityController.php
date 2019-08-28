@@ -34,12 +34,10 @@ class CityController extends Controller
      */
     public function edit($countryId, $provinceId, $cityId)
     {
-        $city = $this->cityRepo->findCityById($cityId);
-
         return view('admin.cities.edit', [
             'countryId' => $countryId,
             'provinceId' => $provinceId,
-            'city' => $city
+            'city' => $this->cityRepo->findCityById($cityId)
         ]);
     }
 
@@ -55,7 +53,6 @@ class CityController extends Controller
     public function update(UpdateCityRequest $request, $countryId, $provinceId, $city)
     {
         $city = $this->cityRepo->findCityById($city);
-
         $update = new CityRepository($city);
         $update->updateCity($request->only('name'));
 

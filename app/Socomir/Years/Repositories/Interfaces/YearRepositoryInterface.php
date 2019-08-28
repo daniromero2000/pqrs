@@ -3,7 +3,7 @@
 namespace App\Socomir\Years\Repositories\Interfaces;
 
 use Jsdecena\Baserepo\BaseRepositoryInterface;
-use App\Socomir\Years\year;
+use App\Socomir\Years\Year;
 use App\Socomir\Finances\Finance;
 use Illuminate\Support\Collection;
 use App\Socomir\Years\YearRepository;

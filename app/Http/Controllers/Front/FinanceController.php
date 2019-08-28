@@ -60,11 +60,7 @@ class FinanceController extends Controller
 
         return view('front.finances.finance', compact(
             'finance',
-            'year',
-
-            /**
-         * 'combos'
-         */
+            'year'
         ));
     }
 }

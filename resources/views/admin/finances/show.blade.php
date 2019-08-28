@@ -5,18 +5,18 @@
     @include('layouts.errors-and-messages')
     <!-- Default box -->
     @if($finance)
-    <div class="box">
+    <div class="box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
         <div class="box-body">
+            <h2>{{ $finance->name }}
+            </h2>
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Nombre</th>
                         <th scope="col">Descripción</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{{ $finance->name }}</td>
                         <td>{{ $finance->description }}</td>
                     </tr>
                 </tbody>
@@ -24,10 +24,8 @@
         </div>
         <div class="row top-buffer bottom-buffer">
             <div class="col-md-12">
-                <object data="{{asset("storage/$finance->cover")}}" type="application/pdf" width="100%" height="800px">
-                    <p>It appears you don't have a PDF plugin for this browser.
-                        No biggie... you can <a href="resume.pdf">click here to
-                            download the PDF file.</a></p>
+                <object data="{{asset("storage/$finance->cover#toolbar=0&navpanes=0&scrollbar=0")}}" type="application/pdf" width="100%" height="800px">
+                    <p>Parece que tu navegador no puede leer PDF</a></p>
                 </object>
             </div>
         </div>

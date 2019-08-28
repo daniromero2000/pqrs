@@ -3,12 +3,13 @@
 <!-- Main content -->
 <section class="content">
     @include('layouts.errors-and-messages')
-    <div class="box">
+    <div class="box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
         <form action="{{ route('admin.finances.update', $finance->id) }}" method="post" class="form"
             enctype="multipart/form-data">
             <div class="box-body">
                 <div class="row">
                     {{ csrf_field() }}
+                    <h1>Editar Información Financiera</h1>
                     <input type="hidden" name="_method" value="put">
                     <div class="col-md-12">
                         <!-- Nav tabs -->
@@ -23,16 +24,6 @@
                                 <div class="row">
                                     <div class="col-md-8">
                                         <h2>{{ ucfirst($finance->name) }}</h2>
-                                        <div class="form-group">
-                                            <label for="sku">Código <span class="text-danger">*</span></label>
-                                            <div class="input-group">
-                                                <div class="input-group-addon">
-                                                    <i class="fa fa-barcode"></i>
-                                                </div>
-                                                <input type="text" name="sku" id="sku" placeholder="xxxxx"
-                                                    class="form-control" value="{!! $finance->sku !!}" required>
-                                            </div>
-                                        </div>
                                         <div class="form-group">
                                             <label for="name">Nombre <span class="text-danger">*</span></label>
                                             <div class="input-group">
@@ -75,7 +66,7 @@
                                         <!-- /.box-body -->
                                     </div>
                                     <div class="col-md-4">
-                                        <h2>Categorias</h2>
+                                        <h2>Categorías</h2>
                                         @include('admin.shared.years', ['years' => $years, 'ids' =>
                                         $finance])
                                     </div>

@@ -4,10 +4,10 @@
 <section class="content">
     @include('layouts.errors-and-messages')
     <!-- Default box -->
-    <div class="box">
+    <div class="box crud-box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
         <form action="{{ route('admin.pqr-statuses.update', $pqrStatus->id) }}" method="post">
             <div class="box-body">
-                <h1>Estados Clientes</h1>
+                <h1>Editar Estado Clientes</h1>
                 {{ csrf_field() }}
                 <input type="hidden" name="_method" value="put">
                 <div class="form-group">
@@ -16,7 +16,7 @@
                         <div class="input-group-addon">
                             <i class="fa fa-check"></i>
                         </div>
-                        <input class="form-control" type="text" name="name" id="name" value="{{ $PqrStatus->name ?: old('name') }}" placeholder="Nombre"
+                        <input class="form-control" type="text" name="name" id="name" value="{{ $pqrStatus->name ?: old('name') }}" placeholder="Nombre"
                             required>
                     </div>
                 </div>

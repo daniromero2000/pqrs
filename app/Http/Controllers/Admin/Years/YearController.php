@@ -107,7 +107,7 @@ class YearController extends Controller
     public function edit($id)
     {
         return view('admin.years.edit', [
-            'years' => $this->yearRepo->listYearss('year', 'asc', $id),
+            'years' => $this->yearRepo->listYears('year', 'asc', $id),
             'year' => $this->yearRepo->findYearById($id)
         ]);
     }

@@ -41,12 +41,12 @@ class CityRepository extends BaseRepository implements CityRepositoryInterface
      *
      * @deprecated @findCityByName
      */
-    public function findCityById(int $id) : City
+    public function findCityById(int $id): City
     {
         try {
             return $this->findOneOrFail($id);
         } catch (ModelNotFoundException $e) {
-            throw new CityNotFoundException('City not found.');
+            throw new CityNotFoundException('Ciudad no encontrada.');
         }
     }
 
@@ -55,20 +55,10 @@ class CityRepository extends BaseRepository implements CityRepositoryInterface
      *
      * @return boolean
      */
-    public function updateCity(array $params) : bool
+    public function updateCity(array $params): bool
     {
         $this->model->update($params);
         return $this->model->save();
-    }
-
-    /**
-     * @param string $state_code
-     *
-     * @return Collection
-     */
-    public function listCitiesByStateCode(string $state_code) : Collection
-    {
-        return $this->model->where(compact('state_code'))->get();
     }
 
     /**
@@ -77,12 +67,12 @@ class CityRepository extends BaseRepository implements CityRepositoryInterface
      * @return mixed
      * @throws CityNotFoundException
      */
-    public function findCityByName(string $name) : City
+    public function findCityByName(string $name): City
     {
         try {
             return $this->model->where(compact('name'))->firstOrFail();
         } catch (ModelNotFoundException $e) {
-            throw new CityNotFoundException('City not found.');
+            throw new CityNotFoundException('Ciudad no encontrada.');
         }
     }
 }

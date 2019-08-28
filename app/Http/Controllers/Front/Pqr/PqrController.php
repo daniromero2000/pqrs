@@ -11,16 +11,12 @@ use App\Socomir\Pqrs\Repositories\Interfaces\PqrRepositoryInterface;
 use App\Socomir\Pqrs\Requests\CreatePqrRequest;
 use App\Socomir\Pqrs\Requests\UpdatePqrFrontRequest;
 use App\Socomir\Pqrs\Transformations\PqrTransformable;
-use App\Socomir\PqrStatuses\PqrStatus;
 use App\Socomir\PqrStatuses\Repositories\Interfaces\PqrStatusRepositoryInterface;
-use App\Socomir\PqrStatuses\Repositories\PqrStatusRepository;
 use App\Socomir\Cities\Repositories\Interfaces\CityRepositoryInterface;
 use App\Socomir\Cities\City;
-use Illuminate\Support\Facades\Auth;
 
 class PqrController extends Controller
 {
-
     use PqrTransformable;
 
     /**
@@ -35,7 +31,6 @@ class PqrController extends Controller
 
     private $cityRepo;
 
-
     /**
      * PqrController constructor.
      * @param PqrRepositoryInterface $pqrRepository
@@ -49,8 +44,6 @@ class PqrController extends Controller
         $this->pqrStatusRepo = $pqrStatusRepository;
         $this->cityRepo = $cityRepository;
     }
-
-
 
     /**
      * Show the about page.
@@ -98,8 +91,6 @@ class PqrController extends Controller
         ]);
     }
 
-
-
     /**
      * Store a newly created resource in storage.
      *
@@ -108,8 +99,11 @@ class PqrController extends Controller
      */
     public function store(CreatePqrRequest $request)
     {
-        $this->pqrRepo->createPqr($request->except('_token', '_method'));
-        return redirect()->route('admin.pqrs.index');
+        $pqr =  $this->pqrRepo->createPqr($request->except('_token', '_method'));
+        $request->session()->flash('message', 'Hemos recibido tu PQR satisfactoriamente.');
+        return view('front.pqrs.pqrtkspage', [
+            'pqr' =>  $this->pqrRepo->findPqrById($pqr->id)
+        ]);
     }
 
     /**
@@ -123,7 +117,7 @@ class PqrController extends Controller
         $pqr = $this->pqrRepo->findPqrById($id);
         return view('admin.pqrs.show', [
             'user' => auth()->guard('employee')->user(),
-            'pqr' => $this->pqrRepo->findPqrById($id),
+            'pqr' =>  $pqr,
             'pqrcommentaries' => $pqr->pqrcommentaries,
             'items' => $pqr->items,
             'currentStatus' => $this->pqrStatusRepo->findPqrStatusById($pqr->pqr_status_id)
@@ -136,12 +130,8 @@ class PqrController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        return view('front.pqrs.edit', [
-            'pqr' => $this->pqrRepo->findPqrById($id)
-        ]);
-    }
+    public function edit()
+    { }
 
     /**
      * Update the specified resource in storage.
@@ -151,86 +141,8 @@ class PqrController extends Controller
      * @param  int $itemid
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatePqrFrontRequest $request, $id)
-    {
-        $pqr = $this->pqrRepo->findPqrById($id);
-        $update = new PqrRepository($pqr);
-        $data = $request->except('_method', '_token', 'password');
-        $email =  $data['email'];
-        $pqrMail = pqr::where('email', $email)->first();
-
-        if ($pqrMail !== NULL && $pqrMail->id != $pqr->id) {
-            /**throw new \Exception('ya existe un cliente creado con ese correo electrónico.');*/
-            $itemid =  $data['itemid'];
-            $item = $this->itemRepo->findItemById($itemid);
-            $itemRepo = new ItemRepository($item);
-            $data1 = array(
-                "pqr_id" => $pqrMail->id
-            );
-            $itemRepo->updateItem($data1);
-            $this->destroy($pqr->id);
-            Auth::login($pqrMail);
-            $request->session()->flash('message', 'Hemos recibido tu artículo satisfactoriamente. ¡Ya eres un cliente registrado de Standard!');
-            $this->itemRepo->sendEmailToPqr($itemid, $pqrMail);
-            $this->itemRepo->sendEmailNotificationToAdmin($itemid);
-            return view('front.items.itemtkspage', [
-                'pqr' => $pqrMail,
-                'item' =>  $this->itemRepo->findItemById($itemid)
-            ]);
-        } elseif ($data['update'] == 1) {
-
-            $update = new PqrRepository($pqr);
-            if ($request->has('password')) {
-                $data['password'] = bcrypt($request->input('password'));
-            }
-            $update->updatePqr($data);
-            Auth::login($pqr);
-            $request->session()->flash('message', 'Asignación de clave exitosa');
-            return redirect()->route('accounts');
-        } else {
-            $itemid =  $data['itemid'];
-            $item = $this->itemRepo->findItemById($itemid);
-            if ($request->has('password')) {
-                $data['password'] = bcrypt($request->input('password'));
-            }
-            $update->updatePqr($data);
-            $pqr = $this->pqrRepo->findPqrById($id);
-
-            $pqrMail =  $pqr;
-            $this->itemRepo->sendEmailToPqr($itemid,  $pqrMail);
-            $this->itemRepo->sendEmailNotificationToAdmin($itemid);
-            $request->session()->flash('message', 'Hemos recibido tu artículo satisfactoriamente.');
-            return view('front.items.itemtkspage', [
-                'pqr' => $this->pqrRepo->findPqrById($id),
-                'item' => $item
-            ]);
-        }
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  UpdatePqrRequest $request
-     * @param  int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function updatePassword(UpdatePqrRequest $request, $id)
-    {
-        $pqr = $this->pqrRepo->findPqrById($id);
-
-        $update = new PqrRepository($pqr);
-        $data = $request->except('_method', '_token', 'password');
-
-        if ($request->has('password')) {
-            $data['password'] = bcrypt($request->input('password'));
-        }
-
-        $update->updatePqr($data);
-
-        $request->session()->flash('message', 'Asignación de clave exitosa');
-        return redirect()->route('home');
-    }
-
+    public function update()
+    { }
 
     /**
      * Remove the specified resource from storage.
@@ -246,20 +158,5 @@ class PqrController extends Controller
         $pqrRepo = new PqrRepository($pqr);
         $pqrRepo->deletePqr();
         return redirect()->route('admin.pqrs.index')->with('message', 'Eliminado Satisfactoriamente');
-    }
-
-
-    /**
-     * @param Collection $list
-     * @return array
-     */
-    private function transFormOrder(Collection $list)
-    {
-        $pqrStatusRepo = new PqrStatusRepository(new PqrStatus());
-
-        return $list->transform(function (Order $pqr) use ($pqrStatusRepo) {
-            $pqr->status = $pqrStatusRepo->findPqrStatusById($pqr->order_status_id);
-            return $pqr;
-        })->all();
     }
 }

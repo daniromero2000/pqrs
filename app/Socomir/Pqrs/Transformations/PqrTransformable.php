@@ -26,11 +26,8 @@ trait PqrTransformable
         $prop->mensaje = $pqr->mensaje;
         $prop->city = $pqr->city_id;
         $prop->status = (int) $pqr->status;
-
-
         $pqrStatusRepo = new PqrStatusRepository(new PqrStatus());
         $prop->pqr_status_id = $pqrStatusRepo->findPqrStatusById($pqr->pqr_status_id);
-
         $pqrCityRepo = new CityRepository(new City());
         $prop->pqr_city = $pqrCityRepo->findCityById($pqr->city_id);
         return $prop;

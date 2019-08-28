@@ -10,7 +10,7 @@
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">GESTION PQRS SOCOMIR</li>
             @if($user->hasRole('superadmin|marketing|operativo'))
-            <li class="treeview @if(request()->segment(2) == 'pqrs') active @endif">
+            <li class="treeview @if(request()->segment(2) == 'pqrs' || request()->segment(2) == 'pqr-statuses') active @endif">
                 <a href="#"> <i class="fa fa-users"> </i> <span>PQRS</span> <span class="pull-right-container">
                         @if($pqrSCCount > 0)
                         <span class="label label-danger pull-right">{{ $pqrSCCount }}</span>
@@ -45,7 +45,7 @@
             <li class="header">GESTION INFO FINANCIERA
             </li>
             <li
-                class="treeview @if(request()->segment(2) == 'finances' || request()->segment(2) == 'attributes') active @endif">
+                class="treeview @if(request()->segment(2) == 'finances' || request()->segment(2) == 'years') active @endif">
                 <ul class="treeview-menu"> @if($user->hasPermission('view-finance'))@endif
             </li> @endif
         </ul>
