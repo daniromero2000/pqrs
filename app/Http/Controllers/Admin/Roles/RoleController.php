@@ -3,11 +3,19 @@
 namespace App\Http\Controllers\Admin\Roles;
 
 use App\Http\Controllers\Controller;
+<<<<<<< HEAD
 use App\Socomir\Permissions\Repositories\Interfaces\PermissionRepositoryInterface;
 use App\Socomir\Roles\Repositories\RoleRepository;
 use App\Socomir\Roles\Repositories\RoleRepositoryInterface;
 use App\Socomir\Roles\Requests\CreateRoleRequest;
 use App\Socomir\Roles\Requests\UpdateRoleRequest;
+=======
+use App\Model\Permissions\Repositories\Interfaces\PermissionRepositoryInterface;
+use App\Model\Roles\Repositories\RoleRepository;
+use App\Model\Roles\Repositories\RoleRepositoryInterface;
+use App\Model\Roles\Requests\CreateRoleRequest;
+use App\Model\Roles\Requests\UpdateRoleRequest;
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 
 class RoleController extends Controller
 {
@@ -108,4 +116,8 @@ class RoleController extends Controller
         return redirect()->route('admin.roles.edit', $id)
             ->with('message', 'Update role successful!');
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4

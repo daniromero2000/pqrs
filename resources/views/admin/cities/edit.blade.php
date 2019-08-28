@@ -24,7 +24,11 @@
             <div class="box-footer">
                 <div class="btn-group">
                     <a href="{{ route('admin.countries.provinces.show', [$countryId, $provinceId]) }}"
+<<<<<<< HEAD
                         class="btn btn-default">Back</a>
+=======
+                        class="btn btn-default">Regresar</a>
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
                     <button type="submit" class="btn btn-primary">Actualizar</button>
                 </div>
             </div>

@@ -12,8 +12,13 @@
 */
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
+<<<<<<< HEAD
 use App\Socomir\Provinces\Province;
 use App\Socomir\Cities\City;
+=======
+use App\Model\Provinces\Province;
+use App\Model\Cities\City;
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 
 $factory->define(City::class, function (Faker\Generator $faker) {
 

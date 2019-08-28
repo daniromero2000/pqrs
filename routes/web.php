@@ -11,6 +11,14 @@
 |
 */
 
+<<<<<<< HEAD
+=======
+Route::get('/', function () {
+    return view('welcome');
+});
+
+
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 
 /**
  * Admin routes
@@ -20,18 +28,25 @@ Route::namespace('Admin')->group(function () {
     Route::post('admin/login', 'LoginController@login')->name('admin.login');
     Route::get('admin/logout', 'LoginController@logout')->name('admin.logout');
 });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 Route::group(['prefix' => 'admin', 'middleware' => ['employee'], 'as' => 'admin.'], function () {
     Route::namespace('Admin')->group(function () {
         Route::group(['middleware' => ['role:admin|superadmin|operativo|marketing, guard:employee']], function () {
             Route::get('/', 'DashboardController@index')->name('dashboard');
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
             Route::namespace('Subsidiaries')->group(function () {
                 Route::resource('subsidiaries', 'SubsidiaryController');
                 Route::get('remove-image-subsidiary', 'SubsidiaryController@removeImage')->name('subsidiary.remove.image');
             });
 
+<<<<<<< HEAD
             Route::namespace('Pqrs')->group(function () {
                 Route::resource('pqrs', 'PqrController');
                 Route::resource('pqr-statuses', 'PqrStatusController');
@@ -49,11 +64,16 @@ Route::group(['prefix' => 'admin', 'middleware' => ['employee'], 'as' => 'admin.
             });
 
             Route::resource('pqrCommentaries', 'PqrCommentaries\PqrCommentaryController');
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
             Route::resource('countries', 'Countries\CountryController');
             Route::resource('countries.provinces', 'Provinces\ProvinceController');
             Route::resource('countries.provinces.cities', 'Cities\CityController');
         });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
         Route::group(['middleware' => ['role:admin|superadmin|marketing|operativo, guard:employee']], function () {
             Route::resource('employees', 'EmployeeController');
             Route::get('employees/{id}/profile', 'EmployeeController@getProfile')->name('employee.profile');
@@ -65,6 +85,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['employee'], 'as' => 'admin.
 });
 
 
+<<<<<<< HEAD
 /**
  * Frontend routes
  */
@@ -151,4 +172,24 @@ Route::namespace('Front')->group(function () {
         Route::get("year/{slug}", 'YearController@getYear')->name('front.year.slug');
         Route::get("{finance}", 'FinanceController@show')->name('front.get.finance');
     });
+=======
+
+
+
+/**
+ * Frontend routes
+ */
+
+Auth::routes();
+Route::namespace('Auth')->group(function () {
+    Route::get('logout', 'LoginController@logout');
+    Route::resource('auth', 'RegisterController');
+});
+
+
+Route::namespace('Front')->group(function () { 
+
+
+    
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 });

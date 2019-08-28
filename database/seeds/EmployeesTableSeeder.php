@@ -1,15 +1,23 @@
 <?php
 
+<<<<<<< HEAD
 use App\Socomir\Employees\Employee;
 use App\Socomir\Permissions\Permission;
 use App\Socomir\Roles\Repositories\RoleRepository;
 use App\Socomir\Roles\Role;
+=======
+use App\Model\Employees\Employee;
+use App\Model\Permissions\Permission;
+use App\Model\Roles\Repositories\RoleRepository;
+use App\Model\Roles\Role;
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 use Illuminate\Database\Seeder;
 
 class EmployeesTableSeeder extends Seeder
 {
     public function run()
     {
+<<<<<<< HEAD
 
 
 
@@ -90,6 +98,8 @@ class EmployeesTableSeeder extends Seeder
 
 
 
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
         /*Permisos Empleados*/
         $deleteEmployeePerm = factory(Permission::class)->create([
             'name' => 'delete-employee',
@@ -150,6 +160,7 @@ class EmployeesTableSeeder extends Seeder
         ]);
 
         $roleSuperRepo = new RoleRepository($super);
+<<<<<<< HEAD
         /*Permisos Finanzas*/
         $roleSuperRepo->attachToPermission($createFinancePerm);
         $roleSuperRepo->attachToPermission($viewFinancePerm);
@@ -167,6 +178,8 @@ class EmployeesTableSeeder extends Seeder
         $roleSuperRepo->attachToPermission($updatePqrPerm);
         $roleSuperRepo->attachToPermission($viewPqrStatusPerm);
         $roleSuperRepo->attachToPermission($createPqrStatusPerm);
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
         /*Permisos Empleados*/
         $roleSuperRepo->attachToPermission($deleteEmployeePerm);
         $roleSuperRepo->attachToPermission($createEmployeePerm);
@@ -184,7 +197,11 @@ class EmployeesTableSeeder extends Seeder
 
 
         $employee = factory(Employee::class)->create([
+<<<<<<< HEAD
             'email' => 'carlo.villarreal@lagobo.com'
+=======
+            'email' => 'adminl@empresa.com'
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
         ]);
 
         $admin = factory(Role::class)->create([
@@ -193,6 +210,7 @@ class EmployeesTableSeeder extends Seeder
         ]);
 
         $roleAdminRepo = new RoleRepository($admin);
+<<<<<<< HEAD
         /*Permisos Finanzas*/
         $roleAdminRepo->attachToPermission($createFinancePerm);
         $roleAdminRepo->attachToPermission($viewFinancePerm);
@@ -203,6 +221,8 @@ class EmployeesTableSeeder extends Seeder
         $roleAdminRepo->attachToPermission($viewYearPerm);
         $roleAdminRepo->attachToPermission($updateYearPerm);
         $roleAdminRepo->attachToPermission($deleteYearPerm);
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
         /*Permisos Empleados*/
         $roleAdminRepo->attachToPermission($deleteEmployeePerm);
         $roleAdminRepo->attachToPermission($createEmployeePerm);
@@ -215,11 +235,15 @@ class EmployeesTableSeeder extends Seeder
         $employee->roles()->save($admin);
 
         $employee = factory(Employee::class)->create([
+<<<<<<< HEAD
             'email' => 'contacto@compraventastandard.com'
         ]);
 
         $employee = factory(Employee::class)->create([
             'email' => 'disenadorcoandes@standard.com.co'
+=======
+            'email' => 'contacto@empresa.com'
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
         ]);
 
         $operativo = factory(Role::class)->create([
@@ -228,12 +252,16 @@ class EmployeesTableSeeder extends Seeder
         ]);
 
         $roleOperativoRepo = new RoleRepository($operativo);
+<<<<<<< HEAD
         /*Permisos Clientes*/
         $roleOperativoRepo->attachToPermission($createPqrPerm);
         $roleOperativoRepo->attachToPermission($viewPqrPerm);
         $roleOperativoRepo->attachToPermission($updatePqrPerm);
         $roleOperativoRepo->attachToPermission($viewPqrStatusPerm);
         /*Permisos Sucursal*/
+=======
+               /*Permisos Sucursal*/
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
         $roleOperativoRepo->attachToPermission($viewSubsidiaryPerm);
         $employee->roles()->save($operativo);
     }

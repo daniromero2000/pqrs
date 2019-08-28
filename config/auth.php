@@ -41,20 +41,30 @@ return [
             'provider' => 'users',
         ],
 
+<<<<<<< HEAD
         'checkout' => [
             'driver' => 'session',
             'provider' => 'users',
+=======
+        'api' => [
+            'driver' => 'token',
+            'provider' => 'users',
+            'hash' => false,
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
         ],
 
         'employee' => [
             'driver' => 'session',
             'provider' => 'employee',
+<<<<<<< HEAD
 
         ],
 
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
         ],
     ],
 
@@ -78,6 +88,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
+<<<<<<< HEAD
             'model' => App\Socomir\Pqrs\pqr::class,
         ],
 
@@ -85,6 +96,20 @@ return [
              'driver' => 'eloquent',
              'model' => App\Socomir\Employees\Employee::class,
          ],
+=======
+            'model' => App\User::class,
+        ],
+
+        // 'users' => [
+        //     'driver' => 'database',
+        //     'table' => 'users',
+        // ],
+
+        'employee' => [
+            'driver' => 'eloquent',
+            'model' => App\Model\Employees\Employee::class,
+        ],
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
     ],
 
     /*

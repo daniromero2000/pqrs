@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+<<<<<<< HEAD
 
 use App\Socomir\Subsidiaries\Repositories\SubsidiaryRepository;
 use App\Socomir\Subsidiaries\Repositories\Interfaces\SubsidiaryRepositoryInterface;
@@ -27,6 +28,22 @@ use App\Socomir\Years\Repositories\YearRepository;
 use App\Socomir\Years\Repositories\Interfaces\YearRepositoryInterface;
 use App\Socomir\Finances\Repositories\Interfaces\FinanceRepositoryInterface;
 use App\Socomir\Finances\Repositories\FinanceRepository;
+=======
+use App\Model\Employees\Repositories\EmployeeRepository;
+use App\Model\Employees\Repositories\Interfaces\EmployeeRepositoryInterface;
+use App\Model\Permissions\Repositories\PermissionRepository;
+use App\Model\Permissions\Repositories\Interfaces\PermissionRepositoryInterface;
+use App\Model\Roles\Repositories\RoleRepository;
+use App\Model\Roles\Repositories\RoleRepositoryInterface;
+use App\Model\Subsidiaries\Repositories\SubsidiaryRepository;
+use App\Model\Subsidiaries\Repositories\Interfaces\SubsidiaryRepositoryInterface;
+use App\Model\Cities\Repositories\CityRepository;
+use App\Model\Cities\Repositories\Interfaces\CityRepositoryInterface;
+use App\Model\Countries\Repositories\CountryRepository;
+use App\Model\Countries\Repositories\Interfaces\CountryRepositoryInterface;
+use App\Model\Provinces\Repositories\Interfaces\ProvinceRepositoryInterface;
+use App\Model\Provinces\Repositories\ProvinceRepository;
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 use Illuminate\Support\ServiceProvider;
 
 class RepositoryServiceProvider extends ServiceProvider
@@ -39,6 +56,7 @@ class RepositoryServiceProvider extends ServiceProvider
             EmployeeRepository::class
         );
 
+<<<<<<< HEAD
         
         $this->app->bind(
             YearRepositoryInterface::class,
@@ -48,6 +66,16 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(
             FinanceRepositoryInterface::class,
             FinanceRepository::class
+=======
+        $this->app->bind(
+            RoleRepositoryInterface::class,
+            RoleRepository::class
+        );
+
+        $this->app->bind(
+            PermissionRepositoryInterface::class,
+            PermissionRepository::class
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
         );
 
         $this->app->bind(
@@ -70,6 +98,7 @@ class RepositoryServiceProvider extends ServiceProvider
             CityRepositoryInterface::class,
             CityRepository::class
         );
+<<<<<<< HEAD
 
         $this->app->bind(
             RoleRepositoryInterface::class,
@@ -95,5 +124,7 @@ class RepositoryServiceProvider extends ServiceProvider
             PqrCommentaryRepositoryInterface::class,
             PqrCommentaryRepository::class
         );
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
     }
 }

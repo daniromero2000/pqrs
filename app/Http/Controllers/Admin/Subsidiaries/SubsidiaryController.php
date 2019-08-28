@@ -2,12 +2,21 @@
 
 namespace App\Http\Controllers\Admin\Subsidiaries;
 
+<<<<<<< HEAD
 use App\Socomir\Subsidiaries\Repositories\SubsidiaryRepository;
 use App\Socomir\Subsidiaries\Repositories\Interfaces\SubsidiaryRepositoryInterface;
 use App\Socomir\Subsidiaries\Requests\CreateSubsidiaryRequest;
 use App\Socomir\Subsidiaries\Requests\UpdateSubsidiaryRequest;
 use App\Socomir\Cities\City;
 use App\Socomir\Cities\Repositories\Interfaces\CityRepositoryInterface;
+=======
+use App\Model\Subsidiaries\Repositories\SubsidiaryRepository;
+use App\Model\Subsidiaries\Repositories\Interfaces\SubsidiaryRepositoryInterface;
+use App\Model\Subsidiaries\Requests\CreateSubsidiaryRequest;
+use App\Model\Subsidiaries\Requests\UpdateSubsidiaryRequest;
+use App\Model\Cities\City;
+use App\Model\Cities\Repositories\Interfaces\CityRepositoryInterface;
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -150,4 +159,8 @@ class SubsidiaryController extends Controller
         request()->session()->flash('message', 'Imagen Eliminada Satisfactoriamente');
         return redirect()->route('admin.subsidiaries.edit', $request->input('subsidiary'));
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4

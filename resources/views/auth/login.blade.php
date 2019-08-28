@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 @extends('layouts.front.app') @section('title', 'Inicio Sesíon') @section('content')
+=======
+@extends('layouts.front.app')
+@extends('adminlte::login') @section('title', 'Inicio Sesíon') @section('content')
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
     <title>Socomir</title>
+=======
+    <title>Model</title>
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
     <!-- Fonts -->
     <style>
         .full-height {
@@ -48,7 +57,11 @@
                 <div class="col-md-12">
                     <a href=""><img src="{{asset('/img/engranaje.png')}}" alt="First slide"></a>
                     <div class="title m-b-md">
+<<<<<<< HEAD
                             Aquí proximamente podrás realizar inicio de sesión
+=======
+                            AQUÍ Proximamente podrás realizar inicio de sesión
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
                     </div>
                 </div>
             </div>

@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.1.3",
+<<<<<<< HEAD
         "fideloper/proxy": "^4.0",
         "jsdecena/baserepo": "^1.0",
         "kalnoy/nestedset": "^4.3",
@@ -16,6 +17,18 @@
         "laravel/tinker": "^1.0",
         "santigarcor/laratrust": "5.0.*",
         "nicolaslopezj/searchable": "^1.10"
+=======
+        "artesaos/seotools": "^0.15.0",
+        "fideloper/proxy": "^4.0",
+        "jeroennoten/laravel-adminlte": "^1.26",
+        "jsdecena/baserepo": "^1.0",
+        "kalnoy/nestedset": "^4.3",
+        "laravel/framework": "5.8.*",
+        "laravel/socialite": "^4.1",
+        "laravel/tinker": "^1.0",
+        "orzcc/autometa": "dev-master",
+        "santigarcor/laratrust": "5.0.*"
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

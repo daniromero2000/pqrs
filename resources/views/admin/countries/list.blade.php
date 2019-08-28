@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 @extends('layouts.admin.app') 
 @section('content')
 <!-- Main content -->

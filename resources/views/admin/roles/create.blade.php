@@ -7,7 +7,10 @@
         <form action="{{ route('admin.roles.store') }}" method="post" class="form">
             <div class="box-body">
                 {{ csrf_field() }}
+<<<<<<< HEAD
                 <h1>Crear Rol</h1>
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
                 <div class="form-group">
                     <label for="display_name">Nombre <span class="text-danger">*</span></label>
                     <div class="input-group">

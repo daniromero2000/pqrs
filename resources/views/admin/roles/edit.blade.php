@@ -7,7 +7,10 @@
         <form action="{{ route('admin.roles.update', $role->id) }}" method="post" class="form">
             <div class="box-body">
                 {{ csrf_field() }}
+<<<<<<< HEAD
                 <h1>Editar Rol</h1>
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
                 <input type="hidden" value="put" name="_method">
                 <div class="form-group">
                     <label for="display_name">Nombre <span class="text text-danger">*</span></label>

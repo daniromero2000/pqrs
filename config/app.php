@@ -13,7 +13,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'name' => env('APP_NAME', 'Laravel'),
+=======
+    'name' => env('APP_NAME', 'BaseCode'),
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 
     /*
     |--------------------------------------------------------------------------
@@ -67,7 +71,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'timezone' => 'UTC',
+=======
+    'timezone' => env('TIMEZONE', 'America/Bogota'),
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 
     /*
     |--------------------------------------------------------------------------
@@ -80,7 +88,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'locale' => 'en',
+=======
+    'locale' => 'es',
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 
     /*
     |--------------------------------------------------------------------------
@@ -162,6 +174,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+<<<<<<< HEAD
         /*
          * Package Service Providers...
          */
@@ -169,6 +182,16 @@ return [
         Jsdecena\Baserepo\BaseRepositoryProvider::class,
 
 
+=======
+
+        /*
+         * Package Service Providers...
+         */
+        Laratrust\LaratrustServiceProvider::class,
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+        'Orzcc\AutoMeta\Providers\AutoMetaServiceProvider',
+     
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 
         /*
          * Application Service Providers...
@@ -180,7 +203,10 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\GlobalTemplateServiceProvider::class,
         App\Providers\RepositoryServiceProvider::class,
+<<<<<<< HEAD
         Laratrust\LaratrustServiceProvider::class,
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 
     ],
 
@@ -215,7 +241,10 @@ return [
         'Gate' => Illuminate\Support\Facades\Gate::class,
         'Hash' => Illuminate\Support\Facades\Hash::class,
         'Lang' => Illuminate\Support\Facades\Lang::class,
+<<<<<<< HEAD
         'Laratrust'   => Laratrust\LaratrustFacade::class,
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
         'Log' => Illuminate\Support\Facades\Log::class,
         'Mail' => Illuminate\Support\Facades\Mail::class,
         'Notification' => Illuminate\Support\Facades\Notification::class,
@@ -234,6 +263,22 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+<<<<<<< HEAD
+=======
+        'Laratrust'   => Laratrust\LaratrustFacade::class,
+
+        'SEOMeta'   => Artesaos\SEOTools\Facades\SEOMeta::class,
+        'OpenGraph' => Artesaos\SEOTools\Facades\OpenGraph::class,
+        'Twitter'   => Artesaos\SEOTools\Facades\TwitterCard::class,
+        'JsonLd'   => Artesaos\SEOTools\Facades\JsonLd::class,
+        // or
+        'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
+        // ...
+        'Meta'   => 'Orzcc\AutoMeta\Facades\AutoMeta',
+        
+
+
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
     ],
 
 ];

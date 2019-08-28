@@ -1,9 +1,18 @@
 /*!
+<<<<<<< HEAD
  *   AdminLTE v2.4.8
  *   Author: Almsaeed Studio
  *	 Website: Almsaeed Studio <https://adminlte.io>
  *   License: Open source - MIT
  *           Please visit http://opensource.org/licenses/MIT for more information
+=======
+ * AdminLTE v2.4.15
+ * 
+ *   Author:  Colorlib
+ *   Support: <https://github.com/ColorlibHQ/AdminLTE/issues>
+ *   Repository: git://github.com/ColorlibHQ/AdminLTE.git
+ *   License: MIT <http://opensource.org/licenses/MIT>
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
  */
 /*
  * Core: General Layout Style
@@ -86,6 +95,7 @@ body {
   }
 }
 .content-wrapper {
+<<<<<<< HEAD
   min-height: 100%;
   background-color: #ecf0f5;
   z-index: 800;
@@ -94,6 +104,21 @@ body {
   background: #fff;
   padding: 15px;
   color: #777777;
+=======
+  min-height: calc(100vh - 101px);
+  background-color: #ecf0f5;
+  z-index: 800;
+}
+@media (max-width: 767px) {
+  .content-wrapper {
+    min-height: calc(100vh - 151px);
+  }
+}
+.main-footer {
+  background: #fff;
+  padding: 15px;
+  color: #444;
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
   border-top: 1px solid #d2d6de;
 }
 /* Fixed layout */
@@ -262,6 +287,16 @@ a:focus {
 .main-header .sidebar-toggle:active {
   background: transparent;
 }
+<<<<<<< HEAD
+=======
+.main-header .sidebar-toggle.fa5 {
+  font-family: "Font Awesome\ 5 Free";
+}
+.main-header .sidebar-toggle.fa5:before {
+  content: "\f0c9";
+  font-weight: 900;
+}
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 .main-header .sidebar-toggle .icon-bar {
   display: none;
 }
@@ -295,12 +330,49 @@ a:focus {
   font-weight: 300;
   overflow: hidden;
 }
+<<<<<<< HEAD
 .main-header .logo .logo-lg {
   display: block;
 }
 .main-header .logo .logo-mini {
   display: none;
 }
+=======
+.main-header .logo img {
+  padding: 4px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+.main-header .logo .logo-lg {
+  display: block;
+}
+.main-header .logo .logo-lg img {
+  max-width: 200px;
+  max-height: 50px;
+}
+.main-header .logo .logo-lg .brandlogo-image {
+  margin-top: 8px;
+  margin-right: 10px;
+  margin-left: -5px;
+}
+.main-header .logo .logo-mini {
+  display: none;
+}
+.main-header .logo .logo-mini img {
+  max-width: 50px;
+  max-height: 50px;
+}
+.main-header .logo .logo-mini .brandlogo-image {
+  margin-top: 8px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.main-header .logo .brandlogo-image {
+  float: left;
+  height: 34px;
+  width: auto;
+}
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 .main-header .navbar-brand {
   color: #fff;
 }
@@ -509,7 +581,10 @@ a:focus {
 .sidebar-menu > li > a {
   padding: 12px 5px 12px 15px;
   display: block;
+<<<<<<< HEAD
   font-size: 12px;
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 }
 .sidebar-menu > li > a > .fa,
 .sidebar-menu > li > a > .glyphicon,
@@ -593,6 +668,10 @@ a:focus {
   .sidebar-mini.sidebar-collapse .sidebar-menu > li > a > span,
   .sidebar-mini.sidebar-collapse .sidebar-menu > li > .treeview-menu,
   .sidebar-mini.sidebar-collapse .sidebar-menu > li > a > .pull-right,
+<<<<<<< HEAD
+=======
+  .sidebar-mini.sidebar-collapse .sidebar-menu > li > a > span > .pull-right,
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
   .sidebar-mini.sidebar-collapse .sidebar-menu li.header {
     display: none !important;
     -webkit-transform: translateZ(0);
@@ -2653,7 +2732,10 @@ a:focus {
 }
 .table > thead > tr > th {
   border-bottom: 2px solid #f4f4f4;
+<<<<<<< HEAD
   font-weight: bold;
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 }
 .table tr td .progress {
   margin-top: 5px;
@@ -3085,7 +3167,11 @@ table.text-center th {
 .treeview-menu > li > a {
   padding: 5px 5px 5px 15px;
   display: block;
+<<<<<<< HEAD
   font-size: 12px;
+=======
+  font-size: 14px;
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 }
 .treeview-menu > li > a > .fa,
 .treeview-menu > li > a > .glyphicon,
@@ -3098,6 +3184,19 @@ table.text-center th {
 .treeview-menu > li > a > .fa-angle-down {
   width: auto;
 }
+<<<<<<< HEAD
+=======
+.treeview > ul.treeview-menu {
+  overflow: hidden;
+  height: auto;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+.treeview.menu-open > ul.treeview-menu {
+  overflow: visible;
+  height: auto;
+}
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 /*
  * Page: Mailbox
  * -------------
@@ -3250,13 +3349,21 @@ table.text-center th {
 }
 .login-page,
 .register-page {
+<<<<<<< HEAD
   background: #E6E8E3;
+=======
+  height: auto;
+  background: #d2d6de;
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 }
 .login-box,
 .register-box {
   width: 360px;
   margin: 7% auto;
+<<<<<<< HEAD
   border-radius: 30px;
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 }
 @media (max-width: 768px) {
   .login-box,
@@ -3271,7 +3378,10 @@ table.text-center th {
   padding: 20px;
   border-top: 0;
   color: #666;
+<<<<<<< HEAD
   border-radius: 25px;
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 }
 .login-box-body .form-control-feedback,
 .register-box-body .form-control-feedback {
@@ -4937,6 +5047,12 @@ table.text-center th {
 .chart canvas {
   width: 100% !important;
 }
+<<<<<<< HEAD
+=======
+hr {
+  border-top: 1px solid #555555;
+}
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 /*
  * Misc: print
  * -----------

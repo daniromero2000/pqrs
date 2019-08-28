@@ -2,9 +2,15 @@
 
 namespace App\Http\Controllers\Admin\Countries;
 
+<<<<<<< HEAD
 use App\Socomir\Countries\Repositories\CountryRepository;
 use App\Socomir\Countries\Repositories\Interfaces\CountryRepositoryInterface;
 use App\Socomir\Countries\Requests\UpdateCountryRequest;
+=======
+use App\Model\Countries\Repositories\CountryRepository;
+use App\Model\Countries\Repositories\Interfaces\CountryRepositoryInterface;
+use App\Model\Countries\Requests\UpdateCountryRequest;
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 use App\Http\Controllers\Controller;
 
 class CountryController extends Controller
@@ -76,4 +82,8 @@ class CountryController extends Controller
         $request->session()->flash('message', 'Actualización Exitosa!');
         return redirect()->route('admin.countries.edit', $id);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4

@@ -8,11 +8,18 @@
  * @package Laratrust
  */
 
+<<<<<<< HEAD
 use App\Socomir\Employees\Employee;
 use App\Socomir\Permissions\Permission;
 use App\Socomir\Roles\Role;
 use App\Socomir\Teams\Team;
 
+=======
+use App\Model\Employees\Employee;
+use App\Model\Permissions\Permission;
+use App\Model\Roles\Role;
+use App\Model\Teams\Team;
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 
 return [
     /*
@@ -34,7 +41,11 @@ return [
     | Defines if Laratrust will use Laravel's Cache to cache the roles and permissions.
     |
     */
+<<<<<<< HEAD
     'use_cache' => false,
+=======
+    'use_cache' => true,
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 
     /*
     |--------------------------------------------------------------------------
@@ -117,32 +128,51 @@ return [
          * Roles table.
          */
         'roles' => 'roles',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
         /**
          * Permissions table.
          */
         'permissions' => 'permissions',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
         /**
          * Teams table.
          */
         'teams' => 'teams',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
         /**
          * Role - User intermediate table.
          */
         'role_user' => 'role_user',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
         /**
          * Permission - User intermediate table.
          */
         'permission_user' => 'permission_user',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
         /**
          * Permission - Role intermediate table.
          */
         'permission_role' => 'permission_role',
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
     ],
 
     /*
@@ -158,22 +188,34 @@ return [
          * User foreign key on Laratrust's role_user and permission_user tables.
          */
         'user' => 'user_id',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
         /**
          * Role foreign key on Laratrust's role_user and permission_role tables.
          */
         'role' => 'role_id',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
         /**
          * Role foreign key on Laratrust's permission_user and permission_role tables.
          */
         'permission' => 'permission_id',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
         /**
          * Role foreign key on Laratrust's role_user and permission_user tables.
          */
         'team' => 'team_id',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
     ],
 
     /*
@@ -189,18 +231,27 @@ return [
          * Define if the laratrust middleware are registered automatically in the service provider
          */
         'register' => true,
+<<<<<<< HEAD
 
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
         /**
          * Method to be called in the middleware return case.
          * Available: abort|redirect
          */
         'handling' => 'abort',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
         /**
          * Parameter passed to the middleware_handling method
          */
         'params' => '403',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
     ],
 
     /*

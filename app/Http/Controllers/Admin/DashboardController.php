@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+<<<<<<< HEAD
 use App\Socomir\Pqrs\Pqr;
 use App\Socomir\Pqrs\Repositories\Interfaces\PqrRepositoryInterface;
 use App\Socomir\Pqrs\Transformations\PqrTransformable;
@@ -29,6 +30,13 @@ class DashboardController extends Controller
      * @var PqrRepositoryInterface
      */
     private $pqrRepo;
+=======
+use Illuminate\Foundation\Auth\RegistersUsers;
+
+class DashboardController extends Controller
+{
+    use RegistersUsers;
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
 
     /**
      * ItemController constructor.
@@ -36,6 +44,7 @@ class DashboardController extends Controller
      * @param DashboardRepositoryInterface $itemRepository
      */
 
+<<<<<<< HEAD
 
     public function __construct(
         PqrRepositoryInterface $pqrRepository
@@ -43,10 +52,16 @@ class DashboardController extends Controller
         $this->pqrRepo = $pqrRepository;
         $this->middleware('guest');
         $this->pqrRepo = $pqrRepository;
+=======
+    public function __construct()
+    {
+        $this->middleware('guest');
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
     }
 
     public function index()
     {
+<<<<<<< HEAD
         // CRM PQRS Socomir
         $listLead = $this->pqrRepo->listPqrs('id')->where('pqr_status_id', 3);
         $listTramite = $this->pqrRepo->listPqrs('id')->where('pqr_status_id', 2);
@@ -87,6 +102,10 @@ class DashboardController extends Controller
             'listTramiteCount' => $listTramiteCount,
             'listAtendidoCount' => $listAtendidoCount,
             'listTramitePendienteInfo' => $listTramitePendienteInfo,
+=======
+        return view('admin.dashboard', [
+            'user' => $user = auth()->guard('employee')->user()
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
         ]);
     }
 }

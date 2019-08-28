@@ -6,8 +6,12 @@
     <!-- Default box -->
     <div class="box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
         <div class="box-body">
+<<<<<<< HEAD
             <h2>{{ $country->name }}
             </h2>
+=======
+            <h2>{{ $country->name }}</h2>
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
             <table class="table">
                 <tbody>
                     <tr>
@@ -28,9 +32,15 @@
             </table>
         </div>
     </div>
+<<<<<<< HEAD
     <div class="box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
         <div class="box-body">
             <h2>Departamentos</h2>
+=======
+    <div class="box crud-box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
+        <div class="box-body">
+                <h2>Departamentos</h2>
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
             @include('admin.shared.provinces', ['country' => $country->id])
         </div>
         <!-- /.box-body -->

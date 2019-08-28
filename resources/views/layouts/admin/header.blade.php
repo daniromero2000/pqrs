@@ -1,13 +1,37 @@
+<<<<<<< HEAD
 <header class="main-header"> <a href="{{route('admin.dashboard')}}" class="logo"> <span class="logo-mini"><img
                 src="{{asset('/img/logo-02.png')}}" alt="Socomir" width="70"></span> <span
             class="logo-lg"><img src="{{asset('/img/logo.png')}}" alt="Socomir" width="170"></span>
+=======
+@section('adminlte_css')
+<link rel="stylesheet"
+    href="{{ asset('vendor/adminlte/dist/css/skins/skin-' . config('adminlte.skin', 'blue') . '.min.css')}} ">
+@stack('css')
+@yield('css')
+@stop
+
+@section('body_class', 'skin-' . config('adminlte.skin', 'blue') . ' sidebar-mini ' . (config('adminlte.layout') ? [
+'boxed' => 'layout-boxed',
+'fixed' => 'fixed',
+'top-nav' => 'layout-top-nav'
+][config('adminlte.layout')] : '') . (config('adminlte.collapse_sidebar') ? ' sidebar-collapse ' : ''))
+
+<header class="main-header"> <a href="{{route('admin.dashboard')}}" class="logo"> <span class="logo-mini"><img
+                src="{{asset('/img/logo-02.png')}}" alt="Model" width="70"></span> <span class="logo-lg"><img
+                src="{{asset('/img/logo.png')}}" alt="Model" width="170"></span>
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
     </a>
     <nav class="navbar navbar-static-top"> <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
             <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
             <span class="icon-bar"></span> </a>
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
+<<<<<<< HEAD
                 <li class="dropdown user user-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img
+=======
+                    <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img
+>>>>>>> 916b0d501bc015f411b62ad487daa9bfbef31ab4
                             src="{{ asset('img/avatarsocomir.png') }}" class="user-image" alt="User Image"> <span
                             class="hidden-xs">{{ $user->name }}</span> </a>
                     <ul class="dropdown-menu">
