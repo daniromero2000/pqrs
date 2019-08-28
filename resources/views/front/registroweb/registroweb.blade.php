@@ -20,7 +20,7 @@
                                     class="fa fa-angle-right yellow" aria-hidden="true"></i> Radicado Formulario
                                 5245</a> </li>
                         <li> <a target="_blank" class="reglamentos"
-                                href="{{asset('/pdf/RADICADO FORMATO 2531.pdf')}}"><i class="fa fa-angle-right yellow"
+                                href="{{asset('/pdf/RADICADO FORMATO 2531.pdf#toolbar=0&navpanes=0&scrollbar=0')}}"><i class="fa fa-angle-right yellow"
                                     aria-hidden="true"></i> Radicado Formato 2531</a> </li>
                         <li><a target="_blank" class="reglamentos" href="{{asset('/pdf/RADICA FORMATO 2530.pdf#toolbar=0&navpanes=0&scrollbar=0')}}"><i
                                     class="fa fa-angle-right yellow" aria-hidden="true"></i> Radicado Formato 2530</a>
