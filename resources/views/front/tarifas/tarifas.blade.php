@@ -10,10 +10,10 @@
             </div>
         </div>
         <hr>
-        <div class="row top-buffer bottom-buffer">
-            <div class="col-md-12">
+        <div class="row top-buffer bottom-buffer text-center">
+            <div class="col-md-12 col-lg-12">
                 <p class="text-center"><strong>Las siguientes son las tarifas de nuestros servicios:</strong></p>
-                <object data="{{asset('/pdf/7. Cartelera SOCOMIR JULIO 2019.pdf#toolbar=0&navpanes=0&scrollbar=0')}}" type="application/pdf" width="100%"
+                <object data="{{asset('/pdf/7. Cartelera SOCOMIR JULIO 2019.pdf')}}#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="80%"
                     height="800px" frameborder="0">
                     <p>Parece que tu navegador no puede leer archivos PDF</a></p>
                 </object>

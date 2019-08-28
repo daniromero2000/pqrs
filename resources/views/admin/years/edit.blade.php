@@ -9,20 +9,7 @@
             <div class="box-body">
                 <input type="hidden" name="_method" value="put"> {{ csrf_field() }}
                 <h1>Editar Año Financiero</h1>
-                <div class="form-group">
-                    <label for="parent">Año Padre <span class="text-danger">*</span></label>
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <i class="fa fa-sitemap"></i>
-                        </div>
-                        <select name="parent" id="parent" class="form-control select2">
-                            @foreach($years as $cat)
-                            <option @if($cat->id == $year->parent_id) selected="selected" @endif
-                                value="{{$cat->id}}">{{$cat->name}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                </div>
+               
                 <div class="form-group">
                     <label for="name">Nombre <span class="text-danger">*</span></label>
                     <div class="input-group">
