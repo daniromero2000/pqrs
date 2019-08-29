@@ -24,22 +24,21 @@
 
     <script type="text/javascript">
         document.onmousedown = disableRightclick;
-        var message = "Right click not allowed !!";
+        var message = "No esta permitida esta funcionalidad";
         function disableRightclick(evt){
             if(evt.button == 2){
                 alert(message);
                 return false;    
             }
         }
-
      
-document.oncontextmenu = function(){return false}
+document.oncontextmenu = function(){return false};
+
+document.getElementById("toolbarViewer").disabled = true;
 
     </script>
 
 </body>
-
-
 
 </html>
 @endsection

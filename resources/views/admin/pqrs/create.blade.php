@@ -32,7 +32,7 @@
                     <label for="cedula">Documento Identificación <span class="text-danger">*</span></label>
                     <div class="input-group">
                         <div class="input-group-addon">
-                            <i class="fa fa-id-card"></i>
+                            <i class="fas fa-id-card"></i>
                         </div>
                         <input type="text" name="cedula" id="cedula" placeholder="Documento Identificación"
                             class="form-control" value="{{ old('cedula') }}">
