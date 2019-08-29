@@ -32,9 +32,9 @@
             }
         }
      
-document.oncontextmenu = function(){return false};
 
-document.getElementById("toolbarViewer").disabled = true;
+
+document.getElementById("toolbarContainer").disabled = true;
 
     </script>
 
