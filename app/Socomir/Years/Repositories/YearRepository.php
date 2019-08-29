@@ -37,9 +37,9 @@ class YearRepository extends BaseRepository implements YearRepositoryInterface
      * @param array $except
      * @return \Illuminate\Support\Collection
      */
-    public function listYears(string $order = 'id', string $sort = 'desc', $except = []) : Collection
+    public function listYears(string $order = 'id', string $sort = 'desc', $except = []): Collection
     {
-        return $this->model->orderBy($order, $sort)->get()->except($except);
+        return $this->model->orderBy($order, $sort)->where('status', 1)->get()->except($except);
     }
 
     /**
@@ -50,12 +50,12 @@ class YearRepository extends BaseRepository implements YearRepositoryInterface
      * @param  array  $except
      * @return \Illuminate\Support\Collection
      */
-    public function rootYears(string $order = 'id', string $sort = 'desc', $except = []) : Collection
+    public function rootYears(string $order = 'id', string $sort = 'desc', $except = []): Collection
     {
         return $this->model->whereIsRoot()
-                        ->orderBy($order, $sort)
-                        ->get()
-                        ->except($except);
+            ->orderBy($order, $sort)
+            ->get()
+            ->except($except);
     }
 
     /**
@@ -67,10 +67,9 @@ class YearRepository extends BaseRepository implements YearRepositoryInterface
      * @throws YearInvalidArgumentException
      * @throws YearNotFoundException
      */
-    public function createYear (array $params) : Year
+    public function createYear(array $params): Year
     {
         try {
-
             $collection = collect($params);
             if (isset($params['year'])) {
                 $slug = str_slug($params['year']);
@@ -104,7 +103,7 @@ class YearRepository extends BaseRepository implements YearRepositoryInterface
      * @return Year
      * @throws YearNotFoundException
      */
-    public function updateYear(array $params) : Year
+    public function updateYear(array $params): Year
     {
         $year = $this->findYearById($this->model->id);
         $collection = collect($params)->except('_token');
@@ -129,7 +128,7 @@ class YearRepository extends BaseRepository implements YearRepositoryInterface
      * @return Year
      * @throws YearNotFoundException
      */
-    public function findYearById(int $id) : Year
+    public function findYearById(int $id): Year
     {
         try {
             return $this->findOneOrFail($id);
@@ -144,7 +143,7 @@ class YearRepository extends BaseRepository implements YearRepositoryInterface
      * @return bool
      * @throws \Exception
      */
-    public function deleteYear() : bool
+    public function deleteYear(): bool
     {
         return $this->model->delete();
     }
@@ -165,7 +164,7 @@ class YearRepository extends BaseRepository implements YearRepositoryInterface
      *
      * @return mixed
      */
-    public function findFinances() : Collection
+    public function findFinances(): Collection
     {
         return $this->model->finances;
     }
@@ -178,7 +177,6 @@ class YearRepository extends BaseRepository implements YearRepositoryInterface
         $this->model->finances()->sync($params);
     }
 
-
     /**
      * Detach the association of the finance
      *
@@ -188,7 +186,6 @@ class YearRepository extends BaseRepository implements YearRepositoryInterface
         $this->model->finances()->detach();
     }
 
-   
     /**
      * Return the years by using the slug as the parameter
      *
@@ -197,7 +194,7 @@ class YearRepository extends BaseRepository implements YearRepositoryInterface
      * @return Year
      * @throws YearNotFoundException
      */
-    public function findYearBySlug(array $slug) : Year
+    public function findYearBySlug(array $slug): Year
     {
         try {
             return $this->findOneByOrFail($slug);
