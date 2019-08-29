@@ -150,7 +150,6 @@ class FinanceRepository extends BaseRepository implements FinanceRepositoryInter
         $this->model->years()->sync($params);
     }
 
-    
     /**
      * @param $file
      * @param null $disk

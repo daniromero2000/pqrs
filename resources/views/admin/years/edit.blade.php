@@ -8,7 +8,7 @@
             enctype="multipart/form-data">
             <div class="box-body">
                 <input type="hidden" name="_method" value="put"> {{ csrf_field() }}
-                <h1>Editar Año Financiero</h1>
+                <h1>Editar Información</h1>
                
                 <div class="form-group">
                     <label for="name">Nombre <span class="text-danger">*</span></label>

@@ -21,9 +21,6 @@
                     class="divider">/</span></li> @endif
         </ul>
 
-
-
-
         <div class="container-fluid d-flex justify-content-center d-flex align-items-center d-xl-none top-buffer">
             <button type="button" id="sidebarCollapse" class="btn btn-outline-danger btn-sm"> <i class="fa fa-gift">
                     Info Financiera</i> <span>Cerrar</span> </button></div>

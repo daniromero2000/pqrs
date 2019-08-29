@@ -8,7 +8,7 @@
             <div class="box-body">
                 {{ csrf_field() }}
                 <div class="col-md-8">
-                    <h1>Crear Información Financiera</h1>
+                    <h1>Crear Información</h1>
                     <div class="form-group">
                         <label for="name">Mes <span class="text-danger">*</span></label>
                         <div class="input-group">
@@ -41,7 +41,7 @@
                     <input type="hidden" name="status" id="status" class="form-control" value="1">
                 </div>
                 <div class="col-md-4">
-                    <h2>Años Financieros</h2>
+                    <h2>Tipo Documento</h2>
                     @include('admin.shared.years', ['years' => $years, 'selectedIdsC' => []])
                 </div>
             </div>

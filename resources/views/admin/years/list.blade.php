@@ -7,7 +7,7 @@
     @if($years)
     <div class="box crud-box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
         <div class="box-body">
-            <h1>Años Financieros</h1>
+            <h1>Listado PDF's Años Financieros y tarifas</h1>
             <table class="table">
                 <thead>
                     <tr>

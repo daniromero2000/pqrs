@@ -8,7 +8,7 @@
     <div class="box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
         @if(!$years->isEmpty())
         <div class="box-body">
-            <h2>Años Financieros</h2>
+            <h2>Listado PDF's Años financieros y Tarifas</h2>
             <table class="table">
                 <thead>
                     <tr>
@@ -29,7 +29,7 @@
         </div>
         @endif @if(!$finances->isEmpty())
         <div class="box-body">
-            <h2>Información Financiera</h2>
+            <h2>Información</h2>
             @include('admin.shared.finances', ['finances' => $finances])
         </div>
         @endif
