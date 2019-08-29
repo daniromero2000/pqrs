@@ -13,15 +13,29 @@
         <div class="row top-buffer bottom-buffer text-center">
             <div class="col-md-12 col-lg-12">
                 <p class="text-center"><strong>Las siguientes son las tarifas de nuestros servicios:</strong></p>
-                <object data="{{asset("storage/$finance->cover")}}#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="80%"
-                    height="800px" frameborder="0">
+                <object data="{{asset("storage/$finance->cover")}}#toolbar=0&navpanes=0&scrollbar=0"
+                    type="application/pdf" width="80%" height="800px" frameborder="0">
                     <p>Parece que tu navegador no puede leer archivos PDF</a></p>
                 </object>
             </div>
         </div>
         <hr>
     </div>
+
+    <script type="text/javascript">
+        document.onmousedown = disableRightclick;
+        var message = "Right click not allowed !!";
+        function disableRightclick(evt){
+            if(evt.button == 2){
+                alert(message);
+                return false;    
+            }
+        }
+    </script>
+
 </body>
+
+
 
 </html>
 @endsection

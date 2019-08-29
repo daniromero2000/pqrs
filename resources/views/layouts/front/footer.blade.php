@@ -23,7 +23,7 @@
                     <div class="footer-menu">
                         <h2 class="footer-text">Información</h2>
                         <ul class="list-unstyled">
-                            <li><i class="fa fa-angle-right iconFooter" aria-hidden="true"></i><a href="#">
+                            <li><i class="fa fa-angle-right iconFooter" aria-hidden="true"></i><a href="{{ route('estatutos') }}">
                                     Estatutos</a></li>
                             <hr class="footerStyle">
                             <li><i class="fa fa-angle-right iconFooter" aria-hidden="true"></i><a
