@@ -109,11 +109,7 @@ class YearRepository extends BaseRepository implements YearRepositoryInterface
         $collection = collect($params)->except('_token');
         $slug = str_slug($collection->get('year'));
 
-        if (isset($params['cover']) && ($params['cover'] instanceof UploadedFile)) {
-            $cover = $this->uploadOne($params['cover'], 'years');
-        }
-
-        $merge = $collection->merge(compact('slug', 'cover'));
+        $merge = $collection->merge(compact('slug'));
         if (isset($params['parent'])) {
             $parent = $this->findYearById($params['parent']);
             $year->parent()->associate($parent);

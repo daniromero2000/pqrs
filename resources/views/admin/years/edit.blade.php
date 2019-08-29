@@ -9,41 +9,17 @@
             <div class="box-body">
                 <input type="hidden" name="_method" value="put"> {{ csrf_field() }}
                 <h1>Editar Información</h1>
-               
                 <div class="form-group">
-                    <label for="name">Nombre <span class="text-danger">*</span></label>
+                    <label for="Year">Nombre <span class="text-danger">*</span></label>
                     <div class="input-group">
                         <div class="input-group-addon">
                             <i class="fa fa-at"></i>
                         </div>
-                        <input type="text" name="name" id="name" placeholder="Nombre" class="form-control"
-                            value="{!! $year->name ?: old('name')  !!}" required>
+                        <input type="text" name="year" id="year" placeholder="Nombre" class="form-control"
+                            value="{!! $year->year ?: old('year')  !!}" required>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="description">Descripción <span class="text-danger">*</span></label>
-                    <textarea class="form-control" name="description" id="description" rows="5" required
-                        placeholder="Descripción">{!! $year->description ?: old('description')  !!}</textarea>
-                </div>
-                @if(isset($year->cover))
-                <div class="form-group">
-                    <img src="{{ asset(" storage/$year->cover") }}" alt="" class="img-responsive" width="100">
-                    <br />
-                    <a onclick="return confirm('¿Estás Seguro?')"
-                        href="{{ route('admin.category.remove.image', ['category' => $year->id]) }}"
-                        class="btn btn-danger">Quitar Imagen?</a>
-                </div>
-                @endif
-                <div class="form-group">
-                    <label for="cover">Imagen <span class="text-danger">*</span></label>
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <i class="fa fa-picture-o"></i>
-                        </div>
-                        <input type="file" name="cover" id="cover" class="form-control" required>
-                    </div>
-                </div>
-                <input type="hidden" name="status" id="status" class="form-control" value="1">
+                               <input type="hidden" name="status" id="status" class="form-control" value="1">
             </div>
             <!-- /.box-body -->
             <div class="box-footer">

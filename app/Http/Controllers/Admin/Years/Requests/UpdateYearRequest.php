@@ -25,7 +25,7 @@ class UpdateYearRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'year' => ['required', Rule::unique('years')->ignore(request()->segment(3))]
+             'year' => ['required']
         ];
     }
 }

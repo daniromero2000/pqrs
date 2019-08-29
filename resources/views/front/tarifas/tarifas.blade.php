@@ -31,6 +31,10 @@
                 return false;    
             }
         }
+
+     
+document.oncontextmenu = function(){return false}
+
     </script>
 
 </body>

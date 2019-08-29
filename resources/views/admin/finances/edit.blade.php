@@ -9,9 +9,10 @@
             <div class="box-body">
                 <div class="row">
                     {{ csrf_field() }}
-                    <h1>Editar Información</h1>
+
                     <input type="hidden" name="_method" value="put">
                     <div class="col-md-12">
+                        <h1>Editar Información</h1>
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist" id="tablist">
                             <li role="presentation" @if(!request()->has('combination')) class="active" @endif><a
@@ -41,24 +42,16 @@
                                                 required
                                                 placeholder="Descripción">{!! $finance->description  !!}</textarea>
                                         </div>
-                                        <div class="form-group">
-                                            <div class="col-md-3">
-                                                <div class="row">
-                                                    <img src="{{ asset("storage/$finance->cover") }}" alt=""
-                                                        class="img-responsive img-thumbnail">
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="row"></div>
                                         <div class="form-group">
-                                            <label for="cover">Cover </label>
+                                            <label for="cover">Archivo PDF </label>
                                             <div class="input-group">
                                                 <div class="input-group-addon">
                                                     <i class="fa fa-picture-o"></i>
                                                 </div>
                                                 <input type="file" name="cover" id="cover" class="form-control">
                                             </div>
-                                            <small class="text-warning">El cover del producto es obligatorio</small>
+                                            <small class="text-warning">El archivo es necesario</small>
                                         </div>
 
 

@@ -32,7 +32,7 @@
                             </div>
                             <input type="file" name="cover" id="cover" class="form-control" required>
                         </div>
-                        <small class="text-warning">El archivo financiero es necesario</small>
+                        <small class="text-warning">El archivo es necesario</small>
                     </div>
 
                     <input type="hidden" name="quantity" id="quantity" placeholder="Cantidad" class="form-control"

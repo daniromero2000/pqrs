@@ -122,7 +122,6 @@ class YearController extends Controller
     public function update(UpdateYearRequest $request, $id)
     {
         $year = $this->yearRepo->findYearById($id);
-
         $update = new YearRepository($year);
         $update->updateYear($request->except('_token', '_method'));
 
