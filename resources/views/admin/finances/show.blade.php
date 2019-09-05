@@ -12,12 +12,12 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Descripción</th>
+                        <th class="text-center" scope="col">Descripción</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{{ $finance->description }}</td>
+                        <td class="text-center">{{ $finance->description }}</td>
                     </tr>
                 </tbody>
             </table>

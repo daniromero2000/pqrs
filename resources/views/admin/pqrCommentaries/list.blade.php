@@ -12,15 +12,15 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Comentario </th>
-                        <th scope="col">Opciones</th>
+                        <th class="text-center" scope="col">Comentario </th>
+                        <th class="text-center" scope="col">Opciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($pqrcommentaries as $pqrcommentary)
                     <tr>
-                        <td>{{ $pqrcommentary->commentary_1 }}</td>
-                        <td>
+                        <td class="text-center">{{ $pqrcommentary->commentary_1 }}</td>
+                        <td class="text-center">
                             <form action="{{ route('admin.pqrCommentaries.destroy', $pqrcommentary->id) }}" method="post" class="form-horizontal">
                                 {{ csrf_field() }}
                                 <input type="hidden" name="_method" value="delete">

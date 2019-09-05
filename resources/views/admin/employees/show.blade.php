@@ -10,14 +10,14 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Email</th>
-                        <th scope="col">Roles</th>
+                        <th class="text-center" scope="col">Email</th>
+                        <th class="text-center" scope="col">Roles</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{{ $employee->email }}</td>
-                        <td>
+                        <td class="text-center">{{ $employee->email }}</td>
+                        <td class="text-center">
                             {{ $employee->roles()->get()->implode('name', ', ') }}
                         </td>
                     </tr>

@@ -68,22 +68,22 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Fecha</th>
-                                        <th scope="col">Codigo</th>
-                                        <th scope="col">Pqrs</th>
-                                        <th scope="col">Teléfono</th>
+                                        <th class="text-center" scope="col">Fecha</th>
+                                        <th class="text-center" scope="col">Codigo</th>
+                                        <th class="text-center" scope="col">Pqrs</th>
+                                        <th class="text-center" scope="col">Teléfono</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($pqrLeads as $pqrLead)
                                     <tr>
-                                        <td>{{ date('M d, Y h:i a', strtotime($pqrLead->created_at)) }}</td>
-                                        <td>{{ $pqrLead->id }}</td>
-                                        <td>
+                                        <td class="text-center">{{ date('M d, Y h:i a', strtotime($pqrLead->created_at)) }}</td>
+                                        <td class="text-center">{{ $pqrLead->id }}</td>
+                                        <td class="text-center">
                                             <a
                                                 href="{{ route('admin.pqrs.show', $pqrLead->id) }}">{{ $pqrLead->pqr }}</a>
                                         </td>
-                                        <td>{{ $pqrLead->phone }}</td>
+                                        <td class="text-center">{{ $pqrLead->phone }}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -121,22 +121,22 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Codigo</th>
-                                        <th scope="col">Pqrs</th>
-                                        <th scope="col">Cliente</th>
-                                        <th scope="col">Teléfono</th>
+                                        <th class="text-center" scope="col">Codigo</th>
+                                        <th class="text-center" scope="col">Pqrs</th>
+                                        <th class="text-center" scope="col">Cliente</th>
+                                        <th class="text-center" scope="col">Teléfono</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($pqrTramites as $pqrTramite)
                                     <tr>
-                                        <td>{{ $pqrTramite->id }}</td>
-                                        <td>
+                                        <td class="text-center">{{ $pqrTramite->id }}</td>
+                                        <td class="text-center">
                                             <a
                                                 href="{{ route('admin.pqrs.show', $pqrTramite->id) }}">{{ $pqrTramite->pqr }}</a>
                                         </td>
-                                        <td>{{ $pqrTramite->name }}</td>
-                                        <td>{{ $pqrTramite->phone }}</td>
+                                        <td class="text-center">{{ $pqrTramite->name }}</td>
+                                        <td class="text-center">{{ $pqrTramite->phone }}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -176,22 +176,22 @@
                             <table class="table">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Codigo</th>
-                                            <th scope="col">Pqrs</th>
-                                            <th scope="col">Cliente</th>
-                                            <th scope="col">Teléfono</th>
+                                            <th class="text-center" scope="col">Codigo</th>
+                                            <th class="text-center" scope="col">Pqrs</th>
+                                            <th class="text-center" scope="col">Cliente</th>
+                                            <th class="text-center" scope="col">Teléfono</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach ($pqrTramitePendienteInfos as $pqrTramitePendienteInfo)
                                         <tr>
-                                            <td>{{ $pqrTramitePendienteInfo->id }}</td>
-                                            <td>
+                                            <td class="text-center">{{ $pqrTramitePendienteInfo->id }}</td>
+                                            <td class="text-center">
                                                 <a
                                                     href="{{ route('admin.pqrs.show', $pqrTramitePendienteInfo->id) }}">{{ $pqrTramitePendienteInfo->pqr }}</a>
                                             </td>
-                                            <td>{{ $pqrTramitePendienteInfo->name }}</td>
-                                            <td>{{ $pqrTramitePendienteInfo->phone }}</td>
+                                            <td class="text-center">{{ $pqrTramitePendienteInfo->name }}</td>
+                                            <td class="text-center">{{ $pqrTramitePendienteInfo->phone }}</td>
                                         </tr>
                                         @endforeach
                                     </tbody>
@@ -230,22 +230,22 @@
                             <table class="table">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Codigo</th>
-                                            <th scope="col">Pqrs</th>
-                                            <th scope="col">Cliente</th>
-                                            <th scope="col">Teléfono</th>
+                                            <th class="text-center" scope="col">Codigo</th>
+                                            <th class="text-center" scope="col">Pqrs</th>
+                                            <th class="text-center" scope="col">Cliente</th>
+                                            <th class="text-center" scope="col">Teléfono</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach ($pqrAtendidos as $pqrAtendido)
                                         <tr>
-                                            <td>{{ $pqrAtendido->id }}</td>
-                                            <td>
+                                            <td class="text-center">{{ $pqrAtendido->id }}</td>
+                                            <td class="text-center">
                                                 <a
                                                     href="{{ route('admin.pqrs.show', $pqrAtendido->id) }}">{{ $pqrAtendido->pqr }}</a>
-                                            </td>
-                                            <td>{{ $pqrAtendido->name }}</td>
-                                            <td>{{ $pqrAtendido->phone }}</td>
+                                            </td class="text-center">
+                                            <td class="text-center">{{ $pqrAtendido->name }}</td>
+                                            <td class="text-center">{{ $pqrAtendido->phone }}</td>
                                         </tr>
                                         @endforeach
                                     </tbody>

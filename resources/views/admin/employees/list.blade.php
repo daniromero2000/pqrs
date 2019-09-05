@@ -11,22 +11,22 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Estado</th>
-                        <th scope="col">Opciones</th>
+                        <th class="text-center" scope="col">Nombre</th>
+                        <th class="text-center" scope="col">Email</th>
+                        <th class="text-center" scope="col">Estado</th>
+                        <th class="text-center" scope="col">Opciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($employees as $employee)
                     <tr>
-                        <td>
+                        <td class="text-center">
                             <a href="{{ route('admin.employees.show', $employee->id) }}">{{ $employee->name }}</a>
                         </td>
-                        <td>{{ $employee->email }}</td>
-                        <td>
+                        <td class="text-center">{{ $employee->email }}</td>
+                        <td class="text-center">
                             @include('layouts.status', ['status' => $employee->status])</td>
-                        <td>
+                        <td class="text-center">
                             <form action="{{ route('admin.employees.destroy', $employee->id) }}" method="post"
                                 class="form-horizontal">
                                 {{ csrf_field() }}

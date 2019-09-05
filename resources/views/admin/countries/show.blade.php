@@ -11,18 +11,18 @@
             <table class="table">
                 <tbody>
                     <tr>
-                        <th scope="col-md-2">ISO</th>
-                        <th scope="col-md-2">ISO-3</th>
-                        <th scope="col-md-2">Numcode</th>
-                        <th scope="col-md-2">Phone Code</th>
+                        <th class="text-center" scope="col-md-2">ISO</th>
+                        <th class="text-center" scope="col-md-2">ISO-3</th>
+                        <th class="text-center" scope="col-md-2">Numcode</th>
+                        <th class="text-center" scope="col-md-2">Phone Code</th>
                     </tr>
                 </tbody>
                 <tbody>
                     <tr>
-                        <td>{{ $country->iso }}</td>
-                        <td>{{ $country->iso3 }}</td>
-                        <td>{{ $country->numcode }}</td>
-                        <td>{{ $country->phonecode }}</td>
+                        <td class="text-center">{{ $country->iso }}</td>
+                        <td class="text-center">{{ $country->iso3 }}</td>
+                        <td class="text-center">{{ $country->numcode }}</td>
+                        <td class="text-center">{{ $country->phonecode }}</td>
                     </tr>
                 </tbody>
             </table>

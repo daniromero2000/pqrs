@@ -11,17 +11,17 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Estado</th>
-                        <th scope="col">Color</th>
-                        <th scope="col">Opciones</th>
+                        <th class="text-center" scope="col">Estado</th>
+                        <th class="text-center" scope="col">Color</th>
+                        <th class="text-center" scope="col">Opciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($pqrStatuses as $status)
                     <tr>
-                        <td>{{ $status->name }}</td>
-                        <td><button class="btn" style="background-color: {{ $status->color }}"><i class="fa fa-check" style="color: #ffffff"></i></button></td>
-                        <td>
+                        <td class="text-center">{{ $status->name }}</td>
+                        <td class="text-center"><button class="btn" style="background-color: {{ $status->color }}"><i class="fa fa-check" style="color: #ffffff"></i></button></td>
+                        <td class="text-center">
                             @if($user->hasRole('superadmin|marketing'))
                             <a href="{{ route('admin.pqr-statuses.edit', $status->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>                            @endif </td>
                     </tr>

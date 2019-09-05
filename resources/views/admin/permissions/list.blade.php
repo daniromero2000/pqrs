@@ -11,17 +11,17 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Descripción</th>
+                        <th class="text-center" scope="col">Nombre</th>
+                        <th class="text-center" scope="col">Descripción</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($permissions as $permission)
                     <tr>
-                        <td>
+                        <td class="text-center">
                             {{ $permission->display_name }}
                         </td>
-                        <td>
+                        <td class="text-center">
                             {!! $permission->description !!}
                         </td>
                     </tr>

@@ -11,25 +11,25 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col-md-1">Nombre</th>
-                        <th scope="col-md-1">ISO</th>
-                        <th scope="col-md-1">ISO-3</th>
-                        <th scope="col-md-1">Numcode</th>
-                        <th scope="col-md-1">Phone Code</th>
-                        <th scope="col-md-2">Opciones</th>
+                        <th class="text-center" scope="col-md-1">Nombre</th>
+                        <th class="text-center" scope="col-md-1">ISO</th>
+                        <th class="text-center" scope="col-md-1">ISO-3</th>
+                        <th class="text-center" scope="col-md-1">Numcode</th>
+                        <th class="text-center" scope="col-md-1">Phone Code</th>
+                        <th class="text-center" scope="col-md-2">Opciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($countries as $country)
                     <tr>
-                        <td>
+                        <td class="text-center">
                             <a href="{{ route('admin.countries.show', $country->id) }}">{{ $country->name }}</a>
                         </td>
-                        <td>{{ $country->iso }}</td>
-                        <td>{{ $country->iso3 }}</td>
-                        <td>{{ $country->numcode }}</td>
-                        <td>{{ $country->phonecode }}</td>
-                        <td>
+                        <td class="text-center">{{ $country->iso }}</td>
+                        <td class="text-center">{{ $country->iso3 }}</td>
+                        <td class="text-center">{{ $country->numcode }}</td>
+                        <td class="text-center">{{ $country->phonecode }}</td>
+                        <td class="text-center">
                             <div class="btn-group">
                                 <a href="{{ route('admin.countries.edit', $country->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
                             </div>
