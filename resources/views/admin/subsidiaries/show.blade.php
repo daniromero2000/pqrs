@@ -12,14 +12,14 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Dirección</th>
-                        <th scope="col">Telefono</th>
+                        <th class="text-center" scope="col">Dirección</th>
+                        <th class="text-center" scope="col">Telefono</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{{ $subsidiary->address }}</td>
-                        <td>{{ $subsidiary->phone }}</td>
+                        <td class="text-center">{{ $subsidiary->address }}</td>
+                        <td class="text-center">{{ $subsidiary->phone }}</td>
                     </tr>
                 </tbody>
             </table>

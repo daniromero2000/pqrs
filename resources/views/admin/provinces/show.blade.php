@@ -11,12 +11,12 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Opciones</th>
+                        <th class="text-center" scope="col">Opciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>
+                        <td class="text-center">
                             <div class="btn-group">
                                 <a href="{{ route('admin.countries.provinces.edit', [$countryId, $province->id]) }}"
                                     class="btn btn-primary"><i class="fa fa-edit"></i> Editar</a>

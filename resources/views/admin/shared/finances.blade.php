@@ -2,19 +2,19 @@
 <table class="table">
     <thead>
         <tr>
-            <th scope="col">Nombre</th>
-            <th scope="col">Opciones</th>
+            <th class="text-center" scope="col">Nombre</th>
+            <th class="text-center" scope="col">Opciones</th>
         </tr>
     </thead>
     <tbody>
         @foreach ($finances as $finance)
         <tr>
-            <td>
+            <td class="text-center">
                 @if($user->hasPermission('view-finance'))
                 <a href="{{ route('admin.finances.show', $finance->id) }}">{{ $finance->name }}</a> @else {{ $finance->name
                 }} @endif
             </td>
-            <td>
+            <td class="text-center">
                 <form action="{{ route('admin.finances.destroy', $finance->id) }}" method="post"
                     class="form-horizontal">
                     {{ csrf_field() }}

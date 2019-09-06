@@ -11,24 +11,23 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th class="col-md-2">Nombre</th>
-                        <th class="col-md-2">Dirección</th>
-                        <th class="col-md-2">Teléfono</th>
-                        <th class="col-md-2">Ciudad</th>
-                        <th class="col-md-2">Opciones</th>
+                        <th class="text-center" class="col-md-2">Nombre</th>
+                        <th class="text-center" class="col-md-2">Dirección</th>
+                        <th class="text-center" class="col-md-2">Teléfono</th>
+                        <th class="text-center" class="col-md-2">Ciudad</th>
+                        <th class="text-center" class="col-md-2">Opciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($subsidiaries as $subsidiary)
                     <tr>
-
-                        <td>
+                        <td class="text-center">
                             <a href="{{ route('admin.subsidiaries.show', $subsidiary->id) }}">{{ $subsidiary->name }}</a>
                         </td>
-                        <td>{{ $subsidiary->address}}</td>
-                        <td>{{ $subsidiary->phone}}</td>
-                        <td>{{ $subsidiary->city->name}}</td>
-                        <td>
+                        <td class="text-center">{{ $subsidiary->address}}</td>
+                        <td class="text-center">{{ $subsidiary->phone}}</td>
+                        <td class="text-center">{{ $subsidiary->city->name}}</td>
+                        <td class="text-center">
                             @if($user->hasRole('superadmin|marketing'))
                             <form action="{{ route('admin.subsidiaries.destroy', $subsidiary->id) }}" method="post" class="form-horizontal">
                                 {{ csrf_field() }}

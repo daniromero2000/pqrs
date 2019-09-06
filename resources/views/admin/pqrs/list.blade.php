@@ -17,25 +17,25 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Ingreso</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Teléfono</th>
-                        <th scope="col">Tipo de PQR</th>
-                        <th scope="col">Estado</th>
-                        <th scope="col">Opciones</th>
+                        <th class="text-center" scope="col">Ingreso</th>
+                        <th class="text-center" scope="col">Nombre</th>
+                        <th class="text-center" scope="col">Teléfono</th>
+                        <th class="text-center" scope="col">Tipo de PQR</th>
+                        <th class="text-center" scope="col">Estado</th>
+                        <th class="text-center" scope="col">Opciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($pqrs as $pqr)
                     <tr>
-                        <td>{{ date('M d, Y h:i a', strtotime($pqr['created_at'])) }}</td>
-                        <td>
+                        <td class="text-center">{{ date('M d, Y h:i a', strtotime($pqr['created_at'])) }}</td>
+                        <td class="text-center">
                            {{ $pqr['name'] }}
                         </td>
-                        <td>{{ $pqr['phone'] }}</td>
-                        <td> <a href="{{ route('admin.pqrs.show', $pqr['id']) }}">{{ $pqr['pqr'] }}</a></td>
+                        <td class="text-center">{{ $pqr['phone'] }}</td>
+                        <td class="text-center"> <a href="{{ route('admin.pqrs.show', $pqr['id']) }}">{{ $pqr['pqr'] }}</a></td>
 
-                        <td>
+                        <td class="text-center">
                             <p class="text-center label"
                                 style="color: #ffffff; background-color: {{ $pqr->pqr_status_id->color }}">
                                 {{ $pqr->pqr_status_id->name }}
@@ -43,7 +43,7 @@
                         </td>
                         <!-- <td>
     @include('layouts.status', ['status' => $pqr['status']])</td>-->
-                        <td>
+                        <td class="text-center">
                             <form action="{{ route('admin.pqrs.destroy', $pqr['id']) }}" method="post"
                                 class="form-horizontal">
                                 {{ csrf_field() }}

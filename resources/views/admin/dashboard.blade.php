@@ -243,7 +243,7 @@
                                             <td class="text-center">
                                                 <a
                                                     href="{{ route('admin.pqrs.show', $pqrAtendido->id) }}">{{ $pqrAtendido->pqr }}</a>
-                                            </td class="text-center">
+                                            </td>
                                             <td class="text-center">{{ $pqrAtendido->name }}</td>
                                             <td class="text-center">{{ $pqrAtendido->phone }}</td>
                                         </tr>

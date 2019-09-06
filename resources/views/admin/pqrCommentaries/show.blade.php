@@ -10,12 +10,12 @@
             <table class="table">
                 <tbody>
                     <tr>
-                        <th class="col">Comentario </th>
+                        <th class="text-center" class="col">Comentario </th>
                     </tr>
                 </tbody>
                 <tbody>
                     <tr>
-                        <td>{{ $pqrcommentary->commentary_1 }}</td>
+                        <td class="text-center">{{ $pqrcommentary->commentary_1 }}</td>
                     </tr>
                 </tbody>
             </table>

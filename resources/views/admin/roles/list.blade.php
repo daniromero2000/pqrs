@@ -11,21 +11,21 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Descripción</th>
-                        <th scope="col">Opciones</th>
+                        <th class="text-center" scope="col">Nombre</th>
+                        <th class="text-center" scope="col">Descripción</th>
+                        <th class="text-center" scope="col">Opciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($roles as $role)
                     <tr>
-                        <td>
+                        <td class="text-center">
                             {{ $role->display_name }}
                         </td>
-                        <td>
+                        <td class="text-center">
                             {!! $role->description !!}
                         </td>
-                        <td>
+                        <td class="text-center">
                             <form action="{{ route('admin.roles.destroy', $role->id) }}" method="post" class="form-horizontal">
                                 {{ csrf_field() }}
                                 <input type="hidden" name="_method" value="delete">

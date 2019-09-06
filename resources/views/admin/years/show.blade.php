@@ -12,15 +12,15 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Año</th>
-                        <th scope="col">Opciones</th>
+                        <th class="text-center" scope="col">Año</th>
+                        <th class="text-center" scope="col">Opciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($years as $cat)
                     <tr>
-                        <td><a href="{{route('admin.years.show', $cat->id)}}">{{ $cat->year }}</a></td>
-                        <td><a class="btn btn-primary" href="{{route('admin.years.edit', $cat->id)}}"><i
+                        <td class="text-center"><a href="{{route('admin.years.show', $cat->id)}}">{{ $cat->year }}</a></td>
+                        <td class="text-center"><a class="btn btn-primary" href="{{route('admin.years.edit', $cat->id)}}"><i
                                     class="fa fa-edit"></i> Editar</a></td>
                     </tr>
                     @endforeach

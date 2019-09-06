@@ -11,16 +11,16 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Opciones</th>
+                        <th class="text-center" scope="col">Nombre</th>
+                        <th class="text-center" scope="col">Opciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($years as $year)
                     <tr>
-                        <td>
+                        <td class="text-center">
                             <a href="{{ route('admin.years.show', $year->id) }}">{{ $year->year }}</a></td>
-                        <td>
+                        <td class="text-center">
                             <form action="{{ route('admin.years.destroy', $year->id) }}" method="post"
                                 class="form-horizontal">
                                 {{ csrf_field() }}

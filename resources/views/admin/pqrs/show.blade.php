@@ -12,32 +12,32 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Documento Identificación</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Teléfono</th>
+                        <th class="text-center" scope="col">Documento Identificación</th>
+                        <th class="text-center" scope="col">Email</th>
+                        <th class="text-center" scope="col">Teléfono</th>
 
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{{ $pqr->cedula }}</td>
-                        <td>{{ $pqr->email }}</td>
-                        <td>{{ $pqr->phone }}</td>
+                        <td class="text-center">{{ $pqr->cedula }}</td>
+                        <td class="text-center">{{ $pqr->email }}</td>
+                        <td class="text-center">{{ $pqr->phone }}</td>
 
                     </tr>
                 </tbody>
                 <thead>
                     <tr>
-                        <th scope="col">Ciudad</th>
-                        <th scope="col">Asunto</th>
-                        <th scope="col">Mensaje</th>
+                        <th class="text-center" scope="col">Ciudad</th>
+                        <th class="text-center" scope="col">Asunto</th>
+                        <th class="text-center" scope="col">Mensaje</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{{ $city->name }}</td>
-                        <td>{{ $pqr->asunto }}</td>
-                        <td>{{ $pqr->mensaje }}</td>
+                        <td class="text-center">{{ $city->name }}</td>
+                        <td class="text-center">{{ $pqr->asunto }}</td>
+                        <td class="text-center">{{ $pqr->mensaje }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -62,17 +62,17 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Comentario</th>
-                        <th scope="col">Fecha</th>
-                        <th scope="col">Usuario</th>
+                        <th class="text-center" scope="col">Comentario</th>
+                        <th class="text-center" scope="col">Fecha</th>
+                        <th class="text-center" scope="col">Usuario</th>
                     </tr>
                     </t>
                 <tbody>
                     @foreach ($pqrcommentaries as $pqrcommentary)
                     <tr>
-                        <td>{{ $pqrcommentary->commentary_1 }}</td>
-                        <td>{{  date('M d, Y h:i a', strtotime($pqrcommentary->created_at)) }}</td>
-                        <td>{{ $pqrcommentary->user }}</td>
+                        <td class="text-center">{{ $pqrcommentary->commentary_1 }}</td>
+                        <td class="text-center">{{  date('M d, Y h:i a', strtotime($pqrcommentary->created_at)) }}</td>
+                        <td class="text-center">{{ $pqrcommentary->user }}</td>
                     </tr>
                     @endforeach
                 </tbody>
