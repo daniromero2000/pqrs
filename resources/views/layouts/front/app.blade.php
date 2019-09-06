@@ -18,10 +18,7 @@ $activeLogin = ($_SERVER['REQUEST_URI'] == '/login') ? 'activenavlink ' : '' ;
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ config('app.name') }}</title>
-     <link href="http://www.socomir.org/" rel="canonical" />
-     <link 
-     href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
-     rel="stylesheet"  type='text/css'>
+    <link href="http://www.socomir.org/" rel="canonical" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link href="{{ asset('css/normalizeMIT.min.css') }}" rel="stylesheet">
