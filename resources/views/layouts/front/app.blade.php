@@ -27,7 +27,7 @@ $activeLogin = ($_SERVER['REQUEST_URI'] == '/login') ? 'activenavlink ' : '' ;
     <link href="{{ asset('css/normalizeMIT.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.min.css') }}" rel="stylesheet">
-  
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
 </head>
 
 <body>
