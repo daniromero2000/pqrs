@@ -15,13 +15,13 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name') }}</title>
     <link 
-    href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
     rel="stylesheet"  type='text/css'>
     <link rel="stylesheet" href="{{ asset('css/admin.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap3.min.css') }}">
     <link href="{{ asset('css/AdminLTE.css') }}" rel="stylesheet">
     <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="http://www.socomir.org/" rel="canonical" />
+    <link href="https://www.socomir.org/" rel="canonical" />
 </head>
 
 <body class="hold-transition login-page">
