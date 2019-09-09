@@ -12,7 +12,7 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th class="text-center" scope="col">Año</th>
+                        <th class="text-center" scope="col">PDF's</th>
                         <th class="text-center" scope="col">Opciones</th>
                     </tr>
                 </thead>

@@ -51,7 +51,7 @@
         </ul>
         </li> @if($user->hasRole('superadmin|marketing'))<li
             class="treeview @if(request()->segment(2) == 'years') active @endif"> <a href="#"> <i class="fa fa-sitemap">
-                </i> <span>Cambiar y crear PDF's</span> <span class="pull-right-container"> <i
+                </i> <span>Administrar PDF's</span> <span class="pull-right-container"> <i
                         class="fa fa-angle-left pull-right"> </i> </span> </a>
             <ul class="treeview-menu"> @if($user->hasPermission('view-year'))<li><a
                         href="{{ route('admin.years.show', 1) }}"><i class="fa fa-circle-o"> </i>Listados PDF's</a>
