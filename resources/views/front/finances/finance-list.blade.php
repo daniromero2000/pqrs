@@ -11,8 +11,7 @@
                                     {{ csrf_field() }} <input type="hidden" name="quantity" value="1" /> <input
                                         type="hidden" name="product" value="{{ $finance->id }}"></form> <a
                                     class="btn btn-default product-btn"
-                                    href="{{ route('front.get.finance', str_slug($finance->slug)) }}">Ver Estado
-                                    Financiero</a>
+                                    href="{{ route('front.get.finance', str_slug($finance->slug)) }}">Ver Indicador Financiero</a>
                             </div>
                         </div>
                     </div>
