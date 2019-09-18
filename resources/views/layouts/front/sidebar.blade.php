@@ -2,20 +2,20 @@
     <nav id="sidebar">
         <div class="container-fluid top-buffer">
             <div class="sidebar-header">
-                <h2 class="tituloStore">Información Financiera</h2>
+                <h2 class="tituloStore">Indicadores Financieros</h2>
                 <div class="d-flex justify-content-center d-flex align-items-center d-xl-none"> <button type="button"
                         id="sidebarCollapseClose" class="btn btn-outline-danger btn-sm"> <i class="fa fa-times"></i>
                         <span>Cerrar</span> </button></div>
             </div>
-            <ul class="list-unstyled components">
+            <ul class="list-unstyled components ml-3">
                 <li> @include('layouts.front.year-nav')</li>
             </ul>
         </div>
     </nav>
-    <div id="content">
+    <div id="content" class="mt-2">
         <ul class="breadcrumb">
             <li><a href="{{ route('home') }}"> <i class="fa fa-home"></i> Home</a><span class="divider">/</span></li>
-            <li><a href="{{ route('informacionfinanciera') }}"> Información Financiera</a><span class="divider">/</span>
+            <li><a href="{{ route('informacionfinanciera') }}"> Indicadores Financieros</a><span class="divider">/</span>
             </li>
             @if(isset($year))<li><a href="{{ route('front.year.slug', $year->slug) }}">{{ $year->year }}</a><span
                     class="divider">/</span></li> @endif

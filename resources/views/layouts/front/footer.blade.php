@@ -12,8 +12,8 @@
                     </a>
                     <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                         <div class="footer-menu">
-                            <ul class="list-unstyled">
-                                <li> <a href="{{ route('termsConditions') }}">Política de tratamiento de datos
+                            <ul class="list-unstyled ">
+                          <li >  <i class="fa fa-angle-right iconFooter  mr-1" aria-hidden="true" target="_blank"></i> <a href="{{ route('termsConditions') }}">Política de tratamiento de datos
                                         personales</a></li>
                             </ul>
                         </div>
@@ -23,23 +23,23 @@
                     <div class="footer-menu">
                         <h2 class="footer-text">Información</h2>
                         <ul class="list-unstyled">
-                            <li><i class="fa fa-angle-right iconFooter" aria-hidden="true"></i><a href="{{ route('estatutos') }}">
+                            <li><i class="fa fa-angle-right iconFooter mr-1" aria-hidden="true"></i><a href="{{ route('estatutos') }}">
                                     Estatutos</a></li>
                             <hr class="footerStyle">
-                            <li><i class="fa fa-angle-right iconFooter" aria-hidden="true"></i><a
+                            <li><i class="fa fa-angle-right iconFooter mr-1" aria-hidden="true"></i><a
                                     href="{{ route('reglamentos') }}"> Reglamentos</a></li>
                             <hr class="footerStyle">
-                            <li><i class="fa fa-angle-right iconFooter" aria-hidden="true"></i><a
+                            <li><i class="fa fa-angle-right iconFooter mr-1" aria-hidden="true"></i><a
                                     href="{{ route('libranza') }}"> Conceptos crédito de libranza</a></li>
                             <hr class="footerStyle">
-                            <li><i class="fa fa-angle-right iconFooter" aria-hidden="true"></i><a target="_blank"
+                            <li><i class="fa fa-angle-right iconFooter mr-1 " aria-hidden="true" target="_blank"></i><a
                                     href="{{asset('/pdf/Informacion-cobranzas-socomir.pdf#toolbar=0&navpanes=0&scrollbar=0')}}"> Políticas de cobro</a>
                             </li>
                             <hr class="footerStyle">
-                            <li><i class="fa fa-angle-right iconFooter" aria-hidden="true" target="_blank"></i><a
+                            <li><i class="fa fa-angle-right iconFooter mr-1" aria-hidden="true" target="_blank"></i><a
                                     href="{{ route('registroweb') }}"> Actualización de registro</a></li>
                             <hr class="footerStyle">
-                            <li><i class="fa fa-angle-right iconFooter" aria-hidden="true" target="_blank"></i><a
+                            <li><i class="fa fa-angle-right iconFooter mr-1" aria-hidden="true" target="_blank"></i><a
                                     href="{{ route('convenios') }}"> Convenios</a></li>
                             <hr class="footerStyle">
                         </ul>
@@ -47,12 +47,14 @@
                 </div>
                 <div class="col-12 col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                     <h2 class="footer-text">Contacto</h2>
-                    <p><i class="fa fa-home iconFooter" aria-hidden="true" target="_blank"></i> Cra. 7 # 156-10 Torre
-                        Krystal of 2303 Bogotá<br><br><i class="fa fa-phone iconFooter" aria-hidden="true"></i>
+                    <p><i class="fa fa-home iconFooter mr-1" aria-hidden="true" target="_blank"></i> Cra. 7 # 156-10 Torre
+                        Krystal of 2303 Bogotá<br><br><i class="fa fa-phone iconFooter mr-2" aria-hidden="true"></i>
                         4842121<br><br>
-                        <i class="fa fa-envelope iconFooter" aria-hidden="true"></i> socomir@creolibranzas.com</p>
+                        <i class="fa fa-envelope iconFooter mr-1" aria-hidden="true"></i> socomir@creolibranzas.com</p>
                 </div>
             </div>
         </div>
     </footer>
 </div>
+
+

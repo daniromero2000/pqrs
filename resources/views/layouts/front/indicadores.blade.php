@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row img-row">
 	<div class="col-md-12 d-flex justify-content-center">
 		<!-- Dolar Wilkinsonpc Ind-Eco-Basico Start -->
 		<!-- DolarWeb IndMin Start -->
