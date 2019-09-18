@@ -1,4 +1,4 @@
-<div class="container-fluid top-buffer">
+<div class="container-fluid top-buffer my-5">
     <div class="row img-row d-flex justify-content-center top-buffer">
         <div
             class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 top-buffer d-flex justify-content-center block animatable fadeInUp">

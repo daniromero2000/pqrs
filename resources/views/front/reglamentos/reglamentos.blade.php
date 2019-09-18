@@ -32,6 +32,7 @@
         </div>
         <hr>
     </div>
+    @include('layouts.front.slideInicial')
 </body>
 
 </html>

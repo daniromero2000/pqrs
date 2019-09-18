@@ -2068,6 +2068,7 @@ PHONE LANDSCAPE VERSION
         margin: 10px;
         padding-left: 5px;
     }
+   
 }
 
 
@@ -4646,7 +4647,7 @@ Productos y Servicios
 /* margin of row simulador.blade.php */
 .reset-row{
     margin-right: 0px !important;
-    margin-left: 0px !important;
+    margin-left: -1px !important;
 }
 /* margin of col simulador.blade.php */
 .reset-col{
@@ -4655,6 +4656,12 @@ Productos y Servicios
 }
 /* margin of page */
 .img-row{
-    margin-right: -12px;
-    margin-left: -12px;
+    margin-right: 0px;
+    margin-left: -1px;
+}
+/* banerinicial */
+.margen-inicial{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
 }

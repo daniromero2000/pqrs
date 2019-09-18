@@ -291,6 +291,7 @@
         </div>
     </div>
     <hr>
+    @include('layouts.front.slideInicial')
     <!-- /.container -->
 </body>
 
