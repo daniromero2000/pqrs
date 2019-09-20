@@ -51,7 +51,7 @@
             <ul class="treeview-menu"> @if($user->hasPermission('view-year'))<li><a href="{{ route('admin.years.show', 1) }}"><i class="fa fa-circle-o"> </i>Listados PDF's</a>
                 </li>@endif @if($user->hasPermission('create-year'))<li><a href="{{ route('admin.years.create') }}"><i class="fa fa-plus"> </i> Crear Año Indicador</a>
                 </li>@endif
-                @if($user->hasPermission('create-finance'))<li><a href="{{ route('admin.finances.create') }}"><i class="fa fa-plus"> </i> Ver Indicador Financiero
+                @if($user->hasPermission('create-finance'))<li><a href="{{ route('admin.finances.create') }}"><i class="fa fa-plus"> </i> Crear Indicador Financiero
                     </a>
                 </li>@endif
 
