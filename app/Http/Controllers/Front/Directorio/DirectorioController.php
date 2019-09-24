@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\Front\Directorio;
 
 use App\Socomir\Employees\Employee;
-use App\Model\Employees\Repositories\EmployeeRepository;
-use App\Model\Employees\Repositories\Interfaces\EmployeeRepositoryInterface;
 
 
 use App\Http\Controllers\Controller;
