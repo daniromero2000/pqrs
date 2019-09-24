@@ -12,6 +12,7 @@
 */
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
+
 use App\Socomir\Subsidiaries\Subsidiary;
 use App\Socomir\Cities\City;
 use Illuminate\Http\UploadedFile;
@@ -21,12 +22,13 @@ $factory->define(Subsidiary::class, function (Faker\Generator $faker) {
         'La 19',
     ]);
 
-    $city= factory(City::class)->create();
+    $city = factory(City::class)->create();
 
     return [
         'name' => $name,
         'address' => str_slug($name),
         'phone' => 3183643,
+        'opening_hours' => '8:00 a 18:00',
         'city_id' => $city->id
     ];
 });

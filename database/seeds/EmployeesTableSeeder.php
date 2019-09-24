@@ -55,8 +55,6 @@ class EmployeesTableSeeder extends Seeder
             'display_name' => 'Borrar Año'
         ]);
 
-
-
         /*Permisos Clientes*/
         $deletePqrPerm = factory(Permission::class)->create([
             'name' => 'delete-pqr',
@@ -87,8 +85,6 @@ class EmployeesTableSeeder extends Seeder
             'name' => 'create-pqrStatus',
             'display_name' => 'Crear Estado Pqr'
         ]);
-
-
 
         /*Permisos Empleados*/
         $deleteEmployeePerm = factory(Permission::class)->create([
@@ -187,6 +183,10 @@ class EmployeesTableSeeder extends Seeder
             'email' => 'carlo.villarreal@lagobo.com'
         ]);
 
+        $employee1 = factory(Employee::class)->create([
+            'email' => 'coordinador.operaciones@creolibranzas.com'
+        ]);
+
         $admin = factory(Role::class)->create([
             'name' => 'admin',
             'display_name' => 'Administrador'
@@ -203,6 +203,13 @@ class EmployeesTableSeeder extends Seeder
         $roleAdminRepo->attachToPermission($viewYearPerm);
         $roleAdminRepo->attachToPermission($updateYearPerm);
         $roleAdminRepo->attachToPermission($deleteYearPerm);
+        /*Permisos Clientes*/
+        $roleAdminRepo->attachToPermission($deletePqrPerm);
+        $roleAdminRepo->attachToPermission($createPqrPerm);
+        $roleAdminRepo->attachToPermission($viewPqrPerm);
+        $roleAdminRepo->attachToPermission($updatePqrPerm);
+        $roleAdminRepo->attachToPermission($viewPqrStatusPerm);
+        $roleAdminRepo->attachToPermission($createPqrStatusPerm);
         /*Permisos Empleados*/
         $roleAdminRepo->attachToPermission($deleteEmployeePerm);
         $roleAdminRepo->attachToPermission($createEmployeePerm);
@@ -212,14 +219,15 @@ class EmployeesTableSeeder extends Seeder
         $roleAdminRepo->attachToPermission($viewCityPerm);
         /*Permisos Sucursal*/
         $roleAdminRepo->attachToPermission($viewSubsidiaryPerm);
+        /*Permisos Roles*/
+        $roleAdminRepo->attachToPermission($viewRolsPerm);
+        /*Permisos Permisos*/
+        $roleAdminRepo->attachToPermission($viewPermissionPerm);
         $employee->roles()->save($admin);
+        $employee1->roles()->save($admin);
 
         $employee = factory(Employee::class)->create([
             'email' => 'contacto@compraventastandard.com'
-        ]);
-
-        $employee = factory(Employee::class)->create([
-            'email' => 'disenadorcoandes@standard.com.co'
         ]);
 
         $operativo = factory(Role::class)->create([

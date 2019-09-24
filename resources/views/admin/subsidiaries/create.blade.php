@@ -1,4 +1,4 @@
-@extends('layouts.admin.app') 
+@extends('layouts.admin.app')
 @section('content')
 <!-- Main content -->
 <section class="content">
@@ -14,7 +14,8 @@
                         <div class="input-group-addon">
                             <i class="fa fa-at"></i>
                         </div>
-                        <input type="text" name="name" id="name" placeholder="Nombre" class="form-control" value="{{ old('name') }}" required>
+                        <input type="text" name="name" id="name" placeholder="Nombre" class="form-control"
+                            value="{{ old('name') }}" required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -23,8 +24,8 @@
                         <div class="input-group-addon">
                             <i class="fa fa-map-marker"></i>
                         </div>
-                        <input type="text" name="address" id="address" placeholder="Dirección" class="form-control" value="{{ old('address') }}"
-                            required>
+                        <input type="text" name="address" id="address" placeholder="Dirección" class="form-control"
+                            value="{{ old('address') }}" required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -33,9 +34,22 @@
                         <div class="input-group-addon">
                             <i class="fa fa-phone"></i>
                         </div>
-                        <input type="text" name="phone" id="phone" placeholder="Teléfono" class="form-control" value="{{ old('phone') }}" required>
+                        <input type="text" name="phone" id="phone" placeholder="Teléfono" class="form-control"
+                            value="{{ old('phone') }}" required>
                     </div>
                 </div>
+                <div class="form-group">
+                    <label for="description">Horario de Atención <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <input type="text" name="opening_hours" id="opening_hours" placeholder="Horario de Atención"
+                            class="form-control" value="{{ old('opening_hours') }}" required>
+                    </div>
+                </div>
+
+
                 <div id="cities" class="form-group">
                     <label for="city_id">Ciudad </label>
                     <div class="input-group">

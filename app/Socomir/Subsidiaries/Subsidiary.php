@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Subsidiary extends Model
 {
     use NodeTrait;
-    
+
     /**
      * The attributes that are mass assignable.
      *
@@ -19,6 +19,7 @@ class Subsidiary extends Model
         'name',
         'address',
         'phone',
+        'opening_hours',
         'city_id',
         'parent_id'
     ];
@@ -30,10 +31,9 @@ class Subsidiary extends Model
      */
     protected $hidden = [];
 
-    
+
     public function city()
     {
         return $this->belongsTo(City::class);
     }
-
 }

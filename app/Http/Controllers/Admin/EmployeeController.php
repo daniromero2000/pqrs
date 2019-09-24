@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Socomir\Subsidiaries\Subsidiary;
 use App\Socomir\Admins\Requests\CreateEmployeeRequest;
 use App\Socomir\Admins\Requests\UpdateEmployeeRequest;
 use App\Socomir\Employees\Repositories\EmployeeRepository;
@@ -59,7 +60,8 @@ class EmployeeController extends Controller
     public function create()
     {
         return view('admin.employees.create', [
-            'roles' => $this->roleRepo->listRoles()
+            'roles' => $this->roleRepo->listRoles(),
+            'subsidiaries' => Subsidiary::get()
         ]);
     }
 

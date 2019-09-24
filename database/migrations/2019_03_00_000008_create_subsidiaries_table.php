@@ -19,6 +19,7 @@ class CreateSubsidiariesTable extends Migration
             $table->string('name');
             $table->string('address')->nullable();
             $table->string('phone')->nullable();
+            $table->string('opening_hours')->nullable();
             $table->unsignedInteger('city_id');
             $table->foreign('city_id')->references('id')->on('cities');
             $table->timestamps();
@@ -39,11 +40,9 @@ class CreateSubsidiariesTable extends Migration
 
             $doctrineTable = $sm->listTableDetails('subsidiaries');
 
-            if ($doctrineTable->hasIndex('subsidiaries__lft__rgt_parent_id_index')) 
-            {
+            if ($doctrineTable->hasIndex('subsidiaries__lft__rgt_parent_id_index')) {
                 $table->dropIndex('subsidiaries__lft__rgt_parent_id_index');
             }
-
         });
 
         Schema::dropIfExists('subsidiaries');
