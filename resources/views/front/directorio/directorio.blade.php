@@ -93,19 +93,22 @@
                                         aria-hidden="true"></i>
                                     BOGOTÁ</h5>
                                 <p class="card-text directorioCard-text text-center ">
+
+
+
+                                    @foreach ($employees as $employee)
+                                    @if ($employee->city == 'Bogotá' )
                                     <i class="fa fa-building yellow" aria-hidden="true"></i> Cll. 17 # 8-62 C.C.
                                     Unicompras
                                     Ofi. 203<br><br>
 
-                                    <i class="fa fa-user yellow" aria-hidden="true"></i> Luis Fernando Herrera<br>
+                                    <i class="fa fa-user yellow" aria-hidden="true"></i> {{$employee->name }} <br>
                                     <i class="fa fa-phone yellow" aria-hidden="true"></i> 2432302<br>
                                     <i class="fa fa-envelope yellow" aria-hidden="true"></i>
-                                    promotorcentro@creolibranzas.com<br><br>
+                                    {{$employee->email }}<br><br>
+                                    @endif
+                                    @endforeach
 
-                                    <i class="fa fa-user yellow" aria-hidden="true"></i> James Muñoz<br>
-                                    <i class="fa fa-phone yellow" aria-hidden="true"></i> 3134706952<br>
-                                    <i class="fa fa-envelope yellow" aria-hidden="true"></i>
-                                    promotorcentro2@creolibranzas.com<br><br>
                                 </p>
                             </div>
                         </div>

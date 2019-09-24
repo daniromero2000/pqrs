@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers\Front\Directorio;
 
+use App\Socomir\Employees\Employee;
+use App\Model\Employees\Repositories\EmployeeRepository;
+use App\Model\Employees\Repositories\Interfaces\EmployeeRepositoryInterface;
+
 
 use App\Http\Controllers\Controller;
 
@@ -14,7 +18,12 @@ class DirectorioController extends Controller
      */
     public function directorio()
     {
-        return view('front.directorio.directorio');
+
+        $employees = Employee::all();
+      
+
+        return view('front.directorio.directorio', [
+            'employees' => $employees
+        ]);
     }
 }
-
