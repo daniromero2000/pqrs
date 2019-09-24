@@ -1,32 +1,42 @@
 /* ************************
 PHONE LANDSCAPE VERSION
 ************************** */
+
 @media only screen and (min-width: 560px) and (max-width: 815px) and (orientation: landscape) {}
 
+
 /* ************************
-PHONE PORTRAIT VERSION 
+PHONE PORTRAIT VERSION
 ************************** */
+
 @media only screen and (min-width: 320px) and (max-width: 420px) and (orientation: portrait) {}
 
+
 /* ************************
- TABLET PORTRAIT VERSION 
+ TABLET PORTRAIT VERSION
 ************************** */
+
 @media only screen and (min-width: 768px) and (max-width: 810px) and (orientation: portrait) {}
 
-/* ************************
-SMALL DESKTOP VERSION 
-************************** */
-@media only screen and (min-width: 980px) and (max-width: 1299px) {}
 
 /* ************************
-BIG DESKTOP VERSION 
+SMALL DESKTOP VERSION
 ************************** */
+
+@media only screen and (min-width: 980px) and (max-width: 1299px) {}
+
+
+/* ************************
+BIG DESKTOP VERSION
+************************** */
+
 @media only screen and (min-width: 1300px) {}
 
 
 /* ************************
 General
 ************************** */
+
 .top-buffer {
     margin-top: 20px;
 }
@@ -134,31 +144,28 @@ General
     font-weight: bold;
 }
 
+
 /* ************************
 PHONE LANDSCAPE VERSION
 ************************** */
+
 @media only screen and (min-width: 560px) and (max-width: 815px) and (orientation: landscape) {
     body {
         padding-top: 63px !important;
     }
-
     .row-buffer {
         padding: 40px;
     }
-
     .top-buffer {
         margin-top: 20px;
     }
-
     .hidden-xs {
         display: none !important;
     }
-
     .inicialText {
         font-size: 16px !important;
         text-align: justify;
     }
-
     #chevron {
         position: relative;
         text-align: center;
@@ -168,7 +175,6 @@ PHONE LANDSCAPE VERSION
         height: 400px;
         width: 100%;
     }
-
     #chevron:before {
         content: '';
         position: absolute;
@@ -179,7 +185,6 @@ PHONE LANDSCAPE VERSION
         transform: skew(0deg, 6deg);
         z-index: -1;
     }
-
     #chevron:after {
         content: '';
         position: absolute;
@@ -190,13 +195,11 @@ PHONE LANDSCAPE VERSION
         transform: skew(0deg, -6deg);
         z-index: -1;
     }
-
     .simulador {
         vertical-align: middle;
         border-style: none;
         width: 100%;
     }
-
     .engranaje {
         position: absolute;
         vertical-align: middle;
@@ -205,7 +208,6 @@ PHONE LANDSCAPE VERSION
         left: 9%;
         top: 22%;
     }
-
     .simuladorText {
         position: absolute;
         vertical-align: middle;
@@ -218,41 +220,36 @@ PHONE LANDSCAPE VERSION
         text-transform: uppercase;
         font-weight: bold;
     }
-
     .mobile-break {
         display: none;
     }
 }
 
+
 /* ************************
-PHONE PORTRAIT VERSION 
+PHONE PORTRAIT VERSION
 ************************** */
+
 @media only screen and (min-width: 320px) and (max-width: 420px) and (orientation: portrait) {
     body {
         padding-top: 54px !important;
     }
-
     .row-buffer {
         padding: 40px;
     }
-
     .hidden-xs {
         display: none !important;
     }
-
     .top-buffer {
         margin-top: 20px;
     }
-
     .top-sm-buffer {
         margin-top: 0px;
     }
-
     .inicialText {
         font-size: 16px !important;
         text-align: justify;
     }
-
     #chevron {
         position: relative;
         text-align: center;
@@ -262,7 +259,6 @@ PHONE PORTRAIT VERSION
         height: 660px;
         width: 100%;
     }
-
     #chevron:before {
         content: '';
         position: absolute;
@@ -273,7 +269,6 @@ PHONE PORTRAIT VERSION
         transform: skew(0deg, 6deg);
         z-index: -1;
     }
-
     #chevron:after {
         content: '';
         position: absolute;
@@ -284,13 +279,11 @@ PHONE PORTRAIT VERSION
         transform: skew(0deg, -6deg);
         z-index: -1;
     }
-
     .simulador {
         vertical-align: middle;
         border-style: none;
         width: 100%;
     }
-
     .engranaje {
         position: absolute;
         vertical-align: middle;
@@ -299,7 +292,6 @@ PHONE PORTRAIT VERSION
         left: 9%;
         top: 22%;
     }
-
     .simuladorText {
         position: absolute;
         vertical-align: middle;
@@ -312,33 +304,30 @@ PHONE PORTRAIT VERSION
         text-transform: uppercase;
         font-weight: bold;
     }
-
     .mobile-break {
         display: none;
     }
 }
 
+
 /* ************************
- TABLET PORTRAIT VERSION 
+ TABLET PORTRAIT VERSION
 ************************** */
+
 @media only screen and (min-width: 768px) and (max-width: 810px) and (orientation: portrait) {
     body {
         padding-top: 63px !important;
     }
-
     .row-buffer {
         padding: 40px;
     }
-
     .top-buffer {
         margin-top: 20px;
     }
-
     .inicialText {
         font-size: 22px !important;
         text-align: justify;
     }
-
     #chevron {
         position: relative;
         text-align: center;
@@ -348,7 +337,6 @@ PHONE PORTRAIT VERSION
         height: 410px;
         width: 100%;
     }
-
     #chevron:before {
         content: '';
         position: absolute;
@@ -359,7 +347,6 @@ PHONE PORTRAIT VERSION
         transform: skew(0deg, 6deg);
         z-index: -1;
     }
-
     #chevron:after {
         content: '';
         position: absolute;
@@ -370,13 +357,11 @@ PHONE PORTRAIT VERSION
         transform: skew(0deg, -6deg);
         z-index: -1;
     }
-
     .simulador {
         vertical-align: middle;
         border-style: none;
         width: 100%;
     }
-
     .engranaje {
         position: absolute;
         vertical-align: middle;
@@ -385,7 +370,6 @@ PHONE PORTRAIT VERSION
         left: 9%;
         top: 22%;
     }
-
     .simuladorText {
         position: absolute;
         vertical-align: middle;
@@ -398,34 +382,30 @@ PHONE PORTRAIT VERSION
         text-transform: uppercase;
         font-weight: bold;
     }
-
     .mobile-break {
         display: none;
     }
 }
 
+
 /* ************************
-SMALL DESKTOP VERSION 
+SMALL DESKTOP VERSION
 ************************** */
+
 @media only screen and (min-width: 980px) and (max-width: 1299px) {
     body {
         padding-top: 76px !important;
     }
-
     .row-buffer {
         padding: 40px;
     }
-
     .top-buffer {
         margin-top: 20px;
     }
-
     .inicialText {
         font-size: 22px !important;
         text-align: justify;
-
     }
-
     #chevron {
         position: relative;
         text-align: center;
@@ -434,9 +414,7 @@ SMALL DESKTOP VERSION
         margin-top: 40px;
         height: 500px;
         width: 100%;
-
     }
-
     #chevron:before {
         content: '';
         position: absolute;
@@ -448,7 +426,6 @@ SMALL DESKTOP VERSION
         transform: skew(0deg, 6deg);
         z-index: -1;
     }
-
     #chevron:after {
         content: '';
         position: absolute;
@@ -460,13 +437,11 @@ SMALL DESKTOP VERSION
         transform: skew(0deg, -6deg);
         z-index: -1;
     }
-
     .simulador {
         vertical-align: middle;
         border-style: none;
         width: 100%;
     }
-
     .engranaje {
         position: absolute;
         vertical-align: middle;
@@ -475,7 +450,6 @@ SMALL DESKTOP VERSION
         left: 9%;
         top: 22%;
     }
-
     .simuladorText {
         position: absolute;
         vertical-align: middle;
@@ -490,28 +464,25 @@ SMALL DESKTOP VERSION
     }
 }
 
+
 /* ************************
-BIG DESKTOP VERSION 
+BIG DESKTOP VERSION
 ************************** */
+
 @media only screen and (min-width: 1300px) {
     body {
         padding-top: 89px !important;
     }
-
     .row-buffer {
         padding: 40px;
     }
-
     .top-buffer {
         margin-top: 20px;
     }
-
     .inicialText {
         font-size: 22px !important;
         text-align: justify;
-
     }
-
     #chevron {
         position: relative;
         text-align: center;
@@ -521,7 +492,6 @@ BIG DESKTOP VERSION
         height: 500px;
         width: 100%;
     }
-
     #chevron:before {
         content: '';
         position: absolute;
@@ -532,7 +502,6 @@ BIG DESKTOP VERSION
         transform: skew(0deg, 6deg);
         z-index: -1;
     }
-
     #chevron:after {
         content: '';
         position: absolute;
@@ -543,13 +512,11 @@ BIG DESKTOP VERSION
         transform: skew(0deg, -6deg);
         z-index: -1;
     }
-
     .simulador {
         vertical-align: middle;
         border-style: none;
         width: 100%;
     }
-
     .engranaje {
         position: absolute;
         vertical-align: middle;
@@ -558,7 +525,6 @@ BIG DESKTOP VERSION
         left: 9%;
         top: 22%;
     }
-
     .simuladorText {
         position: absolute;
         vertical-align: middle;
@@ -573,10 +539,14 @@ BIG DESKTOP VERSION
     }
 }
 
+
 /* ************************++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++************************** */
+
+
 /* ************************
 Nabar Header
 ************************** */
+
 .navbar-brand {
     width: 1000px !important;
 }
@@ -638,19 +608,19 @@ ul.navbar-nav li a:hover {
     margin-bottom: 0px !important;
 }
 
+
 /* ************************
 PHONE LANDSCAPE VERSION
 ************************** */
+
 @media only screen and (min-width: 560px) and (max-width: 815px) and (orientation: landscape) {
     ul.navbar-nav li a {
         font-size: 12px;
         padding: 7px 0px;
     }
-
     .navbar-brand {
         width: auto !important;
     }
-
     .navbar-brand>img {
         width: 228px !important;
         -ms-flex-line-pack: left;
@@ -658,7 +628,6 @@ PHONE LANDSCAPE VERSION
         padding: 0px;
         margin: 0px;
     }
-
     .navbar-collapse {
         padding-right: 0px;
         padding-left: 15px;
@@ -666,26 +635,25 @@ PHONE LANDSCAPE VERSION
     }
 }
 
+
 /* ************************
-PHONE PORTRAIT VERSION 
+PHONE PORTRAIT VERSION
 ************************** */
+
 @media only screen and (min-width: 320px) and (max-width: 420px) and (orientation: portrait) {
     ul.navbar-nav li a {
         font-size: 12px;
         padding: 7px 0px;
     }
-
     .navbar-brand {
         width: auto !important;
         padding: 0px;
         margin: 0px;
     }
-
     .navbar-brand:hover,
     .navbar-brand:focus {
         text-decoration: none;
     }
-
     .navbar-brand>img {
         display: block;
         width: 228px !important;
@@ -693,34 +661,31 @@ PHONE PORTRAIT VERSION
         align-content: left;
         padding: 0px;
         margin: 0px;
-
     }
-
     .navbar-collapse {
         padding-right: 0px;
         padding-left: 15px;
         padding-top: 15px;
         -webkit-overflow-scrolling: touch;
     }
-
     .navbar {
         padding: 0 !important;
     }
 }
 
+
 /* ************************
- TABLET PORTRAIT VERSION 
+ TABLET PORTRAIT VERSION
 ************************** */
+
 @media only screen and (min-width: 768px) and (max-width: 810px) and (orientation: portrait) {
     ul.navbar-nav li a {
         font-size: 12px;
         padding: 7px 0px;
     }
-
     .navbar-brand {
         width: auto !important;
     }
-
     .navbar-brand>img {
         width: 228px !important;
         -ms-flex-line-pack: left;
@@ -728,7 +693,6 @@ PHONE PORTRAIT VERSION
         padding: 0px;
         margin: 0px;
     }
-
     .navbar-collapse {
         padding-right: 0px;
         padding-left: 15px;
@@ -736,19 +700,19 @@ PHONE PORTRAIT VERSION
     }
 }
 
+
 /* ************************
-SMALL DESKTOP VERSION 
+SMALL DESKTOP VERSION
 ************************** */
+
 @media only screen and (min-width: 980px) and (max-width: 1299px) {
     .navbar-brand {
         width: 1000px !important;
     }
-
     .navbar-brand:hover,
     .navbar-brand:focus {
         text-decoration: none;
     }
-
     .navbar-brand>img {
         display: block;
         width: 404px !important;
@@ -757,12 +721,10 @@ SMALL DESKTOP VERSION
         -ms-flex-line-pack: left;
         align-content: left;
     }
-
     .navbar {
         padding: 0px;
         background: #E6E8E3 !important;
     }
-
     ul.navbar-nav li a {
         font-size: 14px;
         padding: 11px 0px;
@@ -772,23 +734,24 @@ SMALL DESKTOP VERSION
         text-align: center;
         text-transform: uppercase;
     }
-
     .nav-colapseWidth {
         width: 100%;
         background-color: #313332;
     }
-
 }
 
+
 /* ************************
-BIG DESKTOP VERSION 
+BIG DESKTOP VERSION
 ************************** */
+
 @media only screen and (min-width: 1300px) {}
 
 
 /* ************************
         FOOTER
 ************************** */
+
 .footer {
     position: absolute;
     bottom: 0;
@@ -882,10 +845,14 @@ hr.footerStyle {
     color: #DBAC06;
 }
 
+
 /* ************************++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++************************** */
+
+
 /* ************************
 Services
 ************************** */
+
 .servicios-text {
     font-family: 'Lato', sans-serif;
     font-size: 17.18px;
@@ -894,8 +861,6 @@ Services
     font-weight: bold;
     line-height: 14.81pt;
 }
-
-
 
 .servicios-iconos {
     margin: 0px;
@@ -920,10 +885,10 @@ hr.style1 {
 }
 
 
-
 /* ************************
 PHONE LANDSCAPE VERSION
 ************************** */
+
 @media only screen and (min-width: 560px) and (max-width: 815px) and (orientation: landscape) {
     .servicios-text {
         font-size: 13.18px;
@@ -931,7 +896,6 @@ PHONE LANDSCAPE VERSION
         font-weight: bold;
         line-height: 14.81pt;
     }
-
     .servicios-iconos {
         margin: 0px;
         display: inline-block;
@@ -945,7 +909,6 @@ PHONE LANDSCAPE VERSION
         z-index: 999;
         width: 155px;
     }
-
     hr.style1 {
         width: 46.7px;
         margin: 0px 0px 0px 0px;
@@ -955,9 +918,11 @@ PHONE LANDSCAPE VERSION
     }
 }
 
+
 /* ************************
-PHONE PORTRAIT VERSION 
+PHONE PORTRAIT VERSION
 ************************** */
+
 @media only screen and (min-width: 320px) and (max-width: 420px) and (orientation: portrait) {
     .servicios-text {
         font-size: 13.18px;
@@ -965,7 +930,6 @@ PHONE PORTRAIT VERSION
         font-weight: bold;
         line-height: 14.81pt;
     }
-
     .servicios-iconos {
         margin: 0px;
         display: inline-block;
@@ -979,7 +943,6 @@ PHONE PORTRAIT VERSION
         z-index: 999;
         width: 155px;
     }
-
     hr.style1 {
         width: 46.7px;
         margin: 0px 0px 0px 0px;
@@ -989,9 +952,11 @@ PHONE PORTRAIT VERSION
     }
 }
 
+
 /* ************************
- TABLET PORTRAIT VERSION 
+ TABLET PORTRAIT VERSION
 ************************** */
+
 @media only screen and (min-width: 768px) and (max-width: 810px) and (orientation: portrait) {
     .servicios-text {
         font-size: 17.18px;
@@ -999,7 +964,6 @@ PHONE PORTRAIT VERSION
         font-weight: bold;
         line-height: 14.81pt;
     }
-
     .servicios-iconos {
         margin: 0px;
         display: inline-block;
@@ -1013,7 +977,6 @@ PHONE PORTRAIT VERSION
         z-index: 999;
         width: 240px;
     }
-
     hr.style1 {
         width: 46.7px;
         margin: 0px 0px 0px 0px;
@@ -1021,12 +984,13 @@ PHONE PORTRAIT VERSION
         display: block;
         overflow: hidden;
     }
-
 }
 
+
 /* ************************
-SMALL DESKTOP VERSION 
+SMALL DESKTOP VERSION
 ************************** */
+
 @media only screen and (min-width: 980px) and (max-width: 1299px) {
     .servicios-text {
         font-family: 'Lato', sans-serif;
@@ -1036,7 +1000,6 @@ SMALL DESKTOP VERSION
         font-weight: bold;
         line-height: 14.81pt;
     }
-
     .servicios-iconos {
         margin: 0px;
         display: inline-block;
@@ -1049,7 +1012,6 @@ SMALL DESKTOP VERSION
         padding: 50px 83px 5px 83px;
         z-index: 999;
     }
-
     hr.style1 {
         border-top: 4px solid #cc2229;
         width: 46.7px;
@@ -1058,12 +1020,13 @@ SMALL DESKTOP VERSION
         display: block;
         overflow: hidden;
     }
-
 }
 
+
 /* ************************
-BIG DESKTOP VERSION 
+BIG DESKTOP VERSION
 ************************** */
+
 @media only screen and (min-width: 1300px) {
     .servicios-text {
         font-family: 'Lato', sans-serif;
@@ -1073,7 +1036,6 @@ BIG DESKTOP VERSION
         font-weight: bold;
         line-height: 14.81pt;
     }
-
     .servicios-iconos {
         margin: 0px;
         display: inline-block;
@@ -1086,7 +1048,6 @@ BIG DESKTOP VERSION
         padding: 50px 83px 5px 83px;
         z-index: 999;
     }
-
     hr.style1 {
         border-top: 4px solid #cc2229;
         width: 46.7px;
@@ -1095,12 +1056,13 @@ BIG DESKTOP VERSION
         display: block;
         overflow: hidden;
     }
-
 }
+
 
 /* ************************
 Informacion de interes
 ************************** */
+
 .interesInfoTitle {
     font-size: 50px;
     font-weight: bold;
@@ -1109,9 +1071,11 @@ Informacion de interes
     font-family: 'Lato', sans-serif;
 }
 
+
 /* ************************
 PHONE LANDSCAPE VERSION
 ************************** */
+
 @media only screen and (min-width: 560px) and (max-width: 815px) and (orientation: landscape) {
     .interesInfoTitle {
         font-size: 30px;
@@ -1120,15 +1084,16 @@ PHONE LANDSCAPE VERSION
         text-align: center;
         font-family: 'Lato', sans-serif;
     }
-
     .imgSlideIni {
         width: 380px;
     }
 }
 
+
 /* ************************
-PHONE PORTRAIT VERSION 
+PHONE PORTRAIT VERSION
 ************************** */
+
 @media only screen and (min-width: 320px) and (max-width: 420px) and (orientation: portrait) {
     .interesInfoTitle {
         font-size: 30px;
@@ -1137,15 +1102,16 @@ PHONE PORTRAIT VERSION
         text-align: center;
         font-family: 'Lato', sans-serif;
     }
-
     .imgSlideIni {
         width: 300px;
     }
 }
 
+
 /* ************************
- TABLET PORTRAIT VERSION 
+ TABLET PORTRAIT VERSION
 ************************** */
+
 @media only screen and (min-width: 768px) and (max-width: 810px) and (orientation: portrait) {
     .interesInfoTitle {
         font-size: 40px;
@@ -1154,15 +1120,16 @@ PHONE PORTRAIT VERSION
         text-align: center;
         font-family: 'Lato', sans-serif;
     }
-
     .imgSlideIni {
         width: 248px;
     }
 }
 
+
 /* ************************
-SMALL DESKTOP VERSION 
+SMALL DESKTOP VERSION
 ************************** */
+
 @media only screen and (min-width: 980px) and (max-width: 1299px) {
     .interesInfoTitle {
         font-size: 50px;
@@ -1171,15 +1138,16 @@ SMALL DESKTOP VERSION
         text-align: center;
         font-family: 'Lato', sans-serif;
     }
-
     .imgSlideIni {
         width: 331px;
     }
 }
 
+
 /* ************************
-BIG DESKTOP VERSION 
+BIG DESKTOP VERSION
 ************************** */
+
 @media only screen and (min-width: 1300px) {
     .interesInfoTitle {
         font-size: 50px;
@@ -1188,7 +1156,6 @@ BIG DESKTOP VERSION
         text-align: center;
         font-family: 'Lato', sans-serif;
     }
-
     .imgSlideIni {
         width: 420px;
     }
@@ -1198,6 +1165,7 @@ BIG DESKTOP VERSION
 /* ************************
 Animations
 ************************** */
+
 .animatable {
     /* initially hide animatable objects */
     visibility: hidden;
@@ -1206,7 +1174,9 @@ Animations
     animation-play-state: paused;
 }
 
+
 /* show objects being animated */
+
 .animated {
     visibility: visible;
     -webkit-animation-fill-mode: both;
@@ -1217,13 +1187,14 @@ Animations
     animation-play-state: running;
 }
 
+
 /* CSS Animations (extracted from http://glifo.uiparade.com/) */
+
 @-webkit-keyframes fadeInDown {
     0% {
         opacity: 0;
         -webkit-transform: translateY(-20px);
     }
-
     100% {
         opacity: 1;
         -webkit-transform: translateY(0);
@@ -1236,7 +1207,6 @@ Animations
         -webkit-transform: translateY(-20px);
         transform: translateY(-20px);
     }
-
     100% {
         opacity: 1;
         -webkit-transform: translateY(0);
@@ -1248,11 +1218,9 @@ Animations
     0% {
         opacity: 0;
     }
-
     20% {
         opacity: 0;
     }
-
     100% {
         opacity: 1;
     }
@@ -1262,15 +1230,12 @@ Animations
     0% {
         opacity: 0;
     }
-
     60% {
         opacity: 0;
     }
-
     20% {
         opacity: 0;
     }
-
     100% {
         opacity: 1;
     }
@@ -1281,15 +1246,12 @@ Animations
         opacity: 0;
         -webkit-transform: translateX(-2000px);
     }
-
     60% {
         -webkit-transform: translateX(20px);
     }
-
     80% {
         -webkit-transform: translateX(-5px);
     }
-
     100% {
         opacity: 1;
         -webkit-transform: translateX(0);
@@ -1302,17 +1264,14 @@ Animations
         -webkit-transform: translateX(-2000px);
         transform: translateX(-2000px);
     }
-
     60% {
         -webkit-transform: translateX(20px);
         transform: translateX(20px);
     }
-
     80% {
         -webkit-transform: translateX(-5px);
         transform: translateX(-5px);
     }
-
     100% {
         opacity: 1;
         -webkit-transform: translateX(0);
@@ -1325,15 +1284,12 @@ Animations
         opacity: 0;
         -webkit-transform: translateX(2000px);
     }
-
     60% {
         -webkit-transform: translateX(-20px);
     }
-
     80% {
         -webkit-transform: translateX(5px);
     }
-
     100% {
         opacity: 1;
         -webkit-transform: translateX(0);
@@ -1346,17 +1302,14 @@ Animations
         -webkit-transform: translateX(2000px);
         transform: translateX(2000px);
     }
-
     60% {
         -webkit-transform: translateX(-20px);
         transform: translateX(-20px);
     }
-
     80% {
         -webkit-transform: translateX(5px);
         transform: translateX(5px);
     }
-
     100% {
         opacity: 1;
         -webkit-transform: translateX(0);
@@ -1369,7 +1322,6 @@ Animations
         opacity: 0;
         -webkit-transform: translateY(20px);
     }
-
     100% {
         opacity: 1;
         -webkit-transform: translateY(0);
@@ -1382,7 +1334,6 @@ Animations
         -webkit-transform: translateY(20px);
         transform: translateY(20px);
     }
-
     100% {
         opacity: 1;
         -webkit-transform: translateY(0);
@@ -1395,15 +1346,12 @@ Animations
         opacity: 0;
         -webkit-transform: scale(0.3);
     }
-
     50% {
         -webkit-transform: scale(1.05);
     }
-
     70% {
         -webkit-transform: scale(0.9);
     }
-
     100% {
         opacity: 1;
         -webkit-transform: scale(1);
@@ -1416,17 +1364,14 @@ Animations
         -webkit-transform: scale(0.3);
         transform: scale(0.3);
     }
-
     50% {
         -webkit-transform: scale(1.05);
         transform: scale(1.05);
     }
-
     70% {
         -webkit-transform: scale(0.9);
         transform: scale(0.9);
     }
-
     100% {
         opacity: 1;
         -webkit-transform: scale(1);
@@ -1439,7 +1384,6 @@ Animations
         opacity: 1;
         -webkit-transform: translateY(40px);
     }
-
     100% {
         opacity: 1;
         -webkit-transform: translateY(0);
@@ -1452,7 +1396,6 @@ Animations
         -webkit-transform: translateY(40px);
         transform: translateY(40px);
     }
-
     100% {
         opacity: 1;
         -webkit-transform: translateY(0);
@@ -1464,11 +1407,9 @@ Animations
     0% {
         background: none;
     }
-
     70% {
         background: none;
     }
-
     100% {
         background: #464646;
     }
@@ -1478,11 +1419,9 @@ Animations
     0% {
         background: none;
     }
-
     70% {
         background: none;
     }
-
     100% {
         background: #464646;
     }
@@ -1543,7 +1482,9 @@ Animations
     animation-name: moveUp;
 }
 
+
 /* animated Icon */
+
 .animated-icon1,
 .animated-icon2,
 .animated-icon3 {
@@ -1615,7 +1556,9 @@ Animations
     transform: rotate(-135deg);
 }
 
+
 /* Icon 3*/
+
 .animated-icon2 span:nth-child(1) {
     top: 0px;
 }
@@ -1651,7 +1594,9 @@ Animations
     left: 50%;
 }
 
+
 /* Icon 4 */
+
 .animated-icon3 span:nth-child(1) {
     top: 0px;
     -webkit-transform-origin: left center;
@@ -1689,10 +1634,14 @@ Animations
     left: 8px;
 }
 
+
 /* ************************
     Quienes somos
 ************************** */
+
+
 /*Navtabs*/
+
 .nav-tabs>li {
     float: left;
     margin-bottom: -1px;
@@ -1745,7 +1694,6 @@ Animations
         display: table-cell;
         width: 1%;
     }
-
     .nav-tabs.nav-justified>li>a {
         margin-bottom: 0;
     }
@@ -1767,7 +1715,6 @@ Animations
         border-bottom: 1px solid #ddd;
         border-radius: 4px 4px 0 0;
     }
-
     .nav-tabs.nav-justified>.active>a,
     .nav-tabs.nav-justified>.active>a:hover,
     .nav-tabs.nav-justified>.active>a:focus {
@@ -1795,7 +1742,6 @@ Animations
         border-bottom: 1px solid #ddd;
         border-radius: 4px 4px 0 0;
     }
-
     .nav-tabs-justified>.active>a,
     .nav-tabs-justified>.active>a:hover,
     .nav-tabs-justified>.active>a:focus {
@@ -1862,9 +1808,11 @@ i.yellow.active {
     color: #ffffff !important;
 }
 
+
 /* ************************
     Asociarse
 ************************** */
+
 .asociarseTitle {
     color: #DBAC06;
     font-size: 28px;
@@ -1873,7 +1821,9 @@ i.yellow.active {
     font-family: 'Lato', sans-serif;
 }
 
+
 /* Container holding the image and the text */
+
 .containerText {
     position: relative;
     height: 755px;
@@ -1881,7 +1831,6 @@ i.yellow.active {
 
 .containerText2 {
     position: relative;
-
 }
 
 .imgAsociarse {
@@ -1927,30 +1876,26 @@ i.yellow.active {
 /* ************************
 PHONE LANDSCAPE VERSION
 ************************** */
+
 @media only screen and (min-width: 560px) and (max-width: 815px) and (orientation: landscape) {
     .asociarseTitle {
         font-size: 21px;
         font-weight: bold;
         text-transform: uppercase;
     }
-
     .conditionsText {
         font-size: 18px;
         position: absolute;
         text-align: justify;
         padding-right: 10px;
     }
-
     .conditionsTextTitle {
         position: absolute;
         top: 510px;
-
         font-size: 17px;
         font-weight: bold;
         text-transform: uppercase;
-
     }
-
     .conditionsTextTitle2 {
         color: #DBAC06;
         font-size: 19px;
@@ -1958,7 +1903,6 @@ PHONE LANDSCAPE VERSION
         text-transform: uppercase;
         font-family: 'Lato', sans-serif;
     }
-
     .conditionsText2 {
         font-size: 18px;
         position: absolute;
@@ -1966,12 +1910,10 @@ PHONE LANDSCAPE VERSION
         padding-right: 10px;
         text-align: justify;
     }
-
     .containerText {
         position: relative;
         height: 772px;
     }
-
     .conditionsText3 {
         font-size: 18px;
         padding-right: 10px;
@@ -1979,33 +1921,30 @@ PHONE LANDSCAPE VERSION
     }
 }
 
+
 /* ************************
-PHONE PORTRAIT VERSION 
+PHONE PORTRAIT VERSION
 ************************** */
+
 @media only screen and (min-width: 320px) and (max-width: 420px) and (orientation: portrait) {
     .asociarseTitle {
         font-size: 21px;
         font-weight: bold;
         text-transform: uppercase;
     }
-
     .conditionsText {
         font-size: 18px;
         position: absolute;
         text-align: justify;
         padding-right: 10px;
     }
-
     .conditionsTextTitle {
         position: absolute;
         top: 838px;
-
         font-size: 17px;
         font-weight: bold;
         text-transform: uppercase;
-
     }
-
     .conditionsTextTitle2 {
         color: #DBAC06;
         font-size: 19px;
@@ -2013,7 +1952,6 @@ PHONE PORTRAIT VERSION
         text-transform: uppercase;
         font-family: 'Lato', sans-serif;
     }
-
     .conditionsText2 {
         font-size: 18px;
         position: absolute;
@@ -2021,13 +1959,10 @@ PHONE PORTRAIT VERSION
         padding-right: 10px;
         text-align: justify;
     }
-
-
     .containerText {
         position: relative;
         height: 1270px;
     }
-
     .conditionsText3 {
         font-size: 18px;
         padding-right: 10px;
@@ -2037,32 +1972,28 @@ PHONE PORTRAIT VERSION
 
 
 /* ************************
- TABLET PORTRAIT VERSION 
+ TABLET PORTRAIT VERSION
 ************************** */
+
 @media only screen and (min-width: 768px) and (max-width: 810px) and (orientation: portrait) {
     .asociarseTitle {
         font-size: 21px;
         font-weight: bold;
         text-transform: uppercase;
     }
-
     .conditionsText {
         font-size: 18px;
         position: absolute;
         text-align: justify;
         padding-right: 10px;
     }
-
     .conditionsTextTitle {
         position: absolute;
         top: 510px;
-
         font-size: 17px;
         font-weight: bold;
         text-transform: uppercase;
-
     }
-
     .conditionsTextTitle2 {
         color: #DBAC06;
         font-size: 19px;
@@ -2070,7 +2001,6 @@ PHONE PORTRAIT VERSION
         text-transform: uppercase;
         font-family: 'Lato', sans-serif;
     }
-
     .conditionsText2 {
         font-size: 18px;
         position: absolute;
@@ -2078,12 +2008,10 @@ PHONE PORTRAIT VERSION
         padding-right: 10px;
         text-align: justify;
     }
-
     .containerText {
         position: relative;
         height: 772px;
     }
-
     .conditionsText3 {
         font-size: 18px;
         padding-right: 10px;
@@ -2095,6 +2023,7 @@ PHONE PORTRAIT VERSION
 /* ************************
     Beneficios
 ************************** */
+
 .beneficiosTitle {
     color: #ffffff;
     font-size: 28px;
@@ -2118,13 +2047,13 @@ PHONE PORTRAIT VERSION
     width: 460px !important;
     height: 800px !important;
     margin-left: 50px;
-
 }
 
 
 /* ************************
 PHONE LANDSCAPE VERSION
 ************************** */
+
 @media only screen and (min-width: 560px) and (max-width: 815px) and (orientation: landscape) {
     .beneficiosTitle {
         font-size: 28px;
@@ -2133,18 +2062,20 @@ PHONE LANDSCAPE VERSION
         padding: 10px;
         margin: 4px 0px;
     }
-
     .beneficiosText {
         font-size: 19px;
         padding: 10px;
         margin: 10px;
         padding-left: 5px;
     }
+   
 }
 
+
 /* ************************
-PHONE PORTRAIT VERSION 
+PHONE PORTRAIT VERSION
 ************************** */
+
 @media only screen and (min-width: 320px) and (max-width: 420px) and (orientation: portrait) {
     .beneficiosTitle {
         font-size: 28px;
@@ -2153,7 +2084,6 @@ PHONE PORTRAIT VERSION
         padding: 10px;
         margin: 4px 0px;
     }
-
     .beneficiosText {
         font-size: 19px;
         padding: 10px;
@@ -2162,9 +2092,11 @@ PHONE PORTRAIT VERSION
     }
 }
 
+
 /* ************************
- TABLET PORTRAIT VERSION 
+ TABLET PORTRAIT VERSION
 ************************** */
+
 @media only screen and (min-width: 768px) and (max-width: 810px) and (orientation: portrait) {
     .beneficiosTitle {
         color: #ffffff;
@@ -2176,7 +2108,6 @@ PHONE PORTRAIT VERSION
         margin: 4px 0px;
         font-family: 'Lato', sans-serif;
     }
-
     .beneficiosText {
         font-size: 19px;
         padding: 10px;
@@ -2186,14 +2117,18 @@ PHONE PORTRAIT VERSION
     }
 }
 
-/* ************************
-SMALL DESKTOP VERSION 
-************************** */
-@media only screen and (min-width: 980px) and (max-width: 1299px) {}
 
 /* ************************
-BIG DESKTOP VERSION 
+SMALL DESKTOP VERSION
 ************************** */
+
+@media only screen and (min-width: 980px) and (max-width: 1299px) {}
+
+
+/* ************************
+BIG DESKTOP VERSION
+************************** */
+
 @media only screen and (min-width: 1300px) {}
 
 
@@ -2202,10 +2137,10 @@ BIG DESKTOP VERSION
 ************************** */
 
 
-
 /* ************************
    Directorio
 ************************** */
+
 .directorioCardTitle {
     background-color: #DBAC06;
     border-radius: 23px 23px 0px 0px;
@@ -2282,9 +2217,11 @@ i.yellow.active {
     background-color: #25d366;
 }
 
+
 /* ************************
   Credito libranza
 ************************** */
+
 .libranzaText {
     font-size: 19px;
     padding: 10px;
@@ -2327,6 +2264,7 @@ i.yellow.active {
 /* ************************
 PHONE LANDSCAPE VERSION
 ************************** */
+
 @media only screen and (min-width: 560px) and (max-width: 815px) and (orientation: landscape) {
     .libranzaText {
         font-size: 17px;
@@ -2335,16 +2273,17 @@ PHONE LANDSCAPE VERSION
     }
 }
 
+
 /* ************************
-PHONE PORTRAIT VERSION 
+PHONE PORTRAIT VERSION
 ************************** */
+
 @media only screen and (min-width: 320px) and (max-width: 420px) and (orientation: portrait) {
     .libranzaText {
         font-size: 14px;
         padding: 10px;
         margin: 10px;
     }
-
     .autorizacionesText {
         position: relative;
         font-size: 17px !important;
@@ -2357,7 +2296,6 @@ PHONE PORTRAIT VERSION
         background-attachment: fixed;
         background-origin: padding-box;
     }
-
     .libranzaIconPdfText {
         font-size: 17.18px;
         color: #313332;
@@ -2366,16 +2304,17 @@ PHONE PORTRAIT VERSION
         line-height: 14.81pt;
         margin: 0px;
     }
-
     .libranzaIconPdf {
         width: 100px;
         margin: 0px;
     }
 }
 
+
 /* ************************
   Reglamentos
 ************************** */
+
 .reglamentos {
     font-size: 25px;
     font-weight: bold;
@@ -2384,11 +2323,12 @@ PHONE PORTRAIT VERSION
     color: #000000 !important;
 }
 
-/* ************************
-PHONE PORTRAIT VERSION 
-************************** */
-@media only screen and (min-width: 320px) and (max-width: 420px) and (orientation: portrait) {
 
+/* ************************
+PHONE PORTRAIT VERSION
+************************** */
+
+@media only screen and (min-width: 320px) and (max-width: 420px) and (orientation: portrait) {
     .reglamentos {
         font-size: 16px;
         font-weight: bold;
@@ -2396,11 +2336,10 @@ PHONE PORTRAIT VERSION
     }
 }
 
+
 /* ************************
   Registro Web
 ************************** */
-
-
 
 
 /* ************************
@@ -2426,7 +2365,6 @@ PHONE PORTRAIT VERSION
 }
 
 @media (max-width: 768px) {
-
     .login-box,
     .register-box {
         width: 90%;
@@ -2500,7 +2438,6 @@ hr.loginstyle {
     text-decoration: none;
 }
 
-
 .form-controlPqrs {
     border-left: none !important;
     border-right: none !important;
@@ -2508,10 +2445,10 @@ hr.loginstyle {
 }
 
 
-
 /* ---------------------------------------------------
 SIDEBAR STYLE
 ----------------------------------------------------- */
+
 .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2571,16 +2508,16 @@ ul.navbar-navside li a:hover {
     margin-left: -200px;
 }
 
+
 /* PHONE PORTRAIT VERSION */
+
 @media only screen and (min-width: 310px) and (max-width: 420px) and (orientation: portrait) {
     #sidebar {
         margin-left: -304px;
     }
-
     #sidebar.active {
         margin-left: 0;
     }
-
     #sidebarCollapse span {
         display: none;
     }
@@ -2662,9 +2599,11 @@ a.article:hover {
     color: #fff !important;
 }
 
+
 /* ---------------------------------------------------
 CONTENT STYLE
 ----------------------------------------------------- */
+
 #content {
     width: 100%;
     padding: 20px;
@@ -2673,7 +2612,9 @@ CONTENT STYLE
     transition: all 0.3s;
 }
 
+
 /* Style the buttons that are used to open and close the accordion panel */
+
 .accordion {
     color: #FFFFFF;
     cursor: pointer;
@@ -2688,7 +2629,9 @@ CONTENT STYLE
     border-bottom: 1px solid #eee;
 }
 
+
 /* Style the accordion panel. Note: hidden by default */
+
 .panel {
     padding: 0 18px;
     background-color: #FFFFFF !important;
@@ -2696,10 +2639,14 @@ CONTENT STYLE
     overflow: hidden;
 }
 
+
 /* ************************
 About
 ************************** */
+
+
 /* The card */
+
 .historycard {
     position: relative;
     height: 100% !important;
@@ -2737,7 +2684,9 @@ About
     text-decoration: none;
 }
 
+
 /* Image on the left side */
+
 .thumbnail {
     float: left;
     position: relative;
@@ -2782,6 +2731,7 @@ About
 /* ************************
 PHONE LANDSCAPE VERSION
 ************************** */
+
 @media only screen and (min-width: 560px) and (max-width: 815px) and (orientation: landscape) {
     .historycard {
         position: relative;
@@ -2791,7 +2741,6 @@ PHONE LANDSCAPE VERSION
         display: block !important;
         border-radius: 30px !important;
     }
-
     .quienescard {
         position: relative;
         height: 100% !important;
@@ -2800,31 +2749,25 @@ PHONE LANDSCAPE VERSION
         display: block !important;
         border-radius: 30px !important;
     }
-
     .historytitle {
         font-size: 30px;
         background: transparent !important;
     }
-
     .abouttitle {
         font-size: 20px;
     }
-
     .abouttext {
         font-size: 18px !important;
         background: transparent !important;
     }
-
     .abouttabtitles {
         font-size: 15px;
         text-decoration: none;
     }
-
     .consciencecontainer {
         position: relative;
         width: 100%;
     }
-
     .consciencecard {
         position: relative;
         height: 100% !important;
@@ -2835,25 +2778,24 @@ PHONE LANDSCAPE VERSION
         top: -10% !important;
         left: 5% !important;
     }
-
     .consciencetitle {
         font-size: 60px;
         line-height: 13px;
     }
-
     .empresatitle {
         font-size: 60px;
         letter-spacing: 11px;
     }
-
     .consciencetext {
         margin-top: 56px;
     }
 }
 
+
 /* ************************
-PHONE PORTRAIT VERSION 
+PHONE PORTRAIT VERSION
 ************************** */
+
 @media only screen and (min-width: 320px) and (max-width: 420px) and (orientation: portrait) {
     .historycard {
         position: relative;
@@ -2863,7 +2805,6 @@ PHONE PORTRAIT VERSION
         display: block !important;
         border-radius: 30px !important;
     }
-
     .quienescard {
         position: relative;
         height: 100% !important;
@@ -2872,31 +2813,25 @@ PHONE PORTRAIT VERSION
         display: block !important;
         border-radius: 30px !important;
     }
-
     .historytitle {
         font-size: 20px;
         background: transparent !important;
     }
-
     .abouttitle {
         font-size: 20px;
     }
-
     .abouttext {
         font-size: 18px !important;
         background: transparent !important;
     }
-
     .abouttabtitles {
         font-size: 10px;
         text-decoration: none;
     }
-
     .consciencecontainer {
         position: relative;
         width: 100%;
     }
-
     .consciencecard {
         position: relative;
         height: 100% !important;
@@ -2907,25 +2842,24 @@ PHONE PORTRAIT VERSION
         top: -5% !important;
         left: 4% !important;
     }
-
     .consciencetitle {
         font-size: 60px;
         line-height: 13px;
     }
-
     .empresatitle {
         font-size: 60px;
         letter-spacing: 11px;
     }
-
     .consciencetext {
         margin-top: 56px;
     }
 }
 
+
 /* ************************
- TABLET PORTRAIT VERSION 
+ TABLET PORTRAIT VERSION
 ************************** */
+
 @media only screen and (min-width: 768px) and (max-width: 810px) and (orientation: portrait) {
     .historycard {
         position: relative;
@@ -2935,7 +2869,6 @@ PHONE PORTRAIT VERSION
         display: block !important;
         border-radius: 30px !important;
     }
-
     .quienescard {
         position: relative;
         height: 100% !important;
@@ -2944,31 +2877,25 @@ PHONE PORTRAIT VERSION
         display: block !important;
         border-radius: 30px !important;
     }
-
     .historytitle {
         font-size: 20px;
         background: transparent !important;
     }
-
     .abouttitle {
         font-size: 25px;
     }
-
     .abouttext {
         font-size: 15px !important;
         background: transparent !important;
     }
-
     .abouttabtitles {
         font-size: 20px;
         text-decoration: none;
     }
-
     .consciencecontainer {
         position: relative;
         width: 100%;
     }
-
     .consciencecard {
         position: relative;
         height: 100% !important;
@@ -2979,26 +2906,24 @@ PHONE PORTRAIT VERSION
         top: -18% !important;
         left: -15% !important;
     }
-
     .consciencetitle {
         font-size: 60px;
         line-height: 13px;
     }
-
     .empresatitle {
         font-size: 60px;
         letter-spacing: 11px;
     }
-
     .consciencetext {
         margin-top: 56px;
     }
-
 }
 
+
 /* ************************
-SMALL DESKTOP VERSION 
+SMALL DESKTOP VERSION
 ************************** */
+
 @media only screen and (min-width: 980px) and (max-width: 1299px) {
     .historycard {
         position: relative;
@@ -3008,7 +2933,6 @@ SMALL DESKTOP VERSION
         display: block !important;
         border-radius: 30px !important;
     }
-
     .quienescard {
         position: relative;
         height: 100% !important;
@@ -3017,32 +2941,25 @@ SMALL DESKTOP VERSION
         display: block !important;
         border-radius: 30px !important;
     }
-
     .historytitle {
         font-size: 40px;
         background: transparent !important;
     }
-
     .abouttitle {
         font-size: 35px;
     }
-
     .abouttext {
         font-size: 20px !important;
         background: transparent !important;
     }
-
     .abouttabtitles {
         font-size: 20px;
         text-decoration: none;
     }
-
-
     .consciencecontainer {
         position: relative;
         width: 100%;
     }
-
     .consciencecard {
         position: relative;
         height: 100% !important;
@@ -3053,26 +2970,24 @@ SMALL DESKTOP VERSION
         top: -18% !important;
         left: -15% !important;
     }
-
     .consciencetitle {
         font-size: 60px;
         line-height: 13px;
     }
-
     .empresatitle {
         font-size: 60px;
         letter-spacing: 11px;
     }
-
     .consciencetext {
         margin-top: 56px;
     }
-
 }
 
+
 /* ************************
-SMALL DESKTOP VERSION 
+SMALL DESKTOP VERSION
 ************************** */
+
 @media only screen and (min-width: 1024px) {
     .historycard {
         position: relative;
@@ -3082,7 +2997,6 @@ SMALL DESKTOP VERSION
         display: block !important;
         border-radius: 30px !important;
     }
-
     .quienescard {
         position: relative;
         height: 100% !important;
@@ -3091,31 +3005,25 @@ SMALL DESKTOP VERSION
         display: block !important;
         border-radius: 30px !important;
     }
-
     .historytitle {
         font-size: 40px;
         background: transparent !important;
     }
-
     .abouttitle {
         font-size: 35px;
     }
-
     .abouttext {
         font-size: 20px !important;
         background: transparent !important;
     }
-
     .abouttabtitles {
         font-size: 20px;
         text-decoration: none;
     }
-
     .consciencecontainer {
         position: relative;
         width: 100%;
     }
-
     .consciencecard {
         position: relative;
         height: 100% !important;
@@ -3126,25 +3034,24 @@ SMALL DESKTOP VERSION
         top: -18% !important;
         left: -15% !important;
     }
-
     .consciencetitle {
         font-size: 60px;
         line-height: 13px;
     }
-
     .empresatitle {
         font-size: 60px;
         letter-spacing: 11px;
     }
-
     .consciencetext {
         margin-top: 56px;
     }
 }
 
+
 /* ************************
-BIG DESKTOP VERSION 
+BIG DESKTOP VERSION
 ************************** */
+
 @media only screen and (min-width: 1300px) {
     .historycard {
         position: relative;
@@ -3154,7 +3061,6 @@ BIG DESKTOP VERSION
         display: block !important;
         border-radius: 30px !important;
     }
-
     .quienescard {
         position: relative;
         height: 100% !important;
@@ -3163,32 +3069,25 @@ BIG DESKTOP VERSION
         display: block !important;
         border-radius: 30px !important;
     }
-
     .historytitle {
         font-size: 40px;
         background: transparent !important;
     }
-
     .abouttitle {
         font-size: 35px;
     }
-
     .abouttext {
         font-size: 20px !important;
         background: transparent !important;
     }
-
     .abouttabtitles {
         font-size: 20px;
         text-decoration: none;
     }
-
-
     .consciencecontainer {
         position: relative;
         width: 100%;
     }
-
     .consciencecard {
         position: relative;
         height: 100% !important;
@@ -3199,17 +3098,14 @@ BIG DESKTOP VERSION
         top: -18% !important;
         left: -15% !important;
     }
-
     .consciencetitle {
         font-size: 60px;
         line-height: 13px;
     }
-
     .empresatitle {
         font-size: 60px;
         letter-spacing: 11px;
     }
-
     .consciencetext {
         margin-top: 56px;
     }
@@ -3217,6 +3113,7 @@ BIG DESKTOP VERSION
 
 
 /* Valores Card*/
+
 .card1 {
     position: relative;
     left: 50%;
@@ -3341,9 +3238,11 @@ BIG DESKTOP VERSION
     background: #ff3636;
 }
 
+
 /* ************************
 Cart
 ************************** */
+
 .bg-cartwarning {
     background-color: #fcf8e3 !important;
 }
@@ -3410,7 +3309,6 @@ a.bg-warning:focus {
     background-image: radial-gradient(#FAD105, #DB8505) !important;
 }
 
-
 .btn-primarycart:focus,
 .btn-primary.focus {
     color: #fff;
@@ -3420,7 +3318,6 @@ a.bg-warning:focus {
 .btn-primarycart:hover {
     color: #FFEB00 !important;
     background-color: #cc2229 !important;
-
 }
 
 .table td,
@@ -3464,7 +3361,6 @@ a.bg-warning:focus {
     background: #f6f6f6 !important;
     padding-bottom: 20px;
     width: 100%;
-
 }
 
 .numberCircle {
@@ -3508,26 +3404,24 @@ a.bg-warning:focus {
     color: #A8A8A8;
 }
 
+
 /* ************************
 PHONE LANDSCAPE VERSION
 ************************** */
+
 @media only screen and (min-width: 560px) and (max-width: 815px) and (orientation: landscape) {
     .product-cart-text {
         font-size: 17.2pt !important;
         font-weight: bold;
     }
-
-
     .cartproductprice {
         font-size: 20pt;
         padding-top: 16px !important;
     }
-
     .btnproductdelete {
         margin-top: 17px !important;
         font-size: 12px !important;
     }
-
     #ordersteps {
         background: #f6f6f6 !important;
         padding-bottom: 20px;
@@ -3542,22 +3436,22 @@ PHONE LANDSCAPE VERSION
         align-items: center;
         width: 100%;
     }
-
     .steptext {
         color: #A8A8A8;
         font-size: 9pt;
         text-align: center;
     }
-
     .steptexthover {
         color: #cc2229;
         font-size: 9pt;
     }
 }
 
+
 /* ************************
-PHONE PORTRAIT VERSION 
+PHONE PORTRAIT VERSION
 ************************** */
+
 @media only screen and (min-width: 320px) and (max-width: 420px) and (orientation: portrait) {
     .btn-primarycart {
         width: 190px;
@@ -3567,7 +3461,6 @@ PHONE PORTRAIT VERSION
         cursor: pointer;
         height: 50px;
     }
-
     .btn-secondarycart {
         width: 230px;
         padding: 1.5%;
@@ -3576,7 +3469,6 @@ PHONE PORTRAIT VERSION
         line-height: 28px !important;
         height: 50px;
     }
-
     .btn-paymentback {
         width: 190px;
         padding: 1.5%;
@@ -3585,7 +3477,6 @@ PHONE PORTRAIT VERSION
         line-height: 28px !important;
         height: 50px;
     }
-
     .btn-secondarycheck {
         width: 230px;
         padding: 1.5%;
@@ -3594,23 +3485,18 @@ PHONE PORTRAIT VERSION
         line-height: 28px !important;
         height: 50px;
     }
-
     .product-cart-text {
         font-size: 17.2pt !important;
         font-weight: bold;
     }
-
-
     .cartproductprice {
         font-size: 20pt;
         padding-top: 0px !important;
     }
-
     .btnproductdelete {
         margin-top: 0px !important;
         font-size: 12px !important;
     }
-
     .numberCircle {
         border-radius: 50%;
         behavior: url(PIE.htc);
@@ -3629,7 +3515,6 @@ PHONE PORTRAIT VERSION
         -ms-flex-align: center;
         align-items: center;
     }
-
     .numberCirclehover {
         border-radius: 50%;
         behavior: url(PIE.htc);
@@ -3648,7 +3533,6 @@ PHONE PORTRAIT VERSION
         -ms-flex-align: center;
         align-items: center;
     }
-
     .steptext {
         color: #A8A8A8;
         font-size: 9pt;
@@ -3662,7 +3546,6 @@ PHONE PORTRAIT VERSION
         -ms-flex-align: center;
         align-items: center;
     }
-
     .steptexthover {
         color: #cc2229;
         font-size: 9pt;
@@ -3675,7 +3558,6 @@ PHONE PORTRAIT VERSION
         -ms-flex-align: center;
         align-items: center;
     }
-
     .stepangle {
         font-size: 30px !important;
         color: #A8A8A8;
@@ -3692,24 +3574,22 @@ PHONE PORTRAIT VERSION
 
 
 /* ************************
- TABLET PORTRAIT VERSION 
+ TABLET PORTRAIT VERSION
 ************************** */
+
 @media only screen and (min-width: 768px) and (max-width: 810px) and (orientation: portrait) {
     .product-cart-text {
         font-size: 17.2pt !important;
         font-weight: bold;
     }
-
     .cartproductprice {
         font-size: 20pt;
         padding-top: 16px !important;
     }
-
     .btnproductdelete {
         margin-top: 17px !important;
         font-size: 12px !important;
     }
-
     .numberCircle {
         border-radius: 50%;
         behavior: url(PIE.htc);
@@ -3722,7 +3602,6 @@ PHONE PORTRAIT VERSION
         font-size: 21pt;
         margin-left: 27%;
     }
-
     .numberCirclehover {
         border-radius: 50%;
         behavior: url(PIE.htc);
@@ -3735,36 +3614,33 @@ PHONE PORTRAIT VERSION
         font-size: 21pt;
         margin-left: 27%;
     }
-
     .steptext {
         color: #A8A8A8;
         font-size: 13pt;
     }
-
     .steptexthover {
         color: #cc2229;
         font-size: 13pt;
     }
-
     .stepangle {
         font-size: 50px !important;
         color: #A8A8A8;
     }
 }
 
+
 /* ************************
-SMALL DESKTOP VERSION 
+SMALL DESKTOP VERSION
 ************************** */
+
 @media only screen and (min-width: 980px) and (max-width: 1299px) {
     .bg-cartwarning {
         background-color: #fcf8e3 !important;
     }
-
     a.bg-cartwarning:hover,
     a.bg-warning:focus {
         background-color: #f7ecb5 !important;
     }
-
     .btn-primarycart {
         width: 190px;
         padding: 1.5%;
@@ -3779,7 +3655,6 @@ SMALL DESKTOP VERSION
         background-repeat: repeat-x !important;
         background-image: radial-gradient(#F93F04, #8D0205) !important;
     }
-
     .btn-secondarycart {
         width: 230px;
         padding: 1.5%;
@@ -3793,7 +3668,6 @@ SMALL DESKTOP VERSION
         background-repeat: repeat-x !important;
         background-image: radial-gradient(#FAD105, #DB8505) !important;
     }
-
     .btn-paymentback {
         width: 190px;
         padding: 1.5%;
@@ -3807,7 +3681,6 @@ SMALL DESKTOP VERSION
         background-repeat: repeat-x !important;
         background-image: radial-gradient(#FAD105, #DB8505) !important;
     }
-
     .btn-secondarycheck {
         width: 230px;
         padding: 1.5%;
@@ -3821,61 +3694,49 @@ SMALL DESKTOP VERSION
         background-repeat: repeat-x !important;
         background-image: radial-gradient(#FAD105, #DB8505) !important;
     }
-
     .btn-primarycart:focus,
     .btn-primary.focus {
         color: #fff;
         background-color: #cc2229 !important;
     }
-
     .btn-primarycart:hover {
         color: #FFEB00 !important;
         background-color: #cc2229 !important;
     }
-
     .table td,
     .table th {
         background-color: transparent !important;
         border-top: 1px solid #6D6C6C !important;
     }
-
     .table-striped tbody tr:nth-of-type(2n+1) {
         background-color: transparent !important;
     }
-
     .table th {
         font-weight: bold;
     }
-
     .product-cart-text {
         font-size: 17.2pt !important;
         font-weight: bold;
     }
-
     .cartproductprice {
         font-size: 28pt;
         padding-top: 70px !important;
     }
-
     .btnproductdelete {
         margin-top: 70px !important;
     }
-
     .product-description {
         padding: 10px 0;
     }
-
     .product-description p {
         line-height: 18px;
         font-size: 14px;
     }
-
     #ordersteps {
         background: #f6f6f6 !important;
         padding-bottom: 20px;
         width: 100%;
     }
-
     .numberCircle {
         border-radius: 50%;
         behavior: url(PIE.htc);
@@ -3888,7 +3749,6 @@ SMALL DESKTOP VERSION
         font-size: 21pt;
         margin-left: 27%;
     }
-
     .numberCirclehover {
         border-radius: 50%;
         behavior: url(PIE.htc);
@@ -3901,36 +3761,33 @@ SMALL DESKTOP VERSION
         font-size: 21pt;
         margin-left: 36%;
     }
-
     .steptext {
         color: #A8A8A8;
         font-size: 12pt;
     }
-
     .steptexthover {
         color: #cc2229;
         font-size: 12pt;
     }
-
     .stepangle {
         font-size: 50px !important;
         color: #A8A8A8;
     }
 }
 
+
 /* ************************
-BIG DESKTOP VERSION 
+BIG DESKTOP VERSION
 ************************** */
+
 @media only screen and (min-width: 1300px) {
     .bg-cartwarning {
         background-color: #fcf8e3 !important;
     }
-
     a.bg-cartwarning:hover,
     a.bg-warning:focus {
         background-color: #f7ecb5 !important;
     }
-
     .btn-primarycart {
         width: 190px;
         padding: 1.5%;
@@ -3945,7 +3802,6 @@ BIG DESKTOP VERSION
         background-repeat: repeat-x !important;
         background-image: radial-gradient(#F93F04, #8D0205) !important;
     }
-
     .btn-secondarycart {
         width: 230px;
         padding: 1.5%;
@@ -3959,7 +3815,6 @@ BIG DESKTOP VERSION
         background-repeat: repeat-x !important;
         background-image: radial-gradient(#FAD105, #DB8505) !important;
     }
-
     .btn-paymentback {
         width: 190px;
         padding: 1.5%;
@@ -3973,7 +3828,6 @@ BIG DESKTOP VERSION
         background-repeat: repeat-x !important;
         background-image: radial-gradient(#FAD105, #DB8505) !important;
     }
-
     .btn-secondarycheck {
         width: 230px;
         padding: 1.5%;
@@ -3987,62 +3841,49 @@ BIG DESKTOP VERSION
         background-repeat: repeat-x !important;
         background-image: radial-gradient(#FAD105, #DB8505) !important;
     }
-
     .btn-primarycart:focus,
     .btn-primary.focus {
         color: #fff;
         background-color: #cc2229 !important;
     }
-
     .btn-primarycart:hover {
         color: #FFEB00 !important;
         background-color: #cc2229 !important;
-
     }
-
     .table td,
     .table th {
         background-color: transparent !important;
         border-top: 1px solid #6D6C6C !important;
     }
-
     .table-striped tbody tr:nth-of-type(2n+1) {
         background-color: transparent !important;
     }
-
     .table th {
         font-weight: bold;
     }
-
     .product-cart-text {
         font-size: 17.2pt !important;
         font-weight: bold;
     }
-
     .cartproductprice {
         font-size: 28pt;
         padding-top: 70px !important;
     }
-
     .btnproductdelete {
         margin-top: 70px !important;
     }
-
     .product-description {
         padding: 10px 0;
     }
-
     .product-description p {
         line-height: 18px;
         font-size: 14px;
     }
-
     #ordersteps {
         background: #f6f6f6 !important;
         padding-bottom: 20px;
         width: 100%;
     }
-
     .numberCircle {
         border-radius: 50%;
         behavior: url(PIE.htc);
@@ -4055,7 +3896,6 @@ BIG DESKTOP VERSION
         font-size: 21pt;
         margin-left: 27%;
     }
-
     .numberCirclehover {
         border-radius: 50%;
         behavior: url(PIE.htc);
@@ -4068,26 +3908,25 @@ BIG DESKTOP VERSION
         font-size: 21pt;
         margin-left: 36%;
     }
-
     .steptext {
         color: #A8A8A8;
         font-size: 12pt;
     }
-
     .steptexthover {
         color: #cc2229;
         font-size: 13pt;
     }
-
     .stepangle {
         font-size: 50px !important;
         color: #A8A8A8;
     }
 }
 
+
 /* ************************
 Checkout
 ************************** */
+
 .btnbank {
     background-color: #cc2229 !important;
     color: #ffffff !important;
@@ -4129,9 +3968,11 @@ Checkout
     background-image: radial-gradient(#FAD105, #DB8505) !important;
 }
 
+
 /* ************************
 PHONE LANDSCAPE VERSION
 ************************** */
+
 @media only screen and (min-width: 560px) and (max-width: 815px) and (orientation: landscape) {
     .btn-ordertks {
         width: 230px;
@@ -4147,9 +3988,11 @@ PHONE LANDSCAPE VERSION
     }
 }
 
+
 /* ************************
-PHONE PORTRAIT VERSION 
+PHONE PORTRAIT VERSION
 ************************** */
+
 @media only screen and (min-width: 320px) and (max-width: 420px) and (orientation: portrait) {
     .btn-ordertks {
         width: 230px;
@@ -4165,9 +4008,11 @@ PHONE PORTRAIT VERSION
     }
 }
 
+
 /* ************************
- TABLET PORTRAIT VERSION 
+ TABLET PORTRAIT VERSION
 ************************** */
+
 @media only screen and (min-width: 768px) and (max-width: 810px) and (orientation: portrait) {
     .btn-ordertks {
         width: 230px;
@@ -4183,9 +4028,11 @@ PHONE PORTRAIT VERSION
     }
 }
 
+
 /* ************************
-SMALL DESKTOP VERSION 
+SMALL DESKTOP VERSION
 ************************** */
+
 @media only screen and (min-width: 980px) and (max-width: 1299px) {
     .btn-ordertks {
         width: 230px;
@@ -4201,9 +4048,11 @@ SMALL DESKTOP VERSION
     }
 }
 
+
 /* ************************
-BIG DESKTOP VERSION 
+BIG DESKTOP VERSION
 ************************** */
+
 @media only screen and (min-width: 1300px) {
     .btn-ordertks {
         width: 230px;
@@ -4219,31 +4068,28 @@ BIG DESKTOP VERSION
     }
 }
 
+
 /* PHONE PORTRAIT VERSION */
+
 @media only screen and (min-width: 310px) and (max-width: 420px) and (orientation: portrait) {
     table {
         width: 100%;
     }
-
     thead {
         display: none;
     }
-
     tr:nth-of-type(2n) {
         background-color: inherit;
     }
-
     tr td:first-child {
         background: #f0f0f0;
         font-weight: bold;
         font-size: 1.3em;
     }
-
     tbody td {
         display: block;
         text-align: center;
     }
-
     tbody td:before {
         content: attr(data-th);
         display: block;
@@ -4251,9 +4097,11 @@ BIG DESKTOP VERSION
     }
 }
 
+
 /* ************************
 Producto
 ************************** */
+
 .btnproduct {
     display: inline-block;
     margin-bottom: 0;
@@ -4426,9 +4274,11 @@ Producto
     font-size: 21.07px !important;
 }
 
+
 /* ************************
-PHONE LANDSCAPE VERSION 
+PHONE LANDSCAPE VERSION
 ************************** */
+
 @media only screen and (min-width: 560px) and (max-width: 815px) and (orientation: landscape) {
     .btnproduct {
         display: inline-block;
@@ -4450,7 +4300,6 @@ PHONE LANDSCAPE VERSION
         -ms-user-select: none;
         user-select: none;
     }
-
     .btn-primaryproduct {
         width: 190px;
         padding: 1.5%;
@@ -4465,7 +4314,6 @@ PHONE LANDSCAPE VERSION
         background-repeat: repeat-x !important;
         background-image: radial-gradient(#F93F04, #8D0205) !important;
     }
-
     .descripcion {
         font-family: "Barlow Semi Condensed", sans-serif !important;
         color: #ffffff !important;
@@ -4475,7 +4323,6 @@ PHONE LANDSCAPE VERSION
         font-weight: bold;
         width: 100%;
     }
-
     .productalerttext {
         width: 169px !important;
         height: 300px !important;
@@ -4487,9 +4334,11 @@ PHONE LANDSCAPE VERSION
     }
 }
 
+
 /* ************************
-PHONE PORTRAIT VERSION 
+PHONE PORTRAIT VERSION
 ************************** */
+
 @media only screen and (min-width: 320px) and (max-width: 420px) and (orientation: portrait) {
     .btnproduct {
         display: inline-block;
@@ -4510,7 +4359,6 @@ PHONE PORTRAIT VERSION
         -ms-user-select: none;
         user-select: none;
     }
-
     .btn-primaryproduct {
         width: 190px;
         padding: 1.5%;
@@ -4525,7 +4373,6 @@ PHONE PORTRAIT VERSION
         background-repeat: repeat-x !important;
         background-image: radial-gradient(#F93F04, #8D0205) !important;
     }
-
     .descripcion {
         font-family: "Barlow Semi Condensed", sans-serif !important;
         color: #ffffff !important;
@@ -4535,7 +4382,6 @@ PHONE PORTRAIT VERSION
         font-weight: bold;
         width: 100%;
     }
-
     .productalerttext {
         width: 151px !important;
         height: 300px !important;
@@ -4549,8 +4395,9 @@ PHONE PORTRAIT VERSION
 
 
 /* ************************
- TABLET PORTRAIT VERSION 
+ TABLET PORTRAIT VERSION
 ************************** */
+
 @media only screen and (min-width: 768px) and (max-width: 810px) and (orientation: portrait) {
     .btnproduct {
         display: inline-block;
@@ -4572,7 +4419,6 @@ PHONE PORTRAIT VERSION
         -ms-user-select: none;
         user-select: none;
     }
-
     .btn-primaryproduct {
         width: 190px;
         padding: 1.5%;
@@ -4587,7 +4433,6 @@ PHONE PORTRAIT VERSION
         background-repeat: repeat-x !important;
         background-image: radial-gradient(#F93F04, #8D0205) !important;
     }
-
     .descripcion {
         font-family: "Barlow Semi Condensed", sans-serif !important;
         color: #ffffff !important;
@@ -4597,7 +4442,6 @@ PHONE PORTRAIT VERSION
         font-weight: bold;
         width: 100%;
     }
-
     .productalerttext {
         width: 200px !important;
         height: 300px !important;
@@ -4609,9 +4453,11 @@ PHONE PORTRAIT VERSION
     }
 }
 
+
 /* ************************
-SMALL DESKTOP VERSION 
+SMALL DESKTOP VERSION
 ************************** */
+
 @media only screen and (min-width: 980px) and (max-width: 1299px) {
     .btnproduct {
         display: inline-block;
@@ -4633,7 +4479,6 @@ SMALL DESKTOP VERSION
         -ms-user-select: none;
         user-select: none;
     }
-
     .btn-primaryproduct {
         width: 190px;
         padding: 1.5%;
@@ -4648,7 +4493,6 @@ SMALL DESKTOP VERSION
         background-repeat: repeat-x !important;
         background-image: radial-gradient(#F93F04, #8D0205) !important;
     }
-
     .descripcion {
         font-family: "Barlow Semi Condensed", sans-serif !important;
         color: #ffffff !important;
@@ -4658,7 +4502,6 @@ SMALL DESKTOP VERSION
         font-weight: bold;
         width: 100%;
     }
-
     .productalerttext {
         width: 200px !important;
         height: 300px !important;
@@ -4670,9 +4513,11 @@ SMALL DESKTOP VERSION
     }
 }
 
+
 /* ************************
-BIG DESKTOP VERSION 
+BIG DESKTOP VERSION
 ************************** */
+
 @media only screen and (min-width: 1300px) {
     .btnproduct {
         display: inline-block;
@@ -4693,7 +4538,6 @@ BIG DESKTOP VERSION
         -ms-user-select: none;
         user-select: none;
     }
-
     .btn-primaryproduct {
         width: 190px;
         padding: 1.5%;
@@ -4708,7 +4552,6 @@ BIG DESKTOP VERSION
         background-repeat: repeat-x !important;
         background-image: radial-gradient(#F93F04, #8D0205) !important;
     }
-
     .descripcion {
         font-family: "Barlow Semi Condensed", sans-serif !important;
         color: #ffffff !important;
@@ -4718,7 +4561,6 @@ BIG DESKTOP VERSION
         font-weight: bold;
         width: 100%;
     }
-
     .productalerttext {
         width: 200px !important;
         height: 300px !important;
@@ -4728,32 +4570,24 @@ BIG DESKTOP VERSION
         color: #ffffff !important;
         font-size: 21.07px !important;
     }
-
-
-
     /* ************************
 BreadCrumb
 ************************** */
-
     .breadcrumb {
         padding: 0px !important;
         margin: 0px !important;
         background-color: #ffffff !important;
     }
-
     .breadcrumb li a {
         font-size: 14px !important;
     }
-
     .divider {
         font-size: 14px !important;
     }
-
     .breadactive {
         font-size: 14px !important;
         margin-top: 5px;
     }
-
     /* ************************
 Productos y Servicios
 ************************** */
@@ -4766,7 +4600,6 @@ Productos y Servicios
         font-weight: bold;
         padding: 5px;
     }
-
     .productTitle2 {
         background-color: #DBAC06;
         color: #ffffff !important;
@@ -4776,7 +4609,6 @@ Productos y Servicios
         font-weight: bold;
         padding: 5px;
     }
-
     .productTitle3 {
         background-color: #DBAC06;
         color: #ffffff !important;
@@ -4786,7 +4618,6 @@ Productos y Servicios
         font-weight: bold;
         padding: 5px;
     }
-
     .productTitle4 {
         background-color: #DBAC06;
         color: #ffffff !important;
@@ -4796,19 +4627,41 @@ Productos y Servicios
         font-weight: bold;
         padding: 5px;
     }
-
     .imgProducto {
         width: 400px;
     }
-
-
     #outerContainer #mainContainer div.toolbar {
         display: none !important;
         /* hide PDF viewer toolbar */
     }
-
     #outerContainer #mainContainer #viewerContainer {
         top: 0 !important;
         /* move doc up into empty bar space */
     }
+   
+}
+/* remove edge cards of direccion */
+.card {
+    border: none !important;
+}
+/* margin of row simulador.blade.php */
+.reset-row{
+    margin-right: 0px !important;
+    margin-left: -1px !important;
+}
+/* margin of col simulador.blade.php */
+.reset-col{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+/* margin of page */
+.img-row{
+    margin-right: 0px;
+    margin-left: -1px;
+}
+/* banerinicial */
+.margen-inicial{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
 }

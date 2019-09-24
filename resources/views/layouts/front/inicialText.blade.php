@@ -1,5 +1,5 @@
 <div class="container-fluid top-buffer bottom-buffer">
-    <div class="row d-flex justify-content-center">
+    <div class="row img-row d-flex justify-content-center">
         <div class="col-12 col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
             <p class="inicialText">Nuestra atención personalizada nos permite brindarle soluciones dinámicas y
                 competitivas, enfocadas a sus necesidades específicas a través de nuestros productos y servicios.

@@ -11,7 +11,7 @@
             <ol class="breadcrumb">
                 <li><a href="{{ route('home') }}"> <i class="fa fa-home"></i> Home</a><span class="divider">/</span>
                 </li>
-                <li><a href="{{ route('informacionfinanciera') }}"> Información Financiera</a><span class="divider">/</span></li>
+                <li><a href="{{ route('informacionfinanciera') }}"> Indicador Financiero</a><span class="divider">/</span></li>
                 @if(isset($year))<li><a
                         href="{{ route('front.year.slug', $year->slug) }}">{{ $year->year }}</a><span
                         class="divider">/</span></li> @endif<li class="breadactive">{{ $finance->name }}</li>

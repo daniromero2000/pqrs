@@ -21,7 +21,9 @@
         </div>
         <hr>
     </div>
-
+    <!-- barra de interes -->
+    @include('layouts.front.slideInicial')
+    
     <script type="text/javascript">
         document.onmousedown = disableRightclick;
         var message = "No esta permitida esta funcionalidad";

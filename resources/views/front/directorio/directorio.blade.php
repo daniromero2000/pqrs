@@ -280,7 +280,7 @@
                                 <p class="card-text directorioCard-text text-center">
                                     <i class="fa fa-building yellow" aria-hidden="true"></i> Cra. 33 # 39-67 Barrio
                                     centro<br><br>
-                                    <i class="fa fa-user yellow" aria-hidden="true"></i> Jhoanna Macías<br>
+                                    <i class="fa fa-user yellow" aria-hidden="true"></i> Diego Dorado<br>
                                     <i class="fa fa-phone yellow" aria-hidden="true"></i> 3204752084 <br>
                                     <i class="fa fa-envelope yellow" aria-hidden="true"></i>
                                     coordinadorvillavicencio@creolibranzas.com<br><br>
@@ -294,6 +294,7 @@
         </div>
     </div>
     <hr>
+    @include('layouts.front.slideInicial')
     <!-- /.container -->
 </body>
 
