@@ -12,6 +12,7 @@
 */
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
+
 use App\Socomir\Provinces\Province;
 use App\Socomir\Cities\City;
 
@@ -21,6 +22,7 @@ $factory->define(City::class, function (Faker\Generator $faker) {
 
     return [
         'name' => $faker->city,
+        'dane' => '1',
         'province_id' => $province->id
     ];
 });

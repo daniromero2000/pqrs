@@ -112,6 +112,7 @@ class EmployeeController extends Controller
             'admin.employees.edit',
             [
                 'employee' => $employee,
+                'subsidiaries' => Subsidiary::all(),
                 'roles' => $this->roleRepo->listRoles('created_at', 'desc'),
                 'isCurrentUser' => $this->employeeRepo->isAuthUser($employee),
                 'selectedIds' => $employee->roles()->pluck('role_id')->all()

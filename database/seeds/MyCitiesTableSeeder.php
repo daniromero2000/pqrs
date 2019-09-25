@@ -11,27 +11,31 @@ class MyCitiesTableSeeder extends Seeder
      */
     public function run()
     {
-        \DB::table('cities')->insert(array (
+        \DB::table('cities')->insert(array(
             0 =>
-                array (
-                    'name' => 'Pereira',
-                    'province_id' => '1',
-                ),
+            array(
+                'name' => 'Pereira',
+                'dane' => '1',
+                'province_id' => '1',
+            ),
             1 =>
-                array (
-                    'name' => 'Dosquebradas',
-                    'province_id' => '1',
-                ),
+            array(
+                'name' => 'Dosquebradas',
+                'dane' => '2',
+                'province_id' => '1',
+            ),
             2 =>
-                array (
-                    'name' => 'Tuluá',
-                    'province_id' => '2',
-                ),
+            array(
+                'name' => 'Tuluá',
+                'dane' => '3',
+                'province_id' => '2',
+            ),
             3 =>
-                array (
-                    'name' => 'Cartago',
-                    'province_id' => '2',
-                ),
+            array(
+                'name' => 'Cartago',
+                'dane' => '4',
+                'province_id' => '2',
+            ),
         ));
     }
 }
