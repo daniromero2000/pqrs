@@ -22,7 +22,7 @@ $factory->define(Subsidiary::class, function (Faker\Generator $faker) {
         'La 19',
     ]);
 
-    $city = factory(City::class)->create();
+
 
     return [
         'name' => $name,
