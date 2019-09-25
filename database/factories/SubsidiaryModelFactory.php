@@ -14,7 +14,7 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Socomir\Subsidiaries\Subsidiary;
-use App\Socomir\Cities\City;
+
 use Illuminate\Http\UploadedFile;
 
 $factory->define(Subsidiary::class, function (Faker\Generator $faker) {
