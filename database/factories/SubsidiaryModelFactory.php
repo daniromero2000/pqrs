@@ -29,6 +29,6 @@ $factory->define(Subsidiary::class, function (Faker\Generator $faker) {
         'address' => str_slug($name),
         'phone' => 3183643,
         'opening_hours' => '8:00 a 18:00',
-        'city_id' => $city->id
+        'city_id' => 1
     ];
 });
