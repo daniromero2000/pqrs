@@ -101,7 +101,7 @@ class SubsidiaryController extends Controller
     {
         $subsidiary = $this->subsidiaryRepo->findSubsidiaryById($id);
         $SubsidiaryRepo = new SubsidiaryRepository($subsidiary);
-        return view('admin.subsidiaries.edit', [
+        return view('admin.subsidiaries.edit ', [
             'subsidiary' => $subsidiary,
             'cities' => $this->cityRepo->listCities(),
             'cityId' => $subsidiary->city_id,

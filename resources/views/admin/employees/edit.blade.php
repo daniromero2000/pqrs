@@ -29,6 +29,9 @@
                             required>
                     </div>
                 </div>
+
+            
+
                 <div class="form-group">
                     <label for="password">Password <span class="text-danger">*</span></label>
                     <div class="input-group">
@@ -51,6 +54,20 @@
                         </select>
                     </div>
                 </div>
+                <div id="city_id" class="form-group">
+                    <label for="subsidiary_id">Sucursal <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        </div>
+                        <select name="subsidiary_id" id="subsidiary_id" class="form-control" enabled>
+                            @foreach($subsidiaries as $subsidiary)
+                            <option value="{{ $subsidiary->id }}">{{ $subsidiary->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+              
     @include('admin.shared.status-select', ['status' => $employee->status])
             </div>
 

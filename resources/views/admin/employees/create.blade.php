@@ -74,6 +74,7 @@
                         <select class="selectpicker form-control" id="position" name="position">
                             <option>Promotor</option>
                             <option>Coordinador</option>
+                            <option>Auxiliar de credito</option>
                         </select>
                     </div>
                 </div>

@@ -1,5 +1,7 @@
-@extends('layouts.admin.app') 
+@extends('layouts.admin.app')
 @section('content')
+<script src="https://kit.fontawesome.com/c1313463c5.js"></script>
+
 <!-- Main content -->
 <section class="content">
     @include('layouts.errors-and-messages')
@@ -14,8 +16,7 @@
                         <div class="input-group-addon">
                             <i class="fa fa-at"></i>
                         </div>
-                        <input type="text" name="name" id="name" placeholder="Nombre" class="form-control" value="{!! $subsidiary->name ?: old('name')  !!}"
-                            required>
+                        <input type="text" name="name" id="name" placeholder="Nombre" class="form-control" value="{!! $subsidiary->name ?: old('name')  !!}" required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -24,20 +25,29 @@
                         <div class="input-group-addon">
                             <i class="fa fa-map-marker"></i>
                         </div>
-                        <input type="text" name="address" id="address" placeholder="Dirección" class="form-control" value="{!! $subsidiary->address ?: old('address')  !!}"
-                            required>
+                        <input type="text" name="address" id="address" placeholder="Dirección" class="form-control" value="{!! $subsidiary->address ?: old('address')  !!}" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="name">Teléfono <span class="text-danger">*</span></label>
                     <div class="input-group">
                         <div class="input-group-addon">
-                            <i class="fa fa-phone"></i>
+                            <i class="fas fa-phone-alt"></i>
                         </div>
-                        <input type="text" name="phone" id="phone" placeholder="Teléfono" class="form-control" value="{!! $subsidiary->phone ?: old('phone')  !!}"
-                            required>
+                        <input type="text" name="phone" id="phone" placeholder="Teléfono" class="form-control" value="{!! $subsidiary->phone ?: old('phone')  !!}" required>
                     </div>
                 </div>
+
+                <div class="form-group">
+                    <label for="name">horario <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <input type="text" name="phone" id="phone" placeholder="Teléfono" class="form-control" value="{!!$subsidiary->opening_hours ?: old('opening_hours')  !!}" required>
+                    </div>
+                </div>
+                
                 <div id="cities" class="form-group">
                     <label for="city_id">Ciudad </label>
                     <div class="input-group">
@@ -45,16 +55,17 @@
                             <i class="fa fa-map-marker"></i>
                         </div>
                         <select name="city_id" id="city_id" class="form-control">
-                        @foreach($cities as $city)
-                        @if($city->id == $cityId)
-                        <option selected="selected" value="{{ $city->id }}">{{ $city->name }}</option>
-                        @else
-                        <option value="{{ $city->id }}">{{ $city->name }}</option>
-                        @endif
-                        @endforeach
-                    </select>
+                            @foreach($cities as $city)
+                            @if($city->id == $cityId)
+                            <option selected="selected" value="{{ $city->id }}">{{ $city->name }}</option>
+                            @else
+                            <option value="{{ $city->id }}">{{ $city->name }}</option>
+                            @endif
+                            @endforeach
+                        </select>
                     </div>
                 </div>
+
 
             </div>
             <!-- /.box-body -->
