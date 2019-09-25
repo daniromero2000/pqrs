@@ -84,7 +84,7 @@ class Pqr extends Authenticatable
         return $this->hasMany(PqrCommentary::class)->whereStatus(true);
     }
 
-   
+
     /**
      * @param $term
      *

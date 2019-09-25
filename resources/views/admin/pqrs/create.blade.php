@@ -109,7 +109,7 @@
                     @if($errors->has('mensaje')) <span class="help-block">
                         <strong>{{ $errors->first('mensaje') }}</strong> </span> @endif</div>
 
-
+                <input class="hidden" value="1" name="data_politics" id="data_politics" required>
             </div>
             <!-- /.box-body -->
             <div class="box-footer">
