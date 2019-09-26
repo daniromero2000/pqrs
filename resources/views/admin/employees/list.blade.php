@@ -11,8 +11,11 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th class="text-center" scope="col">Nombre</th>
+                        <th class="text-center" scope="col-12">Nombre</th>
                         <th class="text-center" scope="col">Email</th>
+                        <th class="text-center" scope="col">Telefono</th>
+                        <th class="text-center" scope="col">Cargo</th>
+                        <th class="text-center" scope="col">Sucursal</th>
                         <th class="text-center" scope="col">Estado</th>
                         <th class="text-center" scope="col">Opciones</th>
                     </tr>
@@ -24,6 +27,9 @@
                             <a href="{{ route('admin.employees.show', $employee->id) }}">{{ $employee->name }}</a>
                         </td>
                         <td class="text-center">{{ $employee->email }}</td>
+                        <td class="text-center">{{ $employee->phone }}</td>
+                        <td class="text-center">{{ $employee->position }}</td>
+                        <td class="text-center">{{$employee->subsidiary->name }}</td>
                         <td class="text-center">
                             @include('layouts.status', ['status' => $employee->status])</td>
                         <td class="text-center">
@@ -31,9 +37,9 @@
                                 class="form-horizontal">
                                 {{ csrf_field() }}
                                 <input type="hidden" name="_method" value="delete">
-                                <div class="btn-group">
+                                <div class="btn-group ">
                                     <a href="{{ route('admin.employees.edit', $employee->id) }}"
-                                        class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
+                                        class="btn btn-primary btn-sm "><i class="fa fa-edit "></i> Editar</a>
                                     @if($user->hasPermission('delete-employee')) <button
                                         onclick="return confirm('¿Estás Seguro?')" type="submit"
                                         class="btn btn-danger btn-sm"><i class="fa fa-times"></i> Borrar</button>@endif

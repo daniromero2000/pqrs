@@ -2395,7 +2395,7 @@ PHONE PORTRAIT VERSION
 
 .login-box-body .form-control-feedback,
 .register-box-body .form-control-feedback {
-    color: #777;
+    color: rgb(189, 38, 38);
 }
 
 .login-box-msg,
