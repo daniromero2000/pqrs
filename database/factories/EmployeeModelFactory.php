@@ -22,10 +22,10 @@ $factory->define(Employee::class, function (Faker\Generator $faker) {
         'name' => $faker->firstName,
         'email' => $faker->unique()->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
+        'phone' => 0,
         'remember_token' => str_random(10),
         'status' => 1,
         'position' => 'Asesor',
         'subsidiary_id' => 1
-
     ];
 });
