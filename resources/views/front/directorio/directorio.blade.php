@@ -84,7 +84,6 @@
                                         @foreach ($employees as $employee)
                                         @if ($employee->subsidiary_id == 2 )
                                       
-                                        <i class="fa fa-user yellow" aria-hidden="true"></i> {{$employee->name }}<br>
                                         <i class="fa fa-briefcase yellow" aria-hidden="true"></i> {{$employee->position }}<br>
                                         <i class="fas fa-phone-alt yellow" aria-hidden="true"></i> {{$employee->subsidiary->phone }}<br>
                                         <i class="fa fa-envelope yellow " aria-hidden="true"></i> {{$employee->email }}
@@ -109,7 +108,6 @@
                                     @foreach ($employees as $employee)
                                         @if ($employee->subsidiary_id == 3 )
                                       
-                                        <i class="fa fa-user yellow" aria-hidden="true"></i> {{$employee->name }}<br>
                                         <i class="fa fa-briefcase yellow" aria-hidden="true"></i> {{$employee->position }}<br>
                                         <i class="fas fa-phone-alt yellow" aria-hidden="true"></i> {{$employee->subsidiary->phone }}<br>
                                         <i class="fa fa-envelope yellow " aria-hidden="true"></i> {{$employee->email }}
@@ -133,7 +131,6 @@
                                     @foreach ($employees as $employee)
                                         @if ($employee->subsidiary_id == 4 )
                                       
-                                        <i class="fa fa-user yellow" aria-hidden="true"></i> {{$employee->name }}<br>
                                         <i class="fa fa-briefcase yellow" aria-hidden="true"></i> {{$employee->position }}<br>
                                         <i class="fas fa-phone-alt yellow" aria-hidden="true"></i> {{$employee->subsidiary->phone }}<br>
                                         <i class="fa fa-envelope yellow " aria-hidden="true"></i> {{$employee->email }}
@@ -159,7 +156,6 @@
                                     @foreach ($employees as $employee)
                                         @if ($employee->subsidiary_id == 5 )
                                       
-                                        <i class="fa fa-user yellow" aria-hidden="true"></i> {{$employee->name }}<br>
                                         <i class="fa fa-briefcase yellow" aria-hidden="true"></i> {{$employee->position }}<br>
                                         <i class="fas fa-phone-alt yellow" aria-hidden="true"></i> {{$employee->subsidiary->phone }}<br>
                                         <i class="fa fa-envelope yellow " aria-hidden="true"></i> {{$employee->email }}
@@ -184,7 +180,6 @@
                                     @foreach ($employees as $employee)
                                         @if ($employee->subsidiary_id == 6 )
                                       
-                                        <i class="fa fa-user yellow" aria-hidden="true"></i> {{$employee->name }}<br>
                                         <i class="fa fa-briefcase yellow" aria-hidden="true"></i> {{$employee->position }}<br>
                                         <i class="fas fa-phone-alt yellow" aria-hidden="true"></i> {{$employee->subsidiary->phone }}<br>
                                         <i class="fa fa-envelope yellow " aria-hidden="true"></i> {{$employee->email }}
@@ -209,7 +204,6 @@
                                     @foreach ($employees as $employee)
                                         @if ($employee->subsidiary_id == 7 )
                                       
-                                        <i class="fa fa-user yellow" aria-hidden="true"></i> {{$employee->name }}<br>
                                         <i class="fa fa-briefcase yellow" aria-hidden="true"></i> {{$employee->position }}<br>
                                         <i class="fas fa-phone-alt yellow" aria-hidden="true"></i> {{$employee->subsidiary->phone }}<br>
                                         <i class="fa fa-envelope yellow " aria-hidden="true"></i> {{$employee->email }}
@@ -236,7 +230,6 @@
                                     @foreach ($employees as $employee)
                                         @if ($employee->subsidiary_id == 8 )
                                       
-                                        <i class="fa fa-user yellow" aria-hidden="true"></i> {{$employee->name }}<br>
                                         <i class="fa fa-briefcase yellow" aria-hidden="true"></i> {{$employee->position }}<br>
                                         <i class="fas fa-phone-alt yellow" aria-hidden="true"></i> {{$employee->subsidiary->phone }}<br>
                                         <i class="fa fa-envelope yellow " aria-hidden="true"></i> {{$employee->email }}
@@ -263,7 +256,6 @@
                                     @foreach ($employees as $employee)
                                         @if ($employee->subsidiary_id == 9 )
                                       
-                                        <i class="fa fa-user yellow" aria-hidden="true"></i> {{$employee->name }}<br>
                                         <i class="fa fa-briefcase yellow" aria-hidden="true"></i> {{$employee->position }}<br>
                                         <i class="fas fa-phone-alt yellow" aria-hidden="true"></i> {{$employee->subsidiary->phone }}<br>
                                         <i class="fa fa-envelope yellow " aria-hidden="true"></i> {{$employee->email }}
@@ -292,7 +284,6 @@
                                     @foreach ($employees as $employee)
                                         @if ($employee->subsidiary_id == 10 )
                                       
-                                        <i class="fa fa-user yellow" aria-hidden="true"></i> {{$employee->name }}<br>
                                         <i class="fa fa-briefcase yellow" aria-hidden="true"></i> {{$employee->position }}<br>
                                         <i class="fas fa-phone-alt yellow" aria-hidden="true"></i> {{$employee->subsidiary->phone }}<br>
                                         <i class="fa fa-envelope yellow " aria-hidden="true"></i> {{$employee->email }}
@@ -320,7 +311,6 @@
                                     @foreach ($employees as $employee)
                                         @if ($employee->subsidiary_id == 11 )
                                       
-                                        <i class="fa fa-user yellow" aria-hidden="true"></i> {{$employee->name }}<br>
                                         <i class="fa fa-briefcase yellow" aria-hidden="true"></i> {{$employee->position }}<br>
                                         <i class="fas fa-phone-alt yellow" aria-hidden="true"></i> {{$employee->subsidiary->phone }}<br>
                                         <i class="fa fa-envelope yellow " aria-hidden="true"></i> {{$employee->email }}
