@@ -92,7 +92,7 @@
                                     @endif
                                     @endforeach
 
-                                    <i class="fa fa-envelope yellow " aria-hidden="true"></i> {{$employee->position }}
+                                    <i class="fa fa-envelope yellow " aria-hidden="true"></i> Promotor
                                     <br>
                                     <i class="fas fa-phone-alt yellow" aria-hidden="true"> </i> <span>2432302 - 3134706952</span> <br>
 
@@ -130,7 +130,7 @@
                                     @endif
                                     @endforeach
 
-                                    <i class="fa fa-envelope yellow " aria-hidden="true"></i> {{$employee->position }}
+                                    <i class="fa fa-envelope yellow " aria-hidden="true"></i> Promotor
                                     <br>
                                     <i class="fas fa-phone-alt yellow" aria-hidden="true"> </i><span> 8960499 - 3174394020</span> <br>
 
@@ -167,7 +167,7 @@
                                     @endif
                                     @endforeach
 
-                                    <i class="fa fa-envelope yellow " aria-hidden="true"></i> {{$employee->position }}
+                                    <i class="fa fa-envelope yellow " aria-hidden="true"></i>  Promotor
                                     <br>
                                     <i class="fas fa-phone-alt yellow" aria-hidden="true"> </i> <span>2761913 - 3176976163</span> <br>
 
@@ -206,7 +206,7 @@
                                     @endif
                                     @endforeach
 
-                                    <i class="fa fa-envelope yellow " aria-hidden="true"></i> {{$employee->position }}
+                                    <i class="fa fa-envelope yellow " aria-hidden="true"></i>  Promotor
                                     <br>
                                     <i class="fas fa-phone-alt yellow" aria-hidden="true"> </i> <span> 8828990 - 3175106227</span> <br>
 
@@ -244,7 +244,7 @@
                                     @endif
                                     @endforeach
 
-                                    <i class="fa fa-envelope yellow " aria-hidden="true"></i> {{$employee->position }}
+                                    <i class="fa fa-envelope yellow " aria-hidden="true"></i>  Promotor
                                     <br>
                                     <i class="fas fa-phone-alt yellow" aria-hidden="true"> </i> <span>5113559 - 3153644278</span> <br>
 
@@ -282,7 +282,7 @@
                                     @endif
                                     @endforeach
 
-                                    <i class="fa fa-envelope yellow " aria-hidden="true"></i> {{$employee->position }}
+                                    <i class="fa fa-envelope yellow " aria-hidden="true"></i>  Promotor
                                     <br>
                                     <i class="fas fa-phone-alt yellow" aria-hidden="true"> </i> <span>7890247 - 3166922635</span> <br>
 
@@ -321,7 +321,7 @@
                                     @endif
                                     @endforeach
 
-                                    <i class="fa fa-envelope yellow " aria-hidden="true"></i> {{$employee->position }}
+                                    <i class="fa fa-envelope yellow " aria-hidden="true"></i>  Promotor
                                     <br>
                                     <i class="fas fa-phone-alt yellow" aria-hidden="true"> </i> <span>3358652 - 3164783089</span> <br>
 
@@ -360,13 +360,22 @@
                                     @endif
                                     @endforeach
 
-                                    <i class="fa fa-envelope yellow " aria-hidden="true"></i> {{$employee->position }}
+                                    <i class="fa fa-envelope yellow " aria-hidden="true"></i>  Promotor
                                     <br>
                                     <i class="fas fa-phone-alt yellow" aria-hidden="true"> </i> <span> 2814555 - 3204752087</span> <br>
 
                                     @foreach ($employees as $employee)
                                     @if ($employee->subsidiary_id == 9 )
                                     @if ($employee->position == 'Promotor' )
+                                    <i class="fa fa-envelope yellow " aria-hidden="true"></i> {{$employee->email }}
+                                    <br>
+                                    @endif
+                                    @endif
+                                    @endforeach
+                                    <br>
+                                    @foreach ($employees as $employee)
+                                    @if ($employee->subsidiary_id == 9 )
+                                    @if ($employee->position == 'Auxiliar de credito' )
                                     <i class="fa fa-envelope yellow " aria-hidden="true"></i> {{$employee->email }}
                                     <br>
                                     @endif
@@ -401,7 +410,7 @@
                                     @endif
                                     @endforeach
 
-                                    <i class="fa fa-envelope yellow " aria-hidden="true"></i> {{$employee->position }}
+                                    <i class="fa fa-envelope yellow " aria-hidden="true"></i>  Promotor
                                     <br>
                                     <i class="fas fa-phone-alt yellow" aria-hidden="true"> </i> <span> 7401719 - 3204600563</span> <br>
 
@@ -441,13 +450,22 @@
                                     @endif
                                     @endforeach
 
-                                    <i class="fa fa-envelope yellow " aria-hidden="true"></i> {{$employee->position }}
+                                    <i class="fa fa-envelope yellow " aria-hidden="true"></i>  Promotor
                                     <br>
                                     <i class="fas fa-phone-alt yellow" aria-hidden="true"> </i><span>6628990 - 3176976018</span> <br>
 
                                     @foreach ($employees as $employee)
-                                    @if ($employee->subsidiary_id == 2 )
+                                    @if ($employee->subsidiary_id == 11 )
                                     @if ($employee->position == 'Promotor' )
+                                    <i class="fa fa-envelope yellow " aria-hidden="true"></i> {{$employee->email }}
+                                    <br>
+                                    @endif
+                                    @endif
+                                    @endforeach
+                                    <br>
+                                    @foreach ($employees as $employee)
+                                    @if ($employee->subsidiary_id == 11 )
+                                    @if ($employee->position == 'Auxiliar de credito' )
                                     <i class="fa fa-envelope yellow " aria-hidden="true"></i> {{$employee->email }}
                                     <br>
                                     @endif
