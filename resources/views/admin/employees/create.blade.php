@@ -29,6 +29,16 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label for="password">telefono <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-lock"></i>
+                        </div>
+                        <input type="text" name="phone" id="phone" placeholder="telefono" class="form-control"
+                        value="{{ old('phone') }}" required>
+                    </div>
+                </div>
+                <div class="form-group">
                     <label for="password">Password <span class="text-danger">*</span></label>
                     <div class="input-group">
                         <div class="input-group-addon">
