@@ -39,7 +39,7 @@ class SubsidiaryController extends Controller
      */
     public function index()
     {
-        $list = $this->subsidiaryRepo->rootSubsidiaries('created_at', 'desc');
+        $list = $this->subsidiaryRepo->rootSubsidiaries('name', 'asc');
 
         return view('admin.subsidiaries.list', [
             'subsidiaries' => $this->subsidiaryRepo->paginateArrayResults($list->all()),
