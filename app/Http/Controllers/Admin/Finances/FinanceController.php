@@ -124,7 +124,7 @@ class FinanceController extends Controller
             $financeRepo->detachYears();
         }
 
-        return redirect()->route('admin.finances.edit', $finance->id)->with('message', 'Creación Exitosa');
+        return redirect()->route('admin.finances.show', $finance->id)->with('message', 'Creación Exitosa');
     }
 
     /**
@@ -192,7 +192,7 @@ class FinanceController extends Controller
 
         $financeRepo->updateFinance($data);
 
-        return redirect()->route('admin.finances.edit', $id)
+        return redirect()->route('admin.finances.show', $id)
             ->with('message', 'Actualización Exitosa!');
     }
 

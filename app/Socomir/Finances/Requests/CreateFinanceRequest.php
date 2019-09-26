@@ -14,7 +14,7 @@ class CreateFinanceRequest extends BaseFormRequest
     public function rules()
     {
         return [
-            'name' => ['required', 'unique:finances'],
+            'name' => ['required'],
             'cover' => ['required', 'file', 'mimes:pdf']
         ];
     }
