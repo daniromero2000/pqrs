@@ -17,6 +17,7 @@ class CreateEmployeesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('email')->unique()->index();
+            $table->string('phone');
             $table->string('password');
             $table->string('position');
             $table->integer('subsidiary_id')->unsigned()->index();
@@ -34,7 +35,5 @@ class CreateEmployeesTable extends Migration
      * @return void
      */
     public function down()
-    {
-    
-    }
+    { }
 }

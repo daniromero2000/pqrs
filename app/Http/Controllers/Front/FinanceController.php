@@ -53,9 +53,9 @@ class FinanceController extends Controller
      * @param string $slug
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function show(string $slug)
+    public function show(int $id)
     {
-        $finance = $this->financeRepo->findFinanceBySlug(['slug' => $slug]);
+        $finance = $this->financeRepo->findFinanceByID($id);
         $year = $finance->years()->first();
 
         return view('front.finances.finance', compact(
