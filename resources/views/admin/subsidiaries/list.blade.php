@@ -1,4 +1,4 @@
-@extends('layouts.admin.app') 
+@extends('layouts.admin.app')
 @section('content')
 <!-- Main content -->
 <section class="content">
@@ -22,19 +22,23 @@
                     @foreach ($subsidiaries as $subsidiary)
                     <tr>
                         <td class="text-center">
-                            <a href="{{ route('admin.subsidiaries.show', $subsidiary->id) }}">{{ $subsidiary->name }}</a>
+                            <a
+                                href="{{ route('admin.subsidiaries.show', $subsidiary->id) }}">{{ $subsidiary->name }}</a>
                         </td>
                         <td class="text-center">{{ $subsidiary->address}}</td>
                         <td class="text-center">{{ $subsidiary->phone}}</td>
                         <td class="text-center">{{ $subsidiary->city->name}}</td>
                         <td class="text-center">
-                            @if($user->hasRole('superadmin|marketing'))
-                            <form action="{{ route('admin.subsidiaries.destroy', $subsidiary->id) }}" method="post" class="form-horizontal">
+                            @if($user->hasRole('superadmin'))
+                            <form action="{{ route('admin.subsidiaries.destroy', $subsidiary->id) }}" method="post"
+                                class="form-horizontal">
                                 {{ csrf_field() }}
                                 <input type="hidden" name="_method" value="delete">
                                 <div class="btn-group">
-                                    <a href="{{ route('admin.subsidiaries.edit', $subsidiary->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
-                                    <button onclick="return confirm('¿Estás Seguro?')" type="submit" class="btn btn-danger btn-sm"><i class="fa fa-times"></i> Borrar</button>
+                                    <a href="{{ route('admin.subsidiaries.edit', $subsidiary->id) }}"
+                                        class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
+                                    <button onclick="return confirm('¿Estás Seguro?')" type="submit"
+                                        class="btn btn-danger btn-sm"><i class="fa fa-times"></i> Borrar</button>
                                 </div>
                             </form>
                             @endif

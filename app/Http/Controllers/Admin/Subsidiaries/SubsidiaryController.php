@@ -134,7 +134,8 @@ class SubsidiaryController extends Controller
     public function destroy(int $id)
     {
         $subsidiary = $this->subsidiaryRepo->findSubsidiaryById($id);
-        $subsidiary->delete();
+        $subsidiaryRepo = new SubsidiaryRepository($subsidiary);
+        $subsidiaryRepo->deleteSubsidiary();
 
         request()->session()->flash('message', 'Eliminado Satisfactoriamente');
         return redirect()->route('admin.subsidiaries.index');
