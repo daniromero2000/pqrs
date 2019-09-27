@@ -12,11 +12,6 @@ class Finance extends Model
 {
     use SearchableTrait;
 
-    /**
-     * Searchable rules.
-     *
-     * @var array
-     */
     protected $searchable = [
         'columns' => [
             'finances.name' => 10,
@@ -24,11 +19,6 @@ class Finance extends Model
         ]
     ];
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'name',
         'description',
@@ -37,11 +27,7 @@ class Finance extends Model
         'slug',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
+
     protected $hidden = [];
 
     public function years()
@@ -49,18 +35,13 @@ class Finance extends Model
         return $this->belongsToMany(Year::class);
     }
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
+
     public function images()
     {
         return $this->hasMany(FinanceImage::class);
     }
 
-    /**
-     * @param string $term
-     * @return Collection
-     */
+
     public function searchFinance(string $term): Collection
     {
         return self::search($term)->get();

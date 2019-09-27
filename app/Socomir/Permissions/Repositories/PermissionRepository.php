@@ -15,24 +15,14 @@ use Illuminate\Support\Collection;
 
 class PermissionRepository extends BaseRepository implements PermissionRepositoryInterface
 {
-    /**
-     * PermissionRepository constructor.
-     *
-     * @param Permission $permission
-     */
     public function __construct(Permission $permission)
     {
         parent::__construct($permission);
         $this->model = $permission;
     }
 
-    /**
-     * @param array $data
-     *
-     * @return Permission
-     * @throws CreatePermissionErrorException
-     */
-    public function createPermission(array $data) : Permission
+
+    public function createPermission(array $data): Permission
     {
         try {
             return $this->create($data);
@@ -41,13 +31,8 @@ class PermissionRepository extends BaseRepository implements PermissionRepositor
         }
     }
 
-    /**
-     * @param int $id
-     *
-     * @return Permission
-     * @throws PermissionNotFoundErrorException
-     */
-    public function findPermissionById(int $id) : Permission
+
+    public function findPermissionById(int $id): Permission
     {
         try {
             return $this->findOneOrFail($id);
@@ -56,13 +41,8 @@ class PermissionRepository extends BaseRepository implements PermissionRepositor
         }
     }
 
-    /**
-     * @param array $data
-     *
-     * @return bool
-     * @throws UpdatePermissionErrorException
-     */
-    public function updatePermission(array $data) : bool
+
+    public function updatePermission(array $data): bool
     {
         try {
             return $this->update($data);
@@ -71,11 +51,8 @@ class PermissionRepository extends BaseRepository implements PermissionRepositor
         }
     }
 
-    /**
-     * @return bool
-     * @throws DeletePermissionErrorException
-     */
-    public function deletePermissionById() : bool
+
+    public function deletePermissionById(): bool
     {
         try {
             return $this->delete();
@@ -84,14 +61,8 @@ class PermissionRepository extends BaseRepository implements PermissionRepositor
         }
     }
 
-    /**
-     * @param array $columns
-     * @param string $orderBy
-     * @param string $sortBy
-     *
-     * @return Collection
-     */
-    public function listPermissions($columns = array('*'), string $orderBy = 'id', string $sortBy = 'asc') : Collection
+
+    public function listPermissions($columns = array('*'), string $orderBy = 'id', string $sortBy = 'asc'): Collection
     {
         return $this->all($columns, $orderBy, $sortBy);
     }

@@ -39,7 +39,6 @@ class RepositoryServiceProvider extends ServiceProvider
             EmployeeRepository::class
         );
 
-        
         $this->app->bind(
             YearRepositoryInterface::class,
             YearRepository::class
@@ -54,7 +53,6 @@ class RepositoryServiceProvider extends ServiceProvider
             SubsidiaryRepositoryInterface::class,
             SubsidiaryRepository::class
         );
-
 
         $this->app->bind(
             CountryRepositoryInterface::class,

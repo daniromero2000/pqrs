@@ -16,51 +16,29 @@ class ProvinceController extends Controller
         $this->provinceRepo = $provinceRepository;
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param int $provinceId
-     * @param int $countryId
-     * @return \Illuminate\Http\Response
-     */
     public function show(int $countryId, int $provinceId)
     {
         $cities = $this->provinceRepo->listCities($provinceId);
 
         return view('admin.provinces.show', [
-            'province' => $this->provinceRepo->findProvinceById($provinceId),
+            'province'  => $this->provinceRepo->findProvinceById($provinceId),
             'countryId' => $countryId,
-            'cities' => $this->provinceRepo->paginateArrayResults(collect($cities)->toArray())
+            'cities'    => $this->provinceRepo->paginateArrayResults(collect($cities)->toArray())
         ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param int $provinceId
-     * @param int $countryId
-     * @return \Illuminate\Http\Response
-     */
     public function edit(int $countryId, int $provinceId)
     {
         return view('admin.provinces.edit', [
-            'province' => $this->provinceRepo->findProvinceById($provinceId),
+            'province'  => $this->provinceRepo->findProvinceById($provinceId),
             'countryId' => $countryId
         ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  Request $request
-     * @param int $provinceId
-     * @param int $countryId
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, int $countryId, int $provinceId)
     {
         $province = $this->provinceRepo->findProvinceById($provinceId);
-        $update = new ProvinceRepository($province);
+        $update   = new ProvinceRepository($province);
         $update->updateProvince($request->except('_method', '_token'));
 
         $request->session()->flash('message', 'Update successful');

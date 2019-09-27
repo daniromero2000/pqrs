@@ -13,24 +13,14 @@ use Illuminate\Support\Collection;
 
 class PqrStatusRepository extends BaseRepository implements PqrStatusRepositoryInterface
 {
-    /**
-     * PqrStatusRepository constructor.
-     * @param PqrStatus $pqrStatus
-     */
     public function __construct(PqrStatus $pqrStatus)
     {
         parent::__construct($pqrStatus);
         $this->model = $pqrStatus;
     }
 
-    /**
-     * Create the pqr status
-     *
-     * @param array $params
-     * @return PqrStatus
-     * @throws PqrStatusInvalidArgumentException
-     */
-    public function createPqrStatus(array $params) : PqrStatus
+
+    public function createPqrStatus(array $params): PqrStatus
     {
         try {
             return $this->create($params);
@@ -39,15 +29,8 @@ class PqrStatusRepository extends BaseRepository implements PqrStatusRepositoryI
         }
     }
 
-    /**
-     * Update the pqr status
-     *
-     * @param array $data
-     *
-     * @return bool
-     * @throws PqrStatusInvalidArgumentException
-     */
-    public function updatePqrStatus(array $data) : bool
+
+    public function updatePqrStatus(array $data): bool
     {
         try {
             return $this->update($data);
@@ -56,12 +39,8 @@ class PqrStatusRepository extends BaseRepository implements PqrStatusRepositoryI
         }
     }
 
-    /**
-     * @param int $id
-     * @return PqrStatus
-     * @throws PqrStatusNotFoundException
-     */
-    public function findPqrStatusById(int $id) : PqrStatus
+
+    public function findPqrStatusById(int $id): PqrStatus
     {
         try {
             return $this->findOneOrFail($id);
@@ -70,36 +49,24 @@ class PqrStatusRepository extends BaseRepository implements PqrStatusRepositoryI
         }
     }
 
-    /**
-     * @return mixed
-     */
     public function listPqrStatuses()
     {
         return $this->all();
     }
 
-    /**
-     * @return bool
-     * @throws \Exception
-     */
-    public function deletePqrStatus() : bool
+
+    public function deletePqrStatus(): bool
     {
         return $this->delete();
     }
 
-    /**
-     * @return Collection
-     */
-    public function findPqrs() : Collection
+
+    public function findPqrs(): Collection
     {
         return $this->model->pqrs()->get();
     }
 
-    /**
-     * @param string $name
-     *
-     * @return mixed
-     */
+
     public function findByName(string $name)
     {
         return $this->model->where('name', $name)->first();

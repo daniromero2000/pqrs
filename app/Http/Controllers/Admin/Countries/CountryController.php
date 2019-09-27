@@ -16,11 +16,7 @@ class CountryController extends Controller
         $this->countryRepo = $countryRepository;
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         $list = $this->countryRepo->listCountries('created_at', 'desc');
@@ -30,50 +26,33 @@ class CountryController extends Controller
         ]);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show(int $id)
     {
-        $country = $this->countryRepo->findCountryById($id);
+        $country     = $this->countryRepo->findCountryById($id);
         $countryRepo = new CountryRepository($country);
-        $provinces = $countryRepo->findProvinces();
+        $provinces   = $countryRepo->findProvinces();
 
         return view('admin.countries.show', [
-            'country' => $country,
+            'country'   => $country,
             'provinces' => $this->countryRepo->paginateArrayResults($provinces->toArray())
         ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
         return view('admin.countries.edit', ['country' => $this->countryRepo->findCountryById($id)]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  UpdateCountryRequest $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(UpdateCountryRequest $request, $id)
     {
         $country = $this->countryRepo->findCountryById($id);
-
-        $update = new CountryRepository($country);
+        $update  = new CountryRepository($country);
         $update->updateCountry($request->except('_method', '_token'));
-
         $request->session()->flash('message', 'Actualización Exitosa!');
+
         return redirect()->route('admin.countries.edit', $id);
     }
 }

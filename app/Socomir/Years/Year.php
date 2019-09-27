@@ -10,11 +10,6 @@ class Year extends Model
 {
     use NodeTrait;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'year',
         'slug',
@@ -22,11 +17,7 @@ class Year extends Model
         'parent_id'
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
+
     protected $hidden = [];
 
     public function finances()

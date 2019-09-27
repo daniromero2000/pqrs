@@ -5,19 +5,11 @@ namespace App\Socomir\PqrCommentaries\Transformations;
 use App\Socomir\PqrCommentaries\PqrCommentary;
 use App\Socomir\Pqrs\Pqr;
 use App\Socomir\Pqrs\Repositories\PqrRepository;
-use App\Socomir\Provinces\Repositories\ProvinceRepository;
 
 
 trait PqrCommentaryTransformable
 {
-    /**
-     * Transform the pqrcommentary
-     *
-     * @param PqrCommentary $pqrcommentary
-     *
-     * @return PqrCommentary
-     * @throws \App\Socomir\Pqrs\Exceptions\PqrNotFoundException
-     */
+
     public function transformPqrCommentary(PqrCommentary $pqrcommentary)
     {
         $obj = new PqrCommentary;

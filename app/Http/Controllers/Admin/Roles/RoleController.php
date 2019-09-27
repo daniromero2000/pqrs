@@ -11,33 +11,18 @@ use App\Socomir\Roles\Requests\UpdateRoleRequest;
 
 class RoleController extends Controller
 {
-    /**
-     * @var RoleRepositoryInterface
-     */
     private $roleRepo;
-
-    /**
-     * @var PermissionRepositoryInterface
-     */
     private $permissionRepository;
 
-    /**
-     * RoleController constructor.
-     *
-     * @param RoleRepositoryInterface $roleRepository
-     * @param PermissionRepositoryInterface $permissionRepository
-     */
     public function __construct(
         RoleRepositoryInterface $roleRepository,
         PermissionRepositoryInterface $permissionRepository
     ) {
-        $this->roleRepo = $roleRepository;
+        $this->roleRepo             = $roleRepository;
         $this->permissionRepository = $permissionRepository;
     }
 
-    /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
+
     public function index()
     {
         $list = $this->roleRepo->listRoles('name', 'asc')->all();
@@ -47,19 +32,13 @@ class RoleController extends Controller
         ]);
     }
 
-    /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
+
     public function create()
     {
         return view('admin.roles.create');
     }
 
-    /**
-     * @param CreateRoleRequest $request
-     *
-     * @return \Illuminate\Http\RedirectResponse
-     */
+
     public function store(CreateRoleRequest $request)
     {
         $this->roleRepo->createRole($request->except('_method', '_token'));
@@ -68,18 +47,13 @@ class RoleController extends Controller
             ->with('message', 'Create role successful!');
     }
 
-    /**
-     * @param $id
-     *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
+
     public function edit($id)
     {
-        $role = $this->roleRepo->findRoleById($id);
-
-        $roleRepo = new RoleRepository($role);
+        $role                        = $this->roleRepo->findRoleById($id);
+        $roleRepo                    = new RoleRepository($role);
         $attachedPermissionsArrayIds = $roleRepo->listPermissions()->pluck('id')->all();
-        $permissions = $this->permissionRepository->listPermissions(['*'], 'name', 'asc');
+        $permissions                 = $this->permissionRepository->listPermissions(['*'], 'name', 'asc');
 
         return view('admin.roles.edit', compact(
             'role',
@@ -88,12 +62,7 @@ class RoleController extends Controller
         ));
     }
 
-    /**
-     * @param UpdateRoleRequest $request
-     * @param $id
-     *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
+
     public function update(UpdateRoleRequest $request, $id)
     {
         $role = $this->roleRepo->findRoleById($id);

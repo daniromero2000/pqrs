@@ -10,18 +10,8 @@ class LoginController extends Controller
 {
     use AuthenticatesUsers;
 
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
     protected $redirectTo = '/admin';
 
-    /**
-     * Shows the admin login form
-     *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
     public function showLoginForm()
     {
         if (auth()->guard('employee')->check()) {
@@ -31,14 +21,7 @@ class LoginController extends Controller
         return view('auth.admin.login');
     }
 
-    /**
-     * Login the employee
-     *
-     * @param LoginRequest $request
-     *
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\Response
-     * @throws \Illuminate\Validation\ValidationException
-     */
+
     public function login(LoginRequest $request)
     {
         $this->validateLogin($request);
@@ -52,7 +35,7 @@ class LoginController extends Controller
             return $this->sendLockoutResponse($request);
         }
 
-        $details = $request->only('email', 'password');
+        $details           = $request->only('email', 'password');
         $details['status'] = 1;
         if (auth()->guard('employee')->attempt($details)) {
             return $this->sendLoginResponse($request);
