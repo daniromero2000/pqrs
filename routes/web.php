@@ -71,83 +71,82 @@ Auth::routes();
 Route::namespace('Auth')->group(function () { });
 Route::namespace('Front')->group(function () {
     Route::get('/', 'HomeController@index')->name('home');
-    Route::group(['prefix' => 'front'], function () {
-        Route::namespace('About')->group(function () {
-            Route::resource('about', 'AboutController');
-            Route::get('about', 'AboutController@about')->name('about');
-        });
 
-        Route::namespace('Asociarse')->group(function () {
-            Route::resource('asociarse', 'AsociarseController');
-            Route::get('asociarse', 'AsociarseController@asociarse')->name('asociarse');
-        });
-
-        Route::namespace('Beneficios')->group(function () {
-            Route::resource('beneficios', 'BeneficiosController');
-            Route::get('beneficios', 'BeneficiosController@beneficios')->name('beneficios');
-        });
-
-        Route::namespace('Libranza')->group(function () {
-            Route::resource('libranza', 'LibranzaController');
-            Route::get('libranza', 'LibranzaController@libranza')->name('libranza');
-        });
-
-        Route::namespace('Reglamentos')->group(function () {
-            Route::resource('reglamentos', 'ReglamentosController');
-            Route::get('reglamentos', 'ReglamentosController@reglamentos')->name('reglamentos');
-        });
-
-        Route::namespace('RegistroWeb')->group(function () {
-            Route::resource('registroweb', 'RegistroWebController');
-            Route::get('registroweb', 'RegistroWebController@registroweb')->name('registroweb');
-        });
-
-        Route::namespace('Tarifas')->group(function () {
-            Route::resource('tarifas', 'TarifasController');
-            Route::get('tarifas', 'TarifasController@tarifas')->name('tarifas');
-        });
-
-        Route::namespace('Estatutos')->group(function () {
-            Route::resource('estatutos', 'EstatutosController');
-            Route::get('estatutos', 'EstatutosController@estatutos')->name('estatutos');
-        });
-
-        Route::namespace('InformacionFinanciera')->group(function () {
-            Route::resource('informacionfinanciera', 'InformacionFinancieraController');
-            Route::get('informacionfinanciera', 'InformacionFinancieraController@informacionfinanciera')->name('informacionfinanciera');
-        });
-
-        Route::namespace('ProductosServicios')->group(function () {
-            Route::resource('productosservicios', 'ProductosServiciosController');
-            Route::get('productosservicios', 'ProductosServiciosController@productosservicios')->name('productosservicios');
-        });
-
-        Route::namespace('Pqr')->group(function () {
-            Route::resource('pqrs', 'PqrController');
-            Route::get('pqrs', 'PqrController@pqr')->name('pqr');
-        });
-
-        Route::namespace('TermsConditions')->group(function () {
-            Route::resource('termsConditions', 'TermsConditionsController');
-            Route::get('termsConditions', 'TermsConditionsController@termsConditions')->name('termsConditions');
-        });
-
-        Route::namespace('Convenios')->group(function () {
-            Route::resource('convenios', 'ConveniosController');
-            Route::get('convenios', 'ConveniosController@convenios')->name('convenios');
-        });
-
-        Route::namespace('Directorio')->group(function () {
-            Route::resource('directorio', 'DirectorioController');
-            Route::get('directorio', 'DirectorioController@directorio')->name('directorio');
-        });
-
-        Route::namespace('TermsConditions')->group(function () {
-            Route::resource('termsConditions', 'TermsConditionsController');
-            Route::get('termsConditions', 'TermsConditionsController@termsConditions')->name('termsConditions');
-        });
-
-        Route::get("year/{slug}", 'YearController@getYear')->name('front.year.slug');
-        Route::get("{finance}", 'FinanceController@show')->name('front.get.finance');
+    Route::namespace('About')->group(function () {
+        Route::resource('about', 'AboutController');
+        Route::get('about', 'AboutController@about')->name('about');
     });
+
+    Route::namespace('Asociarse')->group(function () {
+        Route::resource('asociarse', 'AsociarseController');
+        Route::get('asociarse', 'AsociarseController@asociarse')->name('asociarse');
+    });
+
+    Route::namespace('Beneficios')->group(function () {
+        Route::resource('beneficios', 'BeneficiosController');
+        Route::get('beneficios', 'BeneficiosController@beneficios')->name('beneficios');
+    });
+
+    Route::namespace('Libranza')->group(function () {
+        Route::resource('libranza', 'LibranzaController');
+        Route::get('libranza', 'LibranzaController@libranza')->name('libranza');
+    });
+
+    Route::namespace('Reglamentos')->group(function () {
+        Route::resource('reglamentos', 'ReglamentosController');
+        Route::get('reglamentos', 'ReglamentosController@reglamentos')->name('reglamentos');
+    });
+
+    Route::namespace('RegistroWeb')->group(function () {
+        Route::resource('registroweb', 'RegistroWebController');
+        Route::get('registroweb', 'RegistroWebController@registroweb')->name('registroweb');
+    });
+
+    Route::namespace('Tarifas')->group(function () {
+        Route::resource('tarifas', 'TarifasController');
+        Route::get('tarifas', 'TarifasController@tarifas')->name('tarifas');
+    });
+
+    Route::namespace('Estatutos')->group(function () {
+        Route::resource('estatutos', 'EstatutosController');
+        Route::get('estatutos', 'EstatutosController@estatutos')->name('estatutos');
+    });
+
+    Route::namespace('InformacionFinanciera')->group(function () {
+        Route::resource('informacionfinanciera', 'InformacionFinancieraController');
+        Route::get('informacionfinanciera', 'InformacionFinancieraController@informacionfinanciera')->name('informacionfinanciera');
+    });
+
+    Route::namespace('ProductosServicios')->group(function () {
+        Route::resource('productosservicios', 'ProductosServiciosController');
+        Route::get('productosservicios', 'ProductosServiciosController@productosservicios')->name('productosservicios');
+    });
+
+    Route::namespace('Pqr')->group(function () {
+        Route::resource('pqrs', 'PqrController');
+        Route::get('pqrs', 'PqrController@pqr')->name('pqr');
+    });
+
+    Route::namespace('TermsConditions')->group(function () {
+        Route::resource('termsConditions', 'TermsConditionsController');
+        Route::get('termsConditions', 'TermsConditionsController@termsConditions')->name('termsConditions');
+    });
+
+    Route::namespace('Convenios')->group(function () {
+        Route::resource('convenios', 'ConveniosController');
+        Route::get('convenios', 'ConveniosController@convenios')->name('convenios');
+    });
+
+    Route::namespace('Directorio')->group(function () {
+        Route::resource('directorio', 'DirectorioController');
+        Route::get('directorio', 'DirectorioController@directorio')->name('directorio');
+    });
+
+    Route::namespace('TermsConditions')->group(function () {
+        Route::resource('termsConditions', 'TermsConditionsController');
+        Route::get('termsConditions', 'TermsConditionsController@termsConditions')->name('termsConditions');
+    });
+
+    Route::get("year/{slug}", 'YearController@getYear')->name('front.year.slug');
+    Route::get("{finance}", 'FinanceController@show')->name('front.get.finance');
 });
