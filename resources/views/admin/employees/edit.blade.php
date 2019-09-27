@@ -1,5 +1,6 @@
 @extends('layouts.admin.app')
 @section('content')
+<script src="https://kit.fontawesome.com/c1313463c5.js"></script>
 <!-- Main content -->
 <section class="content">
     @include('layouts.errors-and-messages')
@@ -29,15 +30,6 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="password">telefono <span class="text-danger">*</span></label>
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <i class="fa fa-lock"></i>
-                        </div>
-                        <input type="text" name="phone" id="phone" placeholder="telefono" class="form-control" value="{!! $employee->phone ?: old('phone') !!}" required>
-                    </div>
-                </div>
-                <div class="form-group">
                     <label for="password">Password <span class="text-danger">*</span></label>
                     <div class="input-group">
                         <div class="input-group-addon">
@@ -46,6 +38,17 @@
                         <input type="password" name="password" id="password" placeholder="xxxxx" class="form-control" required>
                     </div>
                 </div>
+
+                <div class="form-group">
+                    <label for="password">Telefono <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <input type="text" name="phone" id="phone" placeholder="telefono" class="form-control" value="{!! $employee->phone ?: old('phone') !!}" >
+                    </div>
+                </div>
+              
 
 
                 <div class="form-group">
@@ -69,8 +72,21 @@
                         </div>
                         <select name="subsidiary_id" id="subsidiary_id" class="form-control" enabled>
                             @foreach($subsidiaries as $subsidiary)
-                            <option value="{{ $subsidiary->id }}">{{ $subsidiary->name }}</option>
+                            <option @if($employee->subsidiary_id == $subsidiary->id) selected @endif value="{{ $subsidiary->id }}">{{ $subsidiary->name }}</option>
                             @endforeach
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="position" class="control-label">Cargo</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-briefcase yellow"></i>
+                        </div>
+                        <select class="selectpicker form-control" id="position" name="position">
+                            <option @if($employee->position == 'Promotor') selected @endif>Promotor</option>
+                            <option @if($employee->position == 'Coordinador') selected @endif>Coordinador</option>
+                            <option @if($employee->position == 'Auxiliar de credito') selected @endif>Auxiliar de credito</option>
                         </select>
                     </div>
                 </div>

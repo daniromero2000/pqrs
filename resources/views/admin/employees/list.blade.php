@@ -8,9 +8,9 @@
     <div class="box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
         <div class="box-body">
             <h1>Empleados Socomir</h1>
-            <table class="table">
-                <thead>
-                    <tr>
+            <table class="table table-admin-list">
+                <thead class="thead-admin-list">
+                    <tr class="tr-admin-list">
                         <th class="text-center" scope="col-12">Nombre</th>
                         <th class="text-center" scope="col">Email</th>
                         <th class="text-center" scope="col">Telefono</th>
@@ -20,10 +20,10 @@
                         <th class="text-center" scope="col">Opciones</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="tbody-admin-list">
                     @foreach ($employees as $employee)
                     <tr>
-                        <td class="text-center">
+                        <td class="text-center tr-admin-list">
                             <a href="{{ route('admin.employees.show', $employee->id) }}">{{ $employee->name }}</a>
                         </td>
                         <td class="text-center">{{ $employee->email }}</td>

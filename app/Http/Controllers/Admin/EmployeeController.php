@@ -44,7 +44,7 @@ class EmployeeController extends Controller
     public function index()
     {
         $user = auth()->guard('employee')->user();
-        $list = $this->employeeRepo->listEmployees('created_at', 'desc');
+        $list = $this->employeeRepo->listEmployees();
 
         return view('admin.employees.list', [
             'employees' => $this->employeeRepo->paginateArrayResults($list->all()),

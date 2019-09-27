@@ -1,5 +1,6 @@
 @extends('layouts.admin.app')
 @section('content')
+<script src="https://kit.fontawesome.com/c1313463c5.js"></script>
 <!-- Main content -->
 <section class="content">
     @include('layouts.errors-and-messages')
@@ -28,16 +29,7 @@
                             value="{{ old('email') }}" required>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="password">telefono <span class="text-danger">*</span></label>
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <i class="fa fa-lock"></i>
-                        </div>
-                        <input type="text" name="phone" id="phone" placeholder="telefono" class="form-control"
-                        value="{{ old('phone') }}" required>
-                    </div>
-                </div>
+               
                 <div class="form-group">
                     <label for="password">Password <span class="text-danger">*</span></label>
                     <div class="input-group">
@@ -46,6 +38,16 @@
                         </div>
                         <input type="password" name="password" id="password" placeholder="xxxxx" class="form-control"
                             required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Telefono <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <input type="text" name="phone" id="phone" placeholder="telefono" class="form-control"
+                        value="{{ old('phone') }}" required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -79,7 +81,7 @@
                     <label for="position" class="control-label">Cargo</label>
                     <div class="input-group">
                         <div class="input-group-addon">
-                            <i class="fa fa-check"></i>
+                            <i class="fa fa-briefcase yellow"></i>
                         </div>
                         <select class="selectpicker form-control" id="position" name="position">
                             <option>Promotor</option>

@@ -3,14 +3,15 @@
 <!-- Main content -->
 <section class="content">
     <!-- Default box -->
-    <div class="box crud-box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
+    <div class="box crud-box " style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
         <div class="box-body">
-            <h2>{{ $employee->name }}
+            <h2 class="text-center ">{{ $employee->name }}
             </h2>
             <table class="table">
                 <thead>
                     <tr>
                         <th class="text-center" scope="col">Email</th>
+                     
                         <th class="text-center" scope="col">Roles</th>
                     </tr>
                 </thead>

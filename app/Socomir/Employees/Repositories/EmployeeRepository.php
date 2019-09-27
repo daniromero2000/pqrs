@@ -32,7 +32,7 @@ class EmployeeRepository extends BaseRepository implements EmployeeRepositoryInt
      *
      * @return Collection
      */
-    public function listEmployees(string $order = 'id', string $sort = 'desc'): Collection
+    public function listEmployees(string $order = 'name', string $sort = 'asc'): Collection
     {
         return $this->all(['*'], $order, $sort);
     }
