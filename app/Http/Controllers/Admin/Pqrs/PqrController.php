@@ -20,38 +20,22 @@ class PqrController extends Controller
 {
     use PqrTransformable;
 
-    /**
-     * @var PqrRepositoryInterface
-     */
     private $pqrRepo;
-
-    /**
-     * @var PqrStatusRepositoryInterface
-     */
     private $pqrStatusRepo;
-
     private $cityRepo;
 
-    /**
-     * PqrController constructor.
-     * @param PqrRepositoryInterface $pqrRepository
-     */
+
     public function __construct(
         PqrRepositoryInterface $pqrRepository,
         PqrStatusRepositoryInterface $pqrStatusRepository,
         CityRepositoryInterface $cityRepository
     ) {
-        $this->pqrRepo = $pqrRepository;
+        $this->pqrRepo       = $pqrRepository;
         $this->pqrStatusRepo = $pqrStatusRepository;
-        $this->cityRepo = $cityRepository;
+        $this->cityRepo      = $cityRepository;
     }
 
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $list = $this->pqrRepo->listPqrs('created_at', 'desc');
@@ -66,83 +50,58 @@ class PqrController extends Controller
 
         return view('admin.pqrs.list', [
             'pqrs' => $this->pqrRepo->paginateArrayResults($pqrs),
-            'user' =>   auth()->guard('employee')->user()
+            'user' => auth()->guard('employee')->user()
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         return view('admin.pqrs.create', [
             'statuses' => $this->pqrStatusRepo->listPqrStatuses(),
-            'cities' => City::all()
+            'cities'   => City::all()
         ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  CreatePqrRequest $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(CreatePqrRequest $request)
     {
         $this->pqrRepo->createPqr($request->except('_token', '_method'));
         return redirect()->route('admin.pqrs.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show(int $id)
     {
         $pqr = $this->pqrRepo->findPqrById($id);
 
         return view('admin.pqrs.show', [
-            'user' => auth()->guard('employee')->user(),
-            'pqr' => $pqr,
+            'user'            => auth()->guard('employee')->user(),
+            'pqr'             => $pqr,
             'pqrcommentaries' => $pqr->pqrcommentaries,
-            'currentStatus' => $this->pqrStatusRepo->findPqrStatusById($pqr->pqr_status_id),
-            'city' => $this->cityRepo->findCityById($pqr->city_id),
+            'currentStatus'   => $this->pqrStatusRepo->findPqrStatusById($pqr->pqr_status_id),
+            'city'            => $this->cityRepo->findCityById($pqr->city_id),
         ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
         $pqr = $this->pqrRepo->findPqrById($id);
 
         return view('admin.pqrs.edit', [
-            'pqr' => $pqr,
+            'pqr'      => $pqr,
             'statuses' => $this->pqrStatusRepo->listPqrStatuses(),
             'currentStatus' => $this->pqrStatusRepo->findPqrStatusById($pqr->pqr_status_id)
         ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  UpdatePqrRequest $request
-     * @param  int $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(UpdatePqrRequest $request, $id)
     {
-        $pqr = $this->pqrRepo->findPqrById($id);
+        $pqr    = $this->pqrRepo->findPqrById($id);
         $update = new PqrRepository($pqr);
-        $data = $request->except('_method', '_token', 'password');
+        $data   = $request->except('_method', '_token', 'password');
 
         if ($request->has('password')) {
             $data['password'] = bcrypt($request->input('password'));
@@ -154,17 +113,9 @@ class PqrController extends Controller
     }
 
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int $id
-     *
-     * @return \Illuminate\Http\Response
-     * @throws \Exception
-     */
     public function destroy($id)
     {
-        $pqr = $this->pqrRepo->findPqrById($id);
+        $pqr     = $this->pqrRepo->findPqrById($id);
         $pqrRepo = new PqrRepository($pqr);
         $pqrRepo->deletePqr();
 
@@ -172,10 +123,6 @@ class PqrController extends Controller
     }
 
 
-    /**
-     * @param Collection $list
-     * @return array
-     */
     private function transFormOrder(Collection $list)
     {
         $pqrStatusRepo = new PqrStatusRepository(new PqrStatus());

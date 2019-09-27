@@ -24,9 +24,9 @@ class UpdateCountryRequest extends FormRequest
     public function rules()
     {
         return [
-            'iso' => ['max:2'],
-            'iso3' => ['max:3'],
-            'numcode' => ['numeric'],
+            'iso'       => ['max:2'],
+            'iso3'      => ['max:3'],
+            'numcode'   => ['numeric'],
             'phonecode' => ['numeric']
         ];
     }

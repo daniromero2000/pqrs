@@ -13,59 +13,39 @@ use Illuminate\Http\Request;
 
 class SubsidiaryController extends Controller
 {
-    /**
-     * @var SubsidiaryRepositoryInterface
-     */
     private $subsidiaryRepo;
     private $cityRepo;
 
-    /**
-     * SubsidiaryController constructor.
-     *
-     * @param SubsidiaryRepositoryInterface $subsidiaryRepository
-     */
+
     public function __construct(
         SubsidiaryRepositoryInterface $subsidiaryRepository,
         CityRepositoryInterface $cityRepository
     ) {
         $this->subsidiaryRepo = $subsidiaryRepository;
-        $this->cityRepo = $cityRepository;
+        $this->cityRepo       = $cityRepository;
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        $list = $this->subsidiaryRepo->rootSubsidiaries('created_at', 'desc');
+        $list = $this->subsidiaryRepo->rootSubsidiaries('name', 'asc');
 
         return view('admin.subsidiaries.list', [
             'subsidiaries' => $this->subsidiaryRepo->paginateArrayResults($list->all()),
-            'user' => auth()->guard('employee')->user()
+            'user'         => auth()->guard('employee')->user()
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         return view('admin.subsidiaries.create', [
-            'cities' => City::all(),
+            'cities'       => City::all(),
             'subsidiaries' => $this->subsidiaryRepo->listSubsidiaries('name', 'asc')
         ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  CreateSubsidiaryRequest  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(CreateSubsidiaryRequest $request)
     {
         $this->subsidiaryRepo->createSubsidiary($request->except('_token', '_method'));
@@ -73,77 +53,53 @@ class SubsidiaryController extends Controller
         return redirect()->route('admin.subsidiaries.index')->with('message', 'Sucursal creada');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
         $subsidiary = $this->subsidiaryRepo->findSubsidiaryById($id);
-        $cat = new SubsidiaryRepository($subsidiary);
 
         return view('admin.subsidiaries.show', [
-            'subsidiary' => $subsidiary,
+            'subsidiary'   => $subsidiary,
             'subsidiaries' => $subsidiary->children,
-            'user' =>  auth()->guard('employee')->user()
+            'user'         => auth()->guard('employee')->user()
         ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
-        $subsidiary = $this->subsidiaryRepo->findSubsidiaryById($id);
-        $SubsidiaryRepo = new SubsidiaryRepository($subsidiary);
+        $subsidiary     = $this->subsidiaryRepo->findSubsidiaryById($id);
+
         return view('admin.subsidiaries.edit ', [
             'subsidiary' => $subsidiary,
-            'cities' => $this->cityRepo->listCities(),
-            'cityId' => $subsidiary->city_id,
+            'cities'     => $this->cityRepo->listCities(),
+            'cityId'     => $subsidiary->city_id,
         ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  UpdateSubsidiaryRequest $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(UpdateSubsidiaryRequest $request, $id)
     {
         $subsidiary = $this->subsidiaryRepo->findSubsidiaryById($id);
-        $update = new SubsidiaryRepository($subsidiary);
+        $update     = new SubsidiaryRepository($subsidiary);
         $update->updateSubsidiary($request->except('_token', '_method'));
 
         $request->session()->flash('message', 'Actualizacion Exitosa');
         return redirect()->route('admin.subsidiaries.edit', $id);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy(int $id)
     {
-        $subsidiary = $this->subsidiaryRepo->findSubsidiaryById($id);
-        $subsidiary->delete();
+        $subsidiary     = $this->subsidiaryRepo->findSubsidiaryById($id);
+        $subsidiaryRepo = new SubsidiaryRepository($subsidiary);
+        $subsidiaryRepo->deleteSubsidiary();
 
         request()->session()->flash('message', 'Eliminado Satisfactoriamente');
         return redirect()->route('admin.subsidiaries.index');
     }
 
-    /**
-     * @param Request $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
+
     public function removeImage(Request $request)
     {
         $this->subsidiaryRepo->deleteFile($request->only('subsidiary'));

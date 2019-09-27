@@ -21,36 +21,19 @@ use App\Socomir\Employees\Repositories\EmployeeRepository;
 
 class PqrRepository extends BaseRepository implements PqrRepositoryInterface
 {
-    /**
-     * PqrRepository constructor.
-     * @param Pqr $pqr
-     */
     public function __construct(Pqr $pqr)
     {
         parent::__construct($pqr);
         $this->model = $pqr;
     }
 
-    /**
-     * List all the employees
-     *
-     * @param string $order
-     * @param string $sort
-     * @param array $columns
-     * @return \Illuminate\Support\Collection
-     */
+
     public function listPqrs(string $order = 'id', string $sort = 'desc', array $columns = ['*']): Support
     {
         return $this->all($columns, $order, $sort);
     }
 
-    /**
-     * Create the pqr
-     *
-     * @param array $params
-     * @return Pqr
-     * @throws CreatePqrInvalidArgumentException
-     */
+
     public function createPqr(array $params): Pqr
     {
         try {
@@ -64,14 +47,7 @@ class PqrRepository extends BaseRepository implements PqrRepositoryInterface
         }
     }
 
-    /**
-     * Update the pqr
-     *
-     * @param array $params
-     *
-     * @return bool
-     * @throws UpdatePqrInvalidArgumentException
-     */
+
     public function updatePqr(array $params): bool
     {
         try {
@@ -81,14 +57,7 @@ class PqrRepository extends BaseRepository implements PqrRepositoryInterface
         }
     }
 
-    /**
-     * Find the pqr or fail
-     *
-     * @param int $id
-     *
-     * @return Pqr
-     * @throws PqrNotFoundException
-     */
+
     public function findPqrById(int $id): Pqr
     {
         try {
@@ -99,14 +68,7 @@ class PqrRepository extends BaseRepository implements PqrRepositoryInterface
     }
 
 
-    /**
-     * Find the pqr or fail
-     *
-     * @param string $email
-     *
-     * @return Pqr
-     * @throws PqrNotFoundException
-     */
+
     public function findPqrByEmail(string $email): Pqr
     {
         try {
@@ -116,21 +78,12 @@ class PqrRepository extends BaseRepository implements PqrRepositoryInterface
         }
     }
 
-    /**
-     * Delete a pqr
-     *
-     * @return bool
-     * @throws \Exception
-     */
     public function deletePqr(): bool
     {
         return $this->delete();
     }
 
-    /**
-     * @param string $text
-     * @return mixed
-     */
+
     public function searchPqr(string $text = null): Collection
     {
         if (is_null($text)) {
@@ -139,12 +92,7 @@ class PqrRepository extends BaseRepository implements PqrRepositoryInterface
         return $this->model->searchPqr($text)->get();
     }
 
-    /**
-     * @param int $amount
-     * @param array $options
-     * @return \Stripe\Charge
-     * @throws PqrPaymentChargingErrorException
-     */
+
     public function charge(int $amount, array $options)
     {
         try {
@@ -154,18 +102,14 @@ class PqrRepository extends BaseRepository implements PqrRepositoryInterface
         }
     }
 
-    /**
-     * Send email to pqr
-     */
+
     public function sendEmailToPqr($pqrMail)
     {
         Mail::to($pqrMail->email)
             ->send(new SendWelcomeToPqrMailable($this->findPqrById($pqrMail->id)));
     }
 
-    /**
-     * Send email notification to the admin
-     */
+
     public function sendEmailNotificationToAdmin($pqrMail)
     {
         $employeeRepo = new EmployeeRepository(new Employee);

@@ -7,12 +7,6 @@ use Illuminate\Support\Facades\Storage;
 
 trait FinanceTransformable
 {
-    /**
-     * Transform the finance
-     *
-     * @param Finance $finance
-     * @return Finance
-     */
     protected function transformFinance(Finance $finance)
     {
         $prod = new Finance;

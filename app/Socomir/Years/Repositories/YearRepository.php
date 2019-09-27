@@ -19,37 +19,18 @@ class YearRepository extends BaseRepository implements YearRepositoryInterface
 {
     use UploadableTrait, FinanceTransformable;
 
-    /**
-     * YearRepository constructor.
-     * @param Year $year
-     */
     public function __construct(Year $year)
     {
         parent::__construct($year);
         $this->model = $year;
     }
 
-    /**
-     * List all the years
-     *
-     * @param string $order
-     * @param string $sort
-     * @param array $except
-     * @return \Illuminate\Support\Collection
-     */
     public function listYears(string $order = 'id', string $sort = 'desc', $except = []): Collection
     {
         return $this->model->orderBy($order, $sort)->where('status', 1)->get()->except($except);
     }
 
-    /**
-     * List all root years
-     *
-     * @param  string $order
-     * @param  string $sort
-     * @param  array  $except
-     * @return \Illuminate\Support\Collection
-     */
+
     public function rootYears(string $order = 'id', string $sort = 'desc', $except = []): Collection
     {
         return $this->model->whereIsRoot()
@@ -58,15 +39,7 @@ class YearRepository extends BaseRepository implements YearRepositoryInterface
             ->except($except);
     }
 
-    /**
-     * Create the year
-     *
-     * @param array $params
-     *
-     * @return Year
-     * @throws YearInvalidArgumentException
-     * @throws YearNotFoundException
-     */
+
     public function createYear(array $params): Year
     {
         try {
@@ -95,14 +68,7 @@ class YearRepository extends BaseRepository implements YearRepositoryInterface
         }
     }
 
-    /**
-     * Update the Year
-     *
-     * @param array $params
-     *
-     * @return Year
-     * @throws YearNotFoundException
-     */
+
     public function updateYear(array $params): Year
     {
         $year = $this->findYearById($this->model->id);
@@ -119,11 +85,7 @@ class YearRepository extends BaseRepository implements YearRepositoryInterface
         return $year;
     }
 
-    /**
-     * @param int $id
-     * @return Year
-     * @throws YearNotFoundException
-     */
+
     public function findYearById(int $id): Year
     {
         try {
@@ -133,63 +95,37 @@ class YearRepository extends BaseRepository implements YearRepositoryInterface
         }
     }
 
-    /**
-     * Delete a years
-     *
-     * @return bool
-     * @throws \Exception
-     */
+
     public function deleteYear(): bool
     {
         return $this->model->delete();
     }
 
-    /**
-     * Associate a finance in a years
-     *
-     * @param Finance $finance
-     * @return \Illuminate\Database\Eloquent\Model
-     */
+
     public function associateFinance(Finance $finance)
     {
         return $this->model->finances()->save($finance);
     }
 
-    /**
-     * Return all the finances associated with the year
-     *
-     * @return mixed
-     */
+
     public function findFinances(): Collection
     {
         return $this->model->finances;
     }
 
-    /**
-     * @param array $params
-     */
+
     public function syncFinances(array $params)
     {
         $this->model->finances()->sync($params);
     }
 
-    /**
-     * Detach the association of the finance
-     *
-     */
+
     public function detachFinances()
     {
         $this->model->finances()->detach();
     }
 
-    /**
-     * Return the years by using the slug as the parameter
-     *
-     * @param array $slug
-     *
-     * @return Year
-     * @throws YearNotFoundException
-     */
+
     public function findYearBySlug(array $slug): Year
     {
         try {
@@ -199,17 +135,13 @@ class YearRepository extends BaseRepository implements YearRepositoryInterface
         }
     }
 
-    /**
-     * @return mixed
-     */
+
     public function findParentYear()
     {
         return $this->model->parent;
     }
 
-    /**
-     * @return mixed
-     */
+
     public function findChildren()
     {
         return $this->model->children;

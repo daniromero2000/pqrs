@@ -4,8 +4,6 @@ namespace App\Http\Controllers\Admin\Finances;
 
 
 use App\Socomir\Years\Repositories\Interfaces\YearRepositoryInterface;
-use App\Socomir\Finances\Exceptions\FinanceInvalidArgumentException;
-use App\Socomir\Finances\Exceptions\FinanceNotFoundException;
 use App\Socomir\Finances\Finance;
 use App\Socomir\Finances\Repositories\Interfaces\FinanceRepositoryInterface;
 use App\Socomir\Finances\Repositories\FinanceRepository;
@@ -14,50 +12,27 @@ use App\Socomir\Finances\Requests\UpdateFinanceRequest;
 use App\Http\Controllers\Controller;
 use App\Socomir\Finances\Transformations\FinanceTransformable;
 use App\Socomir\Tools\UploadableTrait;
-use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Validator;
 
 class FinanceController extends Controller
 {
     use FinanceTransformable, UploadableTrait;
 
-    /**
-     * @var FinanceRepositoryInterface
-     */
     private $financeRepo;
-
-    /**
-     * @var YearRepositoryInterface
-     */
     private $yearRepo;
 
-
-    /**
-     * FinanceController constructor.
-     *
-     * @param FinanceRepositoryInterface $financeRepository
-     * @param YearRepositoryInterface $yearRepository
-     */
     public function __construct(
         YearRepositoryInterface $yearRepository,
         FinanceRepositoryInterface $financeRepository
     ) {
         $this->financeRepo = $financeRepository;
-        $this->yearRepo = $yearRepository;
+        $this->yearRepo    = $yearRepository;
         $this->middleware(['permission:create-finance, guard:employee'], ['only' => ['create', 'store']]);
         $this->middleware(['permission:update-finance, guard:employee'], ['only' => ['edit', 'update']]);
         $this->middleware(['permission:delete-finance, guard:employee'], ['only' => ['destroy']]);
         $this->middleware(['permission:view-finance, guard:employee'], ['only' => ['index', 'show']]);
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $list = $this->financeRepo->listFinances('id');
@@ -72,31 +47,20 @@ class FinanceController extends Controller
 
         return view('admin.finances.list', [
             'finances' => $this->financeRepo->paginateArrayResults($finances, 25),
-            'user' => auth()->guard('employee')->user()
+            'user'     => auth()->guard('employee')->user()
         ]);
     }
 
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('admin.finances.create', [
-            'years' => $this->yearRepo->listYears('year', 'asc')->where('parent_id', 1),
+            'years'   => $this->yearRepo->listYears('year', 'asc')->where('parent_id', 1),
             'finance' => new Finance
         ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  CreateFinanceRequest $request
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(CreateFinanceRequest $request)
     {
         $data = $request->except('_token', '_method');
@@ -106,8 +70,8 @@ class FinanceController extends Controller
         }
 
         $data['slug'] = str_slug($request->input('name'));
-        $finance = $this->financeRepo->createFinance($data);
-        $financeRepo = new FinanceRepository($finance);
+        $finance      = $this->financeRepo->createFinance($data);
+        $financeRepo  = new FinanceRepository($finance);
 
         if ($request->hasFile('image')) {
             $financeRepo->saveFinanceImages(collect($request->file('image')));
@@ -127,13 +91,7 @@ class FinanceController extends Controller
         return redirect()->route('admin.finances.show', $finance->id)->with('message', 'Creación Exitosa');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int $id
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function show(int $id)
     {
         return view('admin.finances.show', [
@@ -141,36 +99,22 @@ class FinanceController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int $id
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit(int $id)
     {
         $finance = $this->financeRepo->findFinanceById($id);
 
         return view('admin.finances.edit', [
-            'finance' => $finance,
-            'years' => $this->yearRepo->listYears('year', 'asc')->where('parent_id', 1),
+            'finance'      => $finance,
+            'years'        => $this->yearRepo->listYears('year', 'asc')->where('parent_id', 1),
             'selectedIdsC' => $finance->years()->pluck('year_id')->all()
         ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  UpdateFinanceRequest $request
-     * @param  int $id
-     *
-     * @return \Illuminate\Http\Response
-     * @throws \App\Socomir\Finances\Exceptions\FinanceUpdateErrorException
-     */
+
     public function update(UpdateFinanceRequest $request, int $id)
     {
-        $finance = $this->financeRepo->findFinanceById($id);
+        $finance     = $this->financeRepo->findFinanceById($id);
         $financeRepo = new FinanceRepository($finance);
 
         $data = $request->except(
@@ -196,14 +140,7 @@ class FinanceController extends Controller
             ->with('message', 'Actualización Exitosa!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int $id
-     *
-     * @return \Illuminate\Http\Response
-     * @throws \Exception
-     */
+
     public function destroy($id)
     {
         $finance = $this->financeRepo->findFinanceById($id);

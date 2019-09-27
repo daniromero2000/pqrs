@@ -12,11 +12,7 @@ class Employee extends Authenticatable
 {
     use Notifiable, SoftDeletes, LaratrustUserTrait;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+
     protected $fillable = [
         'name',
         'email',
@@ -27,11 +23,7 @@ class Employee extends Authenticatable
         'subsidiary_id'
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
+
     protected $hidden = [
         'password',
         'remember_token',
@@ -39,7 +31,8 @@ class Employee extends Authenticatable
 
     protected $dates = ['deleted_at'];
 
-    public function subsidiary(){
-return $this->belongsTo(Subsidiary::class);
+    public function subsidiary()
+    {
+        return $this->belongsTo(Subsidiary::class);
     }
 }

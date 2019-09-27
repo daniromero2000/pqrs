@@ -13,35 +13,17 @@ use Illuminate\Support\Collection;
 
 class ProvinceRepository extends BaseRepository implements ProvinceRepositoryInterface
 {
-    /**
-     * ProvinceRepository constructor.
-     * @param Province $province
-     */
     public function __construct(Province $province)
     {
         parent::__construct($province);
     }
 
-    /**
-     * List all the provinces
-     *
-     * @param string $order
-     * @param string $sort
-     * @param array $columns
-     * @return Collection
-     */
-    public function listProvinces(string $order = 'id', string $sort = 'desc', array $columns = ['*']) : Collection
+    public function listProvinces(string $order = 'id', string $sort = 'desc', array $columns = ['*']): Collection
     {
         return $this->all($columns, $order, $sort);
     }
 
-    /**
-     * Find the province
-     *
-     * @param int $id
-     * @return Province
-     */
-    public function findProvinceById(int $id) : Province
+    public function findProvinceById(int $id): Province
     {
         try {
             return $this->findOneOrFail($id);
@@ -50,13 +32,8 @@ class ProvinceRepository extends BaseRepository implements ProvinceRepositoryInt
         }
     }
 
-    /**
-     * Update the province
-     *
-     * @param array $params
-     * @return boolean
-     */
-    public function updateProvince(array $params) : bool
+
+    public function updateProvince(array $params): bool
     {
         try {
             return $this->model->update($params);
@@ -65,19 +42,14 @@ class ProvinceRepository extends BaseRepository implements ProvinceRepositoryInt
         }
     }
 
-    /**
-     * @param int $provinceId
-     * @return mixed
-     */
-    public function listCities(int $provinceId) : Collection
+
+    public function listCities(int $provinceId): Collection
     {
         return $this->findProvinceById($provinceId)->cities()->get();
     }
 
-    /**
-     * @return Country
-     */
-    public function findCountry() : Country
+
+    public function findCountry(): Country
     {
         return $this->model->country;
     }
