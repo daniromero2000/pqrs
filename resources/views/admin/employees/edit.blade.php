@@ -35,7 +35,7 @@
                         <div class="input-group-addon">
                             <i class="fa fa-lock"></i>
                         </div>
-                        <input type="password" name="password" id="password" placeholder="xxxxx" class="form-control" required>
+                        <input type="password" name="password" id="password" placeholder="xxxxx" class="form-control">
                     </div>
                 </div>
 

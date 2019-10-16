@@ -8,7 +8,7 @@
     <div class="box" style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
         @if(!$years->isEmpty())
         <div class="box-body">
-            <h2>Listado PDF's Años financieros y Tarifas</h2>
+            <h2>Listado PDF's Año Indicador y Tarifas</h2>
             <table class="table">
                 <thead>
                     <tr>

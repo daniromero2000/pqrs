@@ -7,7 +7,7 @@
         <form action="{{ route('admin.years.store') }}" method="post" class="form" enctype="multipart/form-data">
             <div class="box-body">
                 {{ csrf_field() }}
-                <h1>Crear Año Financiero</h1>
+                <h1>Crear Año Indicador</h1>
                 <input type="hidden" name="parent" id="parent" class="form-control" value="1">
 
                 <div class="form-group">

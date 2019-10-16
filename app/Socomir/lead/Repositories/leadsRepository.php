@@ -1,14 +1,10 @@
 <?php
 
-namespace App\Socomir\Pqrs\Repositories;
+namespace App\Socomir\Lead\Repositories;
 
 use Jsdecena\Baserepo\BaseRepository;
-use App\Socomir\Pqrs\Pqr;
-use App\Socomir\Pqrs\Exceptions\CreatePqrInvalidArgumentException;
-use App\Socomir\Pqrs\Exceptions\PqrNotFoundException;
-use App\Socomir\Pqrs\Exceptions\PqrPaymentChargingErrorException;
-use App\Socomir\Pqrs\Exceptions\UpdatePqrInvalidArgumentException;
-use App\Socomir\Pqrs\Repositories\Interfaces\PqrRepositoryInterface;
+use App\Socomir\Lead\Lead;
+use App\Socomir\Lead\Repositories\Interfaces\LeadsRepositoryInterface;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\QueryException;
@@ -16,39 +12,37 @@ use Illuminate\Support\Collection as Support;
 use App\Mail\SendWelcomeToPqrMailable;
 use App\Mail\sendWelcomeEmailNotificationToAdminMailable;
 use Illuminate\Support\Facades\Mail;
-use App\Socomir\Employees\Employee;
-use App\Socomir\Employees\Repositories\EmployeeRepository;
 
-class PqrRepository extends BaseRepository implements PqrRepositoryInterface
+class LeadsRepository extends BaseRepository implements LeadsRepositoryInterface
 {
-    public function __construct(Pqr $pqr)
+    public function __construct(lead $lead)
     {
-        parent::__construct($pqr);
-        $this->model = $pqr;
+        parent::__construct($lead);
+        $this->model = $lead;
     }
 
 
-    public function listPqrs(string $order = 'id', string $sort = 'desc', array $columns = ['*']): Support
+    public function listleads(string $order = 'id', string $sort = 'desc', array $columns = ['*']): Support
     {
         return $this->all($columns, $order, $sort);
     }
 
 
-    public function createPqr(array $params): Pqr
+    public function createleads(array $params): lead
     {
         try {
             $data = collect($params)->all();
-            $pqr = new Pqr($data);
-            $pqr->save();
+            $lead = new lead($data);
+            $lead->save();
 
-            return $pqr;
+            return $lead;
         } catch (QueryException $e) {
             throw new CreatePqrInvalidArgumentException($e->getMessage(), 500, $e);
         }
     }
 
 
-    public function updatePqr(array $params): bool
+    public function updateLeads(array $params): bool
     {
         try {
             return $this->model->update($params);
@@ -58,7 +52,7 @@ class PqrRepository extends BaseRepository implements PqrRepositoryInterface
     }
 
 
-    public function findPqrById(int $id): Pqr
+    public function findleadById(int $id): lead
     {
         try {
             return $this->findOneOrFail($id);
@@ -69,7 +63,7 @@ class PqrRepository extends BaseRepository implements PqrRepositoryInterface
 
 
 
-    public function findPqrByEmail(string $email): Pqr
+    public function findleadByEmail(string $email): lead
     {
         try {
             return $this->findOneOrFailEmail($email);
@@ -78,13 +72,13 @@ class PqrRepository extends BaseRepository implements PqrRepositoryInterface
         }
     }
 
-    public function deletePqr(): bool
+    public function deleteleads(): bool
     {
         return $this->delete();
     }
 
 
-    public function searchPqr(string $text = null): Collection
+    public function searchleads(string $text = null): Collection
     {
         if (is_null($text)) {
             return $this->all();

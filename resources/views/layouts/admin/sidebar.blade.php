@@ -57,6 +57,13 @@
 
             </ul>
         </li> @endif
+
+        <!-- sumulador -->
+     
+
+
+        <!-- fin simulador -->
+
         @if($user->hasRole('admin|superadmin|marketing|operativo'))
         <li class="header">ADMINISTRACIÓN</li>
         @if($user->hasRole('admin|superadmin'))<li class="treeview @if(request()->segment(2) == 'employees' || request()->segment(2) == 'roles' || request()->segment(2) == 'permissions') active @endif">
