@@ -14,7 +14,8 @@
             <div class="row top-buffer">
                 <div class="col-md-10">
                     <ul class="list-unstyled">
-                        <li> <a target="_blank" class="reglamentos" href="{{asset('/pdf/manual-credito-2019.pdf#toolbar=0&navpanes=0&scrollbar=0')}}"><i
+                        <li> <a target="_blank" class="reglamentos"
+                                href="{{asset('/pdf/manual-credito-2019.pdf#toolbar=0&navpanes=0&scrollbar=0')}}"><i
                                     class="fa fa-angle-right yellow" aria-hidden="true"></i> Reglamento de
                                 Crédito</a> </li>
                         <li> <a target="_blank" class="reglamentos"
@@ -26,6 +27,9 @@
                                     class="fa fa-angle-right yellow" aria-hidden="true"></i> Reglamento y
                                 Condiciones
                                 de Crédito Libranza</a> </li>
+                        <li><a target="_blank" class="reglamentos"
+                                href="{{asset('/pdf/Resolución proceso de Elecciones.pdf#toolbar=0&navpanes=0&scrollbar=0')}}"><i
+                                    class="fa fa-angle-right yellow" aria-hidden="true"></i> Elecciones</a> </li>
                     </ul>
                 </div>
             </div>
