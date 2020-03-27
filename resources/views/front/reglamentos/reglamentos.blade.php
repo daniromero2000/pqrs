@@ -28,7 +28,7 @@
                                 Condiciones
                                 de Crédito Libranza</a> </li>
                         <li><a target="_blank" class="reglamentos"
-                                href="{{asset('/pdf/Resolución proceso de Elecciones.pdf#toolbar=0&navpanes=0&scrollbar=0')}}"><i
+                                href="{{asset('/pdf/Resolucion Convocatoria Elecciones de Delegados Final.pdf#toolbar=0&navpanes=0&scrollbar=0')}}"><i
                                     class="fa fa-angle-right yellow" aria-hidden="true"></i> Elecciones</a> </li>
                         <li><a target="_blank" class="reglamentos"
                                 href="{{asset('/pdf/CONVOCATORIA ASAMBLEA NO PRESENCIAL  2020.pdf#toolbar=0&navpanes=0&scrollbar=0')}}"><i
