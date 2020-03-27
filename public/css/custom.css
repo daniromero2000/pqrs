@@ -91,6 +91,10 @@ General
     width: 100%;
     font-family: 'Lato', sans-serif;
 }
+.icon-alert{
+    color: #daab06;
+    font-size: 80px !important;
+}
 
 #chevron:before {
     content: '';
@@ -222,6 +226,30 @@ PHONE LANDSCAPE VERSION
     }
     .mobile-break {
         display: none;
+    }
+}
+
+
+@media only screen and (min-width: 400px) and (max-width: 560px) and (orientation: landscape) {
+   
+    .simuladorText {
+        position: absolute;
+        vertical-align: middle;
+        border-style: none;
+        font-size: 17px;
+        left: 58%;
+        top: 26%;
+        width: 34%;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 570px) {
+       .icon-alert{
+        color: #daab06;
+        font-size: 50px !important;
     }
 }
 

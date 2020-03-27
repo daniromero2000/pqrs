@@ -1,6 +1,33 @@
 <div class="container-fluid top-buffer bottom-buffer">
     <div class="row img-row d-flex justify-content-center">
         <div class="col-12 col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
+            <div class="row">
+                <div class="col-12 col-sm-4 col-md-3 mb-3 d-flex justify-content-center align-items-center">
+                    <img class="img-fluid" src="{{asset('/img/coronavirus.png')}}" alt="">
+                </div>
+                <div class="col-12 col-sm-8 col-md-9">
+                    <p class="inicialText"><span class="text-resalt">Orientados por tu bienestar,</span> en esta
+                        coyuntura global con el
+                        COVID - 19  y
+                        las
+                        decisiones gubernamentales, <span class="text-resalt"> desde el 24 de marzo y hasta el próximo
+                            11 de abril de
+                            2020,</span>
+                        nuestros
+                        centros de atención y oficinas no estarán disponibles.<br>
+                    </p>
+                    <p class="inicialText"> Te invitamos a leer el documento <a class=" text-resalt" target="_blank"
+                            href="{{asset('/pdf/SOCOMIR.pdf#toolbar=0&navpanes=0&scrollbar=0')}}">
+                            SOCOMIR
+                            CON NUESTROS ASOCIADOS
+                            Y CON EL
+                            PAÍS</a> y a utilizar nuestro canal digital y líneas de atención.
+                    </p>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="col-12 col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
             <p class="inicialText">Nuestra atención personalizada nos permite brindarle soluciones dinámicas y
                 competitivas, enfocadas a sus necesidades específicas a través de nuestros productos y servicios.
                 Nuestros Ejecutivos le ofrecerán un asesoramiento individual, dándole el seguimiento permanente que
