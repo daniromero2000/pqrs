@@ -32,8 +32,8 @@
                                     class="fa fa-angle-right yellow" aria-hidden="true"></i> Elecciones</a> </li>
                         <li><a target="_blank" class="reglamentos"
                                 href="{{asset('/pdf/CONVOCATORIA ASAMBLEA NO PRESENCIAL  2020.pdf#toolbar=0&navpanes=0&scrollbar=0')}}"><i
-                                    class="fa fa-angle-right yellow" aria-hidden="true"></i> Convocatoria asamblea no
-                                presencial</a> </li>
+                                    class="fa fa-angle-right yellow" aria-hidden="true"></i> Convocatoria Asamblea no
+                                Presencial</a> </li>
                     </ul>
                 </div>
             </div>
