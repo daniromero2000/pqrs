@@ -23,7 +23,7 @@
                                     class="fa fa-angle-right yellow" aria-hidden="true"></i> Reglamento de
                                 Cobranza</a> </li>
                         <li><a target="_blank" class="reglamentos"
-                                href="{{asset('/pdf/2019 REGLAMENTO Y CONDICIONES DE CREDITO LIBRANZA SOCOMIR.docx nov 2018.pdf#toolbar=0&navpanes=0&scrollbar=0')}}"><i
+                                href="{{asset('/pdf/2020 abr REGLAMENTO CONDICIONES DE CREDITO LIBRANZA SOCOMIR v5.pdf#toolbar=0&navpanes=0&scrollbar=0')}}"><i
                                     class="fa fa-angle-right yellow" aria-hidden="true"></i> Reglamento y
                                 Condiciones
                                 de Crédito Libranza</a> </li>
