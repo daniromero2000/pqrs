@@ -11,7 +11,7 @@
                         COVID - 19  y
                         las
                         decisiones gubernamentales, <span class="text-resalt"> desde el 24 de marzo y hasta el próximo
-                            11 de abril de
+                            11 de mayo de
                             2020,</span>
                         nuestros
                         centros de atención y oficinas no estarán disponibles.<br>
