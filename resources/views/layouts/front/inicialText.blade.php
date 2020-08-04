@@ -17,7 +17,7 @@
                         centros de atención y oficinas no estarán disponibles.<br>
                     </p>
                     <p class="inicialText"> Te invitamos a leer el documento <a class=" text-resalt" target="_blank"
-                            href="{{asset('/pdf/SOCOMIR.pdf#toolbar=0&navpanes=0&scrollbar=0')}}">
+                            href="{{asset('/pdf/JULIO SOCOMIR.pdf#toolbar=0&navpanes=0&scrollbar=0')}}">
                             SOCOMIR
                             CON NUESTROS ASOCIADOS
                             Y CON EL

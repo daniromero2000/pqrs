@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
--@include('layouts.front.bannerinicial')
+@include('layouts.front.bannerinicial')
 @include('layouts.front.inicialText')
 @include('layouts.front.homeIcons')
 @include('layouts.front.slideInicial')
