@@ -35,12 +35,10 @@ class Finance extends Model
         return $this->belongsToMany(Year::class);
     }
 
-
     public function images()
     {
         return $this->hasMany(FinanceImage::class);
     }
-
 
     public function searchFinance(string $term): Collection
     {
